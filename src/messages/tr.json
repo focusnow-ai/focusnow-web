@@ -1,0 +1,239 @@
+{
+  "metadata": {
+    "title": "FocusNow - Yapay Zeka Destekli Odaklanma Takibi",
+    "description": "Gizlilik odaklı, yapay zeka destekli masaüstü odaklanma takip uygulaması. Verilerinizden ödün vermeden üretkenlik kalıplarınızı anlayın.",
+    "keywords": "odaklanma takibi, üretkenlik, yapay zeka, gizlilik, zaman takibi, masaüstü uygulaması"
+  },
+  "nav": {
+    "features": "Özellikler",
+    "download": "İndir",
+    "pricing": "Fiyatlandırma",
+    "blog": "Blog",
+    "about": "Hakkımızda",
+    "changelog": "Değişiklik Kaydı",
+    "privacy": "Gizlilik",
+    "getApp": "Uygulamayı İndir"
+  },
+  "hero": {
+    "badge": "Yapay Zeka Destekli Odaklanma Takibi",
+    "title": "Odaklanmanızı Anlayın,",
+    "titleHighlight": "Gizliliğinizi Koruyun",
+    "description": "FocusNow, masaüstü aktivitenizi yapay zeka destekli içgörülerle takip eder — her şey cihazınızda yerel olarak işlenir. Bulut yüklemesi yok, gözetim yok. Sadece netlik.",
+    "cta": "Ücretsiz İndir",
+    "secondaryCta": "Özellikleri Gör",
+    "platformBadge": {
+      "mac": "macOS için mevcut",
+      "windows": "Windows için yakında",
+      "linux": "Linux için yakında"
+    }
+  },
+  "features": {
+    "title": "Odaklanmak İçin",
+    "titleHighlight": "İhtiyacınız Olan Her Şey",
+    "description": "Gizliliğinizden ödün vermeden üretkenliğinizi anlamanıza ve geliştirmenize yardımcı olmak için tasarlanmış güçlü özellikler.",
+    "items": {
+      "ai": {
+        "title": "Yapay Zeka İçgörüleri",
+        "description": "Yerel yapay zeka ile akıllı sınıflandırma ve üretkenlik puanlama. Odaklanmanızı neyin yönlendirdiğini anlayın."
+      },
+      "focus": {
+        "title": "Odaklanma Oturumları",
+        "description": "Özelleştirilebilir zamanlayıcılarla derin çalışma oturumlarını takip edin. Üretken serilerinizi ve kalıplarınızı görün."
+      },
+      "privacy": {
+        "title": "Önce Gizlilik",
+        "description": "Tüm veriler cihazınızda kalır. Bulut yüklemesi yok, takip sunucusu yok. Aktiviteniz sadece sizindir."
+      },
+      "analytics": {
+        "title": "Detaylı Analizler",
+        "description": "Günlük, haftalık ve aylık üretkenlik trendlerinizi gösteren güzel grafikler ve raporlar."
+      },
+      "crossPlatform": {
+        "title": "Çoklu Platform",
+        "description": "macOS'ta mevcut, Windows ve Linux desteği yakında. Her yerde aynı deneyim."
+      },
+      "distraction": {
+        "title": "Dikkat Dağınıklığı Uyarıları",
+        "description": "Odaklı çalışmadan uzaklaştığınızda bildirim alın. Sizi yolda tutan nazik hatırlatmalar."
+      }
+    }
+  },
+  "screenshots": {
+    "title": "FocusNow'u",
+    "titleHighlight": "Çalışırken Görün",
+    "tabs": {
+      "dashboard": "Kontrol Paneli",
+      "analytics": "Analizler",
+      "sessions": "Oturumlar",
+      "settings": "Ayarlar"
+    }
+  },
+  "privacySection": {
+    "title": "Gizliliğiniz,",
+    "titleHighlight": "Önceliğimiz",
+    "description": "Diğer takip araçlarının aksine, FocusNow her şeyi yerel olarak işler. Bu ne anlama geliyor:",
+    "tracked": {
+      "title": "Ne Takip Ediyoruz",
+      "items": [
+        "Aktif uygulama adları",
+        "Pencere başlıkları (sadece yerel)",
+        "Odaklanma oturumu süreleri",
+        "Üretkenlik kategorileri",
+        "Günlük kullanım kalıpları"
+      ]
+    },
+    "notTracked": {
+      "title": "Asla Yapmadıklarımız",
+      "items": [
+        "Herhangi bir sunucuya veri yüklemek",
+        "Ekranınızın ekran görüntüsünü almak",
+        "Tuş vuruşlarını veya fare tıklamalarını kaydetmek",
+        "Üçüncü taraflarla veri paylaşmak",
+        "Ziyaret ettiğiniz web sitelerini takip etmek"
+      ]
+    }
+  },
+  "downloadCta": {
+    "title": "Odaklanmanızın Kontrolünü",
+    "titleHighlight": "Almaya Hazır mısınız?",
+    "description": "FocusNow'u ücretsiz indirin ve bugün üretkenlik kalıplarınızı anlamaya başlayın.",
+    "cta": "Şimdi İndir",
+    "note": "Ücretsiz ve açık kaynak. Şimdilik sadece macOS."
+  },
+  "download": {
+    "title": "FocusNow'u İndirin",
+    "description": "Platformunuz için FocusNow'u edinin",
+    "detected": "Algılanan Platform",
+    "downloadFor": "{platform} için İndir",
+    "otherPlatforms": "Diğer Platformlar",
+    "comingSoon": "Yakında",
+    "requirements": {
+      "title": "Sistem Gereksinimleri",
+      "mac": {
+        "title": "macOS",
+        "items": ["macOS 12 (Monterey) veya üzeri", "Apple Silicon veya Intel", "50 MB disk alanı"]
+      },
+      "windows": {
+        "title": "Windows",
+        "items": ["Windows 10 veya üzeri", "64-bit işlemci", "50 MB disk alanı"]
+      },
+      "linux": {
+        "title": "Linux",
+        "items": ["Ubuntu 20.04+ veya eşdeğeri", "64-bit işlemci", "50 MB disk alanı"]
+      }
+    }
+  },
+  "pricing": {
+    "title": "Basit, Şeffaf",
+    "titleHighlight": "Fiyatlandırma",
+    "description": "FocusNow kullanımı ücretsizdir. Üretkenlik araçlarının herkes için erişilebilir olması gerektiğine inanıyoruz.",
+    "free": {
+      "title": "Ücretsiz",
+      "price": "₺0",
+      "period": "sonsuza dek",
+      "description": "Odaklanmanızı takip etmek ve geliştirmek için ihtiyacınız olan her şey.",
+      "features": [
+        "Yapay zeka destekli aktivite sınıflandırma",
+        "Odaklanma oturumu takibi",
+        "Günlük ve haftalık analizler",
+        "Dikkat dağınıklığı uyarıları",
+        "Yerel veri işleme",
+        "Tüm gizlilik özellikleri",
+        "Çoklu platform (yakında)"
+      ],
+      "cta": "Ücretsiz İndir"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "Yakında",
+      "description": "İleri düzey kullanıcılar için gelişmiş özellikler.",
+      "features": [
+        "Ücretsiz'deki her şey",
+        "Gelişmiş yapay zeka içgörüleri",
+        "Özel kategoriler",
+        "Veri dışa aktarma",
+        "Öncelikli destek"
+      ],
+      "cta": "Bekleme Listesine Katıl"
+    }
+  },
+  "about": {
+    "title": "FocusNow",
+    "titleHighlight": "Hakkında",
+    "description": "FocusNow basit bir fikirden doğdu: gizliliğinizden vazgeçmeden üretkenliğinizi anlayabilmelisiniz.",
+    "story": {
+      "title": "Hikayemiz",
+      "content": "Çoğu üretkenlik takip aracı, aktivite verilerinizi uzak sunuculara yüklemenizi gerektirir. Daha iyi bir yol olması gerektiğini düşündük. FocusNow, yapay zeka kullanarak her şeyi cihazınızda yerel olarak işler ve gizliliğinizden ödün vermeden güçlü içgörüler sunar."
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "content": "İnsanların akıllı, gizliliğe saygılı teknoloji aracılığıyla odaklanmalarını anlamalarına ve geliştirmelerine yardımcı olmak. Kişisel üretkenlik verilerinin kişisel kalması gerektiğine inanıyoruz."
+    },
+    "tech": {
+      "title": "Kullanılan Teknolojiler",
+      "items": ["Electron", "React", "TypeScript", "Yerel Yapay Zeka", "Tailwind CSS"]
+    }
+  },
+  "privacyPage": {
+    "title": "Gizlilik Politikası",
+    "lastUpdated": "Son güncelleme: Ocak 2025",
+    "intro": "FocusNow, gizliliği temel ilke olarak benimser. Bu politika, verilerinizi nasıl ele aldığımızı açıklar.",
+    "sections": {
+      "collection": {
+        "title": "Veri Toplama",
+        "content": "FocusNow, odaklanma takibi ve üretkenlik içgörüleri sağlamak için aktif uygulamalarınız ve pencere başlıklarınız hakkında bilgi toplar. Tüm bu veriler cihazınızda yerel olarak işlenir ve saklanır."
+      },
+      "storage": {
+        "title": "Veri Saklama",
+        "content": "FocusNow tarafından toplanan tüm veriler yalnızca yerel cihazınızda saklanır. Aktivite verilerinizi alan, saklayan veya işleyen sunucularımız yoktur."
+      },
+      "sharing": {
+        "title": "Veri Paylaşımı",
+        "content": "Aktivite verilerinizi herhangi bir üçüncü tarafla paylaşmıyoruz, satmıyoruz veya aktarmıyoruz. Verileriniz cihazınızdan asla ayrılmaz."
+      },
+      "analytics": {
+        "title": "Anonim Analizler",
+        "content": "FocusNow'u geliştirmek için anonim kullanım istatistikleri (uygulama sürümü, işletim sistemi gibi) toplayabiliriz. Bu veriler kişisel bilgi veya aktivite verisi içermez."
+      },
+      "contact": {
+        "title": "İletişim",
+        "content": "Bu gizlilik politikası hakkında sorularınız varsa, lütfen privacy@focusnow.app adresinden bize ulaşın."
+      }
+    }
+  },
+  "changelog": {
+    "title": "Değişiklik Kaydı",
+    "description": "FocusNow'daki yenilikleri görün.",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "date": "2025-01-15",
+        "title": "İlk Sürüm",
+        "changes": [
+          "Yapay zeka destekli aktivite sınıflandırma",
+          "Özelleştirilebilir zamanlayıcılarla odaklanma oturumu takibi",
+          "Günlük ve haftalık analiz panosu",
+          "Dikkat dağınıklığı uyarıları ve bildirimleri",
+          "Yalnızca yerel veri işleme",
+          "macOS desteği (Apple Silicon ve Intel)"
+        ]
+      }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "FocusNow ve üretkenlik hakkında ipuçları, içgörüler ve güncellemeler.",
+    "readMore": "Devamını Oku",
+    "readingTime": "{minutes} dk okuma",
+    "backToBlog": "Blog'a Dön",
+    "publishedOn": "{date} tarihinde yayınlandı",
+    "noPosts": "Henüz blog yazısı yok. Yakında tekrar kontrol edin!"
+  },
+  "footer": {
+    "description": "Gizliliğinize saygı duyan yapay zeka destekli odaklanma takibi.",
+    "product": "Ürün",
+    "resources": "Kaynaklar",
+    "legal": "Yasal",
+    "copyright": "Tüm hakları saklıdır."
+  }
+}

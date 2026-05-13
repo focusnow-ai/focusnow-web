@@ -1,0 +1,91 @@
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { Sparkles } from "lucide-react";
+
+export function Footer() {
+  const t = useTranslations("footer");
+  const nav = useTranslations("nav");
+
+  return (
+    <footer className="border-t border-border/40 bg-muted/30">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Brand */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <Link href="/" className="flex items-center gap-2 font-bold text-xl">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg gradient-primary">
+                <Sparkles className="h-4 w-4 text-white" />
+              </div>
+              <span className="gradient-text">FocusNow</span>
+            </Link>
+            <p className="mt-3 text-sm text-muted-foreground max-w-xs">
+              {t("description")}
+            </p>
+          </div>
+
+          {/* Product links */}
+          <div>
+            <h3 className="font-semibold text-sm mb-3">{t("product")}</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="/#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {nav("features")}
+                </a>
+              </li>
+              <li>
+                <Link href="/download" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {nav("download")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {nav("pricing")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/changelog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {nav("changelog")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="font-semibold text-sm mb-3">{t("resources")}</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {nav("blog")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {nav("about")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h3 className="font-semibold text-sm mb-3">{t("legal")}</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {nav("privacy")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-border/40">
+          <p className="text-sm text-muted-foreground text-center">
+            &copy; {new Date().getFullYear()} FocusNow. {t("copyright")}
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}

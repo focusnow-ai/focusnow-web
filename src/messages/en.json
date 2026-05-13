@@ -1,0 +1,239 @@
+{
+  "metadata": {
+    "title": "FocusNow - AI-Powered Focus Tracking",
+    "description": "Privacy-first AI-powered desktop focus tracking app. Understand your productivity patterns without compromising your data.",
+    "keywords": "focus tracking, productivity, AI, privacy, time tracking, desktop app"
+  },
+  "nav": {
+    "features": "Features",
+    "download": "Download",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "about": "About",
+    "changelog": "Changelog",
+    "privacy": "Privacy",
+    "getApp": "Get the App"
+  },
+  "hero": {
+    "badge": "AI-Powered Focus Tracking",
+    "title": "Understand Your Focus,",
+    "titleHighlight": "Protect Your Privacy",
+    "description": "FocusNow tracks your desktop activity with AI-powered insights — all processed locally on your device. No cloud uploads, no surveillance. Just clarity.",
+    "cta": "Download for Free",
+    "secondaryCta": "See Features",
+    "platformBadge": {
+      "mac": "Available on macOS",
+      "windows": "Coming Soon for Windows",
+      "linux": "Coming Soon for Linux"
+    }
+  },
+  "features": {
+    "title": "Everything You Need to",
+    "titleHighlight": "Stay Focused",
+    "description": "Powerful features designed to help you understand and improve your productivity without sacrificing your privacy.",
+    "items": {
+      "ai": {
+        "title": "AI-Powered Insights",
+        "description": "Smart categorization and productivity scoring powered by local AI. Understand what drives your focus."
+      },
+      "focus": {
+        "title": "Focus Sessions",
+        "description": "Track deep work sessions with customizable timers. See your productive streaks and patterns."
+      },
+      "privacy": {
+        "title": "Privacy First",
+        "description": "All data stays on your device. No cloud uploads, no tracking servers. Your activity is yours alone."
+      },
+      "analytics": {
+        "title": "Detailed Analytics",
+        "description": "Beautiful charts and reports showing your daily, weekly, and monthly productivity trends."
+      },
+      "crossPlatform": {
+        "title": "Cross-Platform",
+        "description": "Available on macOS with Windows and Linux support coming soon. One experience everywhere."
+      },
+      "distraction": {
+        "title": "Distraction Alerts",
+        "description": "Get notified when you drift away from focused work. Gentle nudges to keep you on track."
+      }
+    }
+  },
+  "screenshots": {
+    "title": "See FocusNow",
+    "titleHighlight": "in Action",
+    "tabs": {
+      "dashboard": "Dashboard",
+      "analytics": "Analytics",
+      "sessions": "Sessions",
+      "settings": "Settings"
+    }
+  },
+  "privacySection": {
+    "title": "Your Privacy,",
+    "titleHighlight": "Our Priority",
+    "description": "Unlike other tracking tools, FocusNow processes everything locally. Here's what that means:",
+    "tracked": {
+      "title": "What We Track",
+      "items": [
+        "Active application names",
+        "Window titles (locally only)",
+        "Focus session durations",
+        "Productivity categories",
+        "Daily usage patterns"
+      ]
+    },
+    "notTracked": {
+      "title": "What We Never Do",
+      "items": [
+        "Upload data to any server",
+        "Take screenshots of your screen",
+        "Record keystrokes or mouse clicks",
+        "Share data with third parties",
+        "Track websites you visit"
+      ]
+    }
+  },
+  "downloadCta": {
+    "title": "Ready to Take Control of",
+    "titleHighlight": "Your Focus?",
+    "description": "Download FocusNow for free and start understanding your productivity patterns today.",
+    "cta": "Download Now",
+    "note": "Free & open source. macOS only (for now)."
+  },
+  "download": {
+    "title": "Download FocusNow",
+    "description": "Get FocusNow for your platform",
+    "detected": "Detected Platform",
+    "downloadFor": "Download for {platform}",
+    "otherPlatforms": "Other Platforms",
+    "comingSoon": "Coming Soon",
+    "requirements": {
+      "title": "System Requirements",
+      "mac": {
+        "title": "macOS",
+        "items": ["macOS 12 (Monterey) or later", "Apple Silicon or Intel", "50 MB disk space"]
+      },
+      "windows": {
+        "title": "Windows",
+        "items": ["Windows 10 or later", "64-bit processor", "50 MB disk space"]
+      },
+      "linux": {
+        "title": "Linux",
+        "items": ["Ubuntu 20.04+ or equivalent", "64-bit processor", "50 MB disk space"]
+      }
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent",
+    "titleHighlight": "Pricing",
+    "description": "FocusNow is free to use. We believe productivity tools should be accessible to everyone.",
+    "free": {
+      "title": "Free",
+      "price": "$0",
+      "period": "forever",
+      "description": "Everything you need to track and improve your focus.",
+      "features": [
+        "AI-powered activity categorization",
+        "Focus session tracking",
+        "Daily & weekly analytics",
+        "Distraction alerts",
+        "Local data processing",
+        "All privacy features",
+        "Cross-platform (coming soon)"
+      ],
+      "cta": "Download Free"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "Coming Soon",
+      "description": "Advanced features for power users.",
+      "features": [
+        "Everything in Free",
+        "Advanced AI insights",
+        "Custom categories",
+        "Data export",
+        "Priority support"
+      ],
+      "cta": "Join Waitlist"
+    }
+  },
+  "about": {
+    "title": "About",
+    "titleHighlight": "FocusNow",
+    "description": "FocusNow was born from a simple idea: you should be able to understand your productivity without giving up your privacy.",
+    "story": {
+      "title": "Our Story",
+      "content": "Most productivity tracking tools require you to upload your activity data to remote servers. We thought there had to be a better way. FocusNow processes everything locally on your device using AI, giving you powerful insights without compromising your privacy."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To help people understand and improve their focus through intelligent, privacy-respecting technology. We believe that personal productivity data should stay personal."
+    },
+    "tech": {
+      "title": "Built With",
+      "items": ["Electron", "React", "TypeScript", "Local AI", "Tailwind CSS"]
+    }
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: January 2025",
+    "intro": "FocusNow is built with privacy as a core principle. This policy explains how we handle your data.",
+    "sections": {
+      "collection": {
+        "title": "Data Collection",
+        "content": "FocusNow collects information about your active applications and window titles to provide focus tracking and productivity insights. All this data is processed and stored locally on your device."
+      },
+      "storage": {
+        "title": "Data Storage",
+        "content": "All data collected by FocusNow is stored exclusively on your local device. We do not have servers that receive, store, or process your activity data."
+      },
+      "sharing": {
+        "title": "Data Sharing",
+        "content": "We do not share, sell, or transfer your activity data to any third parties. Your data never leaves your device."
+      },
+      "analytics": {
+        "title": "Anonymous Analytics",
+        "content": "We may collect anonymous usage statistics (such as app version, operating system) to improve FocusNow. This data contains no personal information or activity data."
+      },
+      "contact": {
+        "title": "Contact",
+        "content": "If you have questions about this privacy policy, please contact us at privacy@focusnow.app"
+      }
+    }
+  },
+  "changelog": {
+    "title": "Changelog",
+    "description": "See what's new in FocusNow.",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "date": "2025-01-15",
+        "title": "Initial Release",
+        "changes": [
+          "AI-powered activity categorization",
+          "Focus session tracking with customizable timers",
+          "Daily and weekly analytics dashboard",
+          "Distraction alerts and notifications",
+          "Local-only data processing",
+          "macOS support (Apple Silicon & Intel)"
+        ]
+      }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Tips, insights, and updates about FocusNow and productivity.",
+    "readMore": "Read More",
+    "readingTime": "{minutes} min read",
+    "backToBlog": "Back to Blog",
+    "publishedOn": "Published on {date}",
+    "noPosts": "No blog posts yet. Check back soon!"
+  },
+  "footer": {
+    "description": "AI-powered focus tracking that respects your privacy.",
+    "product": "Product",
+    "resources": "Resources",
+    "legal": "Legal",
+    "copyright": "All rights reserved."
+  }
+}
