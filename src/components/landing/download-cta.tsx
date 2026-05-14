@@ -37,7 +37,7 @@ export function DownloadCTA() {
               href="/download"
               className={cn(
                 buttonVariants({ size: "lg" }),
-                "gradient-primary text-white border-0 text-base px-8 h-12"
+                "gradient-primary text-white border-0 text-base px-8 h-12 glow-md press-effect"
               )}
             >
               <Download className="mr-2 h-5 w-5" />

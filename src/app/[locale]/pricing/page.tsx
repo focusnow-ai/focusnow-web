@@ -39,7 +39,7 @@ export default function PricingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <Card className="h-full border-primary/30 relative overflow-hidden">
+            <Card className="h-full border-primary/30 border-glow elevation-2 relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 gradient-primary" />
               <CardContent className="p-8">
                 <Badge className="mb-4 gradient-primary text-white border-0">

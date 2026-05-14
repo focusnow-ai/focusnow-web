@@ -33,7 +33,7 @@ export function HeroSection() {
             {t("badge")}
           </Badge>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl text-balance">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl text-balance dark:text-shadow-sm">
             {t("title")}{" "}
             <span className="gradient-text">{t("titleHighlight")}</span>
           </h1>
@@ -47,7 +47,7 @@ export function HeroSection() {
               href="/download"
               className={cn(
                 buttonVariants({ size: "lg" }),
-                "gradient-primary text-white border-0 text-base px-8 h-12"
+                "gradient-primary text-white border-0 text-base px-8 h-12 glow-md press-effect"
               )}
             >
               <Download className="mr-2 h-5 w-5" />
@@ -87,8 +87,8 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="aspect-[16/10] rounded-xl border border-border/40 bg-gradient-to-br from-card to-muted shadow-2xl overflow-hidden">
-            <div className="h-8 bg-muted/50 flex items-center px-4 gap-2 border-b border-border/40">
+          <div className="aspect-[16/10] rounded-xl border border-border/40 bg-gradient-to-br from-card to-muted elevation-4 overflow-hidden">
+            <div className="h-8 glass flex items-center px-4 gap-2 border-b border-border/40">
               <div className="w-3 h-3 rounded-full bg-red-400" />
               <div className="w-3 h-3 rounded-full bg-yellow-400" />
               <div className="w-3 h-3 rounded-full bg-green-400" />
@@ -103,7 +103,7 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="absolute -inset-4 -z-10 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-teal-400/20 rounded-2xl blur-2xl opacity-50" />
+          <div className="absolute -inset-4 -z-10 gradient-glow rounded-2xl blur-2xl opacity-60" />
         </motion.div>
       </div>
     </section>

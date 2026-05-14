@@ -34,18 +34,18 @@ export function PrivacySection() {
           transition={{ duration: 0.6 }}
         >
           {/* What we track */}
-          <Card className="border-green-200 dark:border-green-800/40">
+          <Card className="border-green-200 dark:border-green-800/40 card-hover">
             <CardContent className="p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
-                  <Check className="h-4 w-4 text-green-600 dark:text-green-400" />
+                <div className="w-8 h-8 rounded-full bg-success/10 flex items-center justify-center">
+                  <Check className="h-4 w-4 text-success" />
                 </div>
                 {t("tracked.title")}
               </h3>
               <ul className="space-y-3">
                 {trackedItems.map((item: string, i: number) => (
                   <li key={i} className="flex items-start gap-3 text-sm">
-                    <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
+                    <Check className="h-4 w-4 text-success mt-0.5 shrink-0" />
                     <span className="text-muted-foreground">{item}</span>
                   </li>
                 ))}
@@ -54,18 +54,18 @@ export function PrivacySection() {
           </Card>
 
           {/* What we never do */}
-          <Card className="border-red-200 dark:border-red-800/40">
+          <Card className="border-red-200 dark:border-red-800/40 card-hover">
             <CardContent className="p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
-                  <X className="h-4 w-4 text-red-600 dark:text-red-400" />
+                <div className="w-8 h-8 rounded-full bg-destructive/10 flex items-center justify-center">
+                  <X className="h-4 w-4 text-destructive" />
                 </div>
                 {t("notTracked.title")}
               </h3>
               <ul className="space-y-3">
                 {notTrackedItems.map((item: string, i: number) => (
                   <li key={i} className="flex items-start gap-3 text-sm">
-                    <X className="h-4 w-4 text-red-500 mt-0.5 shrink-0" />
+                    <X className="h-4 w-4 text-destructive mt-0.5 shrink-0" />
                     <span className="text-muted-foreground">{item}</span>
                   </li>
                 ))}

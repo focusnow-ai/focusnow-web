@@ -74,9 +74,8 @@ export function ScreenshotShowcase() {
 
         {/* Screenshot area */}
         <div className="relative mx-auto max-w-4xl">
-          <div className="aspect-[16/10] rounded-xl border border-border/40 bg-card shadow-xl overflow-hidden">
-            {/* Window chrome */}
-            <div className="h-8 bg-muted/50 flex items-center px-4 gap-2 border-b border-border/40">
+          <div className="aspect-[16/10] rounded-xl border border-border/40 bg-card elevation-3 overflow-hidden">
+            <div className="h-8 glass flex items-center px-4 gap-2 border-b border-border/40">
               <div className="w-3 h-3 rounded-full bg-red-400" />
               <div className="w-3 h-3 rounded-full bg-yellow-400" />
               <div className="w-3 h-3 rounded-full bg-green-400" />
@@ -125,7 +124,7 @@ export function ScreenshotShowcase() {
             </AnimatePresence>
           </div>
           {/* Glow */}
-          <div className="absolute -inset-4 -z-10 bg-gradient-to-r from-purple-600/10 via-pink-600/10 to-teal-400/10 rounded-2xl blur-2xl" />
+          <div className="absolute -inset-4 -z-10 gradient-glow rounded-2xl blur-2xl" />
         </div>
       </div>
     </section>

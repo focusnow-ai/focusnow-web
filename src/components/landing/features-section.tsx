@@ -62,7 +62,7 @@ export function FeaturesSection() {
         >
           {featureIcons.map(({ key, icon: Icon, color, bg }) => (
             <motion.div key={key} variants={itemVariants}>
-              <Card className="hover-lift border-border/40 h-full">
+              <Card className="card-hover border-glow border-border/40 h-full">
                 <CardContent className="p-6">
                   <div className={`w-12 h-12 rounded-xl ${bg} flex items-center justify-center mb-4`}>
                     <Icon className={`h-6 w-6 ${color}`} />

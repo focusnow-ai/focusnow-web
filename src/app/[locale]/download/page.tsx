@@ -63,7 +63,7 @@ export default function DownloadPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <Card className="border-primary/20">
+          <Card className="border-primary/20 elevation-2 border-glow">
             <CardContent className="p-6 text-center">
               <Badge className="mb-4">{t("detected")}</Badge>
               <div className="flex justify-center mb-4">
@@ -80,7 +80,7 @@ export default function DownloadPage() {
                   href={primary.url}
                   className={cn(
                     buttonVariants({ size: "lg" }),
-                    "gradient-primary text-white border-0 w-full"
+                    "gradient-primary text-white border-0 w-full glow-md press-effect"
                   )}
                 >
                   <Download className="mr-2 h-5 w-5" />
@@ -113,7 +113,7 @@ export default function DownloadPage() {
               <Card
                 key={link.platform}
                 className={cn(
-                  "transition-all",
+                  "card-hover",
                   link.platform === primary.platform && "border-primary/40"
                 )}
               >

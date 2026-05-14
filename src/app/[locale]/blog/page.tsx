@@ -33,7 +33,7 @@ export default async function BlogPage({
                 key={post.slug}
                 href={{ pathname: "/blog/[slug]", params: { slug: post.slug } }}
               >
-                <Card className="hover-lift transition-all hover:border-primary/30">
+                <Card className="card-hover border-glow transition-all hover:border-primary/30">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       {post.tags.map((tag) => (

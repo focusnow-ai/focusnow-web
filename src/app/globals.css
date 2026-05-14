@@ -38,7 +38,9 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* Light mode (default) */
+/* ============================================
+   Light mode (default — marketing standard)
+   ============================================ */
 :root {
   --background: oklch(0.985 0.002 247.839);   /* slate-50 */
   --foreground: oklch(0.129 0.042 264.695);    /* slate-950 */
@@ -69,24 +71,26 @@
   --chart-5: oklch(0.623 0.214 259.815);
 }
 
-/* Dark mode */
+/* ============================================
+   Dark mode — Warm Notion-like (desktop uyumu)
+   ============================================ */
 .dark {
-  --background: oklch(0.129 0.042 264.695);     /* slate-950 */
-  --foreground: oklch(0.929 0.013 255.508);     /* slate-100 */
-  --card: oklch(0.208 0.042 265.755);            /* slate-900 */
-  --card-foreground: oklch(0.929 0.013 255.508);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.929 0.013 255.508);
-  --primary: oklch(0.345 0.169 283.063);        /* purple-800 */
+  --background: hsl(0 0% 11%);                  /* #1c1c1c warm dark */
+  --foreground: hsl(0 0% 88%);                  /* #e0e0e0 softer white */
+  --card: hsl(0 0% 14%);                         /* #242424 elevated card */
+  --card-foreground: hsl(0 0% 88%);
+  --popover: hsl(0 0% 15%);                      /* #262626 */
+  --popover-foreground: hsl(0 0% 88%);
+  --primary: oklch(0.345 0.169 283.063);         /* purple-800 — brand tutarlılığı */
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.592 0.249 0.584);        /* pink-600 */
+  --secondary: oklch(0.592 0.249 0.584);         /* pink-600 */
   --secondary-foreground: oklch(1 0 0);
-  --accent: oklch(0.845 0.108 176.891);         /* teal-300 */
-  --accent-foreground: oklch(0.129 0.042 264.695);
-  --muted: oklch(0.269 0.015 285.938);          /* neutral-800 */
-  --muted-foreground: oklch(0.556 0.016 285.938); /* neutral-400 */
-  --border: oklch(0.371 0.017 285.938);          /* neutral-700 */
-  --input: oklch(0.371 0.017 285.938);
+  --accent: oklch(0.845 0.108 176.891);          /* teal-300 */
+  --accent-foreground: hsl(0 0% 11%);
+  --muted: hsl(0 0% 20%);                        /* #333333 */
+  --muted-foreground: hsl(0 0% 55%);             /* #8c8c8c */
+  --border: hsl(0 0% 22%);                       /* #383838 visible borders */
+  --input: hsl(0 0% 25%);                        /* #404040 */
   --ring: oklch(0.345 0.169 283.063);            /* purple-800 */
   --destructive: oklch(0.577 0.245 27.325);
   --success: oklch(0.723 0.219 149.579);
@@ -99,32 +103,212 @@
   --chart-5: oklch(0.623 0.214 259.815);
 }
 
+/* ============================================
+   Base Styles
+   ============================================ */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   html {
     @apply font-sans scroll-smooth;
   }
 }
 
+/* ============================================
+   Component Patterns
+   ============================================ */
+@layer components {
+  .status-indicator {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium;
+  }
+  .soft-success {
+    background-color: hsl(142 71% 45% / 0.1);
+    color: hsl(142 71% 45%);
+  }
+  .soft-warning {
+    background-color: hsl(32 95% 44% / 0.1);
+    color: hsl(32 95% 44%);
+  }
+  .soft-destructive {
+    background-color: hsl(0 72% 51% / 0.1);
+    color: hsl(0 72% 51%);
+  }
+  .soft-info {
+    background-color: hsl(200 98% 39% / 0.1);
+    color: hsl(200 98% 39%);
+  }
+}
+
+/* ============================================
+   Utility Extensions
+   ============================================ */
 @layer utilities {
-  .glass {
-    @apply bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-white/20 dark:border-slate-700/30;
-  }
-  .hover-lift {
-    @apply transition-transform duration-300 hover:-translate-y-1;
-  }
+  /* Gradient system */
   .gradient-primary {
     @apply bg-gradient-to-r from-purple-800 to-pink-600;
   }
   .gradient-text {
     @apply bg-gradient-to-r from-purple-800 to-pink-600 bg-clip-text text-transparent;
   }
+  .gradient-subtle {
+    @apply bg-gradient-to-r from-purple-800/5 to-pink-600/5;
+  }
+  .gradient-glow {
+    @apply bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-teal-400/20;
+  }
+
+  /* Notion-like elevation system */
+  .elevation-0 {
+    box-shadow: none;
+  }
+  .elevation-1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  }
+  .elevation-2 {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+  .elevation-3 {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.06);
+  }
+  .elevation-4 {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
+  }
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
+  }
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 10px 20px -5px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  }
+
+  .press-effect {
+    transition: all 0.15s ease;
+  }
+  .press-effect:active {
+    transform: scale(0.97);
+  }
+
+  .transition-smooth {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Glassmorphism */
+  .glass {
+    background-color: hsl(0 0% 100% / 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsl(0 0% 100% / 0.2);
+  }
+  .dark .glass,
+  :is(.dark *) .glass {
+    background-color: hsl(0 0% 11% / 0.6);
+    border-color: hsl(0 0% 100% / 0.06);
+  }
+
+  /* Glow effects */
+  .glow-sm {
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.08);
+  }
+  .glow-md {
+    box-shadow: 0 0 30px rgba(147, 51, 234, 0.12);
+  }
+  .glow-lg {
+    box-shadow: 0 0 40px rgba(147, 51, 234, 0.18);
+  }
+
+  /* Border glow on hover */
+  .border-glow {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .border-glow::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg,
+      rgba(147, 51, 234, 0.3),
+      rgba(219, 39, 119, 0.15),
+      rgba(20, 184, 166, 0.3));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .border-glow:hover::before {
+    opacity: 1;
+  }
+
+  /* Text shadows for hero sections */
+  .text-shadow-sm {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  .text-shadow-md {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Text balance */
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Custom scrollbar */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(0 0% 80%) transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: hsl(0 0% 80%);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(0 0% 65%);
+  }
+}
+
+/* ============================================
+   Reduced Motion Support
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
