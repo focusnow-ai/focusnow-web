@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "FocusNow - AI-Powered Focus Tracking",
-    "description": "Privacy-first AI-powered desktop focus tracking app. Understand your productivity patterns without compromising your data.",
-    "keywords": "focus tracking, productivity, AI, privacy, time tracking, desktop app"
+    "title": "FocusNow - Smart Focus & Time Tracking",
+    "description": "Privacy-first desktop focus and time tracking app. Understand your productivity patterns without compromising your data.",
+    "keywords": "focus tracking, productivity, time tracking, privacy, desktop app, pomodoro"
   },
   "nav": {
     "features": "Features",
@@ -15,26 +15,27 @@
     "getApp": "Get the App"
   },
   "hero": {
-    "badge": "AI-Powered Focus Tracking",
+    "badge": "Smart Focus & Time Tracking",
     "title": "Understand Your Focus,",
-    "titleHighlight": "Protect Your Privacy",
-    "description": "FocusNow tracks your desktop activity with AI-powered insights — all processed locally on your device. No cloud uploads, no surveillance. Just clarity.",
+    "titleHighlight": "Own Your Time",
+    "description": "FocusNow tracks your desktop activity and gives you clear insights into how you spend your time — encrypted, secure, and private. No surveillance, no data selling. Just clarity.",
     "cta": "Download for Free",
     "secondaryCta": "See Features",
     "platformBadge": {
       "mac": "Available on macOS",
       "windows": "Coming Soon for Windows",
       "linux": "Coming Soon for Linux"
-    }
+    },
+    "aiTeaser": "AI-powered insights coming soon"
   },
   "features": {
     "title": "Everything You Need to",
     "titleHighlight": "Stay Focused",
-    "description": "Powerful features designed to help you understand and improve your productivity without sacrificing your privacy.",
+    "description": "Powerful features designed to help you understand and improve how you spend your time.",
     "items": {
-      "ai": {
-        "title": "AI-Powered Insights",
-        "description": "Smart categorization and productivity scoring powered by local AI. Understand what drives your focus."
+      "tracking": {
+        "title": "Automatic Tracking",
+        "description": "Smart categorization and productivity scoring that works in the background. Understand what drives your focus."
       },
       "focus": {
         "title": "Focus Sessions",
@@ -42,7 +43,7 @@
       },
       "privacy": {
         "title": "Privacy First",
-        "description": "All data stays on your device. No cloud uploads, no tracking servers. Your activity is yours alone."
+        "description": "Your data is encrypted with AES-256 and stored securely. We never sell or share your activity data with third parties."
       },
       "analytics": {
         "title": "Detailed Analytics",
@@ -55,8 +56,13 @@
       "distraction": {
         "title": "Distraction Alerts",
         "description": "Get notified when you drift away from focused work. Gentle nudges to keep you on track."
+      },
+      "ai": {
+        "title": "AI-Powered Insights",
+        "description": "Intelligent categorization, smart productivity scoring, and personalized focus recommendations."
       }
-    }
+    },
+    "comingSoon": "Coming Soon"
   },
   "screenshots": {
     "title": "See FocusNow",
@@ -71,12 +77,12 @@
   "privacySection": {
     "title": "Your Privacy,",
     "titleHighlight": "Our Priority",
-    "description": "Unlike other tracking tools, FocusNow processes everything locally. Here's what that means:",
+    "description": "Your data is encrypted and protected with enterprise-grade security. Here's how we handle it:",
     "tracked": {
       "title": "What We Track",
       "items": [
         "Active application names",
-        "Window titles (locally only)",
+        "Window titles",
         "Focus session durations",
         "Productivity categories",
         "Daily usage patterns"
@@ -85,10 +91,10 @@
     "notTracked": {
       "title": "What We Never Do",
       "items": [
-        "Upload data to any server",
+        "Sell or share your data with third parties",
         "Take screenshots of your screen",
         "Record keystrokes or mouse clicks",
-        "Share data with third parties",
+        "Use your data for advertising",
         "Track websites you visit"
       ]
     }
@@ -133,11 +139,11 @@
       "period": "forever",
       "description": "Everything you need to track and improve your focus.",
       "features": [
-        "AI-powered activity categorization",
+        "Automatic activity categorization",
         "Focus session tracking",
         "Daily & weekly analytics",
         "Distraction alerts",
-        "Local data processing",
+        "Encrypted cloud sync",
         "All privacy features",
         "Cross-platform (coming soon)"
       ],
@@ -149,7 +155,7 @@
       "description": "Advanced features for power users.",
       "features": [
         "Everything in Free",
-        "Advanced AI insights",
+        "Advanced productivity insights",
         "Custom categories",
         "Data export",
         "Priority support"
@@ -163,7 +169,7 @@
     "description": "FocusNow was born from a simple idea: you should be able to understand your productivity without giving up your privacy.",
     "story": {
       "title": "Our Story",
-      "content": "Most productivity tracking tools require you to upload your activity data to remote servers. We thought there had to be a better way. FocusNow processes everything locally on your device using AI, giving you powerful insights without compromising your privacy."
+      "content": "Most productivity tracking tools either lack depth or compromise your privacy. We thought there had to be a better way. FocusNow gives you powerful insights into how you spend your time, with all your data encrypted and securely stored."
     },
     "mission": {
       "title": "Our Mission",
@@ -171,33 +177,57 @@
     },
     "tech": {
       "title": "Built With",
-      "items": ["Electron", "React", "TypeScript", "Local AI", "Tailwind CSS"]
+      "items": ["Electron", "React", "TypeScript", "Azure Cosmos DB", "Tailwind CSS"]
     }
   },
   "privacyPage": {
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated: January 2025",
-    "intro": "FocusNow is built with privacy as a core principle. This policy explains how we handle your data.",
+    "lastUpdated": "Effective date: May 18, 2025",
+    "intro": "FocusNow (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy explains what data we collect, how we use and store it, and what rights you have regarding your personal information. By using FocusNow, you agree to the practices described in this policy.",
     "sections": {
       "collection": {
-        "title": "Data Collection",
-        "content": "FocusNow collects information about your active applications and window titles to provide focus tracking and productivity insights. All this data is processed and stored locally on your device."
+        "title": "1. Information We Collect",
+        "content": "We collect the following categories of information: (a) Account Information — when you create an account, we collect your email address, display name, and authentication credentials. (b) Activity Data — FocusNow tracks active application names, window titles, focus session durations, productivity categories, and daily usage patterns to provide you with productivity insights. (c) Device Information — we collect basic device metadata such as operating system type, app version, and device identifier for service functionality and troubleshooting."
+      },
+      "usage": {
+        "title": "2. How We Use Your Data",
+        "content": "We use your data for the following purposes: (a) to provide, maintain, and improve the FocusNow service, including automatic productivity categorization and analytics; (b) to sync your data across your devices so you can access your productivity history anywhere; (c) to generate personalized productivity insights and focus reports; (d) to send you service-related communications such as updates and security alerts; (e) to diagnose technical issues and improve app performance. We do not use your activity data for advertising or marketing profiling."
       },
       "storage": {
-        "title": "Data Storage",
-        "content": "All data collected by FocusNow is stored exclusively on your local device. We do not have servers that receive, store, or process your activity data."
+        "title": "3. Data Storage and Infrastructure",
+        "content": "Your data is stored in Microsoft Azure Cosmos DB, a globally distributed, enterprise-grade database service. All data is encrypted at rest using AES-256 encryption and encrypted in transit using TLS 1.2+. Our database infrastructure benefits from Azure's compliance certifications, including SOC 1/2/3, ISO 27001, and GDPR readiness. Data is processed and stored in secure data centers with physical and logical access controls. A local copy of your data is also maintained on your device for offline access."
+      },
+      "security": {
+        "title": "4. Data Security",
+        "content": "We implement industry-standard security measures to protect your data: (a) AES-256 encryption at rest for all stored data; (b) TLS 1.2+ encryption for all data in transit; (c) Secure authentication with hashed and salted credentials — we never store plain-text passwords; (d) Role-based access controls limiting data access to authorized systems only; (e) Regular security audits and monitoring of our infrastructure. While no system is 100% secure, we take reasonable and appropriate measures to protect your information from unauthorized access, alteration, or destruction."
       },
       "sharing": {
-        "title": "Data Sharing",
-        "content": "We do not share, sell, or transfer your activity data to any third parties. Your data never leaves your device."
+        "title": "5. Data Sharing and Third Parties",
+        "content": "We do not sell, rent, or trade your personal data to third parties. We may share data only in the following limited circumstances: (a) Service Providers — we use Microsoft Azure as our cloud infrastructure provider, which processes data on our behalf under strict contractual obligations; (b) Legal Requirements — we may disclose data if required by law, regulation, legal process, or governmental request; (c) Business Transfers — in the event of a merger, acquisition, or sale of assets, your data may be transferred as part of that transaction, and we will notify you beforehand. We do not share your activity data with advertisers or data brokers."
+      },
+      "retention": {
+        "title": "6. Data Retention",
+        "content": "We retain your data for as long as your account is active or as needed to provide you with our services. If you delete your account, we will delete or anonymize your personal data within 30 days, except where we are required to retain certain data for legal or regulatory compliance. Anonymous, aggregated data that cannot identify you may be retained indefinitely for analytics and service improvement purposes."
+      },
+      "rights": {
+        "title": "7. Your Rights",
+        "content": "You have the following rights regarding your data: (a) Access — you can request a copy of the personal data we hold about you; (b) Correction — you can request correction of inaccurate or incomplete data; (c) Deletion — you can request deletion of your account and associated data; (d) Export — you can export your data in a machine-readable format; (e) Withdrawal of Consent — you can withdraw your consent to data processing at any time by deleting your account. To exercise any of these rights, contact us at privacy@focusnow.app. We will respond to your request within 30 days."
+      },
+      "children": {
+        "title": "8. Children's Privacy",
+        "content": "FocusNow is not intended for use by children under the age of 13 (or the applicable minimum age in your jurisdiction). We do not knowingly collect personal information from children. If we become aware that we have collected data from a child without parental consent, we will take steps to delete that information promptly."
       },
       "analytics": {
-        "title": "Anonymous Analytics",
-        "content": "We may collect anonymous usage statistics (such as app version, operating system) to improve FocusNow. This data contains no personal information or activity data."
+        "title": "9. Analytics and Diagnostics",
+        "content": "We collect anonymous, aggregated usage statistics — such as app version, operating system, feature usage frequency, and crash reports — to improve FocusNow. This diagnostic data does not contain personally identifiable information or your activity content (application names, window titles, etc.). You can opt out of anonymous analytics in the app settings."
+      },
+      "changes": {
+        "title": "10. Changes to This Policy",
+        "content": "We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make material changes, we will notify you through the app or via email before the changes take effect. Your continued use of FocusNow after the changes become effective constitutes your acceptance of the updated policy."
       },
       "contact": {
-        "title": "Contact",
-        "content": "If you have questions about this privacy policy, please contact us at privacy@focusnow.app"
+        "title": "11. Contact Us",
+        "content": "If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at privacy@focusnow.app. We are committed to resolving any issues and will respond to your inquiry within 30 days."
       }
     }
   },
@@ -210,7 +240,7 @@
         "date": "2025-01-15",
         "title": "Initial Release",
         "changes": [
-          "AI-powered activity categorization",
+          "Automatic activity categorization",
           "Focus session tracking with customizable timers",
           "Daily and weekly analytics dashboard",
           "Distraction alerts and notifications",
@@ -230,7 +260,7 @@
     "noPosts": "No blog posts yet. Check back soon!"
   },
   "footer": {
-    "description": "AI-powered focus tracking that respects your privacy.",
+    "description": "Smart focus and time tracking that respects your privacy.",
     "product": "Product",
     "resources": "Resources",
     "legal": "Legal",

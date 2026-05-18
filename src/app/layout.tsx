@@ -10,11 +10,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "FocusNow - AI-Powered Focus Tracking",
+    default: "FocusNow - Smart Focus & Time Tracking",
     template: "%s | FocusNow",
   },
   description:
-    "Privacy-first AI-powered desktop focus tracking app. Understand your productivity patterns without compromising your data.",
+    "Privacy-first desktop focus and time tracking app. Understand your productivity patterns without compromising your data.",
 };
 
 export default function RootLayout({

@@ -11,7 +11,7 @@ export function getSoftwareApplicationLD() {
       priceCurrency: "USD",
     },
     description:
-      "AI-powered, privacy-first desktop focus tracking application.",
+      "Privacy-first desktop focus and time tracking application.",
     url: "https://focusnow.app",
     downloadUrl: "https://focusnow.app/download",
   };
@@ -56,6 +56,6 @@ export function getWebsiteLD() {
     name: "FocusNow",
     url: "https://focusnow.app",
     description:
-      "AI-powered, privacy-first desktop focus tracking application.",
+      "Privacy-first desktop focus and time tracking application.",
   };
 }

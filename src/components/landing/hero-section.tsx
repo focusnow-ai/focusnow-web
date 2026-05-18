@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Apple, Monitor, Terminal } from "lucide-react";
+import { ArrowDown, Download, Apple, Monitor, Terminal, Sparkles } from "lucide-react";
 
 export function HeroSection() {
   const t = useTranslations("hero");
@@ -78,6 +78,11 @@ export function HeroSection() {
               <Terminal className="h-4 w-4" />
               {t("platformBadge.linux")}
             </div>
+          </div>
+
+          <div className="mt-4 flex items-center gap-1.5 text-xs text-amber-600 dark:text-amber-400">
+            <Sparkles className="h-3.5 w-3.5 animate-pulse" />
+            {t("aiTeaser")}
           </div>
         </motion.div>
 

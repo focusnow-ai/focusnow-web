@@ -8,9 +8,15 @@ import { Shield } from "lucide-react";
 
 const sectionKeys = [
   "collection",
+  "usage",
   "storage",
+  "security",
   "sharing",
+  "retention",
+  "rights",
+  "children",
   "analytics",
+  "changes",
   "contact",
 ] as const;
 
