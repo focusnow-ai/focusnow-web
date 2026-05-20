@@ -1,4 +1,4 @@
-export type Platform = "mac-arm" | "mac-intel" | "windows" | "linux";
+export type Platform = "mac-arm" | "mac-intel" | "windows";
 
 export interface DownloadLink {
   platform: Platform;
@@ -34,14 +34,7 @@ export const downloadLinks: DownloadLink[] = [
     label: "Windows",
     fileName: "FocusNow-Setup.exe",
     url: `${GITHUB_RELEASES_BASE}/FocusNow-Setup.exe`,
-    available: false,
-  },
-  {
-    platform: "linux",
-    label: "Linux",
-    fileName: "FocusNow.AppImage",
-    url: `${GITHUB_RELEASES_BASE}/FocusNow.AppImage`,
-    available: false,
+    available: true,
   },
 ];
 
@@ -53,7 +46,6 @@ export function detectPlatform(): Platform {
     return "mac-arm";
   }
   if (ua.includes("win")) return "windows";
-  if (ua.includes("linux")) return "linux";
   return "mac-arm";
 }
 

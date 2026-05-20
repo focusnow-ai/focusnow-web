@@ -23,8 +23,7 @@
     "secondaryCta": "Özellikleri Gör",
     "platformBadge": {
       "mac": "macOS için mevcut",
-      "windows": "Windows için yakında",
-      "linux": "Linux için yakında"
+      "windows": "Windows için mevcut"
     },
     "aiTeaser": "Yapay zeka desteği yakında"
   },
@@ -51,7 +50,7 @@
       },
       "crossPlatform": {
         "title": "Çoklu Platform",
-        "description": "macOS'ta mevcut, Windows ve Linux desteği yakında. Her yerde aynı deneyim."
+        "description": "macOS ve Windows'ta mevcut. Her yerde aynı deneyim."
       },
       "distraction": {
         "title": "Dikkat Dağınıklığı Uyarıları",
@@ -104,7 +103,7 @@
     "titleHighlight": "Almaya Hazır mısınız?",
     "description": "FocusNow'u ücretsiz indirin ve zamanınızı nasıl harcadığınızı bugün görmeye başlayın.",
     "cta": "Şimdi İndir",
-    "note": "Ücretsiz ve açık kaynak. Şimdilik sadece macOS."
+    "note": "Ücretsiz başlayın. macOS ve Windows için mevcut."
   },
   "download": {
     "title": "FocusNow'u İndirin",
@@ -122,10 +121,6 @@
       "windows": {
         "title": "Windows",
         "items": ["Windows 10 veya üzeri", "64-bit işlemci", "50 MB disk alanı"]
-      },
-      "linux": {
-        "title": "Linux",
-        "items": ["Ubuntu 20.04+ veya dengi", "64-bit işlemci", "50 MB disk alanı"]
       }
     }
   },
@@ -145,7 +140,7 @@
         "Dikkat dağınıklığı uyarıları",
         "Şifreli bulut senkronizasyonu",
         "Tüm gizlilik özellikleri",
-        "Çoklu platform (yakında)"
+        "macOS ve Windows desteği"
       ],
       "cta": "Ücretsiz İndir"
     },

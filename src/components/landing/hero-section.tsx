@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Apple, Monitor, Terminal, Sparkles } from "lucide-react";
+import { ArrowDown, Download, Apple, Monitor, Sparkles } from "lucide-react";
 
 export function HeroSection() {
   const t = useTranslations("hero");
@@ -70,13 +70,9 @@ export function HeroSection() {
               <Apple className="h-4 w-4" />
               {t("platformBadge.mac")}
             </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground/60">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Monitor className="h-4 w-4" />
               {t("platformBadge.windows")}
-            </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground/60">
-              <Terminal className="h-4 w-4" />
-              {t("platformBadge.linux")}
             </div>
           </div>
 

@@ -23,8 +23,7 @@
     "secondaryCta": "See Features",
     "platformBadge": {
       "mac": "Available on macOS",
-      "windows": "Coming Soon for Windows",
-      "linux": "Coming Soon for Linux"
+      "windows": "Available on Windows"
     },
     "aiTeaser": "AI-powered insights coming soon"
   },
@@ -51,7 +50,7 @@
       },
       "crossPlatform": {
         "title": "Cross-Platform",
-        "description": "Available on macOS with Windows and Linux support coming soon. One experience everywhere."
+        "description": "Available on macOS and Windows. One experience everywhere."
       },
       "distraction": {
         "title": "Distraction Alerts",
@@ -104,7 +103,7 @@
     "titleHighlight": "Your Focus?",
     "description": "Download FocusNow for free and start understanding your productivity patterns today.",
     "cta": "Download Now",
-    "note": "Free & open source. macOS only (for now)."
+    "note": "Start for free. Available on macOS & Windows."
   },
   "download": {
     "title": "Download FocusNow",
@@ -122,10 +121,6 @@
       "windows": {
         "title": "Windows",
         "items": ["Windows 10 or later", "64-bit processor", "50 MB disk space"]
-      },
-      "linux": {
-        "title": "Linux",
-        "items": ["Ubuntu 20.04+ or equivalent", "64-bit processor", "50 MB disk space"]
       }
     }
   },
@@ -145,7 +140,7 @@
         "Distraction alerts",
         "Encrypted cloud sync",
         "All privacy features",
-        "Cross-platform (coming soon)"
+        "macOS & Windows support"
       ],
       "cta": "Download Free"
     },

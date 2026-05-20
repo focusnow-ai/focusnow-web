@@ -11,9 +11,6 @@ import {
   Download,
   Apple,
   Monitor,
-  Terminal,
-  Cpu,
-  HardDrive,
   CheckCircle2,
 } from "lucide-react";
 import {
@@ -27,7 +24,6 @@ const platformIcons: Record<string, React.ReactNode> = {
   "mac-arm": <Apple className="h-6 w-6" />,
   "mac-intel": <Apple className="h-6 w-6" />,
   windows: <Monitor className="h-6 w-6" />,
-  linux: <Terminal className="h-6 w-6" />,
 };
 
 export default function DownloadPage() {
@@ -158,14 +154,13 @@ export default function DownloadPage() {
           <h3 className="text-xl font-semibold text-center mb-8">
             {t("requirements.title")}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {(["mac", "windows", "linux"] as const).map((os) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            {(["mac", "windows"] as const).map((os) => (
               <Card key={os}>
                 <CardContent className="p-5">
                   <h4 className="font-semibold mb-3 flex items-center gap-2">
                     {os === "mac" && <Apple className="h-4 w-4" />}
                     {os === "windows" && <Monitor className="h-4 w-4" />}
-                    {os === "linux" && <Terminal className="h-4 w-4" />}
                     {t(`requirements.${os}.title`)}
                   </h4>
                   <ul className="space-y-2">

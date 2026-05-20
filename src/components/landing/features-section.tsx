@@ -20,7 +20,7 @@ const featureItems = [
   { key: "privacy", icon: Shield, color: "text-teal-600 dark:text-teal-400", bg: "bg-teal-100 dark:bg-teal-900/30" },
   { key: "analytics", icon: BarChart3, color: "text-blue-600 dark:text-blue-400", bg: "bg-blue-100 dark:bg-blue-900/30" },
   { key: "crossPlatform", icon: Laptop, color: "text-green-600 dark:text-green-400", bg: "bg-green-100 dark:bg-green-900/30" },
-  { key: "distraction", icon: BellRing, color: "text-yellow-600 dark:text-yellow-400", bg: "bg-yellow-100 dark:bg-yellow-900/30" },
+  { key: "distraction", icon: BellRing, color: "text-yellow-600 dark:text-yellow-400", bg: "bg-yellow-100 dark:bg-yellow-900/30", comingSoon: true },
   { key: "ai", icon: Sparkles, color: "text-amber-600 dark:text-amber-400", bg: "bg-amber-100 dark:bg-amber-900/30", comingSoon: true },
 ] as const;
 
