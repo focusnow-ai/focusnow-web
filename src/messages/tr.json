@@ -257,11 +257,12 @@
         "content": "Web sitemizde ve masaüstü uygulamamızda izleme teknolojilerini şu şekilde kullanıyoruz:",
         "items": [
           "Zorunlu çerezler — web sitesinde oturum açma ve kimlik doğrulama için (olmazsa olmaz, ayrıca onay gerekmez)",
-          "Anonim istatistikler — uygulamayı geliştirmek için toplu kullanım verileri topluyoruz (uygulama sürümü, işletim sistemi, hangi özelliklerin ne sıklıkta kullanıldığı, çökme raporları). Bu veriler kimliğinizi ortaya çıkaracak bilgi ya da uygulama adları, pencere başlıkları gibi içerik barındırmaz",
+          "Google Analytics — ziyaretçilerin web sitemizi nasıl kullandığını anlamak için Google Analytics kullanıyoruz (ziyaret edilen sayfalar, trafik kaynakları, ülke). Bu veriler anonim ve toplu haldedir. Google gizlilik politikası: https://policies.google.com/privacy",
+          "Masaüstü uygulama analizleri — masaüstü uygulamada toplu kullanım verileri topluyoruz (uygulama sürümü, işletim sistemi, hangi özelliklerin ne sıklıkta kullanıldığı, çökme raporları). Bu veriler kimliğinizi ortaya çıkaracak bilgi ya da uygulama adları, pencere başlıkları gibi içerik barındırmaz",
           "Reklam çerezi veya üçüncü taraf izleyici kullanmıyoruz",
           "Sosyal medya pikseli veya gömülü izleyici kullanmıyoruz"
         ],
-        "note": "Anonim istatistik toplamayı uygulama ayarlarından dilediğiniz zaman kapatabilirsiniz."
+        "note": "İlk ziyaretinizde çıkan çerez banner'ından analiz çerezlerini reddedebilirsiniz. Masaüstü uygulama analizleri ise uygulama ayarlarından kapatılabilir."
       },
       "retention": {
         "title": "10. Veri Saklama Süresi",
@@ -341,5 +342,11 @@
     "resources": "Kaynaklar",
     "legal": "Yasal",
     "copyright": "Tüm hakları saklıdır."
+  },
+  "consent": {
+    "message": "Site trafiğini analiz etmek ve deneyiminizi iyileştirmek için çerezler kullanıyoruz.",
+    "accept": "Kabul Et",
+    "decline": "Reddet",
+    "learnMore": "Daha fazla bilgi"
   }
 }

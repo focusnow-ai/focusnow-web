@@ -257,11 +257,12 @@
         "content": "Here is how we use tracking technologies across the FocusNow website and desktop application:",
         "items": [
           "Essential cookies — session management and authentication on the website (strictly necessary, no consent required)",
-          "Anonymous analytics — we collect aggregated usage statistics (app version, OS, feature usage frequency, crash reports) to improve FocusNow. This data contains no personally identifiable information or activity content such as application names or window titles",
+          "Google Analytics — we use Google Analytics to understand how visitors interact with our website (pages visited, traffic sources, country). This data is anonymous and aggregated. Google's privacy policy: https://policies.google.com/privacy",
+          "Desktop app analytics — we collect aggregated usage statistics in the desktop app (app version, OS, feature usage frequency, crash reports). This data contains no personally identifiable information or activity content such as application names or window titles",
           "No advertising cookies or third-party ad trackers",
           "No social media tracking pixels or embedded trackers"
         ],
-        "note": "You can opt out of anonymous analytics in the app settings at any time."
+        "note": "You can decline analytics cookies via the cookie banner on your first visit. Desktop app analytics can be disabled in the app settings."
       },
       "retention": {
         "title": "10. Data Retention",
@@ -341,5 +342,11 @@
     "resources": "Resources",
     "legal": "Legal",
     "copyright": "All rights reserved."
+  },
+  "consent": {
+    "message": "We use cookies to analyze site traffic and improve your experience.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learnMore": "Learn more"
   }
 }
