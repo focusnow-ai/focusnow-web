@@ -27,6 +27,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    {
+      url: `${BASE_URL}/tr${page}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: page === "" ? 0.9 : 0.7,
+      alternates: {
+        languages: {
+          en: `${BASE_URL}${page}`,
+          tr: `${BASE_URL}/tr${page}`,
+        },
+      },
+    },
   ]);
 
   const enPosts = getBlogPosts("en");
