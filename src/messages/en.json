@@ -177,7 +177,7 @@
   "privacyPage": {
     "title": "Privacy Policy",
     "lastUpdated": "Effective date: May 25, 2025",
-    "intro": "FocusNow (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy covers both the FocusNow website and desktop application. It explains what data we collect, how we use and store it, and what rights you have regarding your personal information. By using FocusNow, you agree to the practices described in this policy.",
+    "intro": "FocusNow (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy covers both the FocusNow website and desktop application. It explains what data we collect, how we use and store it, and what rights you have regarding your personal information. This policy is prepared in accordance with applicable data protection laws. By using FocusNow, you agree to the practices described in this policy.",
     "sections": {
       "trustPromise": {
         "title": "1. Our Privacy Promise",
@@ -204,18 +204,8 @@
           "Device Information — operating system type, app version, and device identifier (for service functionality and troubleshooting)"
         ]
       },
-      "legalBasis": {
-        "title": "4. Legal Basis for Processing",
-        "content": "Under GDPR and KVKK, we process your data based on the following legal grounds:",
-        "items": [
-          "Contract performance (GDPR Art. 6(1)(b) / KVKK Art. 5(2)(c)) — processing necessary to deliver the FocusNow service you signed up for, including account management, data synchronization, and productivity analytics",
-          "Legitimate interest (GDPR Art. 6(1)(f) / KVKK Art. 5(2)(f)) — improving our service, diagnosing technical issues, and preventing fraud, where these interests do not override your rights",
-          "Consent (GDPR Art. 6(1)(a) / KVKK Art. 5(1)) — for optional anonymous analytics data collection, which you can withdraw at any time in app settings",
-          "Legal obligation (GDPR Art. 6(1)(c) / KVKK Art. 5(2)(ç)) — when we are required to process data to comply with applicable law"
-        ]
-      },
       "usage": {
-        "title": "5. How We Use Your Data",
+        "title": "4. How We Use Your Data",
         "content": "We use your data exclusively to provide and improve the FocusNow experience:",
         "items": [
           "Provide automatic productivity categorization and analytics dashboards",
@@ -227,7 +217,7 @@
         "note": "We do not use your activity data for advertising, marketing profiling, or any purpose unrelated to the FocusNow service."
       },
       "storage": {
-        "title": "6. Data Storage and Infrastructure",
+        "title": "5. Data Storage and Infrastructure",
         "content": "Your data is stored securely in Microsoft Azure Cosmos DB, a globally distributed enterprise-grade database service:",
         "items": [
           "All data encrypted at rest using AES-256 encryption",
@@ -238,11 +228,11 @@
         ]
       },
       "internationalTransfers": {
-        "title": "7. International Data Transfers",
-        "content": "FocusNow is operated from Turkey. Your data may be processed in Microsoft Azure data centers located in the European Union. For any transfers outside the European Economic Area (EEA) or Turkey, we rely on Standard Contractual Clauses (SCCs) approved by the European Commission and the Turkish Personal Data Protection Authority (KVKK Board). Microsoft Azure is our sole infrastructure provider and processes data under a Data Processing Agreement that includes appropriate safeguards for international transfers."
+        "title": "6. International Data Transfers",
+        "content": "FocusNow is operated from Turkey. Your data may be processed in Microsoft Azure data centers located in the European Union. For any transfers outside the European Economic Area (EEA) or Turkey, we rely on Standard Contractual Clauses (SCCs) and other appropriate safeguards recognized by applicable data protection authorities. Microsoft Azure is our sole infrastructure provider and processes data under a Data Processing Agreement that includes safeguards for international transfers."
       },
       "security": {
-        "title": "8. Data Security",
+        "title": "7. Data Security",
         "content": "We implement industry-standard security measures to protect your data:",
         "items": [
           "AES-256 encryption at rest for all stored data",
@@ -254,7 +244,7 @@
         "note": "No system is 100% secure. We take reasonable and appropriate measures to protect your information from unauthorized access, alteration, or destruction."
       },
       "sharing": {
-        "title": "9. Data Sharing and Third Parties",
+        "title": "8. Data Sharing and Third Parties",
         "content": "We do not sell, rent, or trade your personal data. We share data only in these limited circumstances:",
         "items": [
           "Microsoft Azure (infrastructure provider) — processes data on our behalf under strict contractual obligations and a Data Processing Agreement",
@@ -263,7 +253,7 @@
         ]
       },
       "cookies": {
-        "title": "10. Cookies and Tracking Technologies",
+        "title": "9. Cookies and Tracking Technologies",
         "content": "Here is how we use tracking technologies across the FocusNow website and desktop application:",
         "items": [
           "Essential cookies — session management and authentication on the website (strictly necessary, no consent required)",
@@ -274,7 +264,7 @@
         "note": "You can opt out of anonymous analytics in the app settings at any time."
       },
       "retention": {
-        "title": "11. Data Retention",
+        "title": "10. Data Retention",
         "content": "We keep your data only as long as necessary:",
         "items": [
           "Active account — your data is retained while your account is active and you use our services",
@@ -284,8 +274,8 @@
         ]
       },
       "rights": {
-        "title": "12. Your Rights",
-        "content": "You have the following rights regarding your data under GDPR (Articles 15–22) and KVKK (Article 11):",
+        "title": "11. Your Rights",
+        "content": "You have the following rights regarding your personal data:",
         "items": [
           "Access — request a copy of the personal data we hold about you",
           "Rectification — request correction of inaccurate or incomplete data",
@@ -296,35 +286,22 @@
           "Withdrawal of consent — withdraw consent for optional processing at any time via app settings",
           "Lodge a complaint — file a complaint with your local data protection authority"
         ],
-        "note": "To exercise these rights, email privacy@focusnow.ai. We will respond within 30 days. For Turkish residents, you may also apply to the KVKK Board (kvkk.gov.tr)."
-      },
-      "kvkk": {
-        "title": "13. KVKK Compliance",
-        "content": "FocusNow complies with the Turkish Personal Data Protection Law No. 6698 (KVKK). As a data controller based in Turkey:",
-        "items": [
-          "We process personal data in accordance with the principles of lawfulness, fairness, accuracy, purpose limitation, and data minimization as set out in KVKK",
-          "We will complete VERBİS (Data Controllers Registry) registration as required by applicable thresholds",
-          "Turkish residents have rights under KVKK Article 11, including access, correction, deletion, objection to automated decision-making, and compensation for damages arising from unlawful processing",
-          "Cross-border data transfers are conducted under appropriate safeguards approved by the KVKK Board",
-          "You may submit KVKK data requests via privacy@focusnow.ai or by registered mail to our address"
-        ],
-        "note": "If you are unsatisfied with our response, you may lodge a complaint with the Personal Data Protection Authority (KVKK) at kvkk.gov.tr within 30 days."
+        "note": "To exercise these rights, email privacy@focusnow.ai. We will respond within 30 days."
       },
       "children": {
-        "title": "14. Children's Privacy",
+        "title": "12. Children's Privacy",
         "content": "FocusNow is not intended for use by children under the age of 13 (or the applicable minimum age in your jurisdiction). We do not knowingly collect personal information from children. If we become aware that we have collected data from a child without parental consent, we will take steps to delete that information promptly."
       },
       "changes": {
-        "title": "15. Changes to This Policy",
+        "title": "13. Changes to This Policy",
         "content": "We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make material changes, we will notify you through the app or via email before the changes take effect. Your continued use of FocusNow after the changes become effective constitutes your acceptance of the updated policy."
       },
       "contact": {
-        "title": "16. Contact Us",
+        "title": "14. Contact Us",
         "content": "If you have questions about this Privacy Policy or wish to exercise your data rights:",
         "items": [
           "Email: privacy@focusnow.ai",
-          "Response time: within 30 days of receiving your request",
-          "For KVKK-specific requests, please use the subject line \"KVKK Request\""
+          "Response time: within 30 days of receiving your request"
         ],
         "note": "Data Controller: FocusNow — [Your Name], Turkey"
       }

@@ -10,7 +10,6 @@ const sectionKeys = [
   "trustPromise",
   "dataController",
   "collection",
-  "legalBasis",
   "usage",
   "storage",
   "internationalTransfers",
@@ -19,7 +18,6 @@ const sectionKeys = [
   "cookies",
   "retention",
   "rights",
-  "kvkk",
   "children",
   "changes",
   "contact",
@@ -28,7 +26,6 @@ const sectionKeys = [
 const sectionsWithItems = new Set([
   "trustPromise",
   "collection",
-  "legalBasis",
   "usage",
   "storage",
   "security",
@@ -36,7 +33,6 @@ const sectionsWithItems = new Set([
   "cookies",
   "retention",
   "rights",
-  "kvkk",
   "contact",
 ]);
 
@@ -45,7 +41,6 @@ const sectionsWithNote = new Set([
   "security",
   "cookies",
   "rights",
-  "kvkk",
   "contact",
 ]);
 

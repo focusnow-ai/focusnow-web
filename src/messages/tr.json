@@ -177,7 +177,7 @@
   "privacyPage": {
     "title": "Gizlilik Politikası",
     "lastUpdated": "Yürürlük tarihi: 25 Mayıs 2025",
-    "intro": "FocusNow olarak gizliliğinizi korumayı öncelik olarak görüyoruz. Bu Gizlilik Politikası hem web sitemizi hem de masaüstü uygulamamızı kapsar. Hangi verileri topladığımızı, nasıl kullandığımızı, nerede sakladığımızı ve kişisel verileriniz üzerindeki haklarınızı bu belgede bulabilirsiniz. FocusNow'u kullanarak bu politikayı kabul etmiş sayılırsınız.",
+    "intro": "FocusNow olarak gizliliğinizi korumayı öncelik olarak görüyoruz. Bu Gizlilik Politikası hem web sitemizi hem de masaüstü uygulamamızı kapsar. Hangi verileri topladığımızı, nasıl kullandığımızı, nerede sakladığımızı ve kişisel verileriniz üzerindeki haklarınızı bu belgede bulabilirsiniz. Bu politika, yürürlükteki kişisel veri koruma mevzuatına uygun olarak hazırlanmıştır. FocusNow'u kullanarak bu politikayı kabul etmiş sayılırsınız.",
     "sections": {
       "trustPromise": {
         "title": "1. Gizlilik Taahhüdümüz",
@@ -204,18 +204,8 @@
           "Cihaz Bilgileri — işletim sistemi, uygulama sürümü ve cihaz kimliği (uygulamanın düzgün çalışması ve sorunları giderebilmemiz için)"
         ]
       },
-      "legalBasis": {
-        "title": "4. İşlemenin Hukuki Dayanağı",
-        "content": "Verilerinizi GDPR ve KVKK çerçevesinde şu hukuki gerekçelerle işliyoruz:",
-        "items": [
-          "Sözleşmenin ifası (GDPR m. 6(1)(b) / KVKK m. 5(2)(c)) — kayıt olduğunuz FocusNow hizmetini sunabilmek için gerekli işlemler: hesap yönetimi, veri senkronizasyonu, verimlilik analizleri",
-          "Meşru menfaat (GDPR m. 6(1)(f) / KVKK m. 5(2)(f)) — hizmeti geliştirmek, teknik sorunları çözmek ve kötüye kullanımı engellemek; ancak bu menfaatler haklarınızın önüne geçemez",
-          "Açık rıza (GDPR m. 6(1)(a) / KVKK m. 5(1)) — anonim analiz verisi toplama gibi isteğe bağlı işlemler için; rızanızı uygulama ayarlarından dilediğiniz zaman geri çekebilirsiniz",
-          "Hukuki yükümlülük (GDPR m. 6(1)(c) / KVKK m. 5(2)(ç)) — yasaların bizi zorunlu kıldığı durumlarda"
-        ]
-      },
       "usage": {
-        "title": "5. Verilerinizi Nasıl Kullanıyoruz",
+        "title": "4. Verilerinizi Nasıl Kullanıyoruz",
         "content": "Verilerinizi yalnızca FocusNow'u çalıştırmak ve geliştirmek için kullanıyoruz:",
         "items": [
           "Kullandığınız uygulamaları otomatik olarak sınıflandırıp verimlilik panellerinizi hazırlamak",
@@ -227,7 +217,7 @@
         "note": "Aktivite verilerinizi reklam, pazarlama ya da FocusNow dışında hiçbir amaçla kullanmıyoruz."
       },
       "storage": {
-        "title": "6. Veri Saklama ve Altyapı",
+        "title": "5. Veri Saklama ve Altyapı",
         "content": "Verileriniz Microsoft Azure Cosmos DB'de — dünya çapında dağıtık, kurumsal düzeyde bir veritabanı hizmetinde — güvenle saklanır:",
         "items": [
           "Depolanan tüm veriler AES-256 ile şifrelenir",
@@ -238,11 +228,11 @@
         ]
       },
       "internationalTransfers": {
-        "title": "7. Uluslararası Veri Transferleri",
-        "content": "FocusNow Türkiye'den yönetilmektedir. Verileriniz, Avrupa Birliği'ndeki Microsoft Azure veri merkezlerinde işlenebilir. Avrupa Ekonomik Alanı (AEA) veya Türkiye dışına veri aktarımı gerektiğinde, Avrupa Komisyonu ve Kişisel Verileri Koruma Kurumu tarafından onaylı Standart Sözleşme Hükümleri (SCC) esas alınır. Microsoft Azure tek altyapı sağlayıcımızdır ve verilerinizi, uluslararası transferler için gerekli güvenceleri içeren bir Veri İşleme Sözleşmesi çerçevesinde işler."
+        "title": "6. Uluslararası Veri Transferleri",
+        "content": "FocusNow Türkiye'den yönetilmektedir. Verileriniz, Avrupa Birliği'ndeki Microsoft Azure veri merkezlerinde işlenebilir. Avrupa Ekonomik Alanı (AEA) veya Türkiye dışına veri aktarımı gerektiğinde, Standart Sözleşme Hükümleri (SCC) ve ilgili veri koruma otoritelerinin tanıdığı diğer güvenceler esas alınır. Microsoft Azure tek altyapı sağlayıcımızdır ve verilerinizi, uluslararası transferler için gerekli güvenceleri içeren bir Veri İşleme Sözleşmesi çerçevesinde işler."
       },
       "security": {
-        "title": "8. Veri Güvenliği",
+        "title": "7. Veri Güvenliği",
         "content": "Verilerinizi korumak için sektörün en iyi güvenlik uygulamalarını hayata geçiriyoruz:",
         "items": [
           "Depolanan tüm veriler AES-256 ile şifrelenir",
@@ -254,7 +244,7 @@
         "note": "Hiçbir sistem yüzde yüz güvenli olamaz. Yine de bilgilerinizi yetkisiz erişim, değiştirme veya silinmeye karşı korumak için elimizden gelen her önlemi alıyoruz."
       },
       "sharing": {
-        "title": "9. Veri Paylaşımı ve Üçüncü Taraflar",
+        "title": "8. Veri Paylaşımı ve Üçüncü Taraflar",
         "content": "Verilerinizi satmıyoruz, kiralamıyoruz, kimseyle takas etmiyoruz. Yalnızca şu durumlar söz konusu olabilir:",
         "items": [
           "Microsoft Azure (altyapı sağlayıcımız) — sıkı sözleşme yükümlülükleri ve Veri İşleme Sözleşmesi çerçevesinde verilerinizi bizim adımıza işler",
@@ -263,7 +253,7 @@
         ]
       },
       "cookies": {
-        "title": "10. Çerezler ve İzleme Teknolojileri",
+        "title": "9. Çerezler ve İzleme Teknolojileri",
         "content": "Web sitemizde ve masaüstü uygulamamızda izleme teknolojilerini şu şekilde kullanıyoruz:",
         "items": [
           "Zorunlu çerezler — web sitesinde oturum açma ve kimlik doğrulama için (olmazsa olmaz, ayrıca onay gerekmez)",
@@ -274,7 +264,7 @@
         "note": "Anonim istatistik toplamayı uygulama ayarlarından dilediğiniz zaman kapatabilirsiniz."
       },
       "retention": {
-        "title": "11. Veri Saklama Süresi",
+        "title": "10. Veri Saklama Süresi",
         "content": "Verilerinizi gereğinden uzun tutmuyoruz:",
         "items": [
           "Aktif hesap — hesabınız açık olduğu sürece verileriniz saklanır",
@@ -284,8 +274,8 @@
         ]
       },
       "rights": {
-        "title": "12. Haklarınız",
-        "content": "GDPR (Madde 15–22) ve KVKK (Madde 11) size şu hakları tanır:",
+        "title": "11. Haklarınız",
+        "content": "Kişisel verileriniz üzerinde şu haklara sahipsiniz:",
         "items": [
           "Erişim — hakkınızda hangi verileri tuttuğumuzu öğrenebilir, bir kopyasını isteyebilirsiniz",
           "Düzeltme — hatalı veya eksik bilgilerin düzeltilmesini isteyebilirsiniz",
@@ -296,35 +286,22 @@
           "Onay geri çekme — daha önce verdiğiniz rızayı uygulama ayarlarından istediğiniz an geri alabilirsiniz",
           "Şikayet — yerel veri koruma kurumuna başvurabilirsiniz"
         ],
-        "note": "Bu haklarınızı kullanmak için privacy@focusnow.ai adresine yazmanız yeterli. 30 gün içinde yanıt veririz. Türkiye'deki kullanıcılar doğrudan KVKK'ya da (kvkk.gov.tr) başvurabilir."
-      },
-      "kvkk": {
-        "title": "13. KVKK Uyumu",
-        "content": "FocusNow, 6698 sayılı Kişisel Verilerin Korunması Kanunu'na (KVKK) uygun şekilde çalışır. Türkiye'de yerleşik bir veri sorumlusu olarak:",
-        "items": [
-          "Kişisel verileri hukuka uygunluk, dürüstlük, doğruluk, amaçla sınırlılık ve veri minimizasyonu ilkelerine göre işliyoruz",
-          "Yasal zorunluluk doğduğunda VERBİS (Veri Sorumluları Sicil Bilgi Sistemi) kaydı yapılacaktır",
-          "Türkiye'deki kullanıcılarımız KVKK Madde 11 kapsamında; erişim, düzeltme, silme, otomatik kararlara itiraz ve hukuka aykırı işlemden doğan zararın tazminini talep edebilir",
-          "Yurt dışına veri aktarımı ancak KVKK Kurulu'nun onayladığı güvenceler çerçevesinde yapılır",
-          "KVKK kapsamındaki taleplerinizi privacy@focusnow.ai adresine veya kayıtlı adresimize iadeli taahhütlü posta ile gönderebilirsiniz"
-        ],
-        "note": "Yanıtımızı yeterli bulmazsanız, 30 gün içinde Kişisel Verileri Koruma Kurumu'na (kvkk.gov.tr) şikayette bulunabilirsiniz."
+        "note": "Bu haklarınızı kullanmak için privacy@focusnow.ai adresine yazmanız yeterli. 30 gün içinde yanıt veririz."
       },
       "children": {
-        "title": "14. Çocukların Gizliliği",
+        "title": "12. Çocukların Gizliliği",
         "content": "FocusNow 13 yaşından küçük (veya bulunduğunuz ülkedeki yasal yaş sınırının altındaki) çocuklar için tasarlanmamıştır. Çocuklardan bilerek veri toplamıyoruz. Ebeveyn izni olmadan bir çocuğa ait veri topladığımızı fark edersek derhal sileriz."
       },
       "changes": {
-        "title": "15. Politika Değişiklikleri",
+        "title": "13. Politika Değişiklikleri",
         "content": "Bu politikayı zaman zaman güncelleyebiliriz — hizmetimizdeki, teknolojideki veya yasal gerekliliklerdeki değişikliklere bağlı olarak. Önemli bir değişiklik olduğunda, yürürlüğe girmeden önce uygulama içinden veya e-posta ile sizi bilgilendiririz. Güncelleme sonrasında FocusNow'u kullanmaya devam etmeniz, yeni politikayı kabul ettiğiniz anlamına gelir."
       },
       "contact": {
-        "title": "16. Bize Ulaşın",
+        "title": "14. Bize Ulaşın",
         "content": "Bu politika hakkında sorunuz varsa veya veri haklarınızı kullanmak istiyorsanız:",
         "items": [
           "E-posta: privacy@focusnow.ai",
-          "Yanıt süresi: talebinizi aldığımız tarihten itibaren 30 gün",
-          "KVKK talepleriniz için e-postanızın konusuna \"KVKK Talebi\" yazmanız yeterli"
+          "Yanıt süresi: talebinizi aldığımız tarihten itibaren 30 gün"
         ],
         "note": "Veri Sorumlusu: FocusNow — [Ad Soyad], Türkiye"
       }
