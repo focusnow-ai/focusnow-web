@@ -31,7 +31,7 @@ export async function generateMetadata({
     },
     description: t("description"),
     keywords: t("keywords"),
-    metadataBase: new URL("https://focusnow.app"),
+    metadataBase: new URL("https://focusnow.ai"),
     alternates: {
       canonical: locale === "en" ? "/" : `/${locale}`,
       languages: {
@@ -42,7 +42,7 @@ export async function generateMetadata({
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: "https://focusnow.app",
+      url: "https://focusnow.ai",
       siteName: "FocusNow",
       locale: locale === "en" ? "en_US" : "tr_TR",
       type: "website",

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getBlogPosts } from "@/lib/blog";
 
-const BASE_URL = "https://focusnow.app";
+const BASE_URL = "https://focusnow.ai";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [

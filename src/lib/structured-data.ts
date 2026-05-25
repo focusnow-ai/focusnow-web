@@ -12,8 +12,8 @@ export function getSoftwareApplicationLD() {
     },
     description:
       "Privacy-first desktop focus and time tracking application.",
-    url: "https://focusnow.app",
-    downloadUrl: "https://focusnow.app/download",
+    url: "https://focusnow.ai",
+    downloadUrl: "https://focusnow.ai/download",
   };
 }
 
@@ -27,8 +27,8 @@ export function getBlogPostLD(post: {
 }) {
   const url =
     post.locale === "en"
-      ? `https://focusnow.app/blog/${post.slug}`
-      : `https://focusnow.app/tr/blog/${post.slug}`;
+      ? `https://focusnow.ai/blog/${post.slug}`
+      : `https://focusnow.ai/tr/blog/${post.slug}`;
 
   return {
     "@context": "https://schema.org",
@@ -44,7 +44,7 @@ export function getBlogPostLD(post: {
     publisher: {
       "@type": "Organization",
       name: "FocusNow",
-      url: "https://focusnow.app",
+      url: "https://focusnow.ai",
     },
   };
 }
@@ -54,7 +54,7 @@ export function getWebsiteLD() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "FocusNow",
-    url: "https://focusnow.app",
+    url: "https://focusnow.ai",
     description:
       "Privacy-first desktop focus and time tracking application.",
   };

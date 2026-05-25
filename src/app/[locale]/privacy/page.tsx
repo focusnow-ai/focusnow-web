@@ -7,18 +7,47 @@ import { motion } from "framer-motion";
 import { Shield } from "lucide-react";
 
 const sectionKeys = [
+  "trustPromise",
+  "dataController",
   "collection",
+  "legalBasis",
+  "usage",
+  "storage",
+  "internationalTransfers",
+  "security",
+  "sharing",
+  "cookies",
+  "retention",
+  "rights",
+  "kvkk",
+  "children",
+  "changes",
+  "contact",
+] as const;
+
+const sectionsWithItems = new Set([
+  "trustPromise",
+  "collection",
+  "legalBasis",
   "usage",
   "storage",
   "security",
   "sharing",
+  "cookies",
   "retention",
   "rights",
-  "children",
-  "analytics",
-  "changes",
+  "kvkk",
   "contact",
-] as const;
+]);
+
+const sectionsWithNote = new Set([
+  "usage",
+  "security",
+  "cookies",
+  "rights",
+  "kvkk",
+  "contact",
+]);
 
 export default function PrivacyPage() {
   const t = useTranslations("privacyPage");
@@ -53,17 +82,43 @@ export default function PrivacyPage() {
               </p>
 
               <div className="space-y-8">
-                {sectionKeys.map((key, i) => (
-                  <div key={key}>
-                    {i > 0 && <Separator className="mb-8" />}
-                    <h2 className="text-lg font-semibold mb-3">
-                      {t(`sections.${key}.title`)}
-                    </h2>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {t(`sections.${key}.content`)}
-                    </p>
-                  </div>
-                ))}
+                {sectionKeys.map((key, i) => {
+                  const hasItems = sectionsWithItems.has(key);
+                  const hasNote = sectionsWithNote.has(key);
+                  const items: string[] = hasItems
+                    ? t.raw(`sections.${key}.items`)
+                    : [];
+
+                  return (
+                    <div key={key}>
+                      {i > 0 && <Separator className="mb-8" />}
+                      <h2 className="text-lg font-semibold mb-3">
+                        {t(`sections.${key}.title`)}
+                      </h2>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {t(`sections.${key}.content`)}
+                      </p>
+                      {hasItems && items.length > 0 && (
+                        <ul className="mt-4 space-y-2.5">
+                          {items.map((item, idx) => (
+                            <li
+                              key={idx}
+                              className="flex items-start gap-3 text-sm text-muted-foreground"
+                            >
+                              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-muted-foreground/50 shrink-0" />
+                              <span className="leading-relaxed">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                      {hasNote && (
+                        <p className="mt-4 text-sm text-muted-foreground/80 italic leading-relaxed">
+                          {t(`sections.${key}.note`)}
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </CardContent>
           </Card>
