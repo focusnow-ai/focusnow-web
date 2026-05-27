@@ -9,7 +9,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { LocaleSwitcher } from "@/components/shared/locale-switcher";
 import { cn } from "@/lib/utils";
-import { Menu, Sparkles } from "lucide-react";
+import { Menu } from "lucide-react";
+import { FocusNowLogo } from "@/components/shared/focusnow-logo";
 
 type NavItem =
   | { href: string; label: string; isAnchor: true }
@@ -35,11 +36,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg gradient-primary">
-            <Sparkles className="h-4 w-4 text-white" />
-          </div>
-          <span className="gradient-text">FocusNow</span>
+        <Link href="/" className="flex items-center">
+          <FocusNowLogo className="h-16" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
