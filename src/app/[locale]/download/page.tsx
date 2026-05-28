@@ -85,7 +85,7 @@ export default function DownloadPage() {
               ) : (
                 <div
                   className={cn(
-                    buttonVariants({ size: "lg", variant: "secondary" }),
+                    buttonVariants({ size: "lg", variant: "outline" }),
                     "w-full pointer-events-none opacity-60"
                   )}
                 >

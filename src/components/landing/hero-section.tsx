@@ -27,7 +27,6 @@ export function HeroSection() {
           transition={{ duration: 0.6 }}
         >
           <Badge
-            variant="secondary"
             className="mb-6 px-4 py-1.5 text-sm bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 border-purple-200 dark:border-purple-800"
           >
             {t("badge")}
