@@ -3,43 +3,72 @@ import { getBlogPosts } from "@/lib/blog";
 
 const BASE_URL = "https://focusnow.ai";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = [
-    "",
-    "/download",
-    "/pricing",
-    "/about",
-    "/privacy",
-    "/changelog",
-    "/blog",
-  ];
+// Localized paths for Turkish locale
+const trPaths: Record<string, string> = {
+  "": "",
+  "/download": "/indir",
+  "/pricing": "/fiyatlandirma",
+  "/about": "/hakkimizda",
+  "/privacy": "/gizlilik",
+  "/changelog": "/degisiklik-kaydi",
+  "/blog": "/blog",
+  "/use-cases/remote-workers": "/kullanim-alanlari/uzaktan-calisanlar",
+  "/use-cases/students": "/kullanim-alanlari/ogrenciler",
+  "/use-cases/freelancers": "/kullanim-alanlari/serbest-calisanlar",
+  "/use-cases/developers": "/kullanim-alanlari/yazilimcilar",
+};
 
-  const staticEntries: MetadataRoute.Sitemap = staticPages.flatMap((page) => [
-    {
-      url: `${BASE_URL}${page}`,
-      lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: page === "" ? 1 : 0.8,
-      alternates: {
-        languages: {
-          en: `${BASE_URL}${page}`,
-          tr: `${BASE_URL}/tr${page}`,
+interface PageConfig {
+  path: string;
+  changeFrequency: "daily" | "weekly" | "monthly";
+  priority: number;
+  trPriority: number;
+}
+
+const staticPages: PageConfig[] = [
+  { path: "", changeFrequency: "daily", priority: 1, trPriority: 0.9 },
+  { path: "/download", changeFrequency: "weekly", priority: 0.9, trPriority: 0.8 },
+  { path: "/pricing", changeFrequency: "weekly", priority: 0.8, trPriority: 0.7 },
+  { path: "/about", changeFrequency: "monthly", priority: 0.6, trPriority: 0.5 },
+  { path: "/privacy", changeFrequency: "monthly", priority: 0.3, trPriority: 0.3 },
+  { path: "/changelog", changeFrequency: "weekly", priority: 0.5, trPriority: 0.4 },
+  { path: "/blog", changeFrequency: "weekly", priority: 0.7, trPriority: 0.7 },
+  { path: "/use-cases/remote-workers", changeFrequency: "monthly", priority: 0.7, trPriority: 0.7 },
+  { path: "/use-cases/students", changeFrequency: "monthly", priority: 0.7, trPriority: 0.8 },
+  { path: "/use-cases/freelancers", changeFrequency: "monthly", priority: 0.7, trPriority: 0.7 },
+  { path: "/use-cases/developers", changeFrequency: "monthly", priority: 0.7, trPriority: 0.7 },
+];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const staticEntries: MetadataRoute.Sitemap = staticPages.flatMap((page) => {
+    const trPath = trPaths[page.path] ?? page.path;
+    return [
+      {
+        url: `${BASE_URL}${page.path}`,
+        lastModified: new Date(),
+        changeFrequency: page.changeFrequency,
+        priority: page.priority,
+        alternates: {
+          languages: {
+            en: `${BASE_URL}${page.path}`,
+            tr: `${BASE_URL}/tr${trPath}`,
+          },
         },
       },
-    },
-    {
-      url: `${BASE_URL}/tr${page}`,
-      lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: page === "" ? 0.9 : 0.7,
-      alternates: {
-        languages: {
-          en: `${BASE_URL}${page}`,
-          tr: `${BASE_URL}/tr${page}`,
+      {
+        url: `${BASE_URL}/tr${trPath}`,
+        lastModified: new Date(),
+        changeFrequency: page.changeFrequency,
+        priority: page.trPriority,
+        alternates: {
+          languages: {
+            en: `${BASE_URL}${page.path}`,
+            tr: `${BASE_URL}/tr${trPath}`,
+          },
         },
       },
-    },
-  ]);
+    ];
+  });
 
   const enPosts = getBlogPosts("en");
   const trPosts = getBlogPosts("tr");

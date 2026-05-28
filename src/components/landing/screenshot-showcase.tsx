@@ -18,28 +18,12 @@ const tabs = [
   { key: "settings", icon: Settings },
 ];
 
-const placeholderContent: Record<string, { title: string; items: string[] }> = {
-  dashboard: {
-    title: "Today's Focus",
-    items: ["4h 32m deep work", "2h 15m meetings", "1h 08m breaks"],
-  },
-  analytics: {
-    title: "Weekly Trends",
-    items: ["Mon: 85%", "Tue: 72%", "Wed: 91%", "Thu: 88%", "Fri: 76%"],
-  },
-  sessions: {
-    title: "Focus Sessions",
-    items: ["Deep Work — 2h 15m", "Code Review — 45m", "Writing — 1h 30m"],
-  },
-  settings: {
-    title: "Preferences",
-    items: ["Focus alerts: On", "Break reminders: 25min", "Theme: Auto"],
-  },
-};
-
 export function ScreenshotShowcase() {
   const t = useTranslations("screenshots");
   const [activeTab, setActiveTab] = useState("dashboard");
+
+  const contentTitle = t(`content.${activeTab}.title`);
+  const contentItems: string[] = t.raw(`content.${activeTab}.items`);
 
   return (
     <section className="py-20 sm:py-28 bg-muted/30">
@@ -96,10 +80,10 @@ export function ScreenshotShowcase() {
               >
                 <div className="flex flex-col gap-4">
                   <h3 className="text-xl font-semibold">
-                    {placeholderContent[activeTab].title}
+                    {contentTitle}
                   </h3>
                   <div className="space-y-3">
-                    {placeholderContent[activeTab].items.map((item, i) => (
+                    {contentItems.map((item, i) => (
                       <div
                         key={i}
                         className="flex items-center gap-3 p-3 rounded-lg bg-muted/50"

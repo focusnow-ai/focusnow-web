@@ -75,7 +75,7 @@ export function Header() {
               render={<Button variant="ghost" size="icon" className="h-9 w-9" />}
             >
               <Menu className="h-5 w-5" />
-              <span className="sr-only">Menu</span>
+              <span className="sr-only">{t("menu")}</span>
             </SheetTrigger>
             <SheetContent side="right" className="w-72">
               <nav className="flex flex-col gap-1 mt-8">

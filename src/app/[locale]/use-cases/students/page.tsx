@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { PricingPageClient } from "@/components/pages/pricing-page-client";
+import { UseCaseTemplate } from "@/components/use-cases/use-case-template";
 
 export async function generateMetadata({
   params,
@@ -8,16 +8,16 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "pricing.meta" });
+  const t = await getTranslations({ locale, namespace: "useCases.students.meta" });
 
   return {
     title: t("title"),
     description: t("description"),
     alternates: {
-      canonical: locale === "en" ? "/pricing" : `/${locale}/fiyatlandirma`,
+      canonical: locale === "en" ? "/use-cases/students" : `/${locale}/kullanim-alanlari/ogrenciler`,
       languages: {
-        en: "/pricing",
-        tr: "/tr/fiyatlandirma",
+        en: "/use-cases/students",
+        tr: "/tr/kullanim-alanlari/ogrenciler",
       },
     },
     openGraph: {
@@ -28,6 +28,6 @@ export async function generateMetadata({
   };
 }
 
-export default function PricingPage() {
-  return <PricingPageClient />;
+export default function StudentsPage() {
+  return <UseCaseTemplate segment="students" />;
 }

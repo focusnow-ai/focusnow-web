@@ -1,77 +1,56 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
-import { Check, X } from "lucide-react";
+import { Lock, MonitorOff, KeyboardOff, UserCheck, ArrowRight } from "lucide-react";
+
+const badges = [
+  { key: "encrypted", icon: Lock },
+  { key: "noScreenshots", icon: MonitorOff },
+  { key: "noKeylogging", icon: KeyboardOff },
+  { key: "yourData", icon: UserCheck },
+] as const;
 
 export function PrivacySection() {
   const t = useTranslations("privacySection");
 
-  const trackedItems: string[] = t.raw("tracked.items");
-  const notTrackedItems: string[] = t.raw("notTracked.items");
-
   return (
-    <section className="py-20 sm:py-28">
+    <section className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            {t("title")}{" "}
-            <span className="text-purple-600 dark:text-purple-400">{t("titleHighlight")}</span>
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            {t("description")}
-          </p>
-        </div>
-
-        {/* Comparison cards */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+          className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          {/* What we track */}
-          <Card className="border-green-200 dark:border-green-800/40 card-hover">
-            <CardContent className="p-6">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-success/10 flex items-center justify-center">
-                  <Check className="h-4 w-4 text-success" />
-                </div>
-                {t("tracked.title")}
-              </h3>
-              <ul className="space-y-3">
-                {trackedItems.map((item: string, i: number) => (
-                  <li key={i} className="flex items-start gap-3 text-sm">
-                    <Check className="h-4 w-4 text-success mt-0.5 shrink-0" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
+            {t("title")}{" "}
+            <span className="text-purple-600 dark:text-purple-400">{t("titleHighlight")}</span>
+          </h2>
 
-          {/* What we never do */}
-          <Card className="border-red-200 dark:border-red-800/40 card-hover">
-            <CardContent className="p-6">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-destructive/10 flex items-center justify-center">
-                  <X className="h-4 w-4 text-destructive" />
-                </div>
-                {t("notTracked.title")}
-              </h3>
-              <ul className="space-y-3">
-                {notTrackedItems.map((item: string, i: number) => (
-                  <li key={i} className="flex items-start gap-3 text-sm">
-                    <X className="h-4 w-4 text-destructive mt-0.5 shrink-0" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+          <div className="mt-8 flex flex-wrap justify-center gap-4 sm:gap-6">
+            {badges.map(({ key, icon: Icon }) => (
+              <div
+                key={key}
+                className="flex items-center gap-2 px-4 py-2.5 rounded-full border border-border/60 bg-card text-sm font-medium"
+              >
+                <Icon className="h-4 w-4 text-purple-600 dark:text-purple-400" />
+                {t(`badges.${key}`)}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6">
+            <Link
+              href="/privacy"
+              className="inline-flex items-center gap-1.5 text-sm text-purple-600 dark:text-purple-400 hover:underline"
+            >
+              {t("link")}
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>

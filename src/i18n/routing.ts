@@ -34,6 +34,22 @@ export const routing = defineRouting({
       en: "/changelog",
       tr: "/degisiklik-kaydi",
     },
+    "/use-cases/remote-workers": {
+      en: "/use-cases/remote-workers",
+      tr: "/kullanim-alanlari/uzaktan-calisanlar",
+    },
+    "/use-cases/students": {
+      en: "/use-cases/students",
+      tr: "/kullanim-alanlari/ogrenciler",
+    },
+    "/use-cases/freelancers": {
+      en: "/use-cases/freelancers",
+      tr: "/kullanim-alanlari/serbest-calisanlar",
+    },
+    "/use-cases/developers": {
+      en: "/use-cases/developers",
+      tr: "/kullanim-alanlari/yazilimcilar",
+    },
   },
 });
 

@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "FocusNow - Smart Focus & Time Tracking",
-    "description": "Privacy-first desktop focus and time tracking app. Understand your productivity patterns without compromising your data.",
-    "keywords": "focus tracking, productivity, time tracking, privacy, desktop app, pomodoro"
+    "title": "FocusNow — See Where Your Time Goes | Free Desktop Tracker",
+    "description": "Free desktop app that automatically tracks your apps and shows how you spend your workday. AES-256 encrypted. Mac & Windows.",
+    "keywords": "focus tracking app, automatic time tracking desktop, app usage tracker mac, deep work tracker, productivity, pomodoro"
   },
   "nav": {
     "features": "Features",
@@ -12,56 +12,61 @@
     "about": "About",
     "changelog": "Changelog",
     "privacy": "Privacy",
-    "getApp": "Get the App"
+    "getApp": "Get FocusNow Free",
+    "menu": "Menu"
   },
   "hero": {
-    "badge": "Smart Focus & Time Tracking",
-    "title": "Understand Your Focus,",
-    "titleHighlight": "Own Your Time",
-    "description": "FocusNow tracks your desktop activity and gives you clear insights into how you spend your time — encrypted, secure, and private. No surveillance, no data selling. Just clarity.",
-    "cta": "Download for Free",
-    "secondaryCta": "See Features",
+    "badge": "Free forever. No credit card.",
+    "title": "Where Does Your Day Actually Go?",
+    "titleHighlight": "Now You'll Know.",
+    "description": "FocusNow quietly tracks your apps and shows you exactly how you spend your workday. See your most productive hours, spot time sinks, and build better habits — automatically.",
+    "cta": "Start My Free Tracker",
+    "secondaryCta": "See How It Works",
     "platformBadge": {
       "mac": "Available on macOS",
       "windows": "Available on Windows"
     },
-    "aiTeaser": "AI-powered insights coming soon"
+    "screenshotAlt": "FocusNow app screenshot preview"
+  },
+  "socialProof": {
+    "freeForever": "Free forever",
+    "platforms": "Mac & Windows",
+    "encrypted": "AES-256 encrypted",
+    "noTracking": "No screenshots or keylogging"
   },
   "features": {
-    "title": "Everything You Need to",
-    "titleHighlight": "Stay Focused",
-    "description": "Powerful features designed to help you understand and improve how you spend your time.",
+    "title": "See How You Work.",
+    "titleHighlight": "Work Better.",
+    "description": "Simple tools that show you where your time goes — so you can spend it where it matters.",
     "items": {
       "tracking": {
-        "title": "Automatic Tracking",
-        "description": "Smart categorization and productivity scoring that works in the background. Understand what drives your focus."
+        "title": "See Your Real Workday",
+        "description": "FocusNow tracks which apps you use and for how long. No timers. No logging. It just works."
       },
       "focus": {
-        "title": "Focus Sessions",
-        "description": "Track deep work sessions with customizable timers. See your productive streaks and patterns."
-      },
-      "privacy": {
-        "title": "Privacy First",
-        "description": "Your data is encrypted with AES-256 and stored securely. We never sell or share your activity data with third parties."
+        "title": "Deep Work Timer",
+        "description": "Start a focus session, pick your duration, and see how well you stayed on task. Your focus score shows what's working."
       },
       "analytics": {
-        "title": "Detailed Analytics",
-        "description": "Beautiful charts and reports showing your daily, weekly, and monthly productivity trends."
+        "title": "Your Week at a Glance",
+        "description": "Daily and weekly reports show your most productive hours, top apps, and focus trends. Spot patterns you never noticed."
       },
       "crossPlatform": {
-        "title": "Cross-Platform",
-        "description": "Available on macOS and Windows. One experience everywhere."
+        "title": "Mac + Windows",
+        "description": "Same experience on both platforms. Install in under a minute. Your data syncs automatically."
       },
-      "distraction": {
-        "title": "Distraction Alerts",
-        "description": "Get notified when you drift away from focused work. Gentle nudges to keep you on track."
-      },
-      "ai": {
-        "title": "AI-Powered Insights",
-        "description": "Intelligent categorization, smart productivity scoring, and personalized focus recommendations."
+      "cloudSync": {
+        "title": "Encrypted Cloud Sync",
+        "description": "Your data follows you across devices, encrypted end-to-end. No one sees it but you."
       }
     },
-    "comingSoon": "Coming Soon"
+    "roadmap": {
+      "title": "What's Next",
+      "items": [
+        "Distraction alerts — gentle nudges when you drift off task",
+        "AI-powered insights — smart categorization and personalized focus recommendations"
+      ]
+    }
   },
   "screenshots": {
     "title": "See FocusNow",
@@ -71,47 +76,78 @@
       "analytics": "Analytics",
       "sessions": "Sessions",
       "settings": "Settings"
+    },
+    "content": {
+      "dashboard": {
+        "title": "Today's Focus",
+        "items": ["4h 32m deep work", "2h 15m meetings", "1h 08m breaks"]
+      },
+      "analytics": {
+        "title": "Weekly Trends",
+        "items": ["Mon: 85%", "Tue: 72%", "Wed: 91%", "Thu: 88%", "Fri: 76%"]
+      },
+      "sessions": {
+        "title": "Focus Sessions",
+        "items": ["Deep Work — 2h 15m", "Code Review — 45m", "Writing — 1h 30m"]
+      },
+      "settings": {
+        "title": "Preferences",
+        "items": ["Focus alerts: On", "Break reminders: 25min", "Theme: Auto"]
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How It",
+    "titleHighlight": "Works",
+    "steps": {
+      "install": {
+        "title": "Download & Install",
+        "description": "One-click install on Mac or Windows. Under a minute."
+      },
+      "run": {
+        "title": "Go About Your Day",
+        "description": "FocusNow runs silently. No buttons to press."
+      },
+      "insights": {
+        "title": "Check Your Insights",
+        "description": "Open the dashboard anytime to see where your time went."
+      }
     }
   },
   "privacySection": {
-    "title": "Your Privacy,",
-    "titleHighlight": "Our Priority",
-    "description": "Your data is encrypted and protected with enterprise-grade security. Here's how we handle it:",
-    "tracked": {
-      "title": "What We Track",
-      "items": [
-        "Active application names",
-        "Window titles",
-        "Focus session durations",
-        "Productivity categories",
-        "Daily usage patterns"
-      ]
+    "title": "Your data is encrypted and",
+    "titleHighlight": "stays on your terms.",
+    "badges": {
+      "encrypted": "AES-256 Encrypted",
+      "noScreenshots": "No Screenshots",
+      "noKeylogging": "No Keylogging",
+      "yourData": "You Own Your Data"
     },
-    "notTracked": {
-      "title": "What We Never Do",
-      "items": [
-        "Sell or share your data with third parties",
-        "Take screenshots of your screen",
-        "Record keystrokes or mouse clicks",
-        "Use your data for advertising",
-        "Track websites you visit"
-      ]
-    }
+    "link": "Read our full privacy commitment"
   },
   "downloadCta": {
-    "title": "Ready to Take Control of",
-    "titleHighlight": "Your Focus?",
-    "description": "Download FocusNow for free and start understanding your productivity patterns today.",
-    "cta": "Download Now",
-    "note": "Start for free. Available on macOS & Windows."
+    "title": "Your Most Productive Week",
+    "titleHighlight": "Starts Now",
+    "description": "Download FocusNow and finally see where your time actually goes. Free forever, no credit card needed.",
+    "cta": "Get My Free Tracker",
+    "note": "macOS & Windows. Installs in under a minute."
   },
   "download": {
+    "meta": {
+      "title": "Download FocusNow Free — Mac & Windows",
+      "description": "Download FocusNow for free. Automatic focus and time tracking for macOS and Windows. Installs in under a minute."
+    },
     "title": "Download FocusNow",
     "description": "Get FocusNow for your platform",
     "detected": "Detected Platform",
-    "downloadFor": "Download for {platform}",
+    "downloadFor": "Get FocusNow for {platform}",
     "otherPlatforms": "Other Platforms",
     "comingSoon": "Coming Soon",
+    "platforms": {
+      "mac-arm": "macOS (Apple Silicon)",
+      "mac-intel": "macOS (Intel)",
+      "windows": "Windows"
+    },
     "requirements": {
       "title": "System Requirements",
       "mac": {
@@ -122,9 +158,51 @@
         "title": "Windows",
         "items": ["Windows 10 or later", "64-bit processor", "50 MB disk space"]
       }
+    },
+    "afterInstall": {
+      "title": "After You Install",
+      "steps": {
+        "permissions": {
+          "title": "Grant Permissions",
+          "description": "FocusNow needs accessibility permissions to track which app is in the foreground. We never read content — just the app name."
+        },
+        "run": {
+          "title": "Let It Run",
+          "description": "FocusNow works silently in the background. Go about your normal workday."
+        },
+        "dashboard": {
+          "title": "Check Your Dashboard",
+          "description": "Open FocusNow anytime to see your focus stats, top apps, and productivity trends."
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Is this spyware?",
+          "answer": "No. FocusNow only tracks which app is in the foreground and for how long. It never takes screenshots, records keystrokes, or reads what you type. Your data is encrypted with AES-256 and only you can see it."
+        },
+        {
+          "question": "How much CPU and battery does it use?",
+          "answer": "Very little. FocusNow is designed to run silently in the background. It checks the active window at regular intervals and uses minimal system resources — you won't notice it's there."
+        },
+        {
+          "question": "Can my employer see my data?",
+          "answer": "No. FocusNow is a personal productivity tool. Your data is encrypted and stored in your own account. No one else — including us — can access your activity data."
+        },
+        {
+          "question": "Is it really free?",
+          "answer": "Yes. The core product is free forever with no credit card required. We plan to offer an optional Pro tier in the future with advanced features, but the free plan will always include everything you need."
+        }
+      ]
     }
   },
   "pricing": {
+    "meta": {
+      "title": "Pricing — FocusNow Is Free Forever",
+      "description": "FocusNow is free to use with no credit card required. Automatic tracking, focus sessions, analytics, and encrypted sync included."
+    },
     "title": "Simple, Transparent",
     "titleHighlight": "Pricing",
     "description": "FocusNow is free to use. We believe productivity tools should be accessible to everyone.",
@@ -141,7 +219,7 @@
         "All privacy features",
         "macOS & Windows support"
       ],
-      "cta": "Download Free"
+      "cta": "Start Free"
     },
     "pro": {
       "title": "Pro",
@@ -154,10 +232,21 @@
         "Data export",
         "Priority support"
       ],
-      "cta": "Join Waitlist"
+      "cta": "Join Waitlist",
+      "waitlist": {
+        "placeholder": "your@email.com",
+        "submit": "Notify Me",
+        "success": "You're on the list! We'll let you know when Pro launches.",
+        "error": "Something went wrong. Please try again.",
+        "invalid": "Please enter a valid email address."
+      }
     }
   },
   "about": {
+    "meta": {
+      "title": "About FocusNow — Our Story and Mission",
+      "description": "FocusNow was born from a simple idea: understand your productivity without giving up your privacy. Learn about our mission."
+    },
     "title": "About",
     "titleHighlight": "FocusNow",
     "description": "FocusNow was born from a simple idea: you should be able to understand your productivity without giving up your privacy.",
@@ -193,7 +282,7 @@
       },
       "dataController": {
         "title": "2. Data Controller",
-        "content": "FocusNow is developed and operated by [Your Name], based in Turkey. As the data controller, we are responsible for deciding how your personal data is processed. For all privacy-related inquiries, you can reach us at privacy@focusnow.ai."
+        "content": "FocusNow is developed and operated by Barbaros Zongur, based in Turkey. As the data controller, we are responsible for deciding how your personal data is processed. For all privacy-related inquiries, you can reach us at privacy@focusnow.ai."
       },
       "collection": {
         "title": "3. Information We Collect",
@@ -304,7 +393,7 @@
           "Email: privacy@focusnow.ai",
           "Response time: within 30 days of receiving your request"
         ],
-        "note": "Data Controller: FocusNow — [Your Name], Turkey"
+        "note": "Data Controller: FocusNow — Barbaros Zongur, Turkey"
       }
     }
   },
@@ -337,8 +426,9 @@
     "noPosts": "No blog posts yet. Check back soon!"
   },
   "footer": {
-    "description": "Smart focus and time tracking that respects your privacy.",
+    "description": "See where your time goes. Free desktop tracker for Mac and Windows.",
     "product": "Product",
+    "useCases": "Use Cases",
     "resources": "Resources",
     "legal": "Legal",
     "copyright": "All rights reserved."
@@ -348,5 +438,123 @@
     "accept": "Accept",
     "decline": "Decline",
     "learnMore": "Learn more"
+  },
+  "useCases": {
+    "remoteWorkers": {
+      "meta": {
+        "title": "Focus Tracker for Remote Workers",
+        "description": "See if remote work is actually working for you. Track your focus, find your productive hours, and build better work-from-home habits."
+      },
+      "badge": "For Remote Workers",
+      "title": "See If Remote Work Is",
+      "titleHighlight": "Actually Working for You",
+      "description": "Working from home means more freedom — and more distractions. FocusNow shows you exactly how your remote workday looks, so you can make it better.",
+      "painPoints": {
+        "title": "Sound Familiar?",
+        "items": [
+          "You feel busy all day but can't point to what you accomplished",
+          "Home distractions eat into your deep work time without you realizing",
+          "You're not sure if you're more or less productive than in the office",
+          "Work bleeds into evenings because you lost focus during the day"
+        ]
+      },
+      "solution": {
+        "title": "How FocusNow Helps",
+        "items": [
+          "See your real productive hours vs. time lost to distractions",
+          "Find your peak focus times and protect them",
+          "Track work-life boundaries — know when to stop",
+          "Build evidence that remote work works for you"
+        ]
+      },
+      "cta": "Start My Free Tracker"
+    },
+    "students": {
+      "meta": {
+        "title": "Focus Tracker for Students",
+        "description": "Track your study sessions and find where your time goes. Build better study habits with automatic focus tracking."
+      },
+      "badge": "For Students",
+      "title": "Where Do Your Study Hours",
+      "titleHighlight": "Actually Go?",
+      "description": "You sit down to study for 3 hours, but how much of that is actual focus? FocusNow tracks your screen time automatically so you can study smarter.",
+      "painPoints": {
+        "title": "Sound Familiar?",
+        "items": [
+          "You plan to study for hours but end up on social media",
+          "You don't know which subjects eat the most time",
+          "Exam season feels chaotic — you're never sure if you studied enough",
+          "You can't tell if your study methods are actually working"
+        ]
+      },
+      "solution": {
+        "title": "How FocusNow Helps",
+        "items": [
+          "See exactly how long you actually study vs. get distracted",
+          "Track which apps you use during study time",
+          "Use focus sessions with timers to stay on task",
+          "Review weekly trends to improve your study habits"
+        ]
+      },
+      "cta": "Start My Free Tracker"
+    },
+    "freelancers": {
+      "meta": {
+        "title": "Focus Tracker for Freelancers",
+        "description": "Know exactly where every hour goes. Track your work across projects and clients with automatic desktop tracking."
+      },
+      "badge": "For Freelancers",
+      "title": "Know Exactly Where",
+      "titleHighlight": "Every Hour Goes",
+      "description": "As a freelancer, your time is your income. FocusNow tracks your work automatically so you always know how you're spending it.",
+      "painPoints": {
+        "title": "Sound Familiar?",
+        "items": [
+          "You underestimate how long tasks take and underprice your work",
+          "Admin and communication eat hours you can't bill for",
+          "You switch between projects and lose track of time",
+          "End of month, you wonder where all your hours went"
+        ]
+      },
+      "solution": {
+        "title": "How FocusNow Helps",
+        "items": [
+          "See real time spent on each app and project",
+          "Identify unbillable time sinks like email and Slack",
+          "Track your most productive hours to schedule important work",
+          "Build data to price your services accurately"
+        ]
+      },
+      "cta": "Start My Free Tracker"
+    },
+    "developers": {
+      "meta": {
+        "title": "Focus Tracker for Developers",
+        "description": "Track your coding time, code review hours, and meeting overhead. See your real development workflow."
+      },
+      "badge": "For Developers",
+      "title": "Is That Code Review Really",
+      "titleHighlight": "Taking 3 Hours?",
+      "description": "Between coding, code reviews, meetings, and Slack, it's hard to know where your day actually goes. FocusNow shows you the real picture.",
+      "painPoints": {
+        "title": "Sound Familiar?",
+        "items": [
+          "Meetings and code reviews fragment your deep work time",
+          "You feel like you coded all day but shipped nothing",
+          "Context switching between PRs, Slack, and IDE kills your flow",
+          "You can't quantify how much time you spend in actual development"
+        ]
+      },
+      "solution": {
+        "title": "How FocusNow Helps",
+        "items": [
+          "See time in IDE vs. browser vs. communication tools",
+          "Track deep coding sessions and protect your flow state",
+          "Identify meeting overhead and context-switching costs",
+          "Build data to advocate for more focus time"
+        ]
+      },
+      "cta": "Start My Free Tracker"
+    }
   }
 }

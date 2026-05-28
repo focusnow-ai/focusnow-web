@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-sans",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://focusnow.ai"),
   title: {
-    default: "FocusNow - Smart Focus & Time Tracking",
+    default: "FocusNow — See Where Your Time Goes | Free Desktop Tracker",
     template: "%s | FocusNow",
   },
   description:
-    "Privacy-first desktop focus and time tracking app. Understand your productivity patterns without compromising your data.",
+    "Free desktop app that automatically tracks your apps and shows how you spend your workday. AES-256 encrypted. Mac & Windows.",
 };
 
 export default function RootLayout({

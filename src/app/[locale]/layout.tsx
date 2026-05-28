@@ -9,7 +9,7 @@ import { ThemeProvider } from "@/components/shared/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CookieConsentBanner } from "@/components/shared/cookie-consent-banner";
-import { getWebsiteLD, getSoftwareApplicationLD } from "@/lib/structured-data";
+import { getWebsiteLD, getSoftwareApplicationLD, getOrganizationLD } from "@/lib/structured-data";
 import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 import "../globals.css";
 
@@ -83,13 +83,19 @@ export default async function LocaleLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getWebsiteLD()),
+            __html: JSON.stringify(getWebsiteLD(locale)),
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getSoftwareApplicationLD()),
+            __html: JSON.stringify(getSoftwareApplicationLD(locale)),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getOrganizationLD()),
           }}
         />
       </head>

@@ -1,19 +1,24 @@
-export function getSoftwareApplicationLD() {
+export function getSoftwareApplicationLD(locale?: string) {
+  const descriptions: Record<string, string> = {
+    en: "Free desktop app that automatically tracks your apps and shows how you spend your workday. AES-256 encrypted. Mac & Windows.",
+    tr: "Hangi uygulamalara ne kadar vakit harcadığınızı otomatik takip eden ücretsiz masaüstü uygulaması. AES-256 şifreli. Mac ve Windows.",
+  };
+
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "FocusNow",
     applicationCategory: "ProductivityApplication",
-    operatingSystem: "macOS",
+    operatingSystem: ["macOS", "Windows"],
     offers: {
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
     },
-    description:
-      "Privacy-first desktop focus and time tracking application.",
+    description: descriptions[locale ?? "en"] ?? descriptions.en,
     url: "https://focusnow.ai",
     downloadUrl: "https://focusnow.ai/download",
+    inLanguage: locale === "tr" ? "tr" : "en",
   };
 }
 
@@ -36,6 +41,7 @@ export function getBlogPostLD(post: {
     headline: post.title,
     description: post.description,
     datePublished: post.date,
+    inLanguage: post.locale === "tr" ? "tr" : "en",
     author: {
       "@type": "Person",
       name: post.author,
@@ -49,13 +55,48 @@ export function getBlogPostLD(post: {
   };
 }
 
-export function getWebsiteLD() {
+export function getWebsiteLD(locale?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "FocusNow",
     url: "https://focusnow.ai",
+    inLanguage: locale === "tr" ? "tr" : "en",
     description:
-      "Privacy-first desktop focus and time tracking application.",
+      locale === "tr"
+        ? "Hangi uygulamalara ne kadar vakit harcadığınızı otomatik takip eden ücretsiz masaüstü uygulaması."
+        : "Free desktop app that automatically tracks your apps and shows how you spend your workday.",
+  };
+}
+
+export function getOrganizationLD() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "FocusNow",
+    url: "https://focusnow.ai",
+    logo: "https://focusnow.ai/icon.png",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "privacy@focusnow.ai",
+      contactType: "customer support",
+    },
+  };
+}
+
+export function getFAQPageLD(
+  items: { question: string; answer: string }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
   };
 }

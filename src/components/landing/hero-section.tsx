@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Sparkles } from "lucide-react";
+import { ArrowDown, Download } from "lucide-react";
 import { AppleIcon } from "@/components/shared/apple-icon";
 import { WindowsIcon } from "@/components/shared/windows-icon";
 
@@ -55,7 +55,7 @@ export function HeroSection() {
               {t("cta")}
             </Link>
             <a
-              href="#features"
+              href="#how-it-works"
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
                 "text-base px-8 h-12"
@@ -75,11 +75,6 @@ export function HeroSection() {
               <WindowsIcon className="h-4 w-4" />
               {t("platformBadge.windows")}
             </div>
-          </div>
-
-          <div className="mt-4 flex items-center gap-1.5 text-xs text-amber-600 dark:text-amber-400">
-            <Sparkles className="h-3.5 w-3.5 animate-pulse" />
-            {t("aiTeaser")}
           </div>
         </motion.div>
 
@@ -101,7 +96,7 @@ export function HeroSection() {
                 <div className="w-16 h-16 mx-auto rounded-2xl bg-primary flex items-center justify-center mb-4">
                   <span className="text-2xl text-white font-bold">F</span>
                 </div>
-                <p className="text-muted-foreground text-sm">App Screenshot Preview</p>
+                <p className="text-muted-foreground text-sm">{t("screenshotAlt")}</p>
               </div>
             </div>
           </div>

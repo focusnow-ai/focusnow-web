@@ -5,11 +5,12 @@ import { FocusNowLogo } from "@/components/shared/focusnow-logo";
 export function Footer() {
   const t = useTranslations("footer");
   const nav = useTranslations("nav");
+  const uc = useTranslations("useCases");
 
   return (
     <footer className="border-t border-border/40 bg-muted/30">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/">
@@ -42,6 +43,33 @@ export function Footer() {
               <li>
                 <Link href="/changelog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   {nav("changelog")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Use Cases */}
+          <div>
+            <h3 className="font-semibold text-sm mb-3">{t("useCases")}</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/use-cases/remote-workers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {uc("remoteWorkers.badge")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/use-cases/students" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {uc("students.badge")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/use-cases/freelancers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {uc("freelancers.badge")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/use-cases/developers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {uc("developers.badge")}
                 </Link>
               </li>
             </ul>

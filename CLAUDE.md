@@ -11,14 +11,19 @@ src/
 ├── app/                    # App Router
 │   ├── layout.tsx          # Root layout (metadata, fonts)
 │   ├── globals.css         # All CSS variables, utilities, base styles
+│   ├── sitemap.ts          # Sitemap with localized URLs and hreflang
+│   ├── api/waitlist/       # Waitlist email capture endpoint
 │   └── [locale]/           # Locale-prefixed routes
 │       ├── layout.tsx      # Providers (ThemeProvider, NextIntlClientProvider)
+│       ├── page.tsx        # Landing page assembly
+│       ├── use-cases/      # Audience segmentation pages (remote-workers, students, freelancers, developers)
 │       └── */page.tsx      # Pages: download, pricing, about, blog, changelog, privacy
 ├── components/
 │   ├── ui/                 # shadcn/ui components (Base UI + CVA)
 │   ├── layout/             # Header, Footer
 │   ├── shared/             # ThemeProvider, ThemeToggle, LocaleSwitcher, FocusNowLogo, CookieConsentBanner
-│   └── landing/            # Landing sections (hero, features, privacy, screenshots, download-cta)
+│   ├── landing/            # Landing sections (hero, social-proof-bar, features, screenshots, how-it-works, privacy, download-cta)
+│   └── use-cases/          # UseCaseTemplate shared component
 ├── content/blog/           # MDX blog posts (en/, tr/)
 ├── i18n/                   # routing.ts, navigation.ts, request.ts
 ├── lib/                    # utils.ts, blog.ts, downloads.ts, analytics.ts, structured-data.ts
@@ -31,7 +36,7 @@ src/
 - Library: `next-intl` v4
 - Locales: `en` (default), `tr`
 - Translation files: `src/messages/en.json`, `src/messages/tr.json`
-- Routes are localized in `src/i18n/routing.ts` (e.g., `/download` -> `/indir` for Turkish)
+- Routes are localized in `src/i18n/routing.ts` (e.g., `/download` -> `/indir` for Turkish, `/use-cases/students` -> `/kullanim-alanlari/ogrenciler`)
 - Server components: `const t = await getTranslations("namespace")`
 - Client components: `const t = useTranslations("namespace")`
 - Navigation: Always use `Link` from `@/i18n/navigation`, not from `next/link`
@@ -43,6 +48,7 @@ src/
 - **Shared components** (`src/components/shared/`): Reusable across pages. Always `"use client"`.
 - **Landing sections** (`src/components/landing/`): Self-contained, `"use client"`, use framer-motion for animations.
 - **Layout** (`src/components/layout/`): Header and Footer.
+- **Use-case pages** (`src/components/use-cases/`): Shared template for audience segmentation pages.
 - **Icons:** Always use `lucide-react`. Do not add other icon libraries.
 - **Class merging:** Always use `cn()` from `@/lib/utils` when combining classes.
 - **Logo:** `<FocusNowLogo>` component uses inline SVG. Used in both header and footer. Do not replace with `<img>` tags.
@@ -62,6 +68,19 @@ src/
 - `tokens.json` is the canonical source for design tokens (synced with Figma via Tokens Studio). `globals.css` is the runtime CSS implementation.
 - Logo color (`#7F22CE` / purple-700) is intentionally different from UI primary (`purple-800`). Do not unify them.
 
+## Content & Copy
+
+- **Style guide:** All content voice, tone, copywriting standards, and editorial checklists are in `CONTENT_STYLE_GUIDE.md`. Read it before writing any user-facing text.
+- **Messaging hierarchy:** Primary = clarity/self-knowledge ("See where your time goes"). Secondary = privacy/trust. Tertiary = friction removal. Never lead with privacy.
+- **Headlines:** Always benefit-driven, not feature-driven. "See Your Real Workday" not "Automatic Tracking."
+- **CTAs:** Use first-person language ("Start My..." / "Get My..."). See CTA matrix in style guide.
+- **Turkish content:** Write natively from the same brief as EN, never translate word-for-word. Follow Turkish-specific standards in style guide (SOV structure, active voice, colloquial warmth, KVKK references).
+- **SEO:** Every page must have localized `generateMetadata` with keyword-rich title (<60 chars), compelling description (<155 chars), canonical URL, and hreflang alternates. See per-page keyword mapping in style guide.
+- **Privacy messaging:** Privacy is a supporting message, not the primary value proposition. Include it proportionally, not in every section.
+- **"Coming Soon" features:** Never advertise non-existent features as feature cards. Use a roadmap section or "What's Next" note instead.
+- **New pages:** Follow the new page checklist in `CONTENT_STYLE_GUIDE.md` (routing, translations, metadata, structured data, sitemap, internal links).
+- **Blog posts:** Follow the blog post template in style guide. Target 5th-7th grade reading level. End with a CTA linking to download page.
+
 ## Blog
 
 - MDX files in `src/content/blog/en/` and `src/content/blog/tr/`
@@ -72,9 +91,9 @@ src/
 ## SEO
 
 - Metadata in `src/app/[locale]/layout.tsx` and per-page `generateMetadata()`
-- JSON-LD structured data via `src/lib/structured-data.ts`
+- JSON-LD structured data via `src/lib/structured-data.ts` (SoftwareApplication, WebSite, Organization, BlogPosting, FAQPage)
 - Canonical URL: `https://focusnow.ai`
-- Sitemap: `src/app/sitemap.ts`
+- Sitemap: `src/app/sitemap.ts` (includes localized Turkish paths and hreflang alternates)
 - Robots: `src/app/robots.ts`
 
 ## Analytics

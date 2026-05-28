@@ -2,26 +2,21 @@
 
 import { useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import {
   Activity,
   Timer,
-  Shield,
   BarChart3,
   Laptop,
-  BellRing,
-  Sparkles,
+  Cloud,
 } from "lucide-react";
 
 const featureItems = [
   { key: "tracking", icon: Activity },
   { key: "focus", icon: Timer },
-  { key: "privacy", icon: Shield },
   { key: "analytics", icon: BarChart3 },
   { key: "crossPlatform", icon: Laptop },
-  { key: "distraction", icon: BellRing, comingSoon: true },
-  { key: "ai", icon: Sparkles, comingSoon: true },
+  { key: "cloudSync", icon: Cloud },
 ] as const;
 
 const containerVariants = {
@@ -40,6 +35,8 @@ const itemVariants = {
 
 export function FeaturesSection() {
   const t = useTranslations("features");
+
+  const roadmapItems: string[] = t.raw("roadmap.items");
 
   return (
     <section id="features" className="py-20 sm:py-28">
@@ -63,32 +60,43 @@ export function FeaturesSection() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {featureItems.map(({ key, icon: Icon, ...rest }) => {
-            const isComingSoon = "comingSoon" in rest;
+          {featureItems.map(({ key, icon: Icon }) => (
+            <motion.div key={key} variants={itemVariants}>
+              <Card className="h-full card-hover border-border/40">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-4">
+                    <Icon className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">
+                    {t(`items.${key}.title`)}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {t(`items.${key}.description`)}
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
 
-            return (
-              <motion.div key={key} variants={itemVariants}>
-                <Card className={`h-full ${isComingSoon ? "border-dashed border-border/60 opacity-80" : "card-hover border-border/40"}`}>
-                  <CardContent className="p-6 relative">
-                    {isComingSoon && (
-                      <Badge className="absolute top-4 right-4 bg-muted text-muted-foreground border-border text-[10px] font-semibold">
-                        {t("comingSoon")}
-                      </Badge>
-                    )}
-                    <div className="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-4">
-                      <Icon className={`h-6 w-6 text-purple-600 dark:text-purple-400 ${isComingSoon ? "animate-pulse" : ""}`} />
-                    </div>
-                    <h3 className="font-semibold text-lg mb-2">
-                      {t(`items.${key}.title`)}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {t(`items.${key}.description`)}
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            );
-          })}
+        {/* Roadmap note */}
+        <motion.div
+          className="mt-12 max-w-2xl mx-auto text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <p className="text-sm font-medium text-muted-foreground mb-3">
+            {t("roadmap.title")}
+          </p>
+          <div className="space-y-1.5">
+            {roadmapItems.map((item, i) => (
+              <p key={i} className="text-sm text-muted-foreground/70">
+                {item}
+              </p>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

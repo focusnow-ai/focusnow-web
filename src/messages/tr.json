@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "FocusNow - Akıllı Odaklanma ve Zaman Takibi",
-    "description": "Gizlilik odaklı masaüstü odaklanma ve zaman takip uygulaması. Verilerinizden ödün vermeden verimliliğinizi takip edin.",
-    "keywords": "odaklanma takibi, verimlilik, gizlilik, zaman takibi, masaüstü uygulaması, pomodoro"
+    "title": "FocusNow — Zamanınız Nereye Gidiyor? | Ücretsiz Masaüstü Takip",
+    "description": "Hangi uygulamalara ne kadar vakit harcadığınızı otomatik takip eden ücretsiz masaüstü uygulaması. AES-256 şifreli. Mac ve Windows.",
+    "keywords": "zaman takip uygulaması, odaklanma uygulaması, verimlilik takibi, masaüstü zaman takip, pomodoro zamanlayıcı masaüstü"
   },
   "nav": {
     "features": "Özellikler",
@@ -12,56 +12,61 @@
     "about": "Hakkımızda",
     "changelog": "Değişiklik Kaydı",
     "privacy": "Gizlilik",
-    "getApp": "Uygulamayı İndir"
+    "getApp": "FocusNow'u Ücretsiz Al",
+    "menu": "Menü"
   },
   "hero": {
-    "badge": "Akıllı Odaklanma ve Zaman Takibi",
-    "title": "Odaklanmanızı Anlayın,",
-    "titleHighlight": "Zamanınıza Sahip Çıkın",
-    "description": "FocusNow masaüstü etkinliğinizi takip eder ve zamanınızı nasıl harcadığınızı net bir şekilde gösterir — şifreli, güvenli ve gizli. Gözetim yok, veri satışı yok. Sadece netlik.",
-    "cta": "Ücretsiz İndir",
-    "secondaryCta": "Özellikleri Gör",
+    "badge": "Sonsuza dek ücretsiz. Kart gerekmez.",
+    "title": "Gününüz Nereye Gidiyor?",
+    "titleHighlight": "Artık Bileceksiniz.",
+    "description": "FocusNow arka planda sessizce çalışır, hangi uygulamaları ne kadar kullandığınızı takip eder ve size net bir çalışma tablosu sunar. En verimli saatlerinizi keşfedin, zaman kayıplarınızı görün.",
+    "cta": "Ücretsiz Takibimi Başlat",
+    "secondaryCta": "Nasıl Çalıştığını Gör",
     "platformBadge": {
       "mac": "macOS için mevcut",
       "windows": "Windows için mevcut"
     },
-    "aiTeaser": "Yapay zeka desteği yakında"
+    "screenshotAlt": "FocusNow uygulama ekran görüntüsü önizleme"
+  },
+  "socialProof": {
+    "freeForever": "Sonsuza dek ücretsiz",
+    "platforms": "Mac ve Windows",
+    "encrypted": "AES-256 şifreli",
+    "noTracking": "Ekran görüntüsü veya tuş kaydı yok"
   },
   "features": {
-    "title": "Odaklanmak İçin",
-    "titleHighlight": "İhtiyacınız Olan Her Şey",
-    "description": "Zamanınızı nasıl harcadığınızı anlamanıza ve verimliliğinizi artırmanıza yardımcı olan güçlü özellikler.",
+    "title": "Nasıl Çalıştığınızı Görün.",
+    "titleHighlight": "Daha İyi Çalışın.",
+    "description": "Zamanınızın nereye gittiğini gösteren basit araçlar — böylece onu önemli yerlere harcayabilirsiniz.",
     "items": {
       "tracking": {
-        "title": "Otomatik Takip",
-        "description": "Arka planda sessizce çalışır, uygulamalarınızı otomatik sınıflandırır ve verimlilik puanınızı hesaplar."
+        "title": "Gerçek İş Gününüzü Görün",
+        "description": "FocusNow hangi uygulamaları ne kadar kullandığınızı takip eder. Zamanlayıcı yok, kayıt tutma yok. Sessizce çalışır."
       },
       "focus": {
-        "title": "Odaklanma Seansları",
-        "description": "Zamanlayıcılarla derin çalışma seanslarınızı takip edin. Verimli olduğunuz dönemleri ve alışkanlıklarınızı görün."
-      },
-      "privacy": {
-        "title": "Önce Gizlilik",
-        "description": "Verileriniz AES-256 ile şifrelenerek bulutta güvenle saklanır. Verilerinizi asla satmaz, kimseyle paylaşmayız."
+        "title": "Derin Çalışma Zamanlayıcısı",
+        "description": "Odaklanma seansı başlatın, süreyi seçin ve ne kadar odaklandığınızı görün. Odak puanınız neyin işe yaradığını gösterir."
       },
       "analytics": {
-        "title": "Detaylı Analizler",
-        "description": "Günlük, haftalık ve aylık verimlilik değişimlerinizi gösteren anlaşılır grafikler ve raporlar."
+        "title": "Haftanıza Bir Bakışta",
+        "description": "Günlük ve haftalık raporlar en verimli saatlerinizi, en çok kullandığınız uygulamaları ve odak trendlerinizi gösterir."
       },
       "crossPlatform": {
-        "title": "Çoklu Platform",
-        "description": "macOS ve Windows'ta mevcut. Her yerde aynı deneyim."
+        "title": "Mac + Windows",
+        "description": "Her iki platformda da aynı deneyim. Bir dakikada kurulur. Verileriniz otomatik senkronize olur."
       },
-      "distraction": {
-        "title": "Dikkat Dağınıklığı Uyarıları",
-        "description": "Odağınız dağıldığında bildirim alın. Sizi tekrar işe döndüren hafif hatırlatmalar."
-      },
-      "ai": {
-        "title": "Yapay Zeka Desteği",
-        "description": "Akıllı sınıflandırma, verimlilik puanlama ve size özel odaklanma önerileri."
+      "cloudSync": {
+        "title": "Şifreli Bulut Senkronizasyonu",
+        "description": "Verileriniz cihazlar arasında sizi takip eder, uçtan uca şifreli. Sizden başka kimse göremez."
       }
     },
-    "comingSoon": "Yakında"
+    "roadmap": {
+      "title": "Sırada Ne Var",
+      "items": [
+        "Dikkat dağınıklığı uyarıları — odağınız dağıldığında hafif hatırlatmalar",
+        "Yapay zeka destekli analizler — akıllı sınıflandırma ve size özel odaklanma önerileri"
+      ]
+    }
   },
   "screenshots": {
     "title": "FocusNow'u",
@@ -71,47 +76,78 @@
       "analytics": "Analizler",
       "sessions": "Seanslar",
       "settings": "Ayarlar"
+    },
+    "content": {
+      "dashboard": {
+        "title": "Bugünün Odaklanması",
+        "items": ["4s 32dk derin çalışma", "2s 15dk toplantı", "1s 08dk mola"]
+      },
+      "analytics": {
+        "title": "Haftalık Trendler",
+        "items": ["Pzt: %85", "Sal: %72", "Çar: %91", "Per: %88", "Cum: %76"]
+      },
+      "sessions": {
+        "title": "Odaklanma Seansları",
+        "items": ["Derin Çalışma — 2s 15dk", "Kod İnceleme — 45dk", "Yazı Yazma — 1s 30dk"]
+      },
+      "settings": {
+        "title": "Tercihler",
+        "items": ["Odak uyarıları: Açık", "Mola hatırlatma: 25dk", "Tema: Otomatik"]
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Nasıl",
+    "titleHighlight": "Çalışır",
+    "steps": {
+      "install": {
+        "title": "İndirin ve Kurun",
+        "description": "Mac veya Windows'ta tek tıkla kurulum. Bir dakikadan kısa."
+      },
+      "run": {
+        "title": "Günlük İşlerinize Devam Edin",
+        "description": "FocusNow sessizce çalışır. Hiçbir düğmeye basmanız gerekmez."
+      },
+      "insights": {
+        "title": "Analizlerinize Göz Atın",
+        "description": "İstediğiniz zaman paneli açın ve zamanınızın nereye gittiğini görün."
+      }
     }
   },
   "privacySection": {
-    "title": "Gizliliğiniz,",
-    "titleHighlight": "Önceliğimiz",
-    "description": "Verileriniz kurumsal düzeyde güvenlikle şifrelenir ve korunur. İşte nasıl:",
-    "tracked": {
-      "title": "Ne Takip Ediyoruz",
-      "items": [
-        "Açık uygulama adları",
-        "Pencere başlıkları",
-        "Odaklanma seansı süreleri",
-        "Verimlilik kategorileri",
-        "Günlük kullanım alışkanlıkları"
-      ]
+    "title": "Verileriniz şifreli ve",
+    "titleHighlight": "tamamen sizin kontrolünüzde.",
+    "badges": {
+      "encrypted": "AES-256 Şifreli",
+      "noScreenshots": "Ekran Görüntüsü Yok",
+      "noKeylogging": "Tuş Kaydı Yok",
+      "yourData": "Veriler Sizin"
     },
-    "notTracked": {
-      "title": "Asla Yapmadıklarımız",
-      "items": [
-        "Verilerinizi satmak veya üçüncü kişilerle paylaşmak",
-        "Ekran görüntüsü almak",
-        "Klavye veya fare hareketlerinizi kaydetmek",
-        "Verilerinizi reklam amacıyla kullanmak",
-        "Ziyaret ettiğiniz siteleri takip etmek"
-      ]
-    }
+    "link": "Gizlilik taahhüdümüzün tamamını okuyun"
   },
   "downloadCta": {
-    "title": "Odaklanmanızın Kontrolünü",
-    "titleHighlight": "Almaya Hazır mısınız?",
-    "description": "FocusNow'u ücretsiz indirin ve zamanınızı nasıl harcadığınızı bugün görmeye başlayın.",
-    "cta": "Şimdi İndir",
-    "note": "Ücretsiz başlayın. macOS ve Windows için mevcut."
+    "title": "En Verimli Haftanız",
+    "titleHighlight": "Şimdi Başlıyor",
+    "description": "FocusNow'u indirin ve zamanınızın gerçekte nereye gittiğini görmeye başlayın. Sonsuza dek ücretsiz, kredi kartı gerekmez.",
+    "cta": "Ücretsiz Takibimi Al",
+    "note": "macOS ve Windows. Bir dakikada kurulur."
   },
   "download": {
+    "meta": {
+      "title": "FocusNow'u Ücretsiz İndir — Mac ve Windows",
+      "description": "FocusNow'u ücretsiz indirin. macOS ve Windows için otomatik odak ve zaman takibi. Bir dakikada kurulur."
+    },
     "title": "FocusNow'u İndirin",
     "description": "Platformunuz için FocusNow'u edinin",
     "detected": "Algılanan Platform",
-    "downloadFor": "{platform} için İndir",
+    "downloadFor": "{platform} için FocusNow'u Al",
     "otherPlatforms": "Diğer Platformlar",
     "comingSoon": "Yakında",
+    "platforms": {
+      "mac-arm": "macOS (Apple Silicon)",
+      "mac-intel": "macOS (Intel)",
+      "windows": "Windows"
+    },
     "requirements": {
       "title": "Sistem Gereksinimleri",
       "mac": {
@@ -122,9 +158,51 @@
         "title": "Windows",
         "items": ["Windows 10 veya üzeri", "64-bit işlemci", "50 MB disk alanı"]
       }
+    },
+    "afterInstall": {
+      "title": "Kurduktan Sonra",
+      "steps": {
+        "permissions": {
+          "title": "İzinleri Verin",
+          "description": "FocusNow hangi uygulamanın ön planda olduğunu görmek için erişilebilirlik izni ister. İçerikleri asla okumaz — sadece uygulama adını."
+        },
+        "run": {
+          "title": "Çalışmasına İzin Verin",
+          "description": "FocusNow arka planda sessizce çalışır. Normal iş gününüze devam edin."
+        },
+        "dashboard": {
+          "title": "Panelinize Göz Atın",
+          "description": "İstediğiniz zaman FocusNow'u açın ve odak istatistiklerinizi, en çok kullandığınız uygulamaları ve verimlilik trendlerinizi görün."
+        }
+      }
+    },
+    "faq": {
+      "title": "Sık Sorulan Sorular",
+      "items": [
+        {
+          "question": "Bu bir casus yazılım mı?",
+          "answer": "Hayır. FocusNow yalnızca hangi uygulamanın ön planda olduğunu ve ne kadar süre kullanıldığını takip eder. Ekran görüntüsü almaz, tuş vuruşlarını kaydetmez, yazdıklarınızı okumaz. Verileriniz AES-256 ile şifrelenir ve yalnızca siz görebilirsiniz."
+        },
+        {
+          "question": "Ne kadar CPU ve pil kullanıyor?",
+          "answer": "Çok az. FocusNow arka planda sessizce çalışmak için tasarlandı. Belirli aralıklarla aktif pencereyi kontrol eder ve minimum sistem kaynağı kullanır — orada olduğunu bile fark etmezsiniz."
+        },
+        {
+          "question": "İşverenim verilerimi görebilir mi?",
+          "answer": "Hayır. FocusNow kişisel bir verimlilik aracıdır. Verileriniz şifrelenir ve kendi hesabınızda saklanır. Biz dahil başka kimse aktivite verilerinize erişemez."
+        },
+        {
+          "question": "Gerçekten ücretsiz mi?",
+          "answer": "Evet. Temel ürün sonsuza dek ücretsizdir ve kredi kartı gerekmez. Gelecekte gelişmiş özelliklerle isteğe bağlı bir Pro katmanı sunmayı planlıyoruz, ancak ücretsiz plan her zaman ihtiyacınız olan her şeyi içerecek."
+        }
+      ]
     }
   },
   "pricing": {
+    "meta": {
+      "title": "Fiyatlandırma — FocusNow Sonsuza Dek Ücretsiz",
+      "description": "FocusNow kredi kartı gerektirmeden tamamen ücretsiz. Otomatik takip, odak seansları, analizler ve şifreli senkronizasyon dahil."
+    },
     "title": "Basit, Şeffaf",
     "titleHighlight": "Fiyatlandırma",
     "description": "FocusNow tamamen ücretsiz. Verimlilik araçlarının herkesin kullanabilmesi gerektiğine inanıyoruz.",
@@ -141,7 +219,7 @@
         "Tüm gizlilik özellikleri",
         "macOS ve Windows desteği"
       ],
-      "cta": "Ücretsiz İndir"
+      "cta": "Ücretsiz Başla"
     },
     "pro": {
       "title": "Pro",
@@ -154,10 +232,21 @@
         "Veri dışa aktarma",
         "Öncelikli destek"
       ],
-      "cta": "Listeye Katıl"
+      "cta": "Listeye Katıl",
+      "waitlist": {
+        "placeholder": "e-posta@adresiniz.com",
+        "submit": "Beni Bilgilendir",
+        "success": "Listedesiniz! Pro çıkınca size haber vereceğiz.",
+        "error": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+        "invalid": "Lütfen geçerli bir e-posta adresi girin."
+      }
     }
   },
   "about": {
+    "meta": {
+      "title": "FocusNow Hakkında — Hikayemiz ve Misyonumuz",
+      "description": "FocusNow basit bir fikirden doğdu: gizliliğinizden ödün vermeden verimliliğinizi takip edebilmelisiniz."
+    },
     "title": "FocusNow",
     "titleHighlight": "Hakkında",
     "description": "FocusNow basit bir fikirden doğdu: gizliliğinizden ödün vermeden verimliliğinizi takip edebilmelisiniz.",
@@ -177,7 +266,7 @@
   "privacyPage": {
     "title": "Gizlilik Politikası",
     "lastUpdated": "Yürürlük tarihi: 25 Mayıs 2025",
-    "intro": "FocusNow olarak gizliliğinizi korumayı öncelik olarak görüyoruz. Bu Gizlilik Politikası hem web sitemizi hem de masaüstü uygulamamızı kapsar. Hangi verileri topladığımızı, nasıl kullandığımızı, nerede sakladığımızı ve kişisel verileriniz üzerindeki haklarınızı bu belgede bulabilirsiniz. Bu politika, yürürlükteki kişisel veri koruma mevzuatına uygun olarak hazırlanmıştır. Verilerinizi nasıl işlediğimizi anlamak için bu politikayı dikkatlice okumanızı öneririz.",
+    "intro": "FocusNow olarak gizliliğinizi korumayı öncelik olarak görüyoruz. Bu Gizlilik Politikası hem web sitemizi hem de masaüstü uygulamamızı kapsar. Hangi verileri topladığımızı, nasıl kullandığımızı, nerede sakladığımızı ve kişisel verileriniz üzerindeki haklarınızı bu belgede bulabilirsiniz. Bu politika, yürürlükteki kişisel veri koruma mevzuatına (KVKK ve GDPR dahil) uygun olarak hazırlanmıştır. Verilerinizi nasıl işlediğimizi anlamak için bu politikayı dikkatlice okumanızı öneririz.",
     "sections": {
       "trustPromise": {
         "title": "1. Gizlilik Taahhüdümüz",
@@ -193,7 +282,7 @@
       },
       "dataController": {
         "title": "2. Veri Sorumlusu",
-        "content": "FocusNow, Türkiye'de yerleşik [Ad Soyad] tarafından geliştirilmekte ve işletilmektedir. Veri sorumlusu sıfatıyla kişisel verilerinizin işlenme şekline ilişkin kararları biz alıyoruz. Gizlilikle ilgili her türlü talebiniz için privacy@focusnow.ai adresine yazabilirsiniz."
+        "content": "FocusNow, Türkiye'de yerleşik Barbaros Zongur tarafından geliştirilmekte ve işletilmektedir. Veri sorumlusu sıfatıyla kişisel verilerinizin işlenme şekline ilişkin kararları biz alıyoruz. Gizlilikle ilgili her türlü talebiniz için privacy@focusnow.ai adresine yazabilirsiniz."
       },
       "collection": {
         "title": "3. Topladığımız Bilgiler",
@@ -304,7 +393,7 @@
           "E-posta: privacy@focusnow.ai",
           "Yanıt süresi: talebinizi aldığımız tarihten itibaren 30 gün"
         ],
-        "note": "Veri Sorumlusu: FocusNow — [Ad Soyad], Türkiye"
+        "note": "Veri Sorumlusu: FocusNow — Barbaros Zongur, Türkiye"
       }
     }
   },
@@ -337,8 +426,9 @@
     "noPosts": "Henüz blog yazısı yok. Yakında tekrar kontrol edin!"
   },
   "footer": {
-    "description": "Gizliliğinize saygı duyan akıllı odaklanma ve zaman takibi.",
+    "description": "Zamanınızın nereye gittiğini görün. Mac ve Windows için ücretsiz masaüstü takip.",
     "product": "Ürün",
+    "useCases": "Kullanım Alanları",
     "resources": "Kaynaklar",
     "legal": "Yasal",
     "copyright": "Tüm hakları saklıdır."
@@ -348,5 +438,123 @@
     "accept": "Kabul Et",
     "decline": "Reddet",
     "learnMore": "Daha fazla bilgi"
+  },
+  "useCases": {
+    "remoteWorkers": {
+      "meta": {
+        "title": "Uzaktan Çalışanlar İçin Odak Takibi",
+        "description": "Evden çalışmak gerçekten verimli mi? Odaklanmanızı takip edin, verimli saatlerinizi keşfedin ve daha iyi uzaktan çalışma alışkanlıkları oluşturun."
+      },
+      "badge": "Uzaktan Çalışanlar İçin",
+      "title": "Uzaktan Çalışmak Gerçekten",
+      "titleHighlight": "Verimli mi?",
+      "description": "Evden çalışmak özgürlük demek — ama aynı zamanda daha fazla dikkat dağınıklığı. FocusNow uzaktan iş gününüzün gerçekte nasıl göründüğünü gösterir.",
+      "painPoints": {
+        "title": "Tanıdık Geldi mi?",
+        "items": [
+          "Bütün gün meşgulsünüz ama ne yaptığınızı somut olarak gösteremiyorsunuz",
+          "Ev ortamındaki dikkat dağıtıcılar farkında olmadan derin çalışma sürenizi yiyor",
+          "Ofisten daha mı verimli yoksa daha mı az verimli olduğunuzu bilmiyorsunuz",
+          "Gün içinde kaybettiğiniz odak yüzünden iş akşam saatlerine sarkıyor"
+        ]
+      },
+      "solution": {
+        "title": "FocusNow Nasıl Yardımcı Olur",
+        "items": [
+          "Gerçek verimli saatlerinizi ve dikkat dağınıklığına kaybettiğiniz zamanı görün",
+          "En yoğun odak saatlerinizi bulun ve koruyun",
+          "İş-yaşam dengesi sınırlarınızı takip edin — ne zaman durmanız gerektiğini bilin",
+          "Uzaktan çalışmanın işe yaradığına dair somut veriler oluşturun"
+        ]
+      },
+      "cta": "Ücretsiz Takibimi Başlat"
+    },
+    "students": {
+      "meta": {
+        "title": "Öğrenciler İçin Odak Takibi",
+        "description": "Ders çalışma seanslarınızı takip edin ve zamanınızın nereye gittiğini görün. Otomatik odak takibiyle daha iyi çalışma alışkanlıkları oluşturun."
+      },
+      "badge": "Öğrenciler İçin",
+      "title": "Ders Çalışırken Saatler",
+      "titleHighlight": "Nereye Gidiyor?",
+      "description": "3 saat çalışmaya oturuyorsunuz ama gerçekte ne kadarı odaklı geçiyor? FocusNow ekran sürenizi otomatik takip eder, böylece daha akıllı çalışabilirsiniz.",
+      "painPoints": {
+        "title": "Tanıdık Geldi mi?",
+        "items": [
+          "Saatlerce çalışmayı planlıyorsunuz ama sosyal medyaya dalıyorsunuz",
+          "Hangi derslerin en çok zamanınızı aldığını bilmiyorsunuz",
+          "Sınav dönemi kaotik geçiyor — yeterince çalışıp çalışmadığınızdan emin olamıyorsunuz",
+          "Çalışma yöntemlerinizin gerçekten işe yarayıp yaramadığını anlayamıyorsunuz"
+        ]
+      },
+      "solution": {
+        "title": "FocusNow Nasıl Yardımcı Olur",
+        "items": [
+          "Gerçekten ne kadar çalıştığınızı ve ne kadar dikkatinizin dağıldığını görün",
+          "Ders çalışma sırasında hangi uygulamaları kullandığınızı takip edin",
+          "Zamanlayıcılı odak seanslarıyla görev başında kalın",
+          "Haftalık trendleri inceleyerek çalışma alışkanlıklarınızı geliştirin"
+        ]
+      },
+      "cta": "Ücretsiz Takibimi Başlat"
+    },
+    "freelancers": {
+      "meta": {
+        "title": "Serbest Çalışanlar İçin Odak Takibi",
+        "description": "Her saatinizin nereye gittiğini bilin. Otomatik masaüstü takibi ile projeler ve müşteriler arasındaki çalışmanızı takip edin."
+      },
+      "badge": "Serbest Çalışanlar İçin",
+      "title": "Her Saatiniz",
+      "titleHighlight": "Nereye Gidiyor?",
+      "description": "Serbest çalışan olarak zamanınız geliriniz demek. FocusNow çalışmanızı otomatik takip eder, böylece her zaman zamanınızı nasıl harcadığınızı bilirsiniz.",
+      "painPoints": {
+        "title": "Tanıdık Geldi mi?",
+        "items": [
+          "İşlerin ne kadar sürdüğünü olduğundan kısa tahmin edip düşük fiyat veriyorsunuz",
+          "İdari işler ve iletişim faturalanamayan saatleri yiyor",
+          "Projeler arasında geçiş yapıyorsunuz ve zamanın nereye gittiğini kaybediyorsunuz",
+          "Ay sonunda tüm saatlerinizin nereye gittiğini merak ediyorsunuz"
+        ]
+      },
+      "solution": {
+        "title": "FocusNow Nasıl Yardımcı Olur",
+        "items": [
+          "Her uygulama ve proje için harcanan gerçek süreyi görün",
+          "E-posta ve Slack gibi faturalandırılamayan zaman kayıplarını tespit edin",
+          "Önemli işleri planlamak için en verimli saatlerinizi takip edin",
+          "Hizmetlerinizi doğru fiyatlandırmak için veri toplayın"
+        ]
+      },
+      "cta": "Ücretsiz Takibimi Başlat"
+    },
+    "developers": {
+      "meta": {
+        "title": "Yazılımcılar İçin Odak Takibi",
+        "description": "Kodlama sürenizi, kod inceleme saatlerinizi ve toplantı yükünü takip edin. Gerçek geliştirme iş akışınızı görün."
+      },
+      "badge": "Yazılımcılar İçin",
+      "title": "O Kod İncelemesi Gerçekten",
+      "titleHighlight": "3 Saat mi Sürüyor?",
+      "description": "Kodlama, kod inceleme, toplantılar ve Slack arasında gününüzün gerçekte nereye gittiğini bilmek zor. FocusNow size gerçek tabloyu gösterir.",
+      "painPoints": {
+        "title": "Tanıdık Geldi mi?",
+        "items": [
+          "Toplantılar ve kod incelemeleri derin çalışma zamanınızı parçalıyor",
+          "Bütün gün kod yazdığınızı hissediyorsunuz ama hiçbir şey gönderemediniz",
+          "PR'lar, Slack ve IDE arasında sürekli geçiş yapmak akışınızı bozuyor",
+          "Gerçek geliştirmeye ne kadar zaman harcadığınızı sayısal olarak gösteremiyorsunuz"
+        ]
+      },
+      "solution": {
+        "title": "FocusNow Nasıl Yardımcı Olur",
+        "items": [
+          "IDE, tarayıcı ve iletişim araçlarında geçirdiğiniz süreyi görün",
+          "Derin kodlama seanslarını takip edin ve akış halinizi koruyun",
+          "Toplantı yükünü ve bağlam değiştirme maliyetini tespit edin",
+          "Daha fazla odak süresi talep etmek için veri toplayın"
+        ]
+      },
+      "cta": "Ücretsiz Takibimi Başlat"
+    }
   }
 }
