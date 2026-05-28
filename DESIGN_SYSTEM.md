@@ -123,6 +123,10 @@ When updating a token value, update `tokens.json` first, then reflect the change
 
 Brand colors (`primary`, `secondary`, `accent`) remain the same across modes for consistency.
 
+### Feature Icon Colors
+
+All feature section icons use a single color: **purple** (`bg-purple-100` / `text-purple-600`). Monochromatic icons keep the feature grid calm and professional — the icon shape and title already differentiate each card. No multi-color icon schemes.
+
 ### Text Emphasis Colors
 
 For highlighted text (section titles, links), use these instead of semantic tokens -- `--primary` is optimized for backgrounds, not text readability:
@@ -183,7 +187,7 @@ For highlighted text (section titles, links), use these instead of semantic toke
 | `.press-effect` | Scale to 97% on active press | Primary CTAs |
 | `.transition-smooth` | 200ms ease transition | General |
 | `.glass` | Glassmorphism backdrop blur | Header, window chrome |
-| `.border-glow` | Gradient border on hover (purple/pink/teal) | Feature, pricing, changelog, blog, download cards |
+| `.border-glow` | Gradient border on hover (purple/pink/teal) | Pricing card, download detected card only |
 | `.gradient-glow` | Subtle purple ambient glow behind screenshots | Hero screenshot, screenshot showcase |
 
 ### Deprecated / unused utilities

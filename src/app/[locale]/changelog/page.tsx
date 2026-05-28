@@ -41,7 +41,7 @@ export default function ChangelogPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 * (i + 1) }}
             >
-              <Card className="card-hover border-glow">
+              <Card className="card-hover">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
