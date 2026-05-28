@@ -7,12 +7,9 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import {
-  Download,
-  Apple,
-  Monitor,
-  CheckCircle2,
-} from "lucide-react";
+import { Download, CheckCircle2 } from "lucide-react";
+import { AppleIcon } from "@/components/shared/apple-icon";
+import { WindowsIcon } from "@/components/shared/windows-icon";
 import {
   type Platform,
   downloadLinks,
@@ -21,9 +18,9 @@ import {
 } from "@/lib/downloads";
 
 const platformIcons: Record<string, React.ReactNode> = {
-  "mac-arm": <Apple className="h-6 w-6" />,
-  "mac-intel": <Apple className="h-6 w-6" />,
-  windows: <Monitor className="h-6 w-6" />,
+  "mac-arm": <AppleIcon className="h-6 w-6" />,
+  "mac-intel": <AppleIcon className="h-6 w-6" />,
+  windows: <WindowsIcon className="h-6 w-6" />,
 };
 
 export default function DownloadPage() {
@@ -159,8 +156,8 @@ export default function DownloadPage() {
               <Card key={os}>
                 <CardContent className="p-5">
                   <h4 className="font-semibold mb-3 flex items-center gap-2">
-                    {os === "mac" && <Apple className="h-4 w-4" />}
-                    {os === "windows" && <Monitor className="h-4 w-4" />}
+                    {os === "mac" && <AppleIcon className="h-4 w-4" />}
+                    {os === "windows" && <WindowsIcon className="h-4 w-4" />}
                     {t(`requirements.${os}.title`)}
                   </h4>
                   <ul className="space-y-2">
