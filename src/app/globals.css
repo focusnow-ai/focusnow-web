@@ -39,7 +39,7 @@
 }
 
 /* ============================================
-   Light mode (default — marketing standard)
+   Light mode (default)
    ============================================ */
 :root {
   --background: oklch(0.985 0.002 247.839);   /* slate-50 */
@@ -72,7 +72,7 @@
 }
 
 /* ============================================
-   Dark mode — Warm Notion-like (desktop uyumu)
+   Dark mode — Warm Notion-like (desktop harmony)
    ============================================ */
 .dark {
   --background: hsl(0 0% 11%);                  /* #1c1c1c warm dark */
@@ -81,7 +81,7 @@
   --card-foreground: hsl(0 0% 88%);
   --popover: hsl(0 0% 15%);                      /* #262626 */
   --popover-foreground: hsl(0 0% 88%);
-  --primary: oklch(0.345 0.169 283.063);         /* purple-800 — brand tutarlılığı */
+  --primary: oklch(0.417 0.183 283.063);         /* purple-700 — better contrast on dark backgrounds */
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.592 0.249 0.584);         /* pink-600 */
   --secondary-foreground: oklch(1 0 0);
@@ -91,12 +91,12 @@
   --muted-foreground: hsl(0 0% 55%);             /* #8c8c8c */
   --border: hsl(0 0% 22%);                       /* #383838 visible borders */
   --input: hsl(0 0% 25%);                        /* #404040 */
-  --ring: oklch(0.345 0.169 283.063);            /* purple-800 */
+  --ring: oklch(0.417 0.183 283.063);            /* purple-700 */
   --destructive: oklch(0.577 0.245 27.325);
   --success: oklch(0.723 0.219 149.579);
   --warning: oklch(0.795 0.184 86.047);
   --info: oklch(0.623 0.214 259.815);
-  --chart-1: oklch(0.345 0.169 283.063);
+  --chart-1: oklch(0.417 0.183 283.063);
   --chart-2: oklch(0.592 0.249 0.584);
   --chart-3: oklch(0.845 0.108 176.891);
   --chart-4: oklch(0.723 0.219 149.579);

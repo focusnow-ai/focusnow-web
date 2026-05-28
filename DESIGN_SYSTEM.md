@@ -96,7 +96,7 @@ When updating a token value, update `tokens.json` first, then reflect the change
 | `background` | slate-50 | Page background |
 | `foreground` | slate-950 | Primary text |
 | `card` | white | Card surfaces |
-| `primary` | purple-800 | Buttons, primary actions |
+| `primary` | purple-800 (light) / purple-700 (dark) | Buttons, primary actions |
 | `primary-foreground` | white | Text on primary bg |
 | `secondary` | pink-600 | Secondary actions |
 | `accent` | teal-300 | Badges, highlights |
@@ -121,7 +121,7 @@ When updating a token value, update `tokens.json` first, then reflect the change
 | `input` | `#404040` | Input backgrounds |
 | `accent-foreground` | `#1c1c1c` | Text on accent bg |
 
-Brand colors (`primary`, `secondary`, `accent`) remain the same across modes for consistency.
+Brand colors (`secondary`, `accent`) remain the same across modes. `primary` shifts from purple-800 (light) to purple-700 (dark) for better contrast on dark backgrounds — purple-800 on `#1c1c1c` yielded ~3.8:1 contrast which is borderline WCAG AA.
 
 ### Feature Icon Colors
 
