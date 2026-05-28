@@ -26,7 +26,7 @@ export default function PricingPage() {
         >
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
             {t("title")}{" "}
-            <span className="gradient-text">{t("titleHighlight")}</span>
+            <span className="text-purple-600 dark:text-purple-400">{t("titleHighlight")}</span>
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
             {t("description")}
@@ -40,9 +40,9 @@ export default function PricingPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <Card className="h-full border-primary/30 border-glow elevation-2 relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-1 gradient-primary" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-primary" />
               <CardContent className="p-8">
-                <Badge className="mb-4 gradient-primary text-white border-0">
+                <Badge className="mb-4 bg-primary text-primary-foreground border-0">
                   {t("free.title")}
                 </Badge>
                 <div className="mb-2">
@@ -58,7 +58,7 @@ export default function PricingPage() {
                   href="/download"
                   className={cn(
                     buttonVariants({ size: "lg" }),
-                    "w-full gradient-primary text-white border-0"
+                    "w-full"
                   )}
                 >
                   {t("free.cta")}

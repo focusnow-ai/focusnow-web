@@ -48,7 +48,7 @@ export function ScreenshotShowcase() {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             {t("title")}{" "}
-            <span className="gradient-text">{t("titleHighlight")}</span>
+            <span className="text-purple-600 dark:text-purple-400">{t("titleHighlight")}</span>
           </h2>
         </div>
 
@@ -63,7 +63,7 @@ export function ScreenshotShowcase() {
               <TabsTrigger
                 key={key}
                 value={key}
-                className="gap-2 data-[state=active]:gradient-primary data-[state=active]:text-white"
+                className="gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
               >
                 <Icon className="h-4 w-4" />
                 {t(`tabs.${key}`)}

@@ -76,7 +76,7 @@ export default function DownloadPage() {
                   href={primary.url}
                   className={cn(
                     buttonVariants({ size: "lg" }),
-                    "gradient-primary text-white border-0 w-full glow-md press-effect"
+                    "w-full press-effect"
                   )}
                 >
                   <Download className="mr-2 h-5 w-5" />

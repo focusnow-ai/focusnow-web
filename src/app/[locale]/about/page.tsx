@@ -22,7 +22,7 @@ export default function AboutPage() {
         >
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
             {t("title")}{" "}
-            <span className="gradient-text">{t("titleHighlight")}</span>
+            <span className="text-purple-600 dark:text-purple-400">{t("titleHighlight")}</span>
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
             {t("description")}

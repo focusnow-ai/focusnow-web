@@ -54,7 +54,7 @@ export default async function BlogPage({
                           {t("readingTime", { minutes: post.readingTime })}
                         </span>
                       </div>
-                      <span className="text-sm text-primary flex items-center gap-1">
+                      <span className="text-sm text-purple-600 dark:text-purple-400 flex items-center gap-1">
                         {t("readMore")}
                         <ArrowRight className="h-3 w-3" />
                       </span>

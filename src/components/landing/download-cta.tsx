@@ -27,7 +27,7 @@ export function DownloadCTA() {
         >
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             {t("title")}{" "}
-            <span className="gradient-text">{t("titleHighlight")}</span>
+            <span className="text-purple-600 dark:text-purple-400">{t("titleHighlight")}</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             {t("description")}
@@ -37,7 +37,7 @@ export function DownloadCTA() {
               href="/download"
               className={cn(
                 buttonVariants({ size: "lg" }),
-                "gradient-primary text-white border-0 text-base px-8 h-12 glow-md press-effect"
+                "text-base px-8 h-12 press-effect"
               )}
             >
               <Download className="mr-2 h-5 w-5" />

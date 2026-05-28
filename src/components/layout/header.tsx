@@ -61,7 +61,6 @@ export function Header() {
             href="/download"
             className={cn(
               buttonVariants({ size: "sm" }),
-              "gradient-primary text-white border-0"
             )}
           >
             {t("getApp")}
@@ -107,7 +106,7 @@ export function Header() {
                     onClick={() => setOpen(false)}
                     className={cn(
                       buttonVariants(),
-                      "w-full gradient-primary text-white border-0"
+                      "w-full"
                     )}
                   >
                     {t("getApp")}

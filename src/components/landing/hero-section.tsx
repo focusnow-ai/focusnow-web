@@ -35,7 +35,7 @@ export function HeroSection() {
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl text-balance dark:text-shadow-sm">
             {t("title")}{" "}
-            <span className="gradient-text">{t("titleHighlight")}</span>
+            <span className="text-purple-600 dark:text-purple-400">{t("titleHighlight")}</span>
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl text-balance">
@@ -47,7 +47,7 @@ export function HeroSection() {
               href="/download"
               className={cn(
                 buttonVariants({ size: "lg" }),
-                "gradient-primary text-white border-0 text-base px-8 h-12 glow-md press-effect"
+                "text-base px-8 h-12 press-effect"
               )}
             >
               <Download className="mr-2 h-5 w-5" />
@@ -97,7 +97,7 @@ export function HeroSection() {
             </div>
             <div className="p-8 flex items-center justify-center h-[calc(100%-2rem)]">
               <div className="text-center">
-                <div className="w-16 h-16 mx-auto rounded-2xl gradient-primary flex items-center justify-center mb-4">
+                <div className="w-16 h-16 mx-auto rounded-2xl bg-primary flex items-center justify-center mb-4">
                   <span className="text-2xl text-white font-bold">F</span>
                 </div>
                 <p className="text-muted-foreground text-sm">App Screenshot Preview</p>
