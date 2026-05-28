@@ -27,11 +27,12 @@ export default async function BlogPage({
         {posts.length === 0 ? (
           <p className="text-center text-muted-foreground">{t("noPosts")}</p>
         ) : (
-          <div className="space-y-6">
+          <div className="flex flex-col gap-8">
             {posts.map((post) => (
               <Link
                 key={post.slug}
                 href={{ pathname: "/blog/[slug]", params: { slug: post.slug } }}
+                className="block"
               >
                 <Card className="card-hover transition-all hover:border-primary/30">
                   <CardContent className="p-6">
