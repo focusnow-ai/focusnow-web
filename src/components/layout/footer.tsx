@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { Sparkles } from "lucide-react";
+import { FocusNowLogo } from "@/components/shared/focusnow-logo";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -12,11 +12,8 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg gradient-primary">
-                <Sparkles className="h-4 w-4 text-white" />
-              </div>
-              <span className="gradient-text">FocusNow</span>
+            <Link href="/">
+              <FocusNowLogo />
             </Link>
             <p className="mt-3 text-sm text-muted-foreground max-w-xs">
               {t("description")}
