@@ -26,7 +26,15 @@
       "mac": "Available on macOS",
       "windows": "Available on Windows"
     },
-    "screenshotAlt": "FocusNow app screenshot preview"
+    "screenshotAlt": "FocusNow app screenshot preview",
+    "mockup": {
+      "dashboard": {
+        "focusScore": "Focus Score",
+        "today": "Today",
+        "weeklyFocus": "Weekly Focus",
+        "topApps": "Top Apps"
+      }
+    }
   },
   "socialProof": {
     "freeForever": "Free forever",

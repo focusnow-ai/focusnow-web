@@ -11,8 +11,8 @@ export default function HomePage() {
     <>
       <HeroSection />
       <SocialProofBar />
-      <FeaturesSection />
       <ScreenshotShowcase />
+      <FeaturesSection />
       <HowItWorks />
       <PrivacySection />
       <DownloadCTA />

@@ -26,7 +26,15 @@
       "mac": "macOS için mevcut",
       "windows": "Windows için mevcut"
     },
-    "screenshotAlt": "FocusNow uygulama ekran görüntüsü önizleme"
+    "screenshotAlt": "FocusNow uygulama ekran görüntüsü önizleme",
+    "mockup": {
+      "dashboard": {
+        "focusScore": "Odak Puanı",
+        "today": "Bugün",
+        "weeklyFocus": "Haftalık Odak",
+        "topApps": "En Çok Kullanılanlar"
+      }
+    }
   },
   "socialProof": {
     "freeForever": "Sonsuza dek ücretsiz",

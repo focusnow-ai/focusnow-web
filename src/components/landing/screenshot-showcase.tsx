@@ -58,7 +58,7 @@ export function ScreenshotShowcase() {
 
         {/* Screenshot area */}
         <div className="relative mx-auto max-w-4xl">
-          <div className="aspect-[16/10] rounded-xl border border-border/40 bg-card elevation-3 overflow-hidden">
+          <div className="sm:aspect-[16/10] rounded-xl border border-border/40 bg-card elevation-3 overflow-hidden">
             <div className="h-8 glass flex items-center px-4 gap-2 border-b border-border/40">
               <div className="w-3 h-3 rounded-full bg-red-400" />
               <div className="w-3 h-3 rounded-full bg-yellow-400" />
@@ -76,20 +76,20 @@ export function ScreenshotShowcase() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -10 }}
                 transition={{ duration: 0.3 }}
-                className="p-8 h-[calc(100%-2rem)]"
+                className="p-4 sm:p-8"
               >
-                <div className="flex flex-col gap-4">
-                  <h3 className="text-xl font-semibold">
+                <div className="flex flex-col gap-3 sm:gap-4">
+                  <h3 className="text-lg sm:text-xl font-semibold">
                     {contentTitle}
                   </h3>
-                  <div className="space-y-3">
+                  <div className="space-y-2 sm:space-y-3">
                     {contentItems.map((item, i) => (
                       <div
                         key={i}
-                        className="flex items-center gap-3 p-3 rounded-lg bg-muted/50"
+                        className="flex items-center gap-3 p-2.5 sm:p-3 rounded-lg bg-muted/50"
                       >
                         <div
-                          className="w-2 h-2 rounded-full"
+                          className="w-2 h-2 rounded-full shrink-0"
                           style={{
                             backgroundColor:
                               i === 0
@@ -99,7 +99,7 @@ export function ScreenshotShowcase() {
                                 : "var(--accent)",
                           }}
                         />
-                        <span className="text-sm">{item}</span>
+                        <span className="text-xs sm:text-sm">{item}</span>
                       </div>
                     ))}
                   </div>
