@@ -57,8 +57,8 @@ export default function AboutPage() {
           >
             <Card className="h-full">
               <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-xl bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center mb-4">
-                  <Target className="h-6 w-6 text-pink-600 dark:text-pink-400" />
+                <div className="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-4">
+                  <Target className="h-6 w-6 text-purple-600 dark:text-purple-400" />
                 </div>
                 <h2 className="text-xl font-semibold mb-3">
                   {t("mission.title")}
@@ -79,15 +79,15 @@ export default function AboutPage() {
         >
           <Card>
             <CardContent className="p-6 text-center">
-              <div className="w-12 h-12 rounded-xl bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center mb-4 mx-auto">
-                <Code2 className="h-6 w-6 text-teal-600 dark:text-teal-400" />
+              <div className="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-4 mx-auto">
+                <Code2 className="h-6 w-6 text-purple-600 dark:text-purple-400" />
               </div>
               <h2 className="text-xl font-semibold mb-4">
                 {t("tech.title")}
               </h2>
               <div className="flex flex-wrap justify-center gap-2">
                 {techItems.map((item: string) => (
-                  <Badge key={item} variant="secondary" className="text-sm">
+                  <Badge key={item} variant="outline" className="text-sm">
                     {item}
                   </Badge>
                 ))}

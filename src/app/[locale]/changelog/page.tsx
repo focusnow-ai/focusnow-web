@@ -50,7 +50,7 @@ export default function ChangelogPage() {
                     <div>
                       <div className="flex items-center gap-2">
                         <h2 className="font-semibold">{version.title}</h2>
-                        <Badge variant="secondary">v{version.version}</Badge>
+                        <Badge variant="outline">v{version.version}</Badge>
                       </div>
                       <p className="text-xs text-muted-foreground">
                         {version.date}

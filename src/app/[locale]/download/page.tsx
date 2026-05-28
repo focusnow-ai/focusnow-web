@@ -135,7 +135,7 @@ export default function DownloadPage() {
                       {link.fileName}
                     </a>
                   ) : (
-                    <Badge variant="secondary" className="mt-3">
+                    <Badge variant="outline" className="mt-3">
                       {t("comingSoon")}
                     </Badge>
                   )}

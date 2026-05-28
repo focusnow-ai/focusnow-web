@@ -72,7 +72,7 @@ export default async function BlogPostPage({
           <header className="mb-8">
             <div className="flex items-center gap-2 mb-4">
               {post.tags.map((tag) => (
-                <Badge key={tag} variant="secondary" className="text-xs">
+                <Badge key={tag} variant="outline" className="text-xs">
                   {tag}
                 </Badge>
               ))}

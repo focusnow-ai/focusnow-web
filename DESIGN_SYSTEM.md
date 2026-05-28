@@ -203,6 +203,21 @@ These are defined in `globals.css` but **not used in any component**. Kept for p
 
 ---
 
+## Badge Hierarchy
+
+Badges use a visual hierarchy to communicate their role. The `secondary` variant (pink-600) is **not used on badges** — pink is too dominant for small informational elements and creates visual noise when repeated across many pages.
+
+| Role | Variant / Classes | Appearance | Where |
+|---|---|---|---|
+| Primary action | `default` (`bg-primary`) | Solid purple | Pricing "Free", Download "Detected" |
+| Hero emphasis | Custom purple classes | Light purple bg | Hero badge (custom) |
+| Informational | `variant="outline"` | Bordered, neutral | Blog tags, changelog version, about tech stack, download platform |
+| Passive / pending | `bg-muted text-muted-foreground border-border` | Gray bg | Pricing "Pro", Feature "Coming Soon" |
+
+**Decision rationale:** Pink-600 badges competed with primary purple for attention and made the page feel noisy. Outline badges for informational content recede naturally, letting primary-action badges stand out. Muted badges communicate "not yet active" for upcoming features.
+
+---
+
 ## Dark/Light Mode
 
 - Toggled via `.dark` class on root element using `next-themes`.

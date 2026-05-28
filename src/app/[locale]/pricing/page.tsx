@@ -82,7 +82,7 @@ export default function PricingPage() {
           >
             <Card className="h-full">
               <CardContent className="p-8">
-                <Badge variant="secondary" className="mb-4">
+                <Badge className="mb-4 bg-muted text-muted-foreground border-border">
                   <Sparkles className="h-3 w-3 mr-1" />
                   {t("pro.title")}
                 </Badge>

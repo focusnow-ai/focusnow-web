@@ -37,7 +37,7 @@ export default async function BlogPage({
                   <CardContent className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       {post.tags.map((tag) => (
-                        <Badge key={tag} variant="secondary" className="text-xs">
+                        <Badge key={tag} variant="outline" className="text-xs">
                           {tag}
                         </Badge>
                       ))}
