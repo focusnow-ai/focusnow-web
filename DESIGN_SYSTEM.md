@@ -216,6 +216,115 @@ These are defined in `globals.css` but **not used in any component**. Kept for p
 
 ---
 
+## Section Design Patterns
+
+The site uses two distinct section styles that alternate to create visual rhythm. **Do not mix these patterns within a single section.**
+
+### Rich / Interactive Sections
+
+Used for **product showcases** where the goal is to demonstrate what the product does.
+
+| Pattern | Where Used | Key Elements |
+|---|---|---|
+| Bento grid | Landing `BentoFeatures` | Variable-size cards (`grid-template-areas`), embedded interactivity (tabs, SVG animations, bar charts), window chrome mockups (`glass` + traffic light dots) |
+
+**Bento card anatomy:**
+```
+Card (border-border/40, h-full)
+└─ CardContent (p-5 sm:p-6, h-full flex flex-col)
+   ├─ Header: flex items-center gap-3 mb-4
+   │   ├─ Icon container: w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-900/30
+   │   │   └─ Icon: h-5 w-5 text-purple-600 dark:text-purple-400
+   │   └─ Title: font-semibold text-lg
+   ├─ Description: text-sm text-muted-foreground (optional, under title or beside it)
+   └─ Visual content: flex-1 (SVG, chart, mockup, badge list, etc.)
+```
+
+**Window chrome mockup:** Used inside bento hero card for product demo previews.
+```
+rounded-lg border border-border/40 bg-gradient-to-br from-card to-muted/60 elevation-3
+├─ Title bar: h-7 glass border-b border-border/40
+│   ├─ Traffic lights: w-2 h-2 rounded-full (bg-red-400, bg-yellow-400, bg-green-400)
+│   └─ Title: text-[10px] text-muted-foreground
+└─ Content area
+```
+
+### Minimal / Typographic Sections
+
+Used for **explanatory content** where the goal is clarity and scannability, not visual richness. Typography and whitespace do the work.
+
+| Pattern | Where Used | Key Elements |
+|---|---|---|
+| Numbered steps | Landing `HowItWorks` | Large faded numbers (`text-5xl/6xl`, `purple-600/15` opacity), bold titles, single-sentence descriptions. No cards, no borders, no illustrations. |
+| Value pillars | About page | Icon + heading + 2-3 sentence paragraph per pillar. No cards, no borders. Equal-weight grid (`grid-cols-1 md:grid-cols-3`). |
+| Social proof strip | Landing `SocialProofBar` | Inline icon + text pairs, flex row, `text-sm text-muted-foreground`. |
+| CTA block | Landing `DownloadCTA` | Centered heading + description + single button. Gradient background. |
+
+### Rhythm Rule
+
+**Rich → Minimal → CTA.** The landing page alternates between dense and sparse:
+```
+HeroSection (rich — split layout, dashboard mockup)
+SocialProofBar (minimal — icon + text strip)
+BentoFeatures (rich — interactive bento grid)
+HowItWorks (minimal — typographic numbered steps)
+DownloadCTA (minimal — centered text + button with gradient bg)
+```
+
+This prevents "card fatigue" and gives the eye rest between dense sections.
+
+### What NOT to Use
+
+Based on research of modern SaaS patterns (Linear, Raycast, Vercel, Rize, Superhuman):
+
+- **No "Step 1, Step 2, Step 3" with circle badges and connector lines.** This is the most template-looking SaaS pattern. Use large faded numbers + typography instead.
+- **No abstract/whimsical illustrations** (Undraw, Humaaans style). Show the actual product or use pure typography.
+- **No window chrome mockup for non-product content.** The glass + traffic lights pattern is for product demo previews only, not for data lists or tech stacks.
+- **No gratuitous motion.** Parallax, floating elements, spinning icons signal 2019. Motion should demonstrate functionality or reveal content on scroll.
+- **No card wrappers on informational-only content.** If a section just has title + paragraph (like About pillars or HowItWorks steps), use typography and whitespace, not cards.
+
+---
+
+## Animation Patterns
+
+All sections use `framer-motion`. Two standard patterns:
+
+### Container Stagger (for groups of items)
+```tsx
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12–0.2 } },
+};
+const itemVariants = {
+  hidden: { opacity: 0, y: 16–24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
+};
+
+// Usage:
+<motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }}>
+  <motion.div variants={itemVariants}>...</motion.div>
+</motion.div>
+```
+
+- `staggerChildren: 0.12` for bento grid (5 items, fast reveal)
+- `staggerChildren: 0.15–0.2` for smaller groups (3 items)
+- Always use `whileInView` + `viewport={{ once: true }}`, never `animate` (which fires on page load)
+- Exception: page hero headers use `animate` since they're above the fold
+
+### SVG / Chart Animations (viewport-triggered)
+```tsx
+<motion.div
+  initial={{ width: "0%" / height: 0 / strokeDashoffset: circumference }}
+  whileInView={{ width: "80%" / height: "72%" / strokeDashoffset: target }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5–1.5, ease: "easeOut" }}
+/>
+```
+
+Used in bento cards for progress bars, bar charts, and circular progress rings.
+
+---
+
 ## Badge Hierarchy
 
 Badges use a visual hierarchy to communicate their role. The `secondary` variant (pink-600) is **not used on badges** — pink is too dominant for small informational elements and creates visual noise when repeated across many pages.

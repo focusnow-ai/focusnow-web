@@ -73,40 +73,6 @@
       ]
     }
   },
-  "features": {
-    "title": "See How You Work.",
-    "titleHighlight": "Work Better.",
-    "description": "Simple tools that show you where your time goes — so you can spend it where it matters.",
-    "items": {
-      "tracking": {
-        "title": "See Your Real Workday",
-        "description": "FocusNow tracks which apps you use and for how long. No timers. No logging. It just works."
-      },
-      "focus": {
-        "title": "Deep Work Timer",
-        "description": "Start a focus session, pick your duration, and see how well you stayed on task. Your focus score shows what's working."
-      },
-      "analytics": {
-        "title": "Your Week at a Glance",
-        "description": "Daily and weekly reports show your most productive hours, top apps, and focus trends. Spot patterns you never noticed."
-      },
-      "crossPlatform": {
-        "title": "Mac + Windows",
-        "description": "Same experience on both platforms. Install in under a minute. Your data syncs automatically."
-      },
-      "cloudSync": {
-        "title": "Encrypted Cloud Sync",
-        "description": "Your data follows you across devices, encrypted end-to-end. No one sees it but you."
-      }
-    },
-    "roadmap": {
-      "title": "What's Next",
-      "items": [
-        "Distraction alerts — gentle nudges when you drift off task",
-        "AI-powered insights — smart categorization and personalized focus recommendations"
-      ]
-    }
-  },
   "screenshots": {
     "title": "See FocusNow",
     "titleHighlight": "in Action",
@@ -288,14 +254,21 @@
     },
     "title": "About",
     "titleHighlight": "FocusNow",
-    "description": "FocusNow was born from a simple idea: you should be able to understand your productivity without giving up your privacy.",
-    "story": {
-      "title": "Our Story",
-      "content": "Most productivity tracking tools either lack depth or compromise your privacy. We thought there had to be a better way. FocusNow gives you powerful insights into how you spend your time, with all your data encrypted and securely stored."
-    },
-    "mission": {
-      "title": "Our Mission",
-      "content": "To help people understand and improve their focus through intelligent, privacy-respecting technology. We believe that personal productivity data should stay personal."
+    "mission": "Deep work shouldn't require deep effort.",
+    "description": "FocusNow was born from a simple idea: you should be able to understand your productivity without giving up your privacy. Most tools either lack depth or compromise your data. We thought there had to be a better way.",
+    "pillars": {
+      "privacy": {
+        "title": "Privacy-First",
+        "content": "Your productivity data is deeply personal. Everything is encrypted end-to-end, never sold, and stored on your terms. We built FocusNow so you never have to choose between insight and privacy."
+      },
+      "simplicity": {
+        "title": "Effortless",
+        "content": "No buttons to press, no timers to start. FocusNow runs silently in the background and shows you where your time went. Productivity tracking that gets out of your way."
+      },
+      "transparency": {
+        "title": "Transparent",
+        "content": "We're clear about what we collect, how we store it, and why. No dark patterns, no hidden data flows. You own your data and can export or delete it anytime."
+      }
     },
     "tech": {
       "title": "Built With",

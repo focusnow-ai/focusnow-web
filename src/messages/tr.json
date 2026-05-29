@@ -73,40 +73,6 @@
       ]
     }
   },
-  "features": {
-    "title": "Nasıl Çalıştığınızı Görün.",
-    "titleHighlight": "Daha İyi Çalışın.",
-    "description": "Zamanınızın nereye gittiğini gösteren basit araçlar — böylece onu önemli yerlere harcayabilirsiniz.",
-    "items": {
-      "tracking": {
-        "title": "Gerçek İş Gününüzü Görün",
-        "description": "FocusNow hangi uygulamaları ne kadar kullandığınızı takip eder. Zamanlayıcı yok, kayıt tutma yok. Sessizce çalışır."
-      },
-      "focus": {
-        "title": "Derin Çalışma Zamanlayıcısı",
-        "description": "Odaklanma seansı başlatın, süreyi seçin ve ne kadar odaklandığınızı görün. Odak puanınız neyin işe yaradığını gösterir."
-      },
-      "analytics": {
-        "title": "Haftanıza Bir Bakışta",
-        "description": "Günlük ve haftalık raporlar en verimli saatlerinizi, en çok kullandığınız uygulamaları ve odak trendlerinizi gösterir."
-      },
-      "crossPlatform": {
-        "title": "Mac + Windows",
-        "description": "Her iki platformda da aynı deneyim. Bir dakikada kurulur. Verileriniz otomatik senkronize olur."
-      },
-      "cloudSync": {
-        "title": "Şifreli Bulut Senkronizasyonu",
-        "description": "Verileriniz cihazlar arasında sizi takip eder, uçtan uca şifreli. Sizden başka kimse göremez."
-      }
-    },
-    "roadmap": {
-      "title": "Sırada Ne Var",
-      "items": [
-        "Dikkat dağınıklığı uyarıları — odağınız dağıldığında hafif hatırlatmalar",
-        "Yapay zeka destekli analizler — akıllı sınıflandırma ve size özel odaklanma önerileri"
-      ]
-    }
-  },
   "screenshots": {
     "title": "FocusNow'u",
     "titleHighlight": "Çalışırken Görün",
@@ -288,14 +254,21 @@
     },
     "title": "FocusNow",
     "titleHighlight": "Hakkında",
-    "description": "FocusNow basit bir fikirden doğdu: gizliliğinizden ödün vermeden verimliliğinizi takip edebilmelisiniz.",
-    "story": {
-      "title": "Hikayemiz",
-      "content": "Çoğu verimlilik aracı ya yeterince detaylı değil ya da gizliliğinizi tehlikeye atıyor. Daha iyi bir yol olması gerektiğini düşündük. FocusNow zamanınızı nasıl harcadığınızı net bir şekilde gösterir; tüm verileriniz şifreli ve güvenli bir şekilde saklanır."
-    },
-    "mission": {
-      "title": "Misyonumuz",
-      "content": "Gizliliğe saygılı teknoloji ile insanların odaklanma alışkanlıklarını anlamalarına ve geliştirmelerine yardımcı olmak. Kişisel verilerinizin kişisel kalması gerektiğine inanıyoruz."
+    "mission": "Derin çalışma, derin çaba gerektirmemeli.",
+    "description": "FocusNow basit bir fikirden doğdu: gizliliğinizden ödün vermeden verimliliğinizi takip edebilmelisiniz. Çoğu araç ya yeterince detaylı değil ya da verilerinizi tehlikeye atıyor. Daha iyi bir yol olması gerektiğini düşündük.",
+    "pillars": {
+      "privacy": {
+        "title": "Gizlilik Öncelikli",
+        "content": "Verimlilik verileriniz size özeldir. Her şey uçtan uca şifrelenir, asla satılmaz ve sizin koşullarınızda saklanır. FocusNow'u içgörü ile gizlilik arasında seçim yapmak zorunda kalmayasınız diye geliştirdik."
+      },
+      "simplicity": {
+        "title": "Zahmetsiz",
+        "content": "Basacak düğme yok, başlatacak zamanlayıcı yok. FocusNow arka planda sessizce çalışır ve zamanınızın nereye gittiğini gösterir. Önünüzden çekilen bir verimlilik takibi."
+      },
+      "transparency": {
+        "title": "Şeffaf",
+        "content": "Ne topladığımız, nasıl sakladığımız ve neden yaptığımız konusunda açığız. Gizli veri akışı yok, karanlık kalıp yok. Verileriniz sizin — istediğiniz zaman dışa aktarın veya silin."
+      }
     },
     "tech": {
       "title": "Kullanılan Teknolojiler",

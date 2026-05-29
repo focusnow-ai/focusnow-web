@@ -22,7 +22,7 @@ src/
 │   ├── ui/                 # shadcn/ui components (Base UI + CVA)
 │   ├── layout/             # Header, Footer
 │   ├── shared/             # ThemeProvider, ThemeToggle, LocaleSwitcher, FocusNowLogo, CookieConsentBanner
-│   ├── landing/            # Landing sections (hero, social-proof-bar, features, screenshots, how-it-works, privacy, download-cta)
+│   ├── landing/            # Landing sections (hero, social-proof-bar, bento-features, how-it-works, download-cta)
 │   └── use-cases/          # UseCaseTemplate shared component
 ├── content/blog/           # MDX blog posts (en/, tr/)
 ├── i18n/                   # routing.ts, navigation.ts, request.ts
@@ -60,6 +60,17 @@ src/
 - Buttons: Solid `bg-primary`, no gradients. See `DESIGN_SYSTEM.md` for full details.
 - Text emphasis: `text-purple-600 dark:text-purple-400` (not `text-primary` which is too dark in dark mode)
 - Dark mode: `.dark` class toggled by `next-themes`. Warm neutrals, not pure black.
+
+## Section Design Patterns
+
+The site uses **two section styles that alternate** for visual rhythm. See `DESIGN_SYSTEM.md` for full details.
+
+- **Rich sections** (bento grid, hero): Cards with `border-border/40`, embedded interactivity (tabs, SVG animations), window chrome mockups. Icon containers: `w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-900/30`.
+- **Minimal sections** (HowItWorks, About pillars, CTA): Typography-driven. Large faded numbers or icon + heading + paragraph. No cards, no borders. Whitespace does the work.
+- **Rhythm:** Rich → Minimal → Rich → Minimal → CTA. Never stack two rich sections.
+- **Landing page flow:** `HeroSection → SocialProofBar → BentoFeatures → HowItWorks → DownloadCTA`
+- **Animations:** Always `whileInView` + `viewport={{ once: true }}` with stagger. Never `animate` (except hero header which is above the fold).
+- **Do not** wrap informational-only content in Card components. Do not use window chrome mockup for non-product content. Do not use circle step badges or connector lines.
 
 ## Design System
 
