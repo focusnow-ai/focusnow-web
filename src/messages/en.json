@@ -42,6 +42,37 @@
     "encrypted": "AES-256 encrypted",
     "noTracking": "No screenshots or keylogging"
   },
+  "bentoFeatures": {
+    "title": "Everything You Need to",
+    "titleHighlight": "Focus Better",
+    "hero": {
+      "title": "See Your Real Workday",
+      "description": "FocusNow tracks which apps you use and for how long. No timers. No logging. It just works."
+    },
+    "timer": {
+      "title": "Deep Work Timer",
+      "description": "Start a focus session and see how well you stayed on task."
+    },
+    "analytics": {
+      "title": "Your Week at a Glance",
+      "description": "Spot your most productive hours and focus trends at a glance."
+    },
+    "privacy": {
+      "title": "Privacy-First. Always.",
+      "description": "Your data is encrypted and never leaves your control."
+    },
+    "platform": {
+      "title": "Works Everywhere",
+      "description": "Same experience on Mac and Windows. Encrypted sync across devices."
+    },
+    "roadmap": {
+      "title": "What's Next",
+      "items": [
+        "Distraction alerts — gentle nudges when you drift off task",
+        "AI-powered insights — smart categorization and personalized focus recommendations"
+      ]
+    }
+  },
   "features": {
     "title": "See How You Work.",
     "titleHighlight": "Work Better.",

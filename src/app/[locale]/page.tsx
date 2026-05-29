@@ -1,9 +1,7 @@
 import { HeroSection } from "@/components/landing/hero-section";
 import { SocialProofBar } from "@/components/landing/social-proof-bar";
-import { FeaturesSection } from "@/components/landing/features-section";
-import { ScreenshotShowcase } from "@/components/landing/screenshot-showcase";
+import { BentoFeatures } from "@/components/landing/bento-features";
 import { HowItWorks } from "@/components/landing/how-it-works";
-import { PrivacySection } from "@/components/landing/privacy-section";
 import { DownloadCTA } from "@/components/landing/download-cta";
 
 export default function HomePage() {
@@ -11,10 +9,8 @@ export default function HomePage() {
     <>
       <HeroSection />
       <SocialProofBar />
-      <ScreenshotShowcase />
-      <FeaturesSection />
+      <BentoFeatures />
       <HowItWorks />
-      <PrivacySection />
       <DownloadCTA />
     </>
   );

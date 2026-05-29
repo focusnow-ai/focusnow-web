@@ -42,6 +42,37 @@
     "encrypted": "AES-256 şifreli",
     "noTracking": "Ekran görüntüsü veya tuş kaydı yok"
   },
+  "bentoFeatures": {
+    "title": "Daha İyi Odaklanmak İçin",
+    "titleHighlight": "İhtiyacınız Olan Her Şey",
+    "hero": {
+      "title": "Gerçek İş Gününüzü Görün",
+      "description": "FocusNow hangi uygulamaları ne kadar kullandığınızı takip eder. Zamanlayıcı yok, kayıt yok. Sessizce çalışır."
+    },
+    "timer": {
+      "title": "Derin Çalışma Zamanlayıcısı",
+      "description": "Odaklanma seansı başlatın ve ne kadar odaklandığınızı görün."
+    },
+    "analytics": {
+      "title": "Haftanıza Bir Bakışta",
+      "description": "En verimli saatlerinizi ve odak trendlerinizi tek bakışta görün."
+    },
+    "privacy": {
+      "title": "Gizlilik Her Şeyden Önce.",
+      "description": "Verileriniz şifreli ve her zaman sizin kontrolünüzde."
+    },
+    "platform": {
+      "title": "Her Yerde Çalışır",
+      "description": "Mac ve Windows'ta aynı deneyim. Cihazlar arası şifreli senkronizasyon."
+    },
+    "roadmap": {
+      "title": "Sırada Ne Var",
+      "items": [
+        "Dikkat dağınıklığı uyarıları — odağınız dağıldığında hafif hatırlatmalar",
+        "Yapay zeka destekli analizler — akıllı sınıflandırma ve size özel odaklanma önerileri"
+      ]
+    }
+  },
   "features": {
     "title": "Nasıl Çalıştığınızı Görün.",
     "titleHighlight": "Daha İyi Çalışın.",

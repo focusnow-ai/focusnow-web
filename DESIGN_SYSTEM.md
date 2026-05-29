@@ -189,6 +189,19 @@ For highlighted text (section titles, links), use these instead of semantic toke
 | `.glass` | Glassmorphism backdrop blur | Header, window chrome |
 | `.border-glow` | Gradient border on hover (purple/pink/teal) | Pricing card, download detected card only |
 | `.gradient-glow` | Subtle purple ambient glow behind screenshots | Hero screenshot, screenshot showcase |
+| `.bento-grid` | Responsive CSS Grid with named areas for bento feature layout | Landing page features section |
+
+### `.bento-grid` Layout
+
+Responsive grid using `grid-template-areas` for the landing page feature cards:
+
+| Breakpoint | Columns | Layout |
+|---|---|---|
+| Mobile (<640px) | 1 | Single column: hero → privacy → timer → analytics → platform |
+| Tablet (640px+) | 2 | Hero spans 2 cols, timer/analytics side by side, privacy/platform full width |
+| Desktop (1024px+) | 3 | Hero 2×2 (top-left), timer + analytics stacked (right), privacy 2×1 + platform 1×1 (bottom) |
+
+Grid areas: `hero`, `timer`, `analytics`, `privacy`, `platform`. Each child uses `style={{ gridArea: "..." }}`.
 
 ### Deprecated / unused utilities
 

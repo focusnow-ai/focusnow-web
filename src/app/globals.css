@@ -307,6 +307,42 @@
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background-color: hsl(0 0% 65%);
   }
+
+  /* Bento feature grid */
+  .bento-grid {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hero"
+      "privacy"
+      "timer"
+      "analytics"
+      "platform";
+  }
+
+  @media (min-width: 640px) {
+    .bento-grid {
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "hero     hero"
+        "timer    analytics"
+        "privacy  privacy"
+        "platform platform";
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .bento-grid {
+      gap: 1.25rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "hero    hero    timer"
+        "hero    hero    analytics"
+        "privacy privacy platform";
+    }
+  }
 }
 
 /* ============================================
