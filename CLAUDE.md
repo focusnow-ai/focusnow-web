@@ -12,12 +12,11 @@ src/
 │   ├── layout.tsx          # Root layout (metadata, fonts)
 │   ├── globals.css         # All CSS variables, utilities, base styles
 │   ├── sitemap.ts          # Sitemap with localized URLs and hreflang
-│   ├── api/waitlist/       # Waitlist email capture endpoint
 │   └── [locale]/           # Locale-prefixed routes
 │       ├── layout.tsx      # Providers (ThemeProvider, NextIntlClientProvider)
 │       ├── page.tsx        # Landing page assembly
 │       ├── use-cases/      # Audience segmentation pages (remote-workers, students, freelancers, developers)
-│       └── */page.tsx      # Pages: download, pricing, about, blog, changelog, privacy
+│       └── */page.tsx      # Pages: download, pricing, about, blog, changelog, privacy, terms
 ├── components/
 │   ├── ui/                 # shadcn/ui components (Base UI + CVA)
 │   ├── layout/             # Header, Footer

@@ -101,6 +101,11 @@ export function Footer() {
                   {nav("privacy")}
                 </Link>
               </li>
+              <li>
+                <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {nav("terms")}
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
