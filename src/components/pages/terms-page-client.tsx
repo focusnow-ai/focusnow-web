@@ -4,55 +4,30 @@ import { useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
-import { Shield } from "lucide-react";
+import { ScrollText } from "lucide-react";
 
 const sectionKeys = [
-  "trustPromise",
-  "dataController",
-  "collection",
-  "tracking",
-  "usage",
-  "aiInsights",
-  "analytics",
-  "storage",
-  "internationalTransfers",
-  "security",
-  "sharing",
-  "cookies",
-  "retention",
-  "rights",
-  "children",
+  "service",
+  "license",
+  "accounts",
+  "acceptableUse",
+  "plans",
+  "aiContent",
+  "privacyRef",
+  "updates",
+  "ip",
+  "warranty",
+  "liability",
+  "termination",
+  "law",
   "changes",
   "contact",
 ] as const;
 
-const sectionsWithItems = new Set([
-  "trustPromise",
-  "collection",
-  "tracking",
-  "usage",
-  "analytics",
-  "storage",
-  "security",
-  "sharing",
-  "cookies",
-  "retention",
-  "rights",
-  "contact",
-]);
+const sectionsWithItems = new Set(["acceptableUse"]);
 
-const sectionsWithNote = new Set([
-  "usage",
-  "aiInsights",
-  "analytics",
-  "security",
-  "cookies",
-  "rights",
-  "contact",
-]);
-
-export default function PrivacyPage() {
-  const t = useTranslations("privacyPage");
+export function TermsPageClient() {
+  const t = useTranslations("termsPage");
 
   return (
     <div className="py-20 sm:py-28">
@@ -64,7 +39,7 @@ export default function PrivacyPage() {
           transition={{ duration: 0.5 }}
         >
           <div className="w-16 h-16 rounded-2xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-6 mx-auto">
-            <Shield className="h-8 w-8 text-purple-600 dark:text-purple-400" />
+            <ScrollText className="h-8 w-8 text-purple-600 dark:text-purple-400" />
           </div>
           <h1 className="text-4xl font-bold tracking-tight">{t("title")}</h1>
           <p className="mt-2 text-sm text-muted-foreground">
@@ -86,7 +61,6 @@ export default function PrivacyPage() {
               <div className="space-y-8">
                 {sectionKeys.map((key, i) => {
                   const hasItems = sectionsWithItems.has(key);
-                  const hasNote = sectionsWithNote.has(key);
                   const items: string[] = hasItems
                     ? t.raw(`sections.${key}.items`)
                     : [];
@@ -112,11 +86,6 @@ export default function PrivacyPage() {
                             </li>
                           ))}
                         </ul>
-                      )}
-                      {hasNote && (
-                        <p className="mt-4 text-sm text-muted-foreground/80 italic leading-relaxed">
-                          {t(`sections.${key}.note`)}
-                        </p>
                       )}
                     </div>
                   );

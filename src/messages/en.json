@@ -12,6 +12,7 @@
     "about": "About",
     "changelog": "Changelog",
     "privacy": "Privacy",
+    "terms": "Terms of Use",
     "getApp": "Get FocusNow Free",
     "menu": "Menu"
   },
@@ -169,7 +170,7 @@
       "steps": {
         "permissions": {
           "title": "Grant Permissions",
-          "description": "FocusNow needs accessibility permissions to track which app is in the foreground. We never read content — just the app name."
+          "description": "FocusNow needs accessibility permissions to track which app is in the foreground. It only reads the app name, window title, and for browsers the page address — never your screen contents or keystrokes."
         },
         "run": {
           "title": "Let It Run",
@@ -186,7 +187,7 @@
       "items": [
         {
           "question": "Is this spyware?",
-          "answer": "No. FocusNow only tracks which app is in the foreground and for how long. It never takes screenshots, records keystrokes, or reads what you type. Your data is encrypted with AES-256 and only you can see it."
+          "answer": "No. FocusNow tracks which app is in the foreground — its name, window title, and for browsers the page address — and for how long. It never takes screenshots, records keystrokes, or reads what you type. Your data is encrypted in transit and at rest, and it is never sold or shared with advertisers."
         },
         {
           "question": "How much CPU and battery does it use?",
@@ -194,7 +195,7 @@
         },
         {
           "question": "Can my employer see my data?",
-          "answer": "No. FocusNow is a personal productivity tool. Your data is encrypted and stored in your own account. No one else — including us — can access your activity data."
+          "answer": "No. FocusNow is a personal productivity tool. Your data is stored in your own account, is not visible to your employer, and is never shared or sold. Our Privacy Policy explains exactly how your data is handled."
         },
         {
           "question": "Is it really free?",
@@ -236,15 +237,7 @@
         "Custom categories",
         "Data export",
         "Priority support"
-      ],
-      "cta": "Join Waitlist",
-      "waitlist": {
-        "placeholder": "your@email.com",
-        "submit": "Notify Me",
-        "success": "You're on the list! We'll let you know when Pro launches.",
-        "error": "Something went wrong. Please try again.",
-        "invalid": "Please enter a valid email address."
-      }
+      ]
     }
   },
   "about": {
@@ -259,7 +252,7 @@
     "pillars": {
       "privacy": {
         "title": "Privacy-First",
-        "content": "Your productivity data is deeply personal. Everything is encrypted end-to-end, never sold, and stored on your terms. We built FocusNow so you never have to choose between insight and privacy."
+        "content": "Your productivity data is deeply personal. Everything is encrypted in transit and at rest, never sold, and stored on your terms. We built FocusNow so you never have to choose between insight and privacy."
       },
       "simplicity": {
         "title": "Effortless",
@@ -277,8 +270,8 @@
   },
   "privacyPage": {
     "title": "Privacy Policy",
-    "lastUpdated": "Effective date: May 25, 2025",
-    "intro": "FocusNow (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy covers both the FocusNow website and desktop application. It explains what data we collect, how we use and store it, and what rights you have regarding your personal information. This policy is prepared in accordance with applicable data protection laws. We encourage you to read this policy carefully to understand how we handle your data.",
+    "lastUpdated": "Effective date: July 2, 2026",
+    "intro": "FocusNow (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy covers the FocusNow website and desktop application. It explains exactly what data we collect, how we use and store it, who processes it on our behalf, and the rights you have over your personal information. This version replaces the version dated May 25, 2025.",
     "sections": {
       "trustPromise": {
         "title": "1. Our Privacy Promise",
@@ -289,123 +282,229 @@
           "We never take screenshots of your screen",
           "We never record keystrokes, mouse clicks, or form inputs",
           "We never use your data for advertising or marketing profiling",
-          "You can delete all your data at any time — permanently and irreversibly"
+          "You can delete your activity history and sessions from within the app at any time, and request full account deletion by emailing privacy@focusnow.ai"
         ]
       },
       "dataController": {
         "title": "2. Data Controller",
-        "content": "FocusNow is developed and operated by Barbaros Zongur, based in Turkey. As the data controller, we are responsible for deciding how your personal data is processed. For all privacy-related inquiries, you can reach us at privacy@focusnow.ai."
+        "content": "FocusNow is developed and operated by Barbaros Zongur, based in Turkey. As the data controller, we decide how and why your personal data is processed. For all privacy-related inquiries, you can reach us at privacy@focusnow.ai."
       },
       "collection": {
         "title": "3. Information We Collect",
-        "content": "We collect only the minimum data necessary to provide you with productivity insights. Here is exactly what we collect and why:",
+        "content": "We collect only the data needed to provide you with productivity insights. Here is exactly what we collect and why:",
         "items": [
-          "Account Information — your email address, display name, and authentication credentials (to create and manage your account)",
-          "Activity Data — active application names, window titles, focus session durations, productivity categories, and daily usage patterns (to generate your productivity analytics)",
-          "Device Information — operating system type, app version, and device identifier (for service functionality and troubleshooting)"
+          "Account information — your email address, display name, and which sign-in provider you used (Google or Microsoft). We never receive or store passwords",
+          "Optional profile details — your job title and sector, if you choose to provide them, to make your insights more relevant",
+          "Activity data — the names and file paths of the applications you use, window titles, the web addresses (URLs) you visit, whether you are active, idle, or away, timestamps and durations, and your focus session details. This powers your productivity analytics",
+          "Optional diagnostics and usage analytics — operating system and app version, device architecture, language and theme settings, anonymized usage events, and error reports. Collected only if you opt in (see section 7)",
+          "Website data — what the focusnow.ai website collects is described in the cookies section below"
+        ]
+      },
+      "tracking": {
+        "title": "4. How Activity Tracking Works",
+        "content": "While it is running, the desktop app checks which window is in the foreground roughly every two seconds — including outside focus sessions. On macOS this requires the Accessibility permission, which you can revoke in System Settings at any time. You stay in control:",
+        "items": [
+          "Your data is recorded on your device first, in a local database, and synced to the cloud while you are signed in",
+          "You can exclude specific applications and websites from tracking in Settings",
+          "You can delete individual activity logs and sessions from within the app — deletion removes them from both the cloud and your device",
+          "Quitting the app stops all tracking immediately"
         ]
       },
       "usage": {
-        "title": "4. How We Use Your Data",
+        "title": "5. How We Use Your Data",
         "content": "We use your data exclusively to provide and improve the FocusNow experience:",
         "items": [
-          "Provide automatic productivity categorization and analytics dashboards",
-          "Sync your data across devices for seamless access to your productivity history",
-          "Generate personalized focus insights and productivity reports",
+          "Categorize your activity automatically and build your analytics dashboards",
+          "Sync your data so your productivity history follows your account",
+          "Generate personalized focus insights and daily reports",
           "Send service-related communications (updates, security alerts)",
-          "Diagnose technical issues and improve app performance"
+          "Diagnose technical issues and improve app performance (opt-in analytics only)"
         ],
         "note": "We do not use your activity data for advertising, marketing profiling, or any purpose unrelated to the FocusNow service."
       },
-      "storage": {
-        "title": "5. Data Storage and Infrastructure",
-        "content": "Your data is stored securely in Microsoft Azure Cosmos DB, a globally distributed enterprise-grade database service:",
+      "aiInsights": {
+        "title": "6. AI-Generated Insights",
+        "content": "When you request a daily report, that day's activity records — application names, window titles, URLs, timestamps, and categories — are processed by Azure OpenAI Service running inside our own Microsoft Azure subscription in the European Union. Your data is not used to train AI models. The generated report is stored in your account so it does not have to be regenerated.",
+        "note": "AI-generated insights are informational only and can be inaccurate. They are not professional, medical, or employment advice."
+      },
+      "analytics": {
+        "title": "7. Optional Analytics and Diagnostics (Opt-In)",
+        "content": "The desktop app asks for your consent on first launch before sending any analytics or diagnostics. If you decline, nothing is sent. If you opt in:",
         "items": [
-          "All data encrypted at rest using AES-256 encryption",
-          "All data encrypted in transit using TLS 1.2+",
+          "Error and diagnostic reports are sent to Azure Application Insights so we can find and fix bugs",
+          "Product usage events (for example, which features are used) are sent to PostHog, hosted in the European Union, under a random anonymous identifier — not your name or email",
+          "Session replay captures how the FocusNow app's own interface is used, with all text inputs masked. It never records your screen, other applications, or their content",
+          "Your job title and sector are never included in analytics data"
+        ],
+        "note": "You can change your choice at any time in Settings → Privacy. Turning analytics off stops all collection immediately."
+      },
+      "storage": {
+        "title": "8. Data Storage and Infrastructure",
+        "content": "Your synced data is stored in Microsoft Azure (Cosmos DB) in European Union data centers:",
+        "items": [
+          "Encrypted in transit using TLS 1.2+ and encrypted at rest using AES-256",
           "Azure compliance certifications: SOC 1/2/3, ISO 27001, GDPR-ready infrastructure",
           "Physical and logical access controls at all data centers",
-          "A local copy of your data is maintained on your device for offline access"
+          "A local copy of your data is kept on your device for offline access; the local database file name does not contain your email address in readable form"
         ]
       },
       "internationalTransfers": {
-        "title": "6. International Data Transfers",
-        "content": "FocusNow is operated from Turkey. Your data may be processed in Microsoft Azure data centers located in the European Union. For any transfers outside the European Economic Area (EEA) or Turkey, we rely on Standard Contractual Clauses (SCCs) and other appropriate safeguards recognized by applicable data protection authorities. Microsoft Azure is our sole infrastructure provider and processes data under a Data Processing Agreement that includes safeguards for international transfers."
+        "title": "9. International Data Transfers",
+        "content": "FocusNow is operated from Turkey, and your data is processed in Microsoft Azure data centers located in the European Union. Where data is transferred outside the European Economic Area (EEA) or Turkey, we rely on Standard Contractual Clauses (SCCs) and equivalent safeguards recognized by applicable data protection authorities. Our processors handle data under data processing agreements that include these safeguards."
       },
       "security": {
-        "title": "7. Data Security",
+        "title": "10. Data Security",
         "content": "We implement industry-standard security measures to protect your data:",
         "items": [
-          "AES-256 encryption at rest for all stored data",
-          "TLS 1.2+ encryption for all data in transit",
-          "Secure authentication with hashed and salted credentials — we never store plain-text passwords",
-          "Role-based access controls limiting data access to authorized systems only",
-          "Regular security audits and infrastructure monitoring"
+          "TLS 1.2+ encryption for all data in transit; AES-256 encryption at rest in the cloud",
+          "Sign-in is handled entirely by Google and Microsoft — we never see or store passwords",
+          "Sign-in tokens are stored encrypted on your device",
+          "Every API request is authenticated, and your data is isolated per account"
         ],
         "note": "No system is 100% secure. We take reasonable and appropriate measures to protect your information from unauthorized access, alteration, or destruction."
       },
       "sharing": {
-        "title": "8. Data Sharing and Third Parties",
-        "content": "We do not sell, rent, or trade your personal data. We share data only in these limited circumstances:",
+        "title": "11. Data Sharing and Third Parties",
+        "content": "We do not sell, rent, or trade your personal data. Data is shared only with the service providers below, and only to operate FocusNow:",
         "items": [
-          "Microsoft Azure (infrastructure provider) — processes data on our behalf under strict contractual obligations and a Data Processing Agreement",
+          "Microsoft Azure — hosts our backend, database, and AI processing in EU data centers under a Data Processing Agreement",
+          "PostHog (EU-hosted) — receives opt-in, pseudonymized product analytics and session replay (see section 7)",
+          "Google and Microsoft — handle sign-in to your account; your login is processed under their own privacy policies. With your consent, Google Analytics also runs on our website",
+          "GitHub — distributes app downloads and automatic updates; when the app checks for updates, GitHub receives standard technical data such as your IP address",
           "Legal requirements — when required by law, regulation, legal process, or governmental request",
-          "Business transfers — in the event of a merger, acquisition, or sale of assets, your data may be transferred as part of that transaction, with advance notification to you"
+          "Business transfers — in a merger, acquisition, or sale of assets, your data may be transferred as part of that transaction, with advance notice to you"
         ]
       },
       "cookies": {
-        "title": "9. Cookies and Tracking Technologies",
-        "content": "Here is how we use tracking technologies across the FocusNow website and desktop application:",
+        "title": "12. Cookies and Website Analytics",
+        "content": "On the focusnow.ai website:",
         "items": [
-          "Essential cookies — session management and authentication on the website (strictly necessary, no consent required)",
-          "Google Analytics — we use Google Analytics to understand how visitors interact with our website (pages visited, traffic sources, country). This data is anonymous and aggregated. Google's privacy policy: https://policies.google.com/privacy",
-          "Desktop app analytics — we collect aggregated usage statistics in the desktop app (app version, OS, feature usage frequency, crash reports). This data contains no personally identifiable information or activity content such as application names or window titles",
-          "No advertising cookies or third-party ad trackers",
-          "No social media tracking pixels or embedded trackers"
+          "Essential cookies — required for basic site functionality",
+          "Google Analytics — runs only if you accept it via the cookie banner (analytics are off by default) and shows us aggregate information such as pages visited, traffic sources, and countries",
+          "No advertising cookies, ad trackers, or social media pixels"
         ],
-        "note": "You can decline analytics cookies via the cookie banner on your first visit. Desktop app analytics can be disabled in the app settings."
+        "note": "You can decline or withdraw cookie consent at any time. Desktop app analytics are separate and controlled in the app's settings (see section 7)."
       },
       "retention": {
-        "title": "10. Data Retention",
+        "title": "13. Data Retention",
         "content": "We keep your data only as long as necessary:",
         "items": [
-          "Active account — your data is retained while your account is active and you use our services",
-          "After account deletion — personal data is deleted or anonymized within 30 days",
-          "Legal retention — certain data may be retained longer where required by applicable law",
-          "Aggregated anonymous data — may be retained indefinitely for service improvement (this data cannot identify you)"
+          "Cloud data is retained while your account is active",
+          "On your device, synced activity older than 90 days is automatically cleaned up; your cloud history remains available",
+          "When you delete data in the app, it is removed from both the cloud and your device",
+          "Account deletion requests are completed within 30 days; certain data may be retained longer where required by applicable law",
+          "Aggregated, anonymous statistics that cannot identify you may be retained for service improvement"
         ]
       },
       "rights": {
-        "title": "11. Your Rights",
-        "content": "You have the following rights regarding your personal data:",
+        "title": "14. Your Rights (GDPR & KVKK)",
+        "content": "Under the EU General Data Protection Regulation (GDPR), Turkey's Personal Data Protection Law No. 6698 (KVKK), and similar laws, you have the right to:",
         "items": [
           "Access — request a copy of the personal data we hold about you",
           "Rectification — request correction of inaccurate or incomplete data",
           "Erasure — request deletion of your account and all associated data",
-          "Data portability — export your data in a machine-readable format",
+          "Data portability — request an export of your data in a machine-readable format",
           "Restriction — request that we limit processing of your data",
           "Objection — object to processing based on legitimate interest",
-          "Withdrawal of consent — withdraw consent for optional processing at any time via app settings",
-          "Lodge a complaint — file a complaint with your local data protection authority"
+          "Withdrawal of consent — withdraw consent for optional processing (such as analytics) at any time in the app or on the website",
+          "Complaint — lodge a complaint with your data protection authority (in Turkey, the Personal Data Protection Authority; in the EEA, your national authority)"
         ],
-        "note": "To exercise these rights, email privacy@focusnow.ai. We will respond within 30 days."
+        "note": "To exercise any of these rights, email privacy@focusnow.ai. We respond within 30 days."
       },
       "children": {
-        "title": "12. Children's Privacy",
+        "title": "15. Children's Privacy",
         "content": "FocusNow is not intended for use by children under the age of 13 (or the applicable minimum age in your jurisdiction). We do not knowingly collect personal information from children. If we become aware that we have collected data from a child without parental consent, we will take steps to delete that information promptly."
       },
       "changes": {
-        "title": "13. Changes to This Policy",
+        "title": "16. Changes to This Policy",
         "content": "We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make material changes, we will notify you through the app or via email before the changes take effect. Your continued use of FocusNow after the changes become effective constitutes your acceptance of the updated policy."
       },
       "contact": {
-        "title": "14. Contact Us",
+        "title": "17. Contact Us",
         "content": "If you have questions about this Privacy Policy or wish to exercise your data rights:",
         "items": [
           "Email: privacy@focusnow.ai",
           "Response time: within 30 days of receiving your request"
         ],
-        "note": "Data Controller: FocusNow — Barbaros Zongur, Turkey"
+        "note": "Data Controller: FocusNow — Barbaros Zongur, Turkey. This policy is provided in English and Turkish; if the two versions conflict, the English version prevails."
+      }
+    }
+  },
+  "termsPage": {
+    "meta": {
+      "title": "Terms of Use — FocusNow",
+      "description": "The terms that apply when you use the FocusNow desktop app and website: license, acceptable use, AI content, warranties, and liability."
+    },
+    "title": "Terms of Use",
+    "lastUpdated": "Effective date: July 2, 2026",
+    "intro": "These Terms of Use (\"Terms\") govern your use of the FocusNow desktop application and the focusnow.ai website (together, the \"Service\"), operated by Barbaros Zongur, based in Turkey (\"we\", \"our\", or \"us\"). By downloading, installing, signing in to, or using the Service, you agree to these Terms. If you do not agree, do not use the Service.",
+    "sections": {
+      "service": {
+        "title": "1. The Service",
+        "content": "FocusNow is a productivity tracking tool. The desktop app records which applications and windows you use on your own device, organizes that activity into sessions and analytics, and can generate AI-assisted daily reports. Some features require an account and an internet connection; activity tracking runs locally on your device."
+      },
+      "license": {
+        "title": "2. License",
+        "content": "We grant you a personal, limited, non-exclusive, non-transferable, revocable license to install and use the FocusNow desktop application on devices you own or control, for your own use. You may not copy, modify, distribute, sell, rent, sublicense, reverse engineer, or attempt to extract the source code of the Service, except where such a restriction is prohibited by law."
+      },
+      "accounts": {
+        "title": "3. Your Account",
+        "content": "You sign in to FocusNow with a Google or Microsoft account. You are responsible for keeping access to that account secure and for all activity that happens under it. You must provide accurate information and be legally capable of entering into these Terms. FocusNow is not intended for children under 13 (or the applicable minimum age in your jurisdiction)."
+      },
+      "acceptableUse": {
+        "title": "4. Acceptable Use",
+        "content": "You agree not to:",
+        "items": [
+          "Use the Service to monitor another person or their device without their knowledge and lawful consent — FocusNow is a self-tracking tool, not an employee or family surveillance product",
+          "Interfere with, disrupt, or attempt to gain unauthorized access to the Service, its infrastructure, or other users' data",
+          "Use the Service in violation of applicable laws or regulations",
+          "Resell, redistribute, or offer the Service to third parties as your own product",
+          "Circumvent or attempt to circumvent technical limitations or security measures of the Service"
+        ]
+      },
+      "plans": {
+        "title": "5. Free Plan and Future Paid Plans",
+        "content": "FocusNow is currently free to use. We may introduce paid plans with additional features in the future; if we do, pricing and terms for those plans will be communicated clearly before you are charged anything. We may also change, limit, or discontinue features of the free plan, with reasonable notice where the change is material."
+      },
+      "aiContent": {
+        "title": "6. AI-Generated Content",
+        "content": "Daily reports and insights are generated by artificial intelligence based on your activity data. AI output can be incomplete, inaccurate, or misleading. Insights are provided for your personal information only and do not constitute professional, medical, legal, or employment advice. You should not make significant decisions based solely on AI-generated content."
+      },
+      "privacyRef": {
+        "title": "7. Privacy",
+        "content": "Our Privacy Policy explains what data we collect and how we handle it, and forms part of these Terms. By using the Service, you acknowledge the Privacy Policy at focusnow.ai/privacy."
+      },
+      "updates": {
+        "title": "8. Updates and Availability",
+        "content": "The desktop app may download and install updates automatically to keep the Service secure and functional. We aim to keep the Service available but do not guarantee uninterrupted or error-free operation, and we may suspend the Service for maintenance. Cloud sync and AI features depend on third-party infrastructure and may be temporarily unavailable."
+      },
+      "ip": {
+        "title": "9. Intellectual Property",
+        "content": "The Service, including its software, design, branding, and content (excluding your data), is owned by us and protected by intellectual property laws. These Terms do not grant you any rights to our trademarks or branding. You retain all rights to your own activity data; you grant us only the rights needed to operate the Service for you, as described in the Privacy Policy."
+      },
+      "warranty": {
+        "title": "10. Disclaimer of Warranties",
+        "content": "The Service is provided \"as is\" and \"as available\", without warranties of any kind, whether express or implied, including merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the Service will be accurate, reliable, uninterrupted, or error-free, or that activity data will never be lost. Keep your own backups of anything critical."
+      },
+      "liability": {
+        "title": "11. Limitation of Liability",
+        "content": "To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or for lost profits, lost data, or business interruption, arising from your use of or inability to use the Service. To the extent permitted by law, our total liability for all claims relating to the Service shall not exceed the amount you paid us for the Service in the twelve months before the claim (or 50 USD if you have paid nothing). Nothing in these Terms excludes liability that cannot be excluded by law, including mandatory consumer rights in your country of residence."
+      },
+      "termination": {
+        "title": "12. Termination",
+        "content": "You may stop using the Service at any time and may request deletion of your account as described in the Privacy Policy. We may suspend or terminate your access if you materially breach these Terms, if required by law, or if we discontinue the Service; where reasonably possible, we will give you advance notice so you can export your data."
+      },
+      "law": {
+        "title": "13. Governing Law",
+        "content": "These Terms are governed by the laws of the Republic of Turkey, and the courts of Turkey have jurisdiction over disputes arising from them. If you are a consumer in the European Union or elsewhere, you also benefit from any mandatory protections of the law of your country of residence, and this clause does not deprive you of them."
+      },
+      "changes": {
+        "title": "14. Changes to These Terms",
+        "content": "We may update these Terms from time to time. When we make material changes, we will notify you through the app or the website before the changes take effect. Your continued use of the Service after the changes become effective constitutes acceptance of the updated Terms."
+      },
+      "contact": {
+        "title": "15. Contact",
+        "content": "Questions about these Terms: privacy@focusnow.ai. Operator: FocusNow — Barbaros Zongur, Turkey. These Terms are provided in English and Turkish; if the two versions conflict, the English version prevails."
       }
     }
   },

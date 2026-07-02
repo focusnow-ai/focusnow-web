@@ -1,86 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Check, Sparkles, Loader2 } from "lucide-react";
-
-function WaitlistForm() {
-  const t = useTranslations("pricing.pro.waitlist");
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error" | "invalid">("idle");
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setStatus("invalid");
-      return;
-    }
-
-    setStatus("loading");
-    try {
-      const res = await fetch("/api/waitlist", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-
-      if (res.ok) {
-        setStatus("success");
-        setEmail("");
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
-  }
-
-  if (status === "success") {
-    return (
-      <p className="text-sm text-green-600 dark:text-green-400 mt-2">
-        {t("success")}
-      </p>
-    );
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className="mt-2 space-y-2">
-      <div className="flex gap-2">
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-            if (status === "invalid" || status === "error") setStatus("idle");
-          }}
-          placeholder={t("placeholder")}
-          className="flex-1 h-10 rounded-md border border-border bg-background px-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-        />
-        <Button type="submit" size="sm" disabled={status === "loading"} className="h-10">
-          {status === "loading" ? (
-            <Loader2 className="h-4 w-4 animate-spin" />
-          ) : (
-            t("submit")
-          )}
-        </Button>
-      </div>
-      {status === "invalid" && (
-        <p className="text-xs text-destructive">{t("invalid")}</p>
-      )}
-      {status === "error" && (
-        <p className="text-xs text-destructive">{t("error")}</p>
-      )}
-    </form>
-  );
-}
+import { Check, Sparkles } from "lucide-react";
 
 export function PricingPageClient() {
   const t = useTranslations("pricing");
@@ -165,7 +92,6 @@ export function PricingPageClient() {
                 <p className="text-muted-foreground mb-6">
                   {t("pro.description")}
                 </p>
-                <WaitlistForm />
                 <ul className="mt-8 space-y-3">
                   {proFeatures.map((feature: string, i: number) => (
                     <li key={i} className="flex items-start gap-3 text-sm">

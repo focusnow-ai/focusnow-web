@@ -12,6 +12,7 @@
     "about": "Hakkımızda",
     "changelog": "Değişiklik Kaydı",
     "privacy": "Gizlilik",
+    "terms": "Kullanım Koşulları",
     "getApp": "FocusNow'u Ücretsiz Al",
     "menu": "Menü"
   },
@@ -169,7 +170,7 @@
       "steps": {
         "permissions": {
           "title": "İzinleri Verin",
-          "description": "FocusNow hangi uygulamanın ön planda olduğunu görmek için erişilebilirlik izni ister. İçerikleri asla okumaz — sadece uygulama adını."
+          "description": "FocusNow hangi uygulamanın ön planda olduğunu görmek için erişilebilirlik izni ister. Yalnızca uygulama adını, pencere başlığını ve tarayıcılarda sayfa adresini okur — ekran içeriğinizi veya tuş vuruşlarınızı asla."
         },
         "run": {
           "title": "Çalışmasına İzin Verin",
@@ -186,7 +187,7 @@
       "items": [
         {
           "question": "Bu bir casus yazılım mı?",
-          "answer": "Hayır. FocusNow yalnızca hangi uygulamanın ön planda olduğunu ve ne kadar süre kullanıldığını takip eder. Ekran görüntüsü almaz, tuş vuruşlarını kaydetmez, yazdıklarınızı okumaz. Verileriniz AES-256 ile şifrelenir ve yalnızca siz görebilirsiniz."
+          "answer": "Hayır. FocusNow ön plandaki uygulamayı — adını, pencere başlığını ve tarayıcılarda sayfa adresini — ve ne kadar süre kullanıldığını takip eder. Ekran görüntüsü almaz, tuş vuruşlarını kaydetmez, yazdıklarınızı okumaz. Verileriniz aktarımda ve beklemede şifrelenir; asla satılmaz veya reklamcılarla paylaşılmaz."
         },
         {
           "question": "Ne kadar CPU ve pil kullanıyor?",
@@ -194,7 +195,7 @@
         },
         {
           "question": "İşverenim verilerimi görebilir mi?",
-          "answer": "Hayır. FocusNow kişisel bir verimlilik aracıdır. Verileriniz şifrelenir ve kendi hesabınızda saklanır. Biz dahil başka kimse aktivite verilerinize erişemez."
+          "answer": "Hayır. FocusNow kişisel bir verimlilik aracıdır. Verileriniz kendi hesabınızda saklanır, işvereniniz tarafından görülemez ve asla paylaşılmaz veya satılmaz. Verilerinizin tam olarak nasıl işlendiğini Gizlilik Politikamızda bulabilirsiniz."
         },
         {
           "question": "Gerçekten ücretsiz mi?",
@@ -236,15 +237,7 @@
         "Özel kategoriler",
         "Veri dışa aktarma",
         "Öncelikli destek"
-      ],
-      "cta": "Listeye Katıl",
-      "waitlist": {
-        "placeholder": "e-posta@adresiniz.com",
-        "submit": "Beni Bilgilendir",
-        "success": "Listedesiniz! Pro çıkınca size haber vereceğiz.",
-        "error": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
-        "invalid": "Lütfen geçerli bir e-posta adresi girin."
-      }
+      ]
     }
   },
   "about": {
@@ -259,7 +252,7 @@
     "pillars": {
       "privacy": {
         "title": "Gizlilik Öncelikli",
-        "content": "Verimlilik verileriniz size özeldir. Her şey uçtan uca şifrelenir, asla satılmaz ve sizin koşullarınızda saklanır. FocusNow'u içgörü ile gizlilik arasında seçim yapmak zorunda kalmayasınız diye geliştirdik."
+        "content": "Verimlilik verileriniz size özeldir. Her şey hem aktarım sırasında hem beklemede şifrelenir, asla satılmaz ve sizin koşullarınızda saklanır. FocusNow'u içgörü ile gizlilik arasında seçim yapmak zorunda kalmayasınız diye geliştirdik."
       },
       "simplicity": {
         "title": "Zahmetsiz",
@@ -277,135 +270,241 @@
   },
   "privacyPage": {
     "title": "Gizlilik Politikası",
-    "lastUpdated": "Yürürlük tarihi: 25 Mayıs 2025",
-    "intro": "FocusNow olarak gizliliğinizi korumayı öncelik olarak görüyoruz. Bu Gizlilik Politikası hem web sitemizi hem de masaüstü uygulamamızı kapsar. Hangi verileri topladığımızı, nasıl kullandığımızı, nerede sakladığımızı ve kişisel verileriniz üzerindeki haklarınızı bu belgede bulabilirsiniz. Bu politika, yürürlükteki kişisel veri koruma mevzuatına (KVKK ve GDPR dahil) uygun olarak hazırlanmıştır. Verilerinizi nasıl işlediğimizi anlamak için bu politikayı dikkatlice okumanızı öneririz.",
+    "lastUpdated": "Yürürlük tarihi: 2 Temmuz 2026",
+    "intro": "FocusNow (\"biz\") olarak gizliliğinizi korumayı taahhüt ediyoruz. Bu Gizlilik Politikası, FocusNow web sitesini ve masaüstü uygulamasını kapsar; hangi verileri topladığımızı, bunları nasıl kullandığımızı ve sakladığımızı, bizim adımıza kimlerin işlediğini ve kişisel verileriniz üzerindeki haklarınızı açıklar. Bu metin, 25 Mayıs 2025 tarihli sürümün yerine geçer. Türkçe metin bilgilendirme amaçlı bir çeviridir; herhangi bir çelişki hâlinde İngilizce sürüm esas alınır.",
     "sections": {
       "trustPromise": {
-        "title": "1. Gizlilik Taahhüdümüz",
-        "content": "Verimlilik verileriniz size aittir ve son derece kişiseldir. Her şeyden önce, işte size sözümüz:",
+        "title": "1. Gizlilik Sözümüz",
+        "content": "Verimlilik verilerinizin son derece kişisel olduğuna inanıyoruz. Her şeyden önce size şu sözü veriyoruz:",
         "items": [
-          "Verilerinizi asla satmıyoruz, kiralamıyoruz, başkalarıyla takas etmiyoruz",
-          "Aktivite verilerinizi reklamcılarla veya veri aracılarıyla asla paylaşmıyoruz",
-          "Ekran görüntüsü asla almıyoruz",
-          "Klavye girişlerinizi, fare hareketlerinizi veya yazdıklarınızı asla kaydetmiyoruz",
-          "Verilerinizi reklam ya da pazarlama amacıyla asla kullanmıyoruz",
-          "Tüm verilerinizi dilediğiniz zaman kalıcı olarak silebilirsiniz"
+          "Kişisel verilerinizi asla satmayız, kiralamayız veya takas etmeyiz",
+          "Aktivite verilerinizi asla reklamcılarla veya veri simsarlarıyla paylaşmayız",
+          "Ekranınızın görüntüsünü asla almayız",
+          "Klavye girişlerinizi, fare tıklamalarınızı veya form içeriklerinizi asla kaydetmeyiz",
+          "Verilerinizi reklam veya pazarlama profillemesi için asla kullanmayız",
+          "Aktivite geçmişinizi ve seanslarınızı uygulama içinden dilediğiniz an silebilir, hesabınızın tamamen silinmesini privacy@focusnow.ai adresine yazarak talep edebilirsiniz"
         ]
       },
       "dataController": {
         "title": "2. Veri Sorumlusu",
-        "content": "FocusNow, Türkiye'de yerleşik Barbaros Zongur tarafından geliştirilmekte ve işletilmektedir. Veri sorumlusu sıfatıyla kişisel verilerinizin işlenme şekline ilişkin kararları biz alıyoruz. Gizlilikle ilgili her türlü talebiniz için privacy@focusnow.ai adresine yazabilirsiniz."
+        "content": "FocusNow, Türkiye'de yerleşik Barbaros Zongur tarafından geliştirilmekte ve işletilmektedir. Veri sorumlusu sıfatıyla kişisel verilerinizin nasıl ve neden işleneceğine biz karar veririz. Gizlilikle ilgili tüm sorularınız için privacy@focusnow.ai adresinden bize ulaşabilirsiniz."
       },
       "collection": {
-        "title": "3. Topladığımız Bilgiler",
-        "content": "Yalnızca verimlilik analizleriniz için gereken en az veriyi topluyoruz. Topladığımız veriler ve nedenleri:",
+        "title": "3. Topladığımız Veriler",
+        "content": "Yalnızca size verimlilik içgörüleri sunmak için gereken verileri topluyoruz. Neyi neden topladığımız tam olarak şöyle:",
         "items": [
-          "Hesap Bilgileri — e-posta adresiniz, kullanıcı adınız ve şifreniz (hesabınızı açıp yönetebilmeniz için)",
-          "Aktivite Verileri — hangi uygulamayı kullandığınız, pencere başlıkları, odaklanma süreleriniz, verimlilik kategorileri ve günlük kullanım alışkanlıklarınız (size verimlilik analizleri sunabilmek için)",
-          "Cihaz Bilgileri — işletim sistemi, uygulama sürümü ve cihaz kimliği (uygulamanın düzgün çalışması ve sorunları giderebilmemiz için)"
+          "Hesap bilgileri — e-posta adresiniz, görünen adınız ve hangi giriş sağlayıcısını kullandığınız (Google veya Microsoft). Parolanızı hiçbir zaman görmeyiz ve saklamayız",
+          "İsteğe bağlı profil bilgileri — dilerseniz paylaştığınız meslek unvanınız ve sektörünüz; içgörülerinizi size daha uygun hâle getirmek için kullanılır",
+          "Aktivite verileri — kullandığınız uygulamaların adları ve dosya yolları, pencere başlıkları, ziyaret ettiğiniz web adresleri (URL'ler), aktif/boşta/uzakta durumlarınız, zaman damgaları ve süreler ile odak seansı bilgileriniz. Verimlilik analizleriniz bu verilerle oluşturulur",
+          "İsteğe bağlı tanılama ve kullanım analitiği — işletim sistemi ve uygulama sürümü, cihaz mimarisi, dil ve tema ayarları, anonimleştirilmiş kullanım olayları ve hata raporları. Yalnızca açık rıza verirseniz toplanır (bkz. 7. bölüm)",
+          "Web sitesi verileri — focusnow.ai sitesinin ne topladığı aşağıdaki çerezler bölümünde açıklanmıştır"
+        ]
+      },
+      "tracking": {
+        "title": "4. Aktivite Takibi Nasıl Çalışır?",
+        "content": "Masaüstü uygulaması çalıştığı sürece, odak seansı dışındayken de dahil olmak üzere, yaklaşık iki saniyede bir hangi pencerenin önde olduğunu kontrol eder. macOS'ta bunun için Erişilebilirlik izni gerekir; bu izni Sistem Ayarları'ndan dilediğiniz an geri alabilirsiniz. Kontrol her zaman sizde:",
+        "items": [
+          "Verileriniz önce cihazınızdaki yerel bir veritabanına kaydedilir; oturum açtığınız sürece buluta senkronlanır",
+          "Ayarlar'dan belirli uygulamaları ve web sitelerini takibin dışında tutabilirsiniz",
+          "Tekil aktivite kayıtlarını ve seansları uygulama içinden silebilirsiniz — silme işlemi veriyi hem buluttan hem cihazınızdan kaldırır",
+          "Uygulamayı kapattığınızda tüm takip anında durur"
         ]
       },
       "usage": {
-        "title": "4. Verilerinizi Nasıl Kullanıyoruz",
-        "content": "Verilerinizi yalnızca FocusNow'u çalıştırmak ve geliştirmek için kullanıyoruz:",
+        "title": "5. Verilerinizi Nasıl Kullanıyoruz?",
+        "content": "Verilerinizi yalnızca FocusNow deneyimini sunmak ve iyileştirmek için kullanırız:",
         "items": [
-          "Kullandığınız uygulamaları otomatik olarak sınıflandırıp verimlilik panellerinizi hazırlamak",
-          "Verilerinizi cihazlarınız arasında senkronize ederek her yerden erişim sağlamak",
-          "Size özel odaklanma analizleri ve verimlilik raporları oluşturmak",
-          "Güncelleme ve güvenlik uyarıları gibi hizmet bildirimleri göndermek",
-          "Teknik sorunları bulmak ve uygulamanın performansını artırmak"
+          "Aktivitenizi otomatik olarak sınıflandırmak ve analiz panolarınızı oluşturmak",
+          "Verimlilik geçmişinizin hesabınızla birlikte gelmesi için verilerinizi senkronlamak",
+          "Kişiselleştirilmiş odak içgörüleri ve günlük raporlar üretmek",
+          "Hizmetle ilgili bildirimler göndermek (güncellemeler, güvenlik uyarıları)",
+          "Teknik sorunları teşhis etmek ve uygulama performansını iyileştirmek (yalnızca açık rızaya dayalı analitikle)"
         ],
-        "note": "Aktivite verilerinizi reklam, pazarlama ya da FocusNow dışında hiçbir amaçla kullanmıyoruz."
+        "note": "Aktivite verilerinizi reklam, pazarlama profillemesi veya FocusNow hizmetiyle ilgisi olmayan hiçbir amaç için kullanmayız."
+      },
+      "aiInsights": {
+        "title": "6. Yapay Zekâ Destekli Raporlar",
+        "content": "Günlük rapor istediğinizde, o güne ait aktivite kayıtlarınız — uygulama adları, pencere başlıkları, URL'ler, zaman damgaları ve kategoriler — Avrupa Birliği'ndeki kendi Microsoft Azure aboneliğimiz içinde çalışan Azure OpenAI Service tarafından işlenir. Verileriniz yapay zekâ modellerinin eğitiminde kullanılmaz. Üretilen rapor, yeniden oluşturulmasına gerek kalmaması için hesabınızda saklanır.",
+        "note": "Yapay zekâ tarafından üretilen içgörüler yalnızca bilgilendirme amaçlıdır ve hatalı olabilir; mesleki, tıbbi veya istihdama ilişkin tavsiye niteliği taşımaz."
+      },
+      "analytics": {
+        "title": "7. İsteğe Bağlı Analitik ve Tanılama (Açık Rıza ile)",
+        "content": "Masaüstü uygulaması, herhangi bir analitik veya tanılama verisi göndermeden önce ilk açılışta rızanızı ister. Reddederseniz hiçbir şey gönderilmez. Rıza verirseniz:",
+        "items": [
+          "Hata ve tanılama raporları, sorunları bulup düzeltebilmemiz için Azure Application Insights'a gönderilir",
+          "Ürün kullanım olayları (ör. hangi özelliklerin kullanıldığı), adınız veya e-postanız yerine rastgele ve anonim bir kimlik altında, Avrupa Birliği'nde barındırılan PostHog'a gönderilir",
+          "Oturum kaydı (session replay) yalnızca FocusNow uygulamasının kendi arayüzünün nasıl kullanıldığını, tüm metin girişleri maskelenmiş hâlde kaydeder. Ekranınızı, diğer uygulamaları veya onların içeriğini asla kaydetmez",
+          "Meslek unvanınız ve sektörünüz analitik verilerine hiçbir zaman dahil edilmez"
+        ],
+        "note": "Tercihlerinizi Ayarlar → Gizlilik bölümünden dilediğiniz an değiştirebilirsiniz; analitiği kapattığınızda veri toplama anında durur."
       },
       "storage": {
-        "title": "5. Veri Saklama ve Altyapı",
-        "content": "Verileriniz Microsoft Azure Cosmos DB'de — dünya çapında dağıtık, kurumsal düzeyde bir veritabanı hizmetinde — güvenle saklanır:",
+        "title": "8. Veri Depolama ve Altyapı",
+        "content": "Senkronlanan verileriniz, Avrupa Birliği'ndeki veri merkezlerinde Microsoft Azure (Cosmos DB) üzerinde saklanır:",
         "items": [
-          "Depolanan tüm veriler AES-256 ile şifrelenir",
-          "İletim halindeki tüm veriler TLS 1.2+ ile şifrelenir",
+          "Aktarım sırasında TLS 1.2+, bekleme hâlinde AES-256 ile şifrelenir",
           "Azure uyumluluk sertifikaları: SOC 1/2/3, ISO 27001, GDPR uyumlu altyapı",
-          "Veri merkezlerinde fiziksel ve yazılımsal erişim kontrolleri uygulanır",
-          "İnternetsiz kullanım için verilerinizin bir kopyası cihazınızda da tutulur"
+          "Tüm veri merkezlerinde fiziksel ve mantıksal erişim kontrolleri",
+          "Çevrimdışı erişim için verilerinizin yerel bir kopyası cihazınızda tutulur; yerel veritabanı dosyasının adı e-posta adresinizi okunabilir biçimde içermez"
         ]
       },
       "internationalTransfers": {
-        "title": "6. Uluslararası Veri Transferleri",
-        "content": "FocusNow Türkiye'den yönetilmektedir. Verileriniz, Avrupa Birliği'ndeki Microsoft Azure veri merkezlerinde işlenebilir. Avrupa Ekonomik Alanı (AEA) veya Türkiye dışına veri aktarımı gerektiğinde, Standart Sözleşme Hükümleri (SCC) ve ilgili veri koruma otoritelerinin tanıdığı diğer güvenceler esas alınır. Microsoft Azure tek altyapı sağlayıcımızdır ve verilerinizi, uluslararası transferler için gerekli güvenceleri içeren bir Veri İşleme Sözleşmesi çerçevesinde işler."
+        "title": "9. Yurt Dışına Veri Aktarımı",
+        "content": "FocusNow Türkiye'den işletilmektedir ve verileriniz Avrupa Birliği'ndeki Microsoft Azure veri merkezlerinde işlenir. Verilerin Avrupa Ekonomik Alanı (AEA) veya Türkiye dışına aktarıldığı durumlarda, Standart Sözleşme Maddeleri (SCC) ve ilgili veri koruma otoritelerince tanınan eşdeğer güvencelere dayanırız. Veri işleyicilerimiz, bu güvenceleri içeren veri işleme sözleşmeleri kapsamında çalışır."
       },
       "security": {
-        "title": "7. Veri Güvenliği",
-        "content": "Verilerinizi korumak için sektörün en iyi güvenlik uygulamalarını hayata geçiriyoruz:",
+        "title": "10. Veri Güvenliği",
+        "content": "Verilerinizi korumak için sektör standardı güvenlik önlemleri uyguluyoruz:",
         "items": [
-          "Depolanan tüm veriler AES-256 ile şifrelenir",
-          "İletim halindeki tüm veriler TLS 1.2+ ile şifrelenir",
-          "Şifreleriniz hash ve salt yöntemleriyle korunur — düz metin olarak hiçbir zaman saklanmaz",
-          "Verilere yalnızca yetkili sistemlerin erişmesini sağlayan rol bazlı erişim kontrolleri",
-          "Düzenli güvenlik denetimleri ve altyapının sürekli izlenmesi"
+          "Aktarımdaki tüm veriler için TLS 1.2+; buluttaki veriler için AES-256 şifreleme",
+          "Giriş işlemleri tamamen Google ve Microsoft tarafından yürütülür — parolanızı hiçbir zaman görmeyiz ve saklamayız",
+          "Giriş anahtarları (token) cihazınızda şifrelenmiş olarak saklanır",
+          "Her API isteği kimlik doğrulamasından geçer ve verileriniz hesap bazında yalıtılır"
         ],
-        "note": "Hiçbir sistem yüzde yüz güvenli olamaz. Yine de bilgilerinizi yetkisiz erişim, değiştirme veya silinmeye karşı korumak için elimizden gelen her önlemi alıyoruz."
+        "note": "Hiçbir sistem %100 güvenli değildir. Bilgilerinizi yetkisiz erişime, değiştirilmeye veya yok edilmeye karşı korumak için makul ve uygun önlemleri alıyoruz."
       },
       "sharing": {
-        "title": "8. Veri Paylaşımı ve Üçüncü Taraflar",
-        "content": "Verilerinizi satmıyoruz, kiralamıyoruz, kimseyle takas etmiyoruz. Yalnızca şu durumlar söz konusu olabilir:",
+        "title": "11. Veri Paylaşımı ve Üçüncü Taraflar",
+        "content": "Kişisel verilerinizi satmayız, kiralamayız veya takas etmeyiz. Veriler yalnızca aşağıdaki hizmet sağlayıcılarla ve yalnızca FocusNow'u işletmek için paylaşılır:",
         "items": [
-          "Microsoft Azure (altyapı sağlayıcımız) — sıkı sözleşme yükümlülükleri ve Veri İşleme Sözleşmesi çerçevesinde verilerinizi bizim adımıza işler",
-          "Yasal zorunluluk — yasa, yönetmelik veya resmi bir makam talebi olduğunda",
-          "Şirket devri — birleşme, devralma veya varlık satışı halinde verileriniz aktarılabilir; böyle bir durumda sizi önceden bilgilendiririz"
+          "Microsoft Azure — arka uç sistemlerimizi, veritabanımızı ve yapay zekâ işlemeyi AB veri merkezlerinde, veri işleme sözleşmesi kapsamında barındırır",
+          "PostHog (AB'de barındırılır) — açık rızaya dayalı, takma adlaştırılmış ürün analitiği ve oturum kayıtlarını alır (bkz. 7. bölüm)",
+          "Google ve Microsoft — hesabınıza girişi sağlar; giriş bilgileriniz kendi gizlilik politikaları kapsamında işlenir. Rıza verirseniz web sitemizde Google Analytics de çalışır",
+          "GitHub — uygulama indirmelerini ve otomatik güncellemeleri dağıtır; uygulama güncelleme denetimi yaptığında GitHub, IP adresiniz gibi standart teknik verileri görür",
+          "Yasal yükümlülükler — kanun, mevzuat, yargı süreci veya resmî bir talep gerektirdiğinde",
+          "İşletme devirleri — birleşme, devralma veya varlık satışı hâlinde verileriniz, size önceden bildirimde bulunularak işlemin parçası olarak devredilebilir"
         ]
       },
       "cookies": {
-        "title": "9. Çerezler ve İzleme Teknolojileri",
-        "content": "Web sitemizde ve masaüstü uygulamamızda izleme teknolojilerini şu şekilde kullanıyoruz:",
+        "title": "12. Çerezler ve Web Sitesi Analitiği",
+        "content": "focusnow.ai web sitesinde:",
         "items": [
-          "Zorunlu çerezler — web sitesinde oturum açma ve kimlik doğrulama için (olmazsa olmaz, ayrıca onay gerekmez)",
-          "Google Analytics — ziyaretçilerin web sitemizi nasıl kullandığını anlamak için Google Analytics kullanıyoruz (ziyaret edilen sayfalar, trafik kaynakları, ülke). Bu veriler anonim ve toplu haldedir. Google gizlilik politikası: https://policies.google.com/privacy",
-          "Masaüstü uygulama analizleri — masaüstü uygulamada toplu kullanım verileri topluyoruz (uygulama sürümü, işletim sistemi, hangi özelliklerin ne sıklıkta kullanıldığı, çökme raporları). Bu veriler kimliğinizi ortaya çıkaracak bilgi ya da uygulama adları, pencere başlıkları gibi içerik barındırmaz",
-          "Reklam çerezi veya üçüncü taraf izleyici kullanmıyoruz",
-          "Sosyal medya pikseli veya gömülü izleyici kullanmıyoruz"
+          "Zorunlu çerezler — sitenin temel işlevleri için gereklidir",
+          "Google Analytics — yalnızca çerez bandından kabul ederseniz çalışır (analitik varsayılan olarak kapalıdır) ve bize ziyaret edilen sayfalar, trafik kaynakları ve ülkeler gibi bilgileri toplu hâlde gösterir",
+          "Reklam çerezi, reklam takipçisi veya sosyal medya pikseli kullanılmaz"
         ],
-        "note": "İlk ziyaretinizde çıkan çerez banner'ından analiz çerezlerini reddedebilirsiniz. Masaüstü uygulama analizleri ise uygulama ayarlarından kapatılabilir."
+        "note": "Çerez rızanızı dilediğiniz an reddedebilir veya geri çekebilirsiniz. Masaüstü uygulaması analitiği bundan ayrıdır ve uygulama ayarlarından yönetilir (bkz. 7. bölüm)."
       },
       "retention": {
-        "title": "10. Veri Saklama Süresi",
-        "content": "Verilerinizi gereğinden uzun tutmuyoruz:",
+        "title": "13. Veri Saklama Süreleri",
+        "content": "Verilerinizi yalnızca gerektiği süre boyunca saklarız:",
         "items": [
-          "Aktif hesap — hesabınız açık olduğu sürece verileriniz saklanır",
-          "Hesap silindikten sonra — kişisel verileriniz 30 gün içinde silinir ya da anonim hale getirilir",
-          "Yasal zorunluluk — bazı veriler mevzuat gereği daha uzun süre tutulmak zorunda kalabilir",
-          "Anonim toplu veriler — sizi tanımlama imkânı olmayan istatistiksel veriler hizmet geliştirme için süresiz saklanabilir"
+          "Bulut verileri, hesabınız aktif olduğu sürece saklanır",
+          "Cihazınızda, senkronlanmış 90 günden eski aktivite kayıtları otomatik olarak temizlenir; bulut geçmişiniz erişilebilir kalır",
+          "Uygulama içinden sildiğiniz veriler hem buluttan hem cihazınızdan kaldırılır",
+          "Hesap silme talepleri 30 gün içinde tamamlanır; ilgili mevzuatın gerektirdiği hâllerde bazı veriler daha uzun süre saklanabilir",
+          "Sizi tanımlayamayan toplu ve anonim istatistikler, hizmeti iyileştirmek için saklanabilir"
         ]
       },
       "rights": {
-        "title": "11. Haklarınız",
-        "content": "Kişisel verileriniz üzerinde şu haklara sahipsiniz:",
+        "title": "14. Haklarınız (KVKK ve GDPR)",
+        "content": "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), AB Genel Veri Koruma Tüzüğü (GDPR) ve benzeri mevzuat uyarınca şu haklara sahipsiniz:",
         "items": [
-          "Erişim — hakkınızda hangi verileri tuttuğumuzu öğrenebilir, bir kopyasını isteyebilirsiniz",
-          "Düzeltme — hatalı veya eksik bilgilerin düzeltilmesini isteyebilirsiniz",
-          "Silme — hesabınızı ve tüm verilerinizi kalıcı olarak sildirtebilirsiniz",
-          "Taşınabilirlik — verilerinizi makine tarafından okunabilir bir formatta dışa aktarabilirsiniz",
-          "Kısıtlama — verilerinizin işlenmesini geçici olarak durdurmamızı isteyebilirsiniz",
-          "İtiraz — meşru menfaate dayalı veri işlememize itiraz edebilirsiniz",
-          "Onay geri çekme — daha önce verdiğiniz rızayı uygulama ayarlarından istediğiniz an geri alabilirsiniz",
-          "Şikayet — yerel veri koruma kurumuna başvurabilirsiniz"
+          "Erişim — hakkınızda tuttuğumuz kişisel verilerin bir kopyasını isteme",
+          "Düzeltme — eksik veya yanlış verilerin düzeltilmesini isteme",
+          "Silme — hesabınızın ve ilişkili tüm verilerin silinmesini isteme",
+          "Veri taşınabilirliği — verilerinizin makine tarafından okunabilir bir formatta dışa aktarılmasını isteme",
+          "Kısıtlama — verilerinizin işlenmesinin sınırlandırılmasını isteme",
+          "İtiraz — meşru menfaate dayalı işlemeye itiraz etme",
+          "Rızayı geri çekme — isteğe bağlı işleme (ör. analitik) için verdiğiniz rızayı uygulamadan veya web sitesinden dilediğiniz an geri çekme",
+          "Şikâyet — veri koruma otoritesine başvurma (Türkiye'de Kişisel Verileri Koruma Kurumu; AEA'da ulusal otoriteniz)"
         ],
-        "note": "Bu haklarınızı kullanmak için privacy@focusnow.ai adresine yazmanız yeterli. 30 gün içinde yanıt veririz."
+        "note": "Bu haklarınızı kullanmak için privacy@focusnow.ai adresine e-posta gönderin. 30 gün içinde yanıt veririz."
       },
       "children": {
-        "title": "12. Çocukların Gizliliği",
-        "content": "FocusNow 13 yaşından küçük (veya bulunduğunuz ülkedeki yasal yaş sınırının altındaki) çocuklar için tasarlanmamıştır. Çocuklardan bilerek veri toplamıyoruz. Ebeveyn izni olmadan bir çocuğa ait veri topladığımızı fark edersek derhal sileriz."
+        "title": "15. Çocukların Gizliliği",
+        "content": "FocusNow, 13 yaşından (veya bulunduğunuz ülkedeki geçerli asgari yaştan) küçük çocukların kullanımına yönelik değildir. Çocuklardan bilerek kişisel veri toplamayız. Ebeveyn rızası olmadan bir çocuktan veri topladığımızı fark edersek, bu bilgileri derhâl silmek için gerekli adımları atarız."
       },
       "changes": {
-        "title": "13. Politika Değişiklikleri",
-        "content": "Bu politikayı zaman zaman güncelleyebiliriz — hizmetimizdeki, teknolojideki veya yasal gerekliliklerdeki değişikliklere bağlı olarak. Önemli bir değişiklik olduğunda, yürürlüğe girmeden önce uygulama içinden veya e-posta ile sizi bilgilendiririz. Güncelleme sonrasında FocusNow'u kullanmaya devam etmeniz, yeni politikayı kabul ettiğiniz anlamına gelir."
+        "title": "16. Politikadaki Değişiklikler",
+        "content": "Uygulamalarımızdaki, teknolojideki veya yasal gerekliliklerdeki değişiklikleri yansıtmak için bu Gizlilik Politikası'nı zaman zaman güncelleyebiliriz. Önemli değişikliklerde, değişiklikler yürürlüğe girmeden önce sizi uygulama üzerinden veya e-posta ile bilgilendiririz. Değişiklikler yürürlüğe girdikten sonra FocusNow'u kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir."
       },
       "contact": {
-        "title": "14. Bize Ulaşın",
-        "content": "Bu politika hakkında sorunuz varsa veya veri haklarınızı kullanmak istiyorsanız:",
+        "title": "17. Bize Ulaşın",
+        "content": "Bu Gizlilik Politikası hakkında sorularınız varsa veya veri haklarınızı kullanmak istiyorsanız:",
         "items": [
           "E-posta: privacy@focusnow.ai",
-          "Yanıt süresi: talebinizi aldığımız tarihten itibaren 30 gün"
+          "Yanıt süresi: talebinizi aldıktan sonra en geç 30 gün"
         ],
-        "note": "Veri Sorumlusu: FocusNow — Barbaros Zongur, Türkiye"
+        "note": "Veri Sorumlusu: FocusNow — Barbaros Zongur, Türkiye. Bu politika İngilizce ve Türkçe olarak sunulur; iki sürüm arasında çelişki olursa İngilizce sürüm geçerlidir."
+      }
+    }
+  },
+  "termsPage": {
+    "meta": {
+      "title": "Kullanım Koşulları — FocusNow",
+      "description": "FocusNow masaüstü uygulamasını ve web sitesini kullanırken geçerli olan koşullar: lisans, kabul edilebilir kullanım, yapay zekâ içeriği ve sorumluluk."
+    },
+    "title": "Kullanım Koşulları",
+    "lastUpdated": "Yürürlük tarihi: 2 Temmuz 2026",
+    "intro": "Bu Kullanım Koşulları (\"Koşullar\"), Türkiye'de yerleşik Barbaros Zongur (\"biz\") tarafından işletilen FocusNow masaüstü uygulaması ile focusnow.ai web sitesinin (birlikte \"Hizmet\") kullanımını düzenler. Hizmeti indirerek, kurarak, oturum açarak veya kullanarak bu Koşulları kabul etmiş olursunuz. Kabul etmiyorsanız Hizmeti kullanmayın. Türkçe metin bilgilendirme amaçlı bir çeviridir; çelişki hâlinde İngilizce sürüm esas alınır.",
+    "sections": {
+      "service": {
+        "title": "1. Hizmet",
+        "content": "FocusNow bir verimlilik takip aracıdır. Masaüstü uygulaması, kendi cihazınızda hangi uygulama ve pencereleri kullandığınızı kaydeder, bu aktiviteyi seanslar ve analizler hâlinde düzenler ve yapay zekâ destekli günlük raporlar üretebilir. Bazı özellikler hesap ve internet bağlantısı gerektirir; aktivite takibi cihazınızda yerel olarak çalışır."
+      },
+      "license": {
+        "title": "2. Lisans",
+        "content": "Size, FocusNow masaüstü uygulamasını sahip olduğunuz veya kontrolünüzdeki cihazlara kurup kendi kullanımınız için çalıştırmanıza yönelik kişisel, sınırlı, münhasır olmayan, devredilemez ve geri alınabilir bir lisans veriyoruz. Yasaların bu tür kısıtlamaları yasakladığı hâller dışında Hizmeti kopyalayamaz, değiştiremez, dağıtamaz, satamaz, kiralayamaz, alt lisans veremez, tersine mühendislik yapamaz veya kaynak kodunu çıkarmaya çalışamazsınız."
+      },
+      "accounts": {
+        "title": "3. Hesabınız",
+        "content": "FocusNow'a Google veya Microsoft hesabınızla giriş yaparsınız. Bu hesaba erişimin güvenliğinden ve hesabınız altında gerçekleşen tüm faaliyetlerden siz sorumlusunuz. Doğru bilgi vermeniz ve bu Koşulları kabul etmeye hukuken ehil olmanız gerekir. FocusNow, 13 yaşından (veya bulunduğunuz ülkedeki geçerli asgari yaştan) küçük çocuklara yönelik değildir."
+      },
+      "acceptableUse": {
+        "title": "4. Kabul Edilebilir Kullanım",
+        "content": "Şunları yapmamayı kabul ediyorsunuz:",
+        "items": [
+          "Hizmeti, bir başkasını veya onun cihazını, bilgisi ve hukuka uygun rızası olmadan izlemek için kullanmak — FocusNow bir öz-takip aracıdır; çalışan veya aile gözetim ürünü değildir",
+          "Hizmete, altyapısına veya diğer kullanıcıların verilerine müdahale etmek, bunları aksatmak veya yetkisiz erişim sağlamaya çalışmak",
+          "Hizmeti yürürlükteki yasa ve mevzuata aykırı biçimde kullanmak",
+          "Hizmeti kendi ürününüzmüş gibi üçüncü taraflara yeniden satmak, dağıtmak veya sunmak",
+          "Hizmetin teknik sınırlamalarını veya güvenlik önlemlerini aşmak ya da aşmaya çalışmak"
+        ]
+      },
+      "plans": {
+        "title": "5. Ücretsiz Plan ve Gelecekteki Ücretli Planlar",
+        "content": "FocusNow şu anda ücretsizdir. Gelecekte ek özellikler içeren ücretli planlar sunabiliriz; böyle bir durumda fiyatlandırma ve koşullar, sizden herhangi bir ücret alınmadan önce açıkça bildirilir. Ücretsiz planın özelliklerini de değiştirebilir, sınırlandırabilir veya sonlandırabiliriz; önemli değişikliklerde makul bir bildirim yaparız."
+      },
+      "aiContent": {
+        "title": "6. Yapay Zekâ Tarafından Üretilen İçerik",
+        "content": "Günlük raporlar ve içgörüler, aktivite verilerinize dayanarak yapay zekâ tarafından üretilir. Yapay zekâ çıktıları eksik, hatalı veya yanıltıcı olabilir. İçgörüler yalnızca kişisel bilgilendirme amaçlıdır; mesleki, tıbbi, hukuki veya istihdama ilişkin tavsiye niteliği taşımaz. Önemli kararlarınızı yalnızca yapay zekâ içeriğine dayanarak vermemelisiniz."
+      },
+      "privacyRef": {
+        "title": "7. Gizlilik",
+        "content": "Hangi verileri topladığımızı ve nasıl işlediğimizi açıklayan Gizlilik Politikamız bu Koşulların bir parçasıdır. Hizmeti kullanarak focusnow.ai/gizlilik adresindeki Gizlilik Politikası'nı okuduğunuzu kabul etmiş olursunuz."
+      },
+      "updates": {
+        "title": "8. Güncellemeler ve Erişilebilirlik",
+        "content": "Masaüstü uygulaması, Hizmetin güvenli ve işlevsel kalması için güncellemeleri otomatik olarak indirip kurabilir. Hizmeti erişilebilir tutmayı amaçlarız ancak kesintisiz veya hatasız çalışacağını garanti etmeyiz; bakım için Hizmeti askıya alabiliriz. Bulut senkronu ve yapay zekâ özellikleri üçüncü taraf altyapısına bağlıdır ve geçici olarak kullanılamayabilir."
+      },
+      "ip": {
+        "title": "9. Fikri Mülkiyet",
+        "content": "Yazılımı, tasarımı, markası ve içeriğiyle (sizin verileriniz hariç) Hizmet bize aittir ve fikri mülkiyet mevzuatıyla korunur. Bu Koşullar size markalarımız üzerinde herhangi bir hak vermez. Kendi aktivite verileriniz üzerindeki tüm haklar sizde kalır; bize yalnızca, Gizlilik Politikası'nda açıklandığı şekilde Hizmeti sizin için işletmemize yetecek hakları vermiş olursunuz."
+      },
+      "warranty": {
+        "title": "10. Garanti Reddi",
+        "content": "Hizmet \"olduğu gibi\" ve \"mevcut hâliyle\" sunulur; ticari elverişlilik, belirli bir amaca uygunluk ve ihlal etmeme dahil olmak üzere açık veya zımni hiçbir garanti verilmez. Hizmetin doğru, güvenilir, kesintisiz veya hatasız olacağını ya da aktivite verilerinin hiçbir zaman kaybolmayacağını garanti etmeyiz. Kritik önem taşıyan veriler için kendi yedeklerinizi tutun."
+      },
+      "liability": {
+        "title": "11. Sorumluluğun Sınırlandırılması",
+        "content": "Yasaların izin verdiği azami ölçüde; Hizmeti kullanmanızdan veya kullanamamanızdan doğan dolaylı, arızi, özel, netice kabilinden veya cezai zararlardan ya da kâr kaybı, veri kaybı veya iş kesintisinden sorumlu değiliz. Yasaların izin verdiği ölçüde, Hizmetle ilgili tüm taleplere ilişkin toplam sorumluluğumuz, talepten önceki on iki ayda Hizmet için bize ödediğiniz tutarı (hiç ödeme yapmadıysanız 50 ABD dolarını) aşmaz. Bu Koşullardaki hiçbir hüküm, ikamet ettiğiniz ülkedeki emredici tüketici hakları dahil, yasal olarak hariç tutulamayacak sorumlulukları ortadan kaldırmaz."
+      },
+      "termination": {
+        "title": "12. Fesih",
+        "content": "Hizmeti kullanmayı dilediğiniz an bırakabilir ve Gizlilik Politikası'nda açıklandığı şekilde hesabınızın silinmesini talep edebilirsiniz. Bu Koşulları esaslı biçimde ihlal etmeniz hâlinde, yasal bir zorunluluk doğduğunda veya Hizmeti sonlandırmamız durumunda erişiminizi askıya alabilir veya sonlandırabiliriz; makul olarak mümkün olduğunda, verilerinizi dışa aktarabilmeniz için önceden bildirimde bulunuruz."
+      },
+      "law": {
+        "title": "13. Uygulanacak Hukuk",
+        "content": "Bu Koşullar Türkiye Cumhuriyeti hukukuna tabidir ve bunlardan doğan uyuşmazlıklarda Türkiye mahkemeleri yetkilidir. Avrupa Birliği'nde veya başka bir yerde tüketici iseniz, ikamet ettiğiniz ülke hukukunun emredici korumalarından da yararlanırsınız; bu madde sizi bu korumalardan mahrum bırakmaz."
+      },
+      "changes": {
+        "title": "14. Koşullardaki Değişiklikler",
+        "content": "Bu Koşulları zaman zaman güncelleyebiliriz. Önemli değişikliklerde, değişiklikler yürürlüğe girmeden önce sizi uygulama veya web sitesi üzerinden bilgilendiririz. Değişiklikler yürürlüğe girdikten sonra Hizmeti kullanmaya devam etmeniz, güncellenmiş Koşulları kabul ettiğiniz anlamına gelir."
+      },
+      "contact": {
+        "title": "15. İletişim",
+        "content": "Bu Koşullarla ilgili sorularınız için: privacy@focusnow.ai. İşletmeci: FocusNow — Barbaros Zongur, Türkiye. Bu Koşullar İngilizce ve Türkçe olarak sunulur; iki sürüm arasında çelişki olursa İngilizce sürüm geçerlidir."
       }
     }
   },
