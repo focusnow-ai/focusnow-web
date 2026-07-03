@@ -270,7 +270,7 @@
   },
   "privacyPage": {
     "title": "Gizlilik Politikası",
-    "lastUpdated": "Yürürlük tarihi: 2 Temmuz 2026",
+    "lastUpdated": "Yürürlük tarihi: 3 Temmuz 2026",
     "intro": "FocusNow (\"biz\") olarak gizliliğinizi korumayı taahhüt ediyoruz. Bu Gizlilik Politikası, FocusNow web sitesini ve masaüstü uygulamasını kapsar; hangi verileri topladığımızı, bunları nasıl kullandığımızı ve sakladığımızı, bizim adımıza kimlerin işlediğini ve kişisel verileriniz üzerindeki haklarınızı açıklar. Bu metin, 25 Mayıs 2025 tarihli sürümün yerine geçer. Türkçe metin bilgilendirme amaçlı bir çeviridir; herhangi bir çelişki hâlinde İngilizce sürüm esas alınır.",
     "sections": {
       "trustPromise": {
@@ -389,8 +389,8 @@
         "title": "13. Veri Saklama Süreleri",
         "content": "Verilerinizi yalnızca gerektiği süre boyunca saklarız:",
         "items": [
-          "Bulut verileri, hesabınız aktif olduğu sürece saklanır",
-          "Cihazınızda, senkronlanmış 90 günden eski aktivite kayıtları otomatik olarak temizlenir; bulut geçmişiniz erişilebilir kalır",
+          "Aktivite kayıtları, odak oturumları ve AI günlük özet raporları buluttan en fazla 12 ay içinde (kayan pencere ile) otomatik olarak silinir; hesap ve profil bilgileriniz ise hesabınız aktif olduğu sürece saklanır",
+          "Cihazınızda, senkronlanmış 90 günden eski aktivite kayıtları otomatik olarak temizlenir; bulut geçmişiniz yukarıdaki 12 aylık bulut saklama penceresi içinde erişilebilir kalır",
           "Uygulama içinden sildiğiniz veriler hem buluttan hem cihazınızdan kaldırılır",
           "Hesap silme talepleri 30 gün içinde tamamlanır; ilgili mevzuatın gerektirdiği hâllerde bazı veriler daha uzun süre saklanabilir",
           "Sizi tanımlayamayan toplu ve anonim istatistikler, hizmeti iyileştirmek için saklanabilir"
