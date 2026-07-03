@@ -270,7 +270,7 @@
   },
   "privacyPage": {
     "title": "Privacy Policy",
-    "lastUpdated": "Effective date: July 2, 2026",
+    "lastUpdated": "Effective date: July 3, 2026",
     "intro": "FocusNow (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy covers the FocusNow website and desktop application. It explains exactly what data we collect, how we use and store it, who processes it on our behalf, and the rights you have over your personal information. This version replaces the version dated May 25, 2025.",
     "sections": {
       "trustPromise": {
@@ -389,8 +389,8 @@
         "title": "13. Data Retention",
         "content": "We keep your data only as long as necessary:",
         "items": [
-          "Cloud data is retained while your account is active",
-          "On your device, synced activity older than 90 days is automatically cleaned up; your cloud history remains available",
+          "Activity logs, focus sessions, and AI daily insight reports are retained in the cloud for up to 12 months on a rolling basis, then automatically deleted; your account and profile information are kept for as long as your account stays active",
+          "On your device, synced activity older than 90 days is automatically cleaned up; your cloud history remains available within the 12-month cloud retention window described above",
           "When you delete data in the app, it is removed from both the cloud and your device",
           "Account deletion requests are completed within 30 days; certain data may be retained longer where required by applicable law",
           "Aggregated, anonymous statistics that cannot identify you may be retained for service improvement"
