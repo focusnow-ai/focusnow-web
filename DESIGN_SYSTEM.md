@@ -127,6 +127,19 @@ Brand colors (`secondary`, `accent`) remain the same across modes. `primary` shi
 
 All feature section icons use a single color: **purple** (`bg-purple-100` / `text-purple-600`). Monochromatic icons keep the feature grid calm and professional — the icon shape and title already differentiate each card. No multi-color icon schemes.
 
+### Activity Status Colors
+
+Product mockups (hero dashboard mockup, bento screenshot tabs) use shared activity-status colors that mirror the desktop app's activity semantics. Defined once in `src/lib/activity-colors.ts` — always import from there, never hardcode.
+
+| Status | Light | Dark |
+|---|---|---|
+| Focus | `bg-emerald-500` | `dark:bg-emerald-400` |
+| Neutral | `bg-blue-500` | `dark:bg-blue-400` |
+| Distraction | `bg-red-500` | `dark:bg-red-400` |
+| Idle / Away | `bg-gray-400` | `dark:bg-gray-500` |
+
+Used for stacked timeline bars, legend dots, and activity-row status dots.
+
 ### Text Emphasis Colors
 
 For highlighted text (section titles, links), use these instead of semantic tokens -- `--primary` is optimized for backgrounds, not text readability:
@@ -249,6 +262,10 @@ rounded-lg border border-border/40 bg-gradient-to-br from-card to-muted/60 eleva
 └─ Content area
 ```
 
+**Bento hero screenshot tabs:** The bento hero card's window mockup has **5 tabs matching the desktop app's IA**: Dashboard, Analytics, Activities, Sessions, Settings (lucide icons: `LayoutDashboard`, `BarChart3`, `AppWindow`, `Timer`, `Settings`). Item dots on the Dashboard / Activities / Sessions tabs use activity-status colors (see Color Palette); Analytics / Settings fall back to the brand CSS-variable rotation (primary / secondary / accent).
+
+**Hero dashboard mockup:** `HeroSection`'s `DashboardMockup` is a mini replica of the real desktop Dashboard: 3 metric cards (Focus Score with purple value + progress bar, Focus Time, Sessions), a timeline block with `Today | Yesterday | Week` pills (active pill `bg-purple-600 text-white`), an animated stacked activity bar, a 4-item legend, and a 3-row activity list — all using activity-status colors. Numbers and app names are decorative and hardcoded; labels come from i18n (`hero.mockup.dashboard.*`).
+
 ### Minimal / Typographic Sections
 
 Used for **explanatory content** where the goal is clarity and scannability, not visual richness. Typography and whitespace do the work.
@@ -333,7 +350,7 @@ Badges use a visual hierarchy to communicate their role. The `secondary` variant
 |---|---|---|---|
 | Primary action | `default` (`bg-primary`) | Solid purple | Pricing "Free", Download "Detected" |
 | Hero emphasis | Custom purple classes | Light purple bg | Hero badge (custom) |
-| Informational | `variant="outline"` | Bordered, neutral | Blog tags, changelog version, about tech stack, download platform |
+| Informational | `variant="outline"` | Bordered, neutral | Blog tags, changelog version, download platform |
 | Passive / pending | `bg-muted text-muted-foreground border-border` | Gray bg | Pricing "Pro", Feature "Coming Soon" |
 
 **Decision rationale:** Pink-600 badges competed with primary purple for attention and made the page feel noisy. Outline badges for informational content recede naturally, letting primary-action badges stand out. Muted badges communicate "not yet active" for upcoming features.

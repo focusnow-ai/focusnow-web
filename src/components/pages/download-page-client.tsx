@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -28,6 +28,11 @@ const afterInstallSteps = [
   { key: "run", icon: Monitor },
   { key: "dashboard", icon: BarChart3 },
 ] as const;
+
+// Hydration-safe platform detection: server renders the default,
+// the client snapshot takes over after hydration.
+const emptySubscribe = () => () => {};
+const getServerPlatform = (): Platform => "mac-arm";
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
   const [open, setOpen] = useState(false);
@@ -57,11 +62,11 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 export function DownloadPageClient() {
   const t = useTranslations("download");
-  const [platform, setPlatform] = useState<Platform>("mac-arm");
-
-  useEffect(() => {
-    setPlatform(detectPlatform());
-  }, []);
+  const platform = useSyncExternalStore<Platform>(
+    emptySubscribe,
+    detectPlatform,
+    getServerPlatform
+  );
 
   const primary = getPrimaryDownload(platform);
 
@@ -139,16 +144,16 @@ export function DownloadPageClient() {
           <h3 className="text-xl font-semibold text-center mb-6">
             {t("otherPlatforms")}
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {downloadLinks.map((link) => (
               <Card
                 key={link.platform}
                 className={cn(
-                  "card-hover",
+                  "card-hover h-full",
                   link.platform === primary.platform && "border-primary/40"
                 )}
               >
-                <CardContent className="p-4 text-center">
+                <CardContent className="p-4 text-center h-full flex flex-col">
                   <div className="flex justify-center mb-2">
                     {platformIcons[link.platform]}
                   </div>
@@ -160,22 +165,22 @@ export function DownloadPageClient() {
                       {link.arch}
                     </p>
                   )}
-                  {link.available ? (
-                    <a
-                      href={link.url}
-                      className={cn(
-                        buttonVariants({ size: "sm", variant: "outline" }),
-                        "mt-3 w-full"
-                      )}
-                    >
-                      <Download className="mr-1 h-3 w-3" />
-                      {link.fileName}
-                    </a>
-                  ) : (
-                    <Badge variant="outline" className="mt-3">
-                      {t("comingSoon")}
-                    </Badge>
-                  )}
+                  <div className="mt-auto pt-3">
+                    {link.available ? (
+                      <a
+                        href={link.url}
+                        className={cn(
+                          buttonVariants({ size: "sm", variant: "outline" }),
+                          "w-full"
+                        )}
+                      >
+                        <Download className="mr-1 h-3 w-3" />
+                        {link.fileName}
+                      </a>
+                    ) : (
+                      <Badge variant="outline">{t("comingSoon")}</Badge>
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             ))}

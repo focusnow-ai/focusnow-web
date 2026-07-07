@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     template: "%s | FocusNow",
   },
   description:
-    "Free desktop app that automatically tracks your apps and shows how you spend your workday. AES-256 encrypted. Mac & Windows.",
+    "Free desktop app that tracks your apps automatically and shows where your workday goes. No screenshots, no keylogging. Mac & Windows.",
 };
 
 export default function RootLayout({

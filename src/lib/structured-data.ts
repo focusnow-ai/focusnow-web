@@ -1,7 +1,7 @@
 export function getSoftwareApplicationLD(locale?: string) {
   const descriptions: Record<string, string> = {
-    en: "Free desktop app that automatically tracks your apps and shows how you spend your workday. AES-256 encrypted. Mac & Windows.",
-    tr: "Hangi uygulamalara ne kadar vakit harcadığınızı otomatik takip eden ücretsiz masaüstü uygulaması. AES-256 şifreli. Mac ve Windows.",
+    en: "Free desktop app that tracks your apps automatically and shows where your workday goes. No screenshots, no keylogging. Mac & Windows.",
+    tr: "Hangi uygulamada ne kadar vakit geçirdiğinizi otomatik takip eden ücretsiz masaüstü uygulaması. Ekran görüntüsü ve tuş kaydı yok. Mac ve Windows.",
   };
 
   return {

@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { activityColors, type ActivityStatus } from "@/lib/activity-colors";
 import { motion } from "framer-motion";
 import { ArrowDown, Download } from "lucide-react";
 import { AppleIcon } from "@/components/shared/apple-icon";
@@ -12,19 +13,35 @@ import { WindowsIcon } from "@/components/shared/windows-icon";
 
 /* ─── Static mockup data ─── */
 
-const weekDays = ["M", "T", "W", "T", "F"];
-const weekHeights = [65, 82, 48, 90, 70];
+const timelineSegments: { status: ActivityStatus; percent: number }[] = [
+  { status: "focus", percent: 58 },
+  { status: "neutral", percent: 22 },
+  { status: "distraction", percent: 12 },
+  { status: "idle", percent: 8 },
+];
 
-const topApps = [
-  { name: "VS Code", time: "2h 15m", percent: 68, color: "bg-purple-500" },
-  { name: "Chrome", time: "1h 42m", percent: 52, color: "bg-blue-500" },
-  { name: "Slack", time: "45m", percent: 22, color: "bg-emerald-500" },
+const legendKeys: ActivityStatus[] = [
+  "focus",
+  "neutral",
+  "distraction",
+  "idle",
+];
+
+const activityRows: {
+  time: string;
+  app: string;
+  duration: string;
+  status: ActivityStatus;
+}[] = [
+  { time: "09:24", app: "VS Code", duration: "42m", status: "focus" },
+  { time: "10:06", app: "Chrome — Docs", duration: "18m", status: "neutral" },
+  { time: "10:24", app: "YouTube", duration: "6m", status: "distraction" },
 ];
 
 /* ─── Dashboard mockup ─── */
-/* TODO: Replace this component with a real app screenshot / video
-   once the desktop app UI is finalized. Use next/image with the
-   screenshot file and remove this entire component. */
+/* Mini replica of the real desktop Dashboard (metric cards + timeline
+   stacked bar + activity list). Swapping in a real screenshot with
+   next/image remains optional. */
 
 function DashboardMockup({ t }: { t: (key: string) => string }) {
   return (
@@ -43,92 +60,123 @@ function DashboardMockup({ t }: { t: (key: string) => string }) {
       </div>
 
       <div className="p-5 sm:p-6 space-y-5">
-        {/* Stats row */}
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <p className="text-[11px] text-muted-foreground font-medium uppercase tracking-wider">
+        {/* Metric cards row */}
+        <div className="grid grid-cols-3 gap-2.5">
+          <div className="rounded-lg border border-border/40 bg-muted/30 p-2.5">
+            <p className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider truncate">
               {t("mockup.dashboard.focusScore")}
             </p>
-            <p className="text-3xl font-bold text-purple-600 dark:text-purple-400 tabular-nums leading-tight mt-0.5">
+            <p className="text-xl font-bold text-purple-600 dark:text-purple-400 tabular-nums leading-tight mt-0.5">
               87%
             </p>
+            <div className="mt-1.5 h-1 rounded-full bg-muted overflow-hidden">
+              <motion.div
+                className="h-full rounded-full bg-purple-500 dark:bg-purple-400"
+                initial={{ width: 0 }}
+                animate={{ width: "87%" }}
+                transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
+              />
+            </div>
           </div>
-          <div className="text-right">
-            <p className="text-[11px] text-muted-foreground font-medium uppercase tracking-wider">
-              {t("mockup.dashboard.today")}
+          <div className="rounded-lg border border-border/40 bg-muted/30 p-2.5">
+            <p className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider truncate">
+              {t("mockup.dashboard.focusTime")}
             </p>
-            <p className="text-3xl font-bold tabular-nums leading-tight mt-0.5">
-              6h 42m
+            <p className="text-xl font-bold tabular-nums leading-tight mt-0.5">
+              4h 32m
+            </p>
+          </div>
+          <div className="rounded-lg border border-border/40 bg-muted/30 p-2.5">
+            <p className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider truncate">
+              {t("mockup.dashboard.sessions")}
+            </p>
+            <p className="text-xl font-bold tabular-nums leading-tight mt-0.5">
+              3
             </p>
           </div>
         </div>
 
-        {/* Weekly focus bar chart */}
+        {/* Timeline */}
         <div>
-          <p className="text-[11px] text-muted-foreground font-medium uppercase tracking-wider mb-2.5">
-            {t("mockup.dashboard.weeklyFocus")}
-          </p>
-          <div className="flex items-end gap-2">
-            {weekDays.map((day, i) => (
-              <div
-                key={i}
-                className="flex-1 flex flex-col items-center gap-1"
-              >
-                <div className="w-full h-14 flex items-end">
-                  <motion.div
-                    className="w-full rounded-t bg-purple-500/80 dark:bg-purple-400/50"
-                    initial={{ height: 0 }}
-                    animate={{ height: `${weekHeights[i]}%` }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.7 + i * 0.08,
-                      ease: "easeOut",
-                    }}
-                  />
-                </div>
-                <span className="text-[10px] text-muted-foreground font-medium">
-                  {day}
+          <div className="flex items-center justify-between mb-2.5">
+            <p className="text-[11px] text-muted-foreground font-medium uppercase tracking-wider">
+              {t("mockup.dashboard.timeline")}
+            </p>
+            <div className="flex gap-1">
+              <span className="px-2 py-0.5 rounded-full text-[9px] font-medium bg-purple-600 text-white">
+                {t("mockup.dashboard.tabs.today")}
+              </span>
+              <span className="px-2 py-0.5 rounded-full text-[9px] font-medium text-muted-foreground">
+                {t("mockup.dashboard.tabs.yesterday")}
+              </span>
+              <span className="px-2 py-0.5 rounded-full text-[9px] font-medium text-muted-foreground">
+                {t("mockup.dashboard.tabs.week")}
+              </span>
+            </div>
+          </div>
+
+          {/* Stacked activity bar */}
+          <div className="h-2.5 rounded-full bg-muted overflow-hidden flex">
+            {timelineSegments.map((segment, i) => (
+              <motion.div
+                key={segment.status}
+                className={cn("h-full", activityColors[segment.status])}
+                initial={{ width: 0 }}
+                animate={{ width: `${segment.percent}%` }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.8 + i * 0.12,
+                  ease: "easeOut",
+                }}
+              />
+            ))}
+          </div>
+
+          {/* Legend */}
+          <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
+            {legendKeys.map((status) => (
+              <div key={status} className="flex items-center gap-1.5">
+                <span
+                  className={cn(
+                    "w-1.5 h-1.5 rounded-full",
+                    activityColors[status]
+                  )}
+                />
+                <span className="text-[10px] text-muted-foreground">
+                  {t(`mockup.dashboard.legend.${status}`)}
                 </span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Top apps */}
-        <div>
-          <p className="text-[11px] text-muted-foreground font-medium uppercase tracking-wider mb-2">
-            {t("mockup.dashboard.topApps")}
-          </p>
-          <div className="space-y-2">
-            {topApps.map((app, i) => (
-              <motion.div
-                key={app.name}
-                className="flex items-center gap-3"
-                initial={{ opacity: 0, x: 8 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: 1.1 + i * 0.1 }}
-              >
-                <span className="text-xs font-medium w-[56px] truncate">
-                  {app.name}
-                </span>
-                <div className="flex-1 h-1.5 rounded-full bg-muted overflow-hidden">
-                  <motion.div
-                    className={cn("h-full rounded-full", app.color)}
-                    initial={{ width: 0 }}
-                    animate={{ width: `${app.percent}%` }}
-                    transition={{
-                      duration: 0.6,
-                      delay: 1.1 + i * 0.1,
-                      ease: "easeOut",
-                    }}
-                  />
-                </div>
-                <span className="text-[11px] text-muted-foreground tabular-nums w-[48px] text-right">
-                  {app.time}
-                </span>
-              </motion.div>
-            ))}
-          </div>
+        {/* Activity list */}
+        <div className="space-y-2">
+          {activityRows.map((row, i) => (
+            <motion.div
+              key={row.app}
+              className="flex items-center gap-3"
+              initial={{ opacity: 0, x: 8 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: 1.2 + i * 0.1 }}
+            >
+              <span
+                className={cn(
+                  "w-1.5 h-1.5 rounded-full shrink-0",
+                  activityColors[row.status]
+                )}
+              />
+              <span className="text-[11px] text-muted-foreground tabular-nums">
+                {row.time}
+              </span>
+              <span className="text-xs font-medium flex-1 truncate">
+                {row.app}
+              </span>
+              <span className="text-[11px] text-muted-foreground tabular-nums">
+                {row.duration}
+              </span>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>

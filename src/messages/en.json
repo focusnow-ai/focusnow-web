@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FocusNow — See Where Your Time Goes | Free Desktop Tracker",
-    "description": "Free desktop app that automatically tracks your apps and shows how you spend your workday. AES-256 encrypted. Mac & Windows.",
+    "description": "Free desktop app that tracks your apps automatically and shows where your workday goes. No screenshots, no keylogging. Mac & Windows.",
     "keywords": "focus tracking app, automatic time tracking desktop, app usage tracker mac, deep work tracker, productivity, pomodoro"
   },
   "nav": {
@@ -31,16 +31,27 @@
     "mockup": {
       "dashboard": {
         "focusScore": "Focus Score",
-        "today": "Today",
-        "weeklyFocus": "Weekly Focus",
-        "topApps": "Top Apps"
+        "focusTime": "Focus Time",
+        "sessions": "Sessions",
+        "timeline": "Timeline",
+        "tabs": {
+          "today": "Today",
+          "yesterday": "Yesterday",
+          "week": "Week"
+        },
+        "legend": {
+          "focus": "Focus",
+          "neutral": "Neutral",
+          "distraction": "Distraction",
+          "idle": "Idle"
+        }
       }
     }
   },
   "socialProof": {
     "freeForever": "Free forever",
     "platforms": "Mac & Windows",
-    "encrypted": "AES-256 encrypted",
+    "encrypted": "Encrypted in transit & at rest",
     "noTracking": "No screenshots or keylogging"
   },
   "bentoFeatures": {
@@ -48,15 +59,19 @@
     "titleHighlight": "Focus Better",
     "hero": {
       "title": "See Your Real Workday",
-      "description": "FocusNow tracks which apps you use and for how long. No timers. No logging. It just works."
+      "description": "FocusNow tracks your apps automatically and uses AI to sort your time into focus, neutral, and distraction. It just works."
     },
     "timer": {
-      "title": "Deep Work Timer",
-      "description": "Start a focus session and see how well you stayed on task."
+      "title": "Focus Sessions",
+      "description": "Pick a Pomodoro sprint or a longer Deep Work block and see how well you stayed on task.",
+      "presets": {
+        "pomodoro": "Pomodoro",
+        "deepWork": "Deep Work"
+      }
     },
     "analytics": {
       "title": "Your Week at a Glance",
-      "description": "Spot your most productive hours and focus trends at a glance."
+      "description": "Spot your peak focus hours, 7-day trends, and your most-used apps at a glance."
     },
     "privacy": {
       "title": "Privacy-First. Always.",
@@ -64,13 +79,24 @@
     },
     "platform": {
       "title": "Works Everywhere",
-      "description": "Same experience on Mac and Windows. Encrypted sync across devices."
+      "description": "Same experience on Mac and Windows. Encrypted sync, works offline."
+    },
+    "included": {
+      "title": "Also included",
+      "items": [
+        "Idle & away detection",
+        "Custom categories and per-app rules",
+        "Sign in with Google or Microsoft",
+        "Offline mode with encrypted sync",
+        "Data export",
+        "Dark & light themes, 5 languages"
+      ]
     },
     "roadmap": {
       "title": "What's Next",
       "items": [
         "Distraction alerts — gentle nudges when you drift off task",
-        "AI-powered insights — smart categorization and personalized focus recommendations"
+        "AI insights — personalized focus recommendations"
       ]
     }
   },
@@ -80,25 +106,30 @@
     "tabs": {
       "dashboard": "Dashboard",
       "analytics": "Analytics",
+      "activities": "Activities",
       "sessions": "Sessions",
       "settings": "Settings"
     },
     "content": {
       "dashboard": {
-        "title": "Today's Focus",
-        "items": ["4h 32m deep work", "2h 15m meetings", "1h 08m breaks"]
+        "title": "Today at a Glance",
+        "items": ["Focus Score — 87%", "Focus Time — 4h 32m", "Sessions — 3 completed"]
       },
       "analytics": {
-        "title": "Weekly Trends",
-        "items": ["Mon: 85%", "Tue: 72%", "Wed: 91%", "Thu: 88%", "Fri: 76%"]
+        "title": "Your Patterns",
+        "items": ["Peak focus: 9–11 AM", "7-day focus trend ↑", "Top app: VS Code — 2h 15m"]
+      },
+      "activities": {
+        "title": "Your Rules",
+        "items": ["Figma → Focus", "YouTube → Distraction", "Custom category: Design"]
       },
       "sessions": {
-        "title": "Focus Sessions",
-        "items": ["Deep Work — 2h 15m", "Code Review — 45m", "Writing — 1h 30m"]
+        "title": "Recent Sessions",
+        "items": ["Pomodoro — 25m · 86% focus", "Deep Work — 1h 30m · 92% focus", "Pomodoro — 25m · 74% focus"]
       },
       "settings": {
-        "title": "Preferences",
-        "items": ["Focus alerts: On", "Break reminders: 25min", "Theme: Auto"]
+        "title": "Make It Yours",
+        "items": ["Working hours: 09:00–18:00", "Theme: Dark · Light · System", "Language: EN · ES · RU · TR · DE"]
       }
     }
   },
@@ -124,7 +155,7 @@
     "title": "Your data is encrypted and",
     "titleHighlight": "stays on your terms.",
     "badges": {
-      "encrypted": "AES-256 Encrypted",
+      "encrypted": "Encrypted in Transit & at Rest",
       "noScreenshots": "No Screenshots",
       "noKeylogging": "No Keylogging",
       "yourData": "You Own Your Data"
@@ -170,7 +201,7 @@
       "steps": {
         "permissions": {
           "title": "Grant Permissions",
-          "description": "FocusNow needs accessibility permissions to track which app is in the foreground. It only reads the app name, window title, and for browsers the page address — never your screen contents or keystrokes."
+          "description": "Sign in with Google or Microsoft, then grant accessibility permission so FocusNow can see which app is in the foreground. It only reads the app name, window title, and for browsers the page address — never your screen contents or keystrokes."
         },
         "run": {
           "title": "Let It Run",
@@ -186,20 +217,20 @@
       "title": "Frequently Asked Questions",
       "items": [
         {
-          "question": "Is this spyware?",
-          "answer": "No. FocusNow tracks which app is in the foreground — its name, window title, and for browsers the page address — and for how long. It never takes screenshots, records keystrokes, or reads what you type. Your data is encrypted in transit and at rest, and it is never sold or shared with advertisers."
+          "question": "Is it really free?",
+          "answer": "Yes. The core product is free forever with no credit card required. We plan to offer an optional Pro tier in the future with advanced features, but the free plan will always include everything you need."
         },
         {
           "question": "How much CPU and battery does it use?",
           "answer": "Very little. FocusNow is designed to run silently in the background. It checks the active window at regular intervals and uses minimal system resources — you won't notice it's there."
         },
         {
-          "question": "Can my employer see my data?",
-          "answer": "No. FocusNow is a personal productivity tool. Your data is stored in your own account, is not visible to your employer, and is never shared or sold. Our Privacy Policy explains exactly how your data is handled."
+          "question": "What data does FocusNow collect?",
+          "answer": "Only what's needed to build your analytics: the app in the foreground — its name, window title, and for browsers the page address — and for how long. It never takes screenshots, records keystrokes, or reads what you type. Your data is encrypted in transit and at rest, and it is never sold or shared with advertisers."
         },
         {
-          "question": "Is it really free?",
-          "answer": "Yes. The core product is free forever with no credit card required. We plan to offer an optional Pro tier in the future with advanced features, but the free plan will always include everything you need."
+          "question": "Can my employer see my data?",
+          "answer": "No. FocusNow is a personal productivity tool. Your data is stored in your own account, is not visible to your employer, and is never shared or sold. Our Privacy Policy explains exactly how your data is handled."
         }
       ]
     }
@@ -207,7 +238,7 @@
   "pricing": {
     "meta": {
       "title": "Pricing — FocusNow Is Free Forever",
-      "description": "FocusNow is free to use with no credit card required. Automatic tracking, focus sessions, analytics, and encrypted sync included."
+      "description": "FocusNow is free to use with no credit card required. AI-powered activity tracking, focus sessions, analytics, and encrypted sync included."
     },
     "title": "Simple, Transparent",
     "titleHighlight": "Pricing",
@@ -218,11 +249,13 @@
       "period": "forever",
       "description": "Everything you need to track and improve your focus.",
       "features": [
-        "Automatic activity categorization",
-        "Focus session tracking",
-        "Daily & weekly analytics",
-        "Encrypted cloud sync",
-        "All privacy features",
+        "Automatic activity tracking with AI categorization",
+        "Pomodoro & Deep Work focus sessions",
+        "Focus Score, timeline & hourly analytics",
+        "Custom categories, app rules & exclusion lists",
+        "Encrypted cloud sync with offline mode",
+        "Data export & account deletion",
+        "Dark & light themes, 5 languages",
         "macOS & Windows support"
       ],
       "cta": "Start Free"
@@ -233,16 +266,15 @@
       "description": "Advanced features for power users.",
       "features": [
         "Everything in Free",
-        "Advanced productivity insights",
-        "Custom categories",
-        "Data export",
+        "Advanced AI insights & recommendations",
+        "Team & workspace features",
         "Priority support"
       ]
     }
   },
   "about": {
     "meta": {
-      "title": "About FocusNow — Our Story and Mission",
+      "title": "About FocusNow — Our Mission",
       "description": "FocusNow was born from a simple idea: understand your productivity without giving up your privacy. Learn about our mission."
     },
     "title": "About",
@@ -262,10 +294,6 @@
         "title": "Transparent",
         "content": "We're clear about what we collect, how we store it, and why. No dark patterns, no hidden data flows. You own your data and can export or delete it anytime."
       }
-    },
-    "tech": {
-      "title": "Built With",
-      "items": ["Electron", "React", "TypeScript", "Azure Cosmos DB", "Tailwind CSS"]
     }
   },
   "privacyPage": {
@@ -518,10 +546,10 @@
         "title": "Initial Release",
         "changes": [
           "Automatic activity categorization",
-          "Focus session tracking with customizable timers",
+          "Focus sessions with Pomodoro and Deep Work presets",
           "Daily and weekly analytics dashboard",
-          "Distraction alerts and notifications",
-          "Local-only data processing",
+          "Automatic idle and away detection",
+          "Local-first storage with encrypted cloud sync",
           "macOS support (Apple Silicon & Intel)"
         ]
       }
@@ -574,7 +602,7 @@
         "items": [
           "See your real productive hours vs. time lost to distractions",
           "Find your peak focus times and protect them",
-          "Track work-life boundaries — know when to stop",
+          "Automatic idle and away detection keeps your stats honest — know when to stop",
           "Build evidence that remote work works for you"
         ]
       },
@@ -603,7 +631,7 @@
         "items": [
           "See exactly how long you actually study vs. get distracted",
           "Track which apps you use during study time",
-          "Use focus sessions with timers to stay on task",
+          "Run Pomodoro or Deep Work sessions to stay on task",
           "Review weekly trends to improve your study habits"
         ]
       },
@@ -660,7 +688,7 @@
         "title": "How FocusNow Helps",
         "items": [
           "See time in IDE vs. browser vs. communication tools",
-          "Track deep coding sessions and protect your flow state",
+          "Track deep coding sessions and spot your peak hours on the hourly focus chart",
           "Identify meeting overhead and context-switching costs",
           "Build data to advocate for more focus time"
         ]

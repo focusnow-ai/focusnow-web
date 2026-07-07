@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { Shield, Zap, Eye } from "lucide-react";
 
@@ -29,7 +28,6 @@ const pillars = [
 
 export function AboutPageClient() {
   const t = useTranslations("about");
-  const techItems: string[] = t.raw("tech.items");
 
   return (
     <div>
@@ -81,26 +79,6 @@ export function AboutPageClient() {
                 </p>
               </motion.div>
             ))}
-          </motion.div>
-
-          {/* Tech stack — simple badges */}
-          <motion.div
-            className="mt-16 sm:mt-20 text-center max-w-2xl mx-auto"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <p className="text-sm font-medium text-muted-foreground mb-4">
-              {t("tech.title")}
-            </p>
-            <div className="flex flex-wrap justify-center gap-2">
-              {techItems.map((item: string) => (
-                <Badge key={item} variant="outline" className="text-sm">
-                  {item}
-                </Badge>
-              ))}
-            </div>
           </motion.div>
         </div>
       </div>

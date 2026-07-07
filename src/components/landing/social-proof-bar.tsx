@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Shield, Lock, MonitorSmartphone } from "lucide-react";
+import { Shield, Lock, MonitorOff, MonitorSmartphone } from "lucide-react";
 
 export function SocialProofBar() {
   const t = useTranslations("socialProof");
@@ -10,6 +10,7 @@ export function SocialProofBar() {
   const items = [
     { key: "freeForever", icon: Shield },
     { key: "platforms", icon: MonitorSmartphone },
+    { key: "noTracking", icon: MonitorOff },
     { key: "encrypted", icon: Lock },
   ];
 

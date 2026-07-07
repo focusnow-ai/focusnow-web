@@ -9,7 +9,17 @@ const CONSENT_KEY = "focusnow-cookie-consent";
 
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID ?? "";
 
-type ConsentStatus = "granted" | "denied" | null;
+export type ConsentStatus = "granted" | "denied" | null;
+
+let consentListeners: Array<() => void> = [];
+
+/** Subscribe to consent changes (for useSyncExternalStore). */
+export function subscribeConsentStatus(listener: () => void): () => void {
+  consentListeners = [...consentListeners, listener];
+  return () => {
+    consentListeners = consentListeners.filter((l) => l !== listener);
+  };
+}
 
 export function getConsentStatus(): ConsentStatus {
   if (typeof window === "undefined") return null;
@@ -21,6 +31,7 @@ export function getConsentStatus(): ConsentStatus {
 export function setConsentStatus(granted: boolean) {
   if (typeof window === "undefined") return;
   localStorage.setItem(CONSENT_KEY, granted ? "granted" : "denied");
+  for (const listener of consentListeners) listener();
 }
 
 export function updateGtagConsent(granted: boolean) {

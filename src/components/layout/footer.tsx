@@ -26,9 +26,9 @@ export function Footer() {
             <h3 className="font-semibold text-sm mb-3">{t("product")}</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link href={{ pathname: "/", hash: "features" }} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   {nav("features")}
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/download" className="text-sm text-muted-foreground hover:text-foreground transition-colors">

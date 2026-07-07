@@ -6,9 +6,11 @@ import { Link } from "@/i18n/navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
+import { activityColors } from "@/lib/activity-colors";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Activity,
+  AppWindow,
   Timer,
   BarChart3,
   Shield,
@@ -44,9 +46,31 @@ const cardVariants = {
 const screenshotTabs = [
   { key: "dashboard", icon: LayoutDashboard },
   { key: "analytics", icon: BarChart3 },
+  { key: "activities", icon: AppWindow },
   { key: "sessions", icon: Timer },
   { key: "settings", icon: Settings },
 ] as const;
+
+/* Activity-status dot colors for tabs that show real activity semantics
+   (Focus = green, Neutral = blue, Distraction = red). Other tabs fall
+   back to theme accent colors. */
+const tabDotColors: Record<string, [string, string, string]> = {
+  dashboard: [
+    activityColors.focus,
+    activityColors.focus,
+    activityColors.neutral,
+  ],
+  activities: [
+    activityColors.focus,
+    activityColors.distraction,
+    activityColors.neutral,
+  ],
+  sessions: [
+    activityColors.focus,
+    activityColors.focus,
+    activityColors.neutral,
+  ],
+};
 
 /* ─── Privacy badges data ─── */
 
@@ -132,17 +156,26 @@ function HeroCard() {
                     key={i}
                     className="flex items-center gap-2 p-2 rounded-md bg-muted/50"
                   >
-                    <div
-                      className="w-1.5 h-1.5 rounded-full shrink-0"
-                      style={{
-                        backgroundColor:
-                          i === 0
-                            ? "var(--primary)"
-                            : i === 1
-                            ? "var(--secondary)"
-                            : "var(--accent)",
-                      }}
-                    />
+                    {tabDotColors[activeTab] ? (
+                      <div
+                        className={cn(
+                          "w-1.5 h-1.5 rounded-full shrink-0",
+                          tabDotColors[activeTab][i] ?? tabDotColors[activeTab][2]
+                        )}
+                      />
+                    ) : (
+                      <div
+                        className="w-1.5 h-1.5 rounded-full shrink-0"
+                        style={{
+                          backgroundColor:
+                            i === 0
+                              ? "var(--primary)"
+                              : i === 1
+                              ? "var(--secondary)"
+                              : "var(--accent)",
+                        }}
+                      />
+                    )}
                     <span className="text-xs">{item}</span>
                   </div>
                 ))}
@@ -175,7 +208,10 @@ function TimerCard() {
           </div>
         </div>
 
-        <div className="flex-1 flex items-center justify-center" aria-hidden="true">
+        <div
+          className="flex-1 flex flex-col items-center justify-center gap-3"
+          aria-hidden="true"
+        >
           <div className="relative w-24 h-24">
             <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
               <circle
@@ -203,6 +239,14 @@ function TimerCard() {
               <span className="text-lg font-bold tabular-nums">18:24</span>
               <span className="text-[9px] text-muted-foreground">remaining</span>
             </div>
+          </div>
+          <div className="flex gap-2">
+            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300">
+              {t("timer.presets.pomodoro")}
+            </span>
+            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-pink-100 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300">
+              {t("timer.presets.deepWork")}
+            </span>
           </div>
         </div>
       </CardContent>
@@ -339,6 +383,7 @@ function PlatformCard() {
 
 export function BentoFeatures() {
   const t = useTranslations("bentoFeatures");
+  const includedItems: string[] = t.raw("included.items");
   const roadmapItems: string[] = t.raw("roadmap.items");
 
   return (
@@ -379,24 +424,33 @@ export function BentoFeatures() {
           </motion.div>
         </motion.div>
 
-        {/* Roadmap note */}
+        {/* Also included chips + one-line roadmap note */}
         <motion.div
-          className="mt-12 max-w-2xl mx-auto text-center"
+          className="mt-12 max-w-3xl mx-auto text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <p className="text-sm font-medium text-muted-foreground mb-3">
-            {t("roadmap.title")}
+          <p className="text-sm font-medium text-muted-foreground mb-4">
+            {t("included.title")}
           </p>
-          <div className="space-y-1.5">
-            {roadmapItems.map((item, i) => (
-              <p key={i} className="text-sm text-muted-foreground/70">
+          <div className="flex flex-wrap justify-center gap-2">
+            {includedItems.map((item, i) => (
+              <span
+                key={i}
+                className="px-3 py-1.5 rounded-full border border-border/60 bg-muted/50 text-xs font-medium text-muted-foreground"
+              >
                 {item}
-              </p>
+              </span>
             ))}
           </div>
+          <p className="mt-8 text-sm text-muted-foreground/70 text-balance">
+            <span className="font-medium text-muted-foreground">
+              {t("roadmap.title")}:
+            </span>{" "}
+            {roadmapItems.join(" · ")}
+          </p>
         </motion.div>
       </div>
     </section>

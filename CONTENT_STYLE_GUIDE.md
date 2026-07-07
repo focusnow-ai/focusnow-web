@@ -48,6 +48,23 @@ Single source of truth for all editorial, copywriting, and content decisions.
 
 **AVOID:** leverage, synergy, robust, cutting-edge, state-of-the-art, enterprise-grade (for individual users), revolutionary, game-changing, excessive "never"
 
+### Privacy Claims
+
+Ground truth: FocusNow records the active app name and window title (never screenshots or keystrokes); AI categorization runs on our backend; data is encrypted with TLS in transit and AES-256 at rest on Azure; local-first storage with encrypted cloud sync. All privacy copy must match this reality.
+
+**APPROVED phrasing:**
+- "encrypted in transit and at rest"
+- "no screenshots, no keylogging" / "never screenshots or keystrokes"
+- "local-first with encrypted sync"
+- "records only the active app name and window title"
+- "never sold or shared — used only to power your own analytics"
+
+**FORBIDDEN phrasing:**
+- "end-to-end encrypted" — factually wrong; our backend processes activity data for AI categorization
+- "local-only" — cloud sync exists
+- "only you can see it" / "no one — including us — can access it" — same reason
+- "AES-256" in marketing copy — technical implementation detail; allowed **only** on the Privacy Policy page and in privacy-focused blog posts where the Azure at-rest context is explained
+
 ---
 
 ## 4. CTA Conventions
@@ -75,8 +92,8 @@ Single source of truth for all editorial, copywriting, and content decisions.
 1. **Write TR independently from the same brief as EN.** Never translate word-for-word. Start with the user benefit, write natural Turkish.
 2. **Turkish is SOV** — restructure sentences accordingly. Don't mirror English SVO.
 3. **Active voice over passive** — Turkish prefers active even more than English.
-   - Bad: "Verileriniz AES-256 ile şifrelenerek saklanır" (passive)
-   - Good: "Verilerinizi AES-256 ile şifreleriz ve güvenle saklarız" (active)
+   - Bad: "Verileriniz şifrelenerek saklanır" (passive)
+   - Good: "Verilerinizi şifreler ve güvenle saklarız" (active)
 4. **Colloquial warmth** — Turkish marketing copy should feel warmer than English.
    - Cold: "Ücretsiz İndir" → Warm: "Hemen Dene — Ücretsiz"
 5. **Cultural references** — Blog posts should reference Turkish work culture, exam seasons (YKS, KPSS), remote work trends in Turkey.

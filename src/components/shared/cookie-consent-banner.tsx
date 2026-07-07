@@ -1,59 +1,59 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import { getConsentStatus, setConsentStatus, updateGtagConsent } from "@/lib/analytics";
+import {
+  type ConsentStatus,
+  getConsentStatus,
+  setConsentStatus,
+  subscribeConsentStatus,
+  updateGtagConsent,
+} from "@/lib/analytics";
 import { cn } from "@/lib/utils";
+
+// On the server (and during hydration) the status is unknown → banner hidden.
+const getServerSnapshot = (): ConsentStatus | undefined => undefined;
 
 export function CookieConsentBanner() {
   const t = useTranslations("consent");
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const status = getConsentStatus();
-    if (status === null) {
-      setVisible(true);
-    }
-  }, []);
+  const status = useSyncExternalStore<ConsentStatus | undefined>(
+    subscribeConsentStatus,
+    getConsentStatus,
+    getServerSnapshot
+  );
 
   function handleAccept() {
     setConsentStatus(true);
     updateGtagConsent(true);
-    setVisible(false);
   }
 
   function handleDecline() {
     setConsentStatus(false);
     updateGtagConsent(false);
-    setVisible(false);
   }
 
-  if (!visible) return null;
+  // Only show when we know the user hasn't made a choice yet.
+  if (status !== null) return null;
 
   return (
-    <div
-      className={cn(
-        "fixed inset-0 z-50 flex items-end justify-center",
-        "bg-black/40 backdrop-blur-sm",
-        "animate-in fade-in duration-300"
-      )}
-    >
+    <div className="fixed inset-x-0 bottom-0 z-50 flex justify-center pointer-events-none">
       <div
         className={cn(
-          "m-4 w-full max-w-2xl rounded-xl border-2 border-primary/20 bg-card p-5 shadow-2xl",
+          "pointer-events-auto m-4 w-full max-w-2xl rounded-xl border border-border/60 bg-card p-5 elevation-4",
           "flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5",
           "animate-in slide-in-from-bottom duration-300"
         )}
       >
         <p className="flex-1 text-sm text-foreground leading-relaxed">
           {t("message")}{" "}
-          <a
+          <Link
             href="/privacy"
             className="font-medium underline underline-offset-4 hover:text-primary transition-colors"
           >
             {t("learnMore")}
-          </a>
+          </Link>
         </p>
         <div className="flex gap-2 shrink-0">
           <Button variant="outline" onClick={handleDecline}>
