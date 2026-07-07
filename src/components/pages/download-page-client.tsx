@@ -11,8 +11,8 @@ import { Download, CheckCircle2, ShieldCheck, Monitor, BarChart3, ChevronDown } 
 import { AppleIcon } from "@/components/shared/apple-icon";
 import { WindowsIcon } from "@/components/shared/windows-icon";
 import {
+  type DownloadLink,
   type Platform,
-  downloadLinks,
   detectPlatform,
   getPrimaryDownload,
 } from "@/lib/downloads";
@@ -60,7 +60,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
   );
 }
 
-export function DownloadPageClient() {
+export function DownloadPageClient({ links }: { links: DownloadLink[] }) {
   const t = useTranslations("download");
   const platform = useSyncExternalStore<Platform>(
     emptySubscribe,
@@ -68,7 +68,7 @@ export function DownloadPageClient() {
     getServerPlatform
   );
 
-  const primary = getPrimaryDownload(platform);
+  const primary = getPrimaryDownload(links, platform);
 
   const faqItems: { question: string; answer: string }[] = t.raw("faq.items");
 
@@ -145,7 +145,7 @@ export function DownloadPageClient() {
             {t("otherPlatforms")}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-            {downloadLinks.map((link) => (
+            {links.map((link) => (
               <Card
                 key={link.platform}
                 className={cn(

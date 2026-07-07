@@ -9,47 +9,81 @@ export interface DownloadLink {
   arch?: string;
 }
 
-export const GITHUB_RELEASES_BASE =
-  "https://github.com/barbaroszngr/FocusNow/releases/latest/download";
+export const RELEASES_LATEST_PAGE =
+  "https://github.com/focusnow-ai/focusnow-releases/releases/latest";
 
-export const downloadLinks: DownloadLink[] = [
-  {
-    platform: "mac-arm",
-    label: "macOS (Apple Silicon)",
-    fileName: "FocusNow-arm64.dmg",
-    url: `${GITHUB_RELEASES_BASE}/FocusNow-arm64.dmg`,
+const RELEASES_LATEST_API =
+  "https://api.github.com/repos/focusnow-ai/focusnow-releases/releases/latest";
+
+const platformMeta: Record<Platform, { label: string; arch?: string }> = {
+  "mac-arm": { label: "macOS (Apple Silicon)", arch: "Apple M1/M2/M3/M4" },
+  "mac-intel": { label: "macOS (Intel)", arch: "Intel x64" },
+  windows: { label: "Windows" },
+};
+
+const platformOrder: Platform[] = ["mac-arm", "mac-intel", "windows"];
+
+interface ReleaseAsset {
+  name: string;
+  browser_download_url: string;
+}
+
+function matchAsset(
+  assets: ReleaseAsset[],
+  platform: Platform
+): ReleaseAsset | undefined {
+  return assets.find(({ name }) => {
+    if (platform === "mac-arm") return name.endsWith(".dmg") && name.includes("arm64");
+    if (platform === "mac-intel") return name.endsWith(".dmg") && !name.includes("arm64");
+    return name.endsWith(".exe");
+  });
+}
+
+function fallbackLinks(): DownloadLink[] {
+  return platformOrder.map((platform) => ({
+    platform,
+    ...platformMeta[platform],
+    fileName: "GitHub Releases",
+    url: RELEASES_LATEST_PAGE,
     available: true,
-    arch: "Apple M1/M2/M3/M4",
-  },
-  {
-    platform: "mac-intel",
-    label: "macOS (Intel)",
-    fileName: "FocusNow-x64.dmg",
-    url: `${GITHUB_RELEASES_BASE}/FocusNow-x64.dmg`,
-    available: true,
-    arch: "Intel x64",
-  },
-  {
-    platform: "windows",
-    label: "Windows",
-    fileName: "FocusNow-Setup.exe",
-    url: `${GITHUB_RELEASES_BASE}/FocusNow-Setup.exe`,
-    available: true,
-  },
-];
+  }));
+}
+
+export async function getLatestDownloadLinks(): Promise<DownloadLink[]> {
+  try {
+    const res = await fetch(RELEASES_LATEST_API, {
+      headers: { Accept: "application/vnd.github+json" },
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) return fallbackLinks();
+
+    const release: { assets?: ReleaseAsset[] } = await res.json();
+
+    return platformOrder.map((platform) => {
+      const asset = matchAsset(release.assets ?? [], platform);
+      return {
+        platform,
+        ...platformMeta[platform],
+        fileName: asset?.name ?? "",
+        url: asset?.browser_download_url ?? RELEASES_LATEST_PAGE,
+        available: Boolean(asset),
+      };
+    });
+  } catch {
+    return fallbackLinks();
+  }
+}
 
 export function detectPlatform(): Platform {
   if (typeof window === "undefined") return "mac-arm";
   const ua = navigator.userAgent.toLowerCase();
-  if (ua.includes("mac")) {
-    // Check for Apple Silicon - not perfectly reliable from UA alone
-    return "mac-arm";
-  }
   if (ua.includes("win")) return "windows";
   return "mac-arm";
 }
 
-export function getPrimaryDownload(platform: Platform): DownloadLink {
-  const link = downloadLinks.find((d) => d.platform === platform);
-  return link || downloadLinks[0];
+export function getPrimaryDownload(
+  links: DownloadLink[],
+  platform: Platform
+): DownloadLink {
+  return links.find((d) => d.platform === platform) ?? links[0];
 }
