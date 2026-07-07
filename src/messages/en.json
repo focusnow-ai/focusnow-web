@@ -67,11 +67,12 @@
       "presets": {
         "pomodoro": "Pomodoro",
         "deepWork": "Deep Work"
-      }
+      },
+      "remaining": "remaining"
     },
     "analytics": {
       "title": "Your Week at a Glance",
-      "description": "Spot your peak focus hours, 7-day trends, and your most-used apps at a glance."
+      "description": "Spot your peak focus hours, 7-day trends and most-used apps — and let the AI Daily Report sum up your day."
     },
     "privacy": {
       "title": "Privacy-First. Always.",
@@ -113,23 +114,43 @@
     "content": {
       "dashboard": {
         "title": "Today at a Glance",
-        "items": ["Focus Score — 87%", "Focus Time — 4h 32m", "Sessions — 3 completed"]
+        "items": [
+          "Focus Score — 87%",
+          "Focus Time — 4h 32m",
+          "Sessions — 3 completed"
+        ]
       },
       "analytics": {
         "title": "Your Patterns",
-        "items": ["Peak focus: 9–11 AM", "7-day focus trend ↑", "Top app: VS Code — 2h 15m"]
+        "items": [
+          "Peak focus: 9–11 AM",
+          "7-day focus trend ↑",
+          "Top app: VS Code — 2h 15m"
+        ]
       },
       "activities": {
         "title": "Your Rules",
-        "items": ["Figma → Focus", "YouTube → Distraction", "Custom category: Design"]
+        "items": [
+          "Figma → Focus",
+          "YouTube → Distraction",
+          "Custom category: Design"
+        ]
       },
       "sessions": {
         "title": "Recent Sessions",
-        "items": ["Pomodoro — 25m · 86% focus", "Deep Work — 1h 30m · 92% focus", "Pomodoro — 25m · 74% focus"]
+        "items": [
+          "Pomodoro — 25m · 86% focus",
+          "Deep Work — 1h 30m · 92% focus",
+          "Pomodoro — 25m · 74% focus"
+        ]
       },
       "settings": {
         "title": "Make It Yours",
-        "items": ["Working hours: 09:00–18:00", "Theme: Dark · Light · System", "Language: EN · ES · RU · TR · DE"]
+        "items": [
+          "Working hours: 09:00–18:00",
+          "Theme: Dark · Light · System",
+          "Language: EN · ES · RU · TR · DE"
+        ]
       }
     }
   },
@@ -189,11 +210,19 @@
       "title": "System Requirements",
       "mac": {
         "title": "macOS",
-        "items": ["macOS 12 (Monterey) or later", "Apple Silicon or Intel", "50 MB disk space"]
+        "items": [
+          "macOS 12 (Monterey) or later",
+          "Apple Silicon or Intel",
+          "500 MB disk space"
+        ]
       },
       "windows": {
         "title": "Windows",
-        "items": ["Windows 10 or later", "64-bit processor", "50 MB disk space"]
+        "items": [
+          "Windows 10 or later",
+          "64-bit processor",
+          "500 MB disk space"
+        ]
       }
     },
     "afterInstall": {
@@ -541,16 +570,16 @@
     "description": "See what's new in FocusNow.",
     "versions": [
       {
-        "version": "1.0.0",
-        "date": "2025-01-15",
-        "title": "Initial Release",
+        "version": "0.0.14",
+        "date": "2026-07-01",
+        "title": "Latest Release",
         "changes": [
-          "Automatic activity categorization",
-          "Focus sessions with Pomodoro and Deep Work presets",
-          "Daily and weekly analytics dashboard",
+          "Activities view with Focus, Neutral and Distracting columns plus custom categories and per-app rules",
+          "Analytics with Today / 7 days / 30 days / All ranges, custom date picker and an AI Daily Report",
+          "Pomodoro (25 min) and Deep Work (90 min) focus sessions",
           "Automatic idle and away detection",
-          "Local-first storage with encrypted cloud sync",
-          "macOS support (Apple Silicon & Intel)"
+          "Encrypted cloud sync with offline mode and data export",
+          "macOS (Apple Silicon) and Windows builds with automatic updates"
         ]
       }
     ]

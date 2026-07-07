@@ -42,7 +42,7 @@
         "legend": {
           "focus": "Odak",
           "neutral": "Nötr",
-          "distraction": "Dikkat Dağınıklığı",
+          "distraction": "Dikkat Dağıtıcı",
           "idle": "Boşta"
         }
       }
@@ -67,11 +67,12 @@
       "presets": {
         "pomodoro": "Pomodoro",
         "deepWork": "Derin Çalışma"
-      }
+      },
+      "remaining": "kalan"
     },
     "analytics": {
       "title": "Haftanıza Bir Bakışta",
-      "description": "En yoğun odak saatlerinizi, 7 günlük trendinizi ve en çok kullandığınız uygulamaları tek bakışta görün."
+      "description": "En yoğun odak saatlerinizi, 7 günlük trendinizi ve en çok kullandığınız uygulamaları görün — yapay zekâ Günlük Raporu gününüzü sizin için özetlesin."
     },
     "privacy": {
       "title": "Gizlilik Her Şeyden Önce.",
@@ -113,23 +114,43 @@
     "content": {
       "dashboard": {
         "title": "Bugüne Bir Bakış",
-        "items": ["Odak Puanı — %87", "Odak Süresi — 4s 32dk", "Seanslar — 3 tamamlandı"]
+        "items": [
+          "Odak Puanı — %87",
+          "Odak Süresi — 4s 32dk",
+          "Seanslar — 3 tamamlandı"
+        ]
       },
       "analytics": {
         "title": "Alışkanlıklarınız",
-        "items": ["En yoğun odak: 09–11", "7 günlük odak trendi ↑", "En çok kullanılan: VS Code — 2s 15dk"]
+        "items": [
+          "En yoğun odak: 09–11",
+          "7 günlük odak trendi ↑",
+          "En çok kullanılan: VS Code — 2s 15dk"
+        ]
       },
       "activities": {
         "title": "Kurallarınız",
-        "items": ["Figma → Odak", "YouTube → Dikkat Dağınıklığı", "Özel kategori: Tasarım"]
+        "items": [
+          "Figma → Odak",
+          "YouTube → Dikkat Dağıtıcı",
+          "Özel kategori: Tasarım"
+        ]
       },
       "sessions": {
         "title": "Son Seanslar",
-        "items": ["Pomodoro — 25dk · %86 odak", "Derin Çalışma — 1s 30dk · %92 odak", "Pomodoro — 25dk · %74 odak"]
+        "items": [
+          "Pomodoro — 25dk · %86 odak",
+          "Derin Çalışma — 1s 30dk · %92 odak",
+          "Pomodoro — 25dk · %74 odak"
+        ]
       },
       "settings": {
         "title": "Size Göre Ayarlayın",
-        "items": ["Çalışma saatleri: 09:00–18:00", "Tema: Koyu · Açık · Sistem", "Dil: EN · ES · RU · TR · DE"]
+        "items": [
+          "Çalışma saatleri: 09:00–18:00",
+          "Tema: Koyu · Açık · Sistem",
+          "Dil: EN · ES · RU · TR · DE"
+        ]
       }
     }
   },
@@ -189,11 +210,19 @@
       "title": "Sistem Gereksinimleri",
       "mac": {
         "title": "macOS",
-        "items": ["macOS 12 (Monterey) veya üzeri", "Apple Silicon veya Intel", "50 MB disk alanı"]
+        "items": [
+          "macOS 12 (Monterey) veya üzeri",
+          "Apple Silicon veya Intel",
+          "500 MB disk alanı"
+        ]
       },
       "windows": {
         "title": "Windows",
-        "items": ["Windows 10 veya üzeri", "64-bit işlemci", "50 MB disk alanı"]
+        "items": [
+          "Windows 10 veya üzeri",
+          "64-bit işlemci",
+          "500 MB disk alanı"
+        ]
       }
     },
     "afterInstall": {
@@ -541,16 +570,16 @@
     "description": "FocusNow'daki yenilikleri görün.",
     "versions": [
       {
-        "version": "1.0.0",
-        "date": "2025-01-15",
-        "title": "İlk Sürüm",
+        "version": "0.0.14",
+        "date": "2026-07-01",
+        "title": "Güncel Sürüm",
         "changes": [
-          "Otomatik uygulama sınıflandırma",
-          "Pomodoro ve Derin Çalışma hazır ayarlı odak seansları",
-          "Günlük ve haftalık analiz paneli",
+          "Odak, Nötr ve Dikkat Dağıtıcı kolonlarıyla Aktiviteler ekranı; özel kategoriler ve uygulama bazlı kurallar",
+          "Bugün / 7 gün / 30 gün / Tümü aralıkları, özel tarih seçici ve yapay zekâ Günlük Raporu ile Analizler",
+          "Pomodoro (25 dk) ve Derin Çalışma (90 dk) odak seansları",
           "Otomatik boşta ve uzakta algılama",
-          "Yerel öncelikli depolama ve şifreli bulut senkronizasyonu",
-          "macOS desteği (Apple Silicon ve Intel)"
+          "Çevrimdışı mod ve veri dışa aktarma destekli şifreli bulut senkronizasyonu",
+          "Otomatik güncellemeli macOS (Apple Silicon) ve Windows sürümleri"
         ]
       }
     ]
