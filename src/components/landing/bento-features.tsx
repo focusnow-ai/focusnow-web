@@ -237,7 +237,7 @@ function TimerCard() {
             </svg>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <span className="text-lg font-bold tabular-nums">18:24</span>
-              <span className="text-[9px] text-muted-foreground">remaining</span>
+              <span className="text-[9px] text-muted-foreground">{t("timer.remaining")}</span>
             </div>
           </div>
           <div className="flex gap-2">
