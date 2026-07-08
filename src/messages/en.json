@@ -51,7 +51,7 @@
   "socialProof": {
     "freeForever": "Free forever",
     "platforms": "Mac & Windows",
-    "encrypted": "Encrypted in transit & at rest",
+    "encrypted": "Your data stays encrypted",
     "noTracking": "No screenshots or keylogging"
   },
   "bentoFeatures": {
@@ -132,7 +132,7 @@
         "title": "Your Rules",
         "items": [
           "Figma → Focus",
-          "YouTube → Distraction",
+          "YouTube → Distracting",
           "Custom category: Design"
         ]
       },
@@ -174,7 +174,7 @@
   },
   "privacySection": {
     "title": "Your data is encrypted and",
-    "titleHighlight": "stays on your terms.",
+    "titleHighlight": "stays under your control.",
     "badges": {
       "encrypted": "Encrypted in Transit & at Rest",
       "noScreenshots": "No Screenshots",
@@ -187,7 +187,7 @@
     "title": "Your Most Productive Week",
     "titleHighlight": "Starts Now",
     "description": "Download FocusNow and finally see where your time actually goes. Free forever, no credit card needed.",
-    "cta": "Get My Free Tracker",
+    "cta": "Start My Free Tracker",
     "note": "macOS & Windows. Installs in under a minute."
   },
   "download": {
@@ -196,7 +196,7 @@
       "description": "Download FocusNow for free. Automatic focus and time tracking for macOS and Windows. Installs in under a minute."
     },
     "title": "Download FocusNow",
-    "description": "Get FocusNow for your platform",
+    "description": "Free forever. Installs in under a minute.",
     "detected": "Detected Platform",
     "downloadFor": "Get FocusNow for {platform}",
     "otherPlatforms": "Other Platforms",
@@ -287,7 +287,7 @@
         "Dark & light themes, 5 languages",
         "macOS & Windows support"
       ],
-      "cta": "Start Free"
+      "cta": "Start My Free Tracker"
     },
     "pro": {
       "title": "Pro",
@@ -669,7 +669,7 @@
     "freelancers": {
       "meta": {
         "title": "Focus Tracker for Freelancers",
-        "description": "Know exactly where every hour goes. Track your work across projects and clients with automatic desktop tracking."
+        "description": "Know where every working hour goes. Automatic desktop tracking for freelancers — no timers, no manual logs."
       },
       "badge": "For Freelancers",
       "title": "Know Exactly Where",
@@ -687,7 +687,7 @@
       "solution": {
         "title": "How FocusNow Helps",
         "items": [
-          "See real time spent on each app and project",
+          "See real time spent in each app — and group apps into custom categories",
           "Identify unbillable time sinks like email and Slack",
           "Track your most productive hours to schedule important work",
           "Build data to price your services accurately"
