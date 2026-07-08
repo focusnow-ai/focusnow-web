@@ -405,7 +405,7 @@ export function BentoFeatures() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "0px 0px -40px 0px" }}
         >
           <motion.div variants={cardVariants} style={{ gridArea: "hero" }}>
             <HeroCard />

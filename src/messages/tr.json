@@ -59,7 +59,7 @@
     "titleHighlight": "İhtiyacınız Olan Her Şey",
     "hero": {
       "title": "Gerçek İş Gününüzü Görün",
-      "description": "FocusNow uygulamalarınızı otomatik takip eder ve yapay zeka ile zamanınızı odak, nötr ve dikkat dağınıklığı olarak sınıflandırır. Kendiliğinden çalışır."
+      "description": "FocusNow uygulamalarınızı otomatik takip eder ve yapay zeka ile zamanınızı odak, nötr ve dikkat dağıtıcı olarak sınıflandırır. Kendiliğinden çalışır."
     },
     "timer": {
       "title": "Odak Seansları",
@@ -187,7 +187,7 @@
     "title": "En Verimli Haftanız",
     "titleHighlight": "Şimdi Başlıyor",
     "description": "FocusNow'u indirin ve zamanınızın gerçekte nereye gittiğini görmeye başlayın. Sonsuza dek ücretsiz, kredi kartı gerekmez.",
-    "cta": "Ücretsiz Takibimi Al",
+    "cta": "Ücretsiz Takibimi Başlat",
     "note": "macOS ve Windows. Bir dakikada kurulur."
   },
   "download": {
@@ -196,7 +196,7 @@
       "description": "FocusNow'u ücretsiz indirin. macOS ve Windows için otomatik odak ve zaman takibi. Bir dakikada kurulur."
     },
     "title": "FocusNow'u İndirin",
-    "description": "Platformunuz için FocusNow'u edinin",
+    "description": "Sonsuza dek ücretsiz. Bir dakikada kurulur.",
     "detected": "Algılanan Platform",
     "downloadFor": "{platform} için FocusNow'u Al",
     "otherPlatforms": "Diğer Platformlar",
@@ -287,14 +287,14 @@
         "Koyu ve açık tema, 5 dil desteği",
         "macOS ve Windows desteği"
       ],
-      "cta": "Ücretsiz Başla"
+      "cta": "Ücretsiz Takibimi Başlat"
     },
     "pro": {
       "title": "Pro",
       "price": "Yakında",
       "description": "İleri düzey kullanıcılar için gelişmiş özellikler.",
       "features": [
-        "Ücretsiz'deki her şey",
+        "Ücretsiz plandaki her şey",
         "Gelişmiş yapay zeka içgörüleri ve öneriler",
         "Ekip ve çalışma alanı özellikleri",
         "Öncelikli destek"
@@ -317,7 +317,7 @@
       },
       "simplicity": {
         "title": "Zahmetsiz",
-        "content": "Basacak düğme yok, başlatacak zamanlayıcı yok. FocusNow arka planda sessizce çalışır ve zamanınızın nereye gittiğini gösterir. Önünüzden çekilen bir verimlilik takibi."
+        "content": "Basacak düğme yok, başlatacak zamanlayıcı yok. FocusNow arka planda sessizce çalışır ve zamanınızın nereye gittiğini gösterir. Araya girmeyen verimlilik takibi."
       },
       "transparency": {
         "title": "Şeffaf",
@@ -669,7 +669,7 @@
     "freelancers": {
       "meta": {
         "title": "Serbest Çalışanlar İçin Odak Takibi",
-        "description": "Her saatinizin nereye gittiğini bilin. Otomatik masaüstü takibi ile projeler ve müşteriler arasındaki çalışmanızı takip edin."
+        "description": "Her çalışma saatinizin nereye gittiğini bilin. Serbest çalışanlar için otomatik masaüstü takibi — zamanlayıcı yok, elle kayıt yok."
       },
       "badge": "Serbest Çalışanlar İçin",
       "title": "Her Saatiniz",
@@ -687,7 +687,7 @@
       "solution": {
         "title": "FocusNow Nasıl Yardımcı Olur",
         "items": [
-          "Her uygulama ve proje için harcanan gerçek süreyi görün",
+          "Her uygulamada geçen gerçek süreyi görün — uygulamaları özel kategorilerle gruplayın",
           "E-posta ve Slack gibi faturalandırılamayan zaman kayıplarını tespit edin",
           "Önemli işleri planlamak için en verimli saatlerinizi takip edin",
           "Hizmetlerinizi doğru fiyatlandırmak için veri toplayın"
@@ -708,7 +708,7 @@
         "title": "Tanıdık Geldi mi?",
         "items": [
           "Toplantılar ve kod incelemeleri derin çalışma zamanınızı parçalıyor",
-          "Bütün gün kod yazdığınızı hissediyorsunuz ama hiçbir şey gönderemediniz",
+          "Bütün gün kod yazdığınızı hissediyorsunuz ama elle tutulur bir şey çıkmadı",
           "PR'lar, Slack ve IDE arasında sürekli geçiş yapmak akışınızı bozuyor",
           "Gerçek geliştirmeye ne kadar zaman harcadığınızı sayısal olarak gösteremiyorsunuz"
         ]

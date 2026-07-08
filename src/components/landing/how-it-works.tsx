@@ -47,7 +47,7 @@ export function HowItWorks() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "0px 0px -40px 0px" }}
         >
           {steps.map(({ key, number }) => (
             <motion.div key={key} variants={itemVariants} className="text-center md:text-left">
