@@ -85,6 +85,7 @@
     "included": {
       "title": "Also included",
       "items": [
+        "AI Daily Report",
         "Idle & away detection",
         "Custom categories and per-app rules",
         "Sign in with Google or Microsoft",
@@ -279,6 +280,7 @@
       "description": "Everything you need to track and improve your focus.",
       "features": [
         "Automatic activity tracking with AI categorization",
+        "AI Daily Report — your day summed up by AI",
         "Pomodoro & Deep Work focus sessions",
         "Focus Score, timeline & hourly analytics",
         "Custom categories, app rules & exclusion lists",
