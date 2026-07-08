@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { DownloadPageClient } from "@/components/pages/download-page-client";
+import { getLatestDownloadLinks } from "@/lib/downloads";
 import { getFAQPageLD } from "@/lib/structured-data";
 
 export async function generateMetadata({
@@ -37,6 +38,7 @@ export default async function DownloadPage({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "download.faq" });
   const faqItems: { question: string; answer: string }[] = t.raw("items");
+  const links = await getLatestDownloadLinks();
 
   return (
     <>
@@ -46,7 +48,7 @@ export default async function DownloadPage({
           __html: JSON.stringify(getFAQPageLD(faqItems)),
         }}
       />
-      <DownloadPageClient />
+      <DownloadPageClient links={links} />
     </>
   );
 }
