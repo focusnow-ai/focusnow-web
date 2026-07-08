@@ -2,15 +2,14 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CookieConsentBanner } from "@/components/shared/cookie-consent-banner";
+import { AnalyticsLoader } from "@/components/shared/analytics-loader";
 import { getWebsiteLD, getSoftwareApplicationLD, getOrganizationLD } from "@/lib/structured-data";
-import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 import "../globals.css";
 
 const inter = Inter({
@@ -100,28 +99,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
-        {GA_MEASUREMENT_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="gtag-init" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('consent', 'default', {
-                  analytics_storage: 'denied'
-                });
-                gtag('js', new Date());
-                gtag('config', '${GA_MEASUREMENT_ID}', {
-                  page_path: window.location.pathname,
-                });
-                window.gtag = gtag;
-              `}
-            </Script>
-          </>
-        )}
+        <AnalyticsLoader />
         <ThemeProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Header />
