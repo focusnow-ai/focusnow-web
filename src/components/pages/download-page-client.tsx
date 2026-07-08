@@ -16,6 +16,14 @@ import {
   detectPlatform,
   getPrimaryDownload,
 } from "@/lib/downloads";
+import { trackEvent } from "@/lib/analytics";
+
+function trackDownload(link: DownloadLink) {
+  trackEvent("download_click", {
+    platform: link.platform,
+    file_name: link.fileName,
+  });
+}
 
 const platformIcons: Record<string, React.ReactNode> = {
   "mac-arm": <AppleIcon className="h-6 w-6" />,
@@ -113,6 +121,7 @@ export function DownloadPageClient({ links }: { links: DownloadLink[] }) {
               {primary.available ? (
                 <a
                   href={primary.url}
+                  onClick={() => trackDownload(primary)}
                   className={cn(
                     buttonVariants({ size: "lg" }),
                     "w-full press-effect"
@@ -169,6 +178,7 @@ export function DownloadPageClient({ links }: { links: DownloadLink[] }) {
                     {link.available ? (
                       <a
                         href={link.url}
+                        onClick={() => trackDownload(link)}
                         className={cn(
                           buttonVariants({ size: "sm", variant: "outline" }),
                           "w-full"
