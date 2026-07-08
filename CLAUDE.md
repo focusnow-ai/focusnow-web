@@ -80,6 +80,7 @@ The site uses **two section styles that alternate** for visual rhythm. See `DESI
 
 ## Content & Copy
 
+- **App reality:** `docs/APP_REALITY.md` documents what the desktop app actually does (pages, features, terminology, mechanics, and a "never claim" list). Check every product claim against it before writing or editing copy.
 - **Style guide:** All content voice, tone, copywriting standards, and editorial checklists are in `CONTENT_STYLE_GUIDE.md`. Read it before writing any user-facing text.
 - **Messaging hierarchy:** Primary = clarity/self-knowledge ("See where your time goes"). Secondary = privacy/trust. Tertiary = friction removal. Never lead with privacy.
 - **Headlines:** Always benefit-driven, not feature-driven. "See Your Real Workday" not "Automatic Tracking."
