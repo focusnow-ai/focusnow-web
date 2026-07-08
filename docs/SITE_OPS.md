@@ -19,7 +19,9 @@ Voice, messaging and copy standards live in `CONTENT_STYLE_GUIDE.md` — this do
 
 ## 2. Editorial Pipeline (blog)
 
-**Cadence:** 2 posts/month minimum. Written natively in EN and TR from the same brief (never word-for-word translation).
+**Cadence:** 1 post/week. Written natively in EN and TR from the same brief (never word-for-word translation).
+
+**Content pillar — Deep Work:** Cal Newport's deep work ideas are a recurring editorial angle (the product itself is inspired by this school of thought, as is Rize). Reference and build on the concepts — deep vs. shallow work, attention residue, time blocking, digital minimalism — always in our own words with attribution; never reproduce passages from the books.
 
 **Story arc for the blog as a whole:** each post moves a reader one step along
 *"I feel busy but unproductive" → "my time is measurable" → "FocusNow measures it for free"*.

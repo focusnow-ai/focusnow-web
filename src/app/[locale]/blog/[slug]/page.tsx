@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
 import { getBlogPost, getAllBlogSlugs } from "@/lib/blog";
+import { renderInline } from "@/lib/markdown";
 import { getBlogPostLD } from "@/lib/structured-data";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 
@@ -103,27 +104,35 @@ export default async function BlogPostPage({
               if (trimmed.startsWith("## ")) {
                 return (
                   <h2 key={i} className="text-2xl font-bold mt-8 mb-4">
-                    {trimmed.replace("## ", "")}
+                    {renderInline(trimmed.replace("## ", ""))}
                   </h2>
                 );
               }
               if (trimmed.startsWith("### ")) {
                 return (
                   <h3 key={i} className="text-xl font-semibold mt-6 mb-3">
-                    {trimmed.replace("### ", "")}
+                    {renderInline(trimmed.replace("### ", ""))}
                   </h3>
                 );
               }
               if (trimmed.startsWith("- ")) {
                 return (
                   <li key={i} className="text-muted-foreground ml-4">
-                    {trimmed.replace("- ", "")}
+                    {renderInline(trimmed.replace("- ", ""))}
                   </li>
+                );
+              }
+              const ordered = trimmed.match(/^(\d+)\.\s+(.*)$/);
+              if (ordered) {
+                return (
+                  <p key={i} className="text-muted-foreground leading-relaxed mb-2 ml-4">
+                    {ordered[1]}. {renderInline(ordered[2])}
+                  </p>
                 );
               }
               return (
                 <p key={i} className="text-muted-foreground leading-relaxed mb-4">
-                  {trimmed}
+                  {renderInline(trimmed)}
                 </p>
               );
             })}
