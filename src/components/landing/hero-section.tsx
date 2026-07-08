@@ -6,7 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { activityColors, type ActivityStatus } from "@/lib/activity-colors";
-import { motion } from "framer-motion";
+import { animate, motion, useMotionValue, useTransform } from "framer-motion";
+import { useEffect } from "react";
 import { ArrowDown, Download } from "lucide-react";
 import { AppleIcon } from "@/components/shared/apple-icon";
 import { WindowsIcon } from "@/components/shared/windows-icon";
@@ -43,6 +44,22 @@ const activityRows: {
    stacked bar + activity list). Swapping in a real screenshot with
    next/image remains optional. */
 
+function CountUp({ to, delay }: { to: number; delay: number }) {
+  const value = useMotionValue(0);
+  const rounded = useTransform(value, (v) => Math.round(v));
+
+  useEffect(() => {
+    const controls = animate(value, to, {
+      duration: 1.1,
+      delay,
+      ease: "easeOut",
+    });
+    return controls.stop;
+  }, [value, to, delay]);
+
+  return <motion.span>{rounded}</motion.span>;
+}
+
 function DashboardMockup({ t }: { t: (key: string) => string }) {
   return (
     <div
@@ -57,6 +74,15 @@ function DashboardMockup({ t }: { t: (key: string) => string }) {
         <span className="ml-3 text-[11px] text-muted-foreground font-medium">
           FocusNow
         </span>
+        <span className="ml-auto flex items-center gap-1.5 text-[10px] text-muted-foreground font-medium">
+          <span
+            className={cn(
+              "w-1.5 h-1.5 rounded-full animate-pulse",
+              activityColors.focus
+            )}
+          />
+          {t("mockup.dashboard.tracking")}
+        </span>
       </div>
 
       <div className="p-5 sm:p-6 space-y-5">
@@ -67,14 +93,14 @@ function DashboardMockup({ t }: { t: (key: string) => string }) {
               {t("mockup.dashboard.focusScore")}
             </p>
             <p className="text-xl font-bold text-purple-600 dark:text-purple-400 tabular-nums leading-tight mt-0.5">
-              87%
+              <CountUp to={87} delay={0.6} />%
             </p>
             <div className="mt-1.5 h-1 rounded-full bg-muted overflow-hidden">
               <motion.div
                 className="h-full rounded-full bg-purple-500 dark:bg-purple-400"
                 initial={{ width: 0 }}
                 animate={{ width: "87%" }}
-                transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
+                transition={{ duration: 1.1, delay: 0.6, ease: "easeOut" }}
               />
             </div>
           </div>

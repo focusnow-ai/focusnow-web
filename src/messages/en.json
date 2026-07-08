@@ -44,7 +44,8 @@
           "neutral": "Neutral",
           "distraction": "Distraction",
           "idle": "Idle"
-        }
+        },
+        "tracking": "Tracking"
       }
     }
   },
