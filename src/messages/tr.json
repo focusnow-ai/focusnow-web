@@ -249,19 +249,23 @@
       "items": [
         {
           "question": "Gerçekten ücretsiz mi?",
-          "answer": "Evet. Temel ürün sonsuza dek ücretsizdir ve kredi kartı gerekmez. Gelecekte gelişmiş özelliklerle isteğe bağlı bir Pro katmanı sunmayı planlıyoruz, ancak ücretsiz plan her zaman ihtiyacınız olan her şeyi içerecek."
+          "answer": "Evet — sonsuza dek ücretsiz, kart gerekmez. İleride ekip özellikleri gibi ekstralarla ücretli bir Pro katmanı gelebilir; ama bugün gördüğünüz her şey ücretsiz kalacak."
         },
         {
-          "question": "Ne kadar CPU ve pil kullanıyor?",
-          "answer": "Çok az. FocusNow arka planda sessizce çalışmak için tasarlandı. Belirli aralıklarla aktif pencereyi kontrol eder ve minimum sistem kaynağı kullanır — orada olduğunu bile fark etmezsiniz."
+          "question": "Bu bir çalışan takip yazılımı mı?",
+          "answer": "Hayır — tam tersi. FocusNow kişisel bir araçtır: verileriniz kendi hesabınızda durur ve sizden başka kimse göremez. Asla ekran görüntüsü almaz, asla tuş kaydı tutmaz."
         },
         {
           "question": "FocusNow hangi verileri topluyor?",
-          "answer": "Yalnızca analizleriniz için gerekenleri: ön plandaki uygulamanın adını, pencere başlığını, tarayıcılarda sayfa adresini ve kullanım süresini. Ekran görüntüsü almaz, tuş vuruşlarını kaydetmez, yazdıklarınızı okumaz. Verileriniz aktarımda ve beklemede şifrelenir; asla satılmaz veya reklamcılarla paylaşılmaz."
+          "answer": "Yalnızca analizlerinizin ihtiyacı kadarını: öndeki uygulamanın adı, pencere başlığı, tarayıcılarda sayfa adresi ve orada geçen süre. Her şey aktarımda ve depolamada şifrelenir; asla satılmaz, paylaşılmaz."
         },
         {
-          "question": "İşverenim verilerimi görebilir mi?",
-          "answer": "Hayır. FocusNow kişisel bir verimlilik aracıdır. Verileriniz kendi hesabınızda saklanır, işvereniniz tarafından görülemez ve asla paylaşılmaz veya satılmaz. Verilerinizin tam olarak nasıl işlendiğini Gizlilik Politikamızda bulabilirsiniz."
+          "question": "Verilerimi dışa aktarabilir ya da silebilir miyim?",
+          "answer": "Evet. Ayarlar → Hesap'tan tüm verinizi tek tıkla JSON dosyası olarak indirebilir, dilediğiniz an hesabınızı — içindeki her şeyle birlikte — silebilirsiniz."
+        },
+        {
+          "question": "Ne kadar CPU ve pil kullanıyor?",
+          "answer": "Yok denecek kadar az. FocusNow aktif pencereyi belirli aralıklarla kontrol eder ve arka planda sessizce durur — çalıştığını fark etmezsiniz."
         }
       ]
     }

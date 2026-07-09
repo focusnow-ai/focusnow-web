@@ -249,19 +249,23 @@
       "items": [
         {
           "question": "Is it really free?",
-          "answer": "Yes. The core product is free forever with no credit card required. We plan to offer an optional Pro tier in the future with advanced features, but the free plan will always include everything you need."
+          "answer": "Yes — free forever, no credit card. A paid Pro tier may arrive later with team features and advanced extras, but everything you see today stays free."
         },
         {
-          "question": "How much CPU and battery does it use?",
-          "answer": "Very little. FocusNow is designed to run silently in the background. It checks the active window at regular intervals and uses minimal system resources — you won't notice it's there."
+          "question": "Is this employee monitoring software?",
+          "answer": "No — the opposite. FocusNow is a personal tool: your data lives in your own account and nobody else can see it. It never takes screenshots and never records keystrokes."
         },
         {
           "question": "What data does FocusNow collect?",
-          "answer": "Only what's needed to build your analytics: the app in the foreground — its name, window title, and for browsers the page address — and for how long. It never takes screenshots, records keystrokes, or reads what you type. Your data is encrypted in transit and at rest, and it is never sold or shared with advertisers."
+          "answer": "Only what your analytics need: the name of the app in front, its window title, the page address in browsers, and how long you spent there. Everything is encrypted in transit and at rest, and never sold or shared."
         },
         {
-          "question": "Can my employer see my data?",
-          "answer": "No. FocusNow is a personal productivity tool. Your data is stored in your own account, is not visible to your employer, and is never shared or sold. Our Privacy Policy explains exactly how your data is handled."
+          "question": "Can I export or delete my data?",
+          "answer": "Yes. Settings → Account gives you a one-click export of all your data as a JSON file, and you can delete your account — with everything in it — whenever you want."
+        },
+        {
+          "question": "How much CPU and battery does it use?",
+          "answer": "Barely any. FocusNow checks the active window at regular intervals and sits quietly in the background — you won't notice it's running."
         }
       ]
     }
