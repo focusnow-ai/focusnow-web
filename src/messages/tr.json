@@ -346,12 +346,12 @@
           "Ekranınızın görüntüsünü asla almayız",
           "Klavye girişlerinizi, fare tıklamalarınızı veya form içeriklerinizi asla kaydetmeyiz",
           "Verilerinizi reklam veya pazarlama profillemesi için asla kullanmayız",
-          "Aktivite geçmişinizi ve seanslarınızı uygulama içinden dilediğiniz an silebilir, hesabınızın tamamen silinmesini privacy@focusnow.ai adresine yazarak talep edebilirsiniz"
+          "Aktivite geçmişinizi ve seanslarınızı uygulama içinden dilediğiniz an silebilirsiniz — hesabınızı da dilediğiniz an Ayarlar → Hesap bölümünden tamamen silebilirsiniz"
         ]
       },
       "dataController": {
         "title": "2. Veri Sorumlusu",
-        "content": "FocusNow, Türkiye'de yerleşik Barbaros Zongur tarafından geliştirilmekte ve işletilmektedir. Veri sorumlusu sıfatıyla kişisel verilerinizin nasıl ve neden işleneceğine biz karar veririz. Gizlilikle ilgili tüm sorularınız için privacy@focusnow.ai adresinden bize ulaşabilirsiniz."
+        "content": "FocusNow, Türkiye'de yerleşik Barbaros Zongur tarafından geliştirilmekte ve işletilmektedir. Veri sorumlusu sıfatıyla kişisel verilerinizin nasıl ve neden işleneceğine biz karar veririz. Gizlilikle ilgili tüm sorularınız için info@focusnow.ai adresinden bize ulaşabilirsiniz."
       },
       "collection": {
         "title": "3. Topladığımız Veriler",
@@ -473,7 +473,7 @@
           "Rızayı geri çekme — isteğe bağlı işleme (ör. analitik) için verdiğiniz rızayı uygulamadan veya web sitesinden dilediğiniz an geri çekme",
           "Şikâyet — veri koruma otoritesine başvurma (Türkiye'de Kişisel Verileri Koruma Kurumu; AEA'da ulusal otoriteniz)"
         ],
-        "note": "Bu haklarınızı kullanmak için privacy@focusnow.ai adresine e-posta gönderin. 30 gün içinde yanıt veririz."
+        "note": "Verilerinizi dışa aktarma ve hesabınızı silme işlemlerini doğrudan uygulama içinden yapabilirsiniz (Ayarlar → Hesap). Diğer tüm talepleriniz için info@focusnow.ai adresine yazın — 30 gün içinde yanıt veririz."
       },
       "children": {
         "title": "15. Çocukların Gizliliği",
@@ -487,7 +487,7 @@
         "title": "17. Bize Ulaşın",
         "content": "Bu Gizlilik Politikası hakkında sorularınız varsa veya veri haklarınızı kullanmak istiyorsanız:",
         "items": [
-          "E-posta: privacy@focusnow.ai",
+          "E-posta: info@focusnow.ai",
           "Yanıt süresi: talebinizi aldıktan sonra en geç 30 gün"
         ],
         "note": "Veri Sorumlusu: FocusNow — Barbaros Zongur, Türkiye. Bu politika İngilizce ve Türkçe olarak sunulur; iki sürüm arasında çelişki olursa İngilizce sürüm geçerlidir."
@@ -568,7 +568,7 @@
       },
       "contact": {
         "title": "15. İletişim",
-        "content": "Bu Koşullarla ilgili sorularınız için: privacy@focusnow.ai. İşletmeci: FocusNow — Barbaros Zongur, Türkiye. Bu Koşullar İngilizce ve Türkçe olarak sunulur; iki sürüm arasında çelişki olursa İngilizce sürüm geçerlidir."
+        "content": "Bu Koşullarla ilgili sorularınız için: info@focusnow.ai. İşletmeci: FocusNow — Barbaros Zongur, Türkiye. Bu Koşullar İngilizce ve Türkçe olarak sunulur; iki sürüm arasında çelişki olursa İngilizce sürüm geçerlidir."
       }
     }
   },
@@ -606,6 +606,7 @@
     "useCases": "Kullanım Alanları",
     "resources": "Kaynaklar",
     "legal": "Yasal",
+    "contact": "Bize Ulaşın",
     "copyright": "Tüm hakları saklıdır."
   },
   "consent": {

@@ -78,7 +78,7 @@ export function getOrganizationLD() {
     logo: "https://focusnow.ai/icon.png",
     contactPoint: {
       "@type": "ContactPoint",
-      email: "privacy@focusnow.ai",
+      email: "info@focusnow.ai",
       contactType: "customer support",
     },
   };
