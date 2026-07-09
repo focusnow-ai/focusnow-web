@@ -36,6 +36,7 @@ Every post ends with one CTA to `/download`. No post exists without a target key
 | 3 | deep work tracking | You Can't Improve Deep Work You Don't Measure | derin çalışma nasıl yapılır | Ölçmediğiniz Derin Çalışmayı Geliştiremezsiniz |
 | 4 | context switching cost | What Context Switching Really Costs You (With Your Own Data) | odaklanma sorunu çözümü | Sürekli Bölünen Dikkat: Kendi Verinizle Maliyeti Görün |
 | 5 | rescuetime alternative | Free RescueTime Alternatives in 2026 (Honest Comparison) | zaman takip programı ücretsiz | Ücretsiz Zaman Takip Programları: Dürüst Karşılaştırma |
+|   | ⚠️ #5 was published 2026-07-08 and unpublished the same day — first draft gave competitors the spotlight (3 of 4 routing bullets pointed away from us). Rewrite with FocusNow-centered framing: open with the reader's need (free + automatic + insights), show we meet it, then concede niches honestly (mobile → RescueTime, local-only/Linux → ActivityWatch). Keep verified prices + disclosure. |
 | 6 | work from home productivity | Is Remote Work Working for You? Check Your Numbers | evden çalışma verimlilik | Evden Çalışmak Sizin İçin İşliyor mu? Rakamlara Bakın |
 
 **Per-post checklist:** target keyword in title + first paragraph · 5th–7th grade reading level · claims match the shipped app · internal link to one use-case page · CTA to `/download` · both locales · frontmatter date = publish date.
