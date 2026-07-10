@@ -45,7 +45,7 @@ function DashboardPreview({ t }: { t: (key: string) => string }) {
           src="/screenshots/hero-analytics-v3.webp"
           alt=""
           fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 768px, 820px"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 768px, (max-width: 1536px) 860px, 990px"
           className="object-cover"
           priority
         />
@@ -67,11 +67,11 @@ export function HeroSection() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-purple-400/20 dark:bg-purple-600/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="mx-auto max-w-[88rem] px-4 sm:px-6 lg:px-8 pt-20 pb-16 sm:pt-28 sm:pb-20">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+      <div className="mx-auto max-w-[94rem] px-4 sm:px-6 lg:px-8 pt-20 pb-16 sm:pt-28 sm:pb-20">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left: Text + CTA */}
           <motion.div
-            className="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left"
+            className="lg:col-span-5 2xl:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -128,7 +128,7 @@ export function HeroSection() {
 
           {/* Right: App preview */}
           <motion.div
-            className="lg:col-span-7 relative w-full max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-none mx-auto"
+            className="lg:col-span-7 2xl:col-span-8 relative w-full max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-none mx-auto"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
