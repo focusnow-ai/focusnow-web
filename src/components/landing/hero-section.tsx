@@ -40,12 +40,12 @@ function DashboardPreview({ t }: { t: (key: string) => string }) {
       </div>
 
       {/* Real screenshot */}
-      <div className="relative aspect-[16/10]">
+      <div className="relative aspect-[2.2/1]">
         <Image
-          src="/screenshots/hero-analytics-v2.webp"
+          src="/screenshots/hero-analytics-v3.webp"
           alt=""
           fill
-          sizes="(max-width: 1024px) 100vw, 560px"
+          sizes="(max-width: 1024px) 100vw, 760px"
           className="object-cover"
           priority
         />
@@ -68,10 +68,10 @@ export function HeroSection() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-16 sm:pt-28 sm:pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
           {/* Left: Text + CTA */}
           <motion.div
-            className="flex flex-col items-center lg:items-start text-center lg:text-left"
+            className="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -128,7 +128,7 @@ export function HeroSection() {
 
           {/* Right: App preview */}
           <motion.div
-            className="relative lg:justify-self-end w-full max-w-md lg:max-w-none mx-auto"
+            className="lg:col-span-7 relative w-full max-w-md lg:max-w-none mx-auto"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
