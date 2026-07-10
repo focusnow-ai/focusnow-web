@@ -732,5 +732,36 @@
       },
       "cta": "Ücretsiz Takibimi Başlat"
     }
+  },
+  "showcase": {
+    "title": "FocusNow'u",
+    "titleHighlight": "iş başında görün",
+    "description": "Uygulamadan gerçek ekran görüntüleri — bir dakikalık kurulumdan sonra karşınıza çıkacak olan tam olarak bu.",
+    "tabs": {
+      "dashboard": {
+        "label": "Panel",
+        "caption": "Gününüz tek bakışta: Odak Puanı, odak süresi ve her uygulamanın zaman çizelgesi — tamamen otomatik kaydedilir."
+      },
+      "report": {
+        "label": "Yapay Zekâ Raporu",
+        "caption": "Gününüzün yapay zekâ tarafından yazılmış özeti: ne iyi gitti, zaman nereye sızdı ve yarın için tek bir öneri."
+      },
+      "analytics": {
+        "label": "Analizler",
+        "caption": "Haftalık ve aylık eğilimler: odak saatleri, ortalama puan, en çok kullanılan uygulamalar ve toplam dikkat dağınıklığı."
+      },
+      "activities": {
+        "label": "Aktiviteler",
+        "caption": "Her uygulama ve site; Odak, Nötr, Kişisel veya Dikkat Dağıtıcı olarak gruplanır — tek tıkla yeniden sınıflandırın."
+      },
+      "sessions": {
+        "label": "Seanslar",
+        "caption": "Tüm Pomodoro ve Derin Çalışma geçmişiniz, gün gün ve her seansın tamamlanma durumuyla."
+      },
+      "categories": {
+        "label": "Özelleştirme",
+        "caption": "Neyin sayılacağına siz karar verin: herhangi bir kategorinin puanı nasıl etkilediğini değiştirin ya da kendi kategorinizi oluşturun."
+      }
+    }
   }
 }
