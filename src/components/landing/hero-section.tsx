@@ -258,7 +258,7 @@ export function HeroSection() {
                 {t("cta")}
               </Link>
               <a
-                href="#how-it-works"
+                href="#product"
                 className={cn(
                   buttonVariants({ variant: "outline", size: "lg" }),
                   "text-base px-8 h-12"

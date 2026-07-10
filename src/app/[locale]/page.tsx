@@ -10,9 +10,9 @@ export default function HomePage() {
     <>
       <HeroSection />
       <SocialProofBar />
+      <ProductShowcase />
       <BentoFeatures />
       <HowItWorks />
-      <ProductShowcase />
       <DownloadCTA />
     </>
   );

@@ -22,7 +22,7 @@
     "titleHighlight": "Now You'll Know.",
     "description": "FocusNow quietly tracks your apps and shows you exactly how you spend your workday. See your most productive hours, spot time sinks, and build better habits — automatically.",
     "cta": "Start My Free Tracker",
-    "secondaryCta": "See How It Works",
+    "secondaryCta": "See It in Action",
     "platformBadge": {
       "mac": "Available on macOS",
       "windows": "Available on Windows"
@@ -58,30 +58,24 @@
   "bentoFeatures": {
     "title": "Everything You Need to",
     "titleHighlight": "Focus Better",
-    "hero": {
-      "title": "See Your Real Workday",
-      "description": "FocusNow tracks your apps automatically and uses AI to sort your time into focus, neutral, and distraction. It just works."
-    },
-    "timer": {
-      "title": "Focus Sessions",
-      "description": "Pick a Pomodoro sprint or a longer Deep Work block and see how well you stayed on task.",
-      "presets": {
-        "pomodoro": "Pomodoro",
-        "deepWork": "Deep Work"
+    "seeIt": "See it in action",
+    "cards": {
+      "tracking": {
+        "title": "Automatic tracking",
+        "description": "No timers to start, nothing to log. Install it once and your real workday appears on the dashboard."
       },
-      "remaining": "remaining"
-    },
-    "analytics": {
-      "title": "Your Week at a Glance",
-      "description": "Spot your peak focus hours, 7-day trends and most-used apps — and let the AI Daily Report sum up your day."
-    },
-    "privacy": {
-      "title": "Privacy-First. Always.",
-      "description": "Your data is encrypted and never leaves your control."
-    },
-    "platform": {
-      "title": "Works Everywhere",
-      "description": "Same experience on Mac and Windows. Encrypted sync, works offline."
+      "sessions": {
+        "title": "Focus sessions",
+        "description": "Pomodoro (25 min) or Deep Work (90 min) — each session ends with a focus score, so you know if the time was really yours."
+      },
+      "report": {
+        "title": "AI Daily Report",
+        "description": "At the end of the day, AI sums up what went well, where the time leaked, and what to try tomorrow."
+      },
+      "privacy": {
+        "title": "Private by design",
+        "description": "No screenshots, no keystrokes — and you decide what counts as a distraction."
+      }
     },
     "included": {
       "title": "Also included",

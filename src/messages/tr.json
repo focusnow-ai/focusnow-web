@@ -22,7 +22,7 @@
     "titleHighlight": "Artık Bileceksiniz.",
     "description": "FocusNow arka planda sessizce çalışır, hangi uygulamaları ne kadar kullandığınızı takip eder ve size net bir çalışma tablosu sunar. En verimli saatlerinizi keşfedin, zaman kayıplarınızı görün.",
     "cta": "Ücretsiz Takibimi Başlat",
-    "secondaryCta": "Nasıl Çalıştığını Gör",
+    "secondaryCta": "İş Başında Görün",
     "platformBadge": {
       "mac": "macOS için mevcut",
       "windows": "Windows için mevcut"
@@ -58,30 +58,24 @@
   "bentoFeatures": {
     "title": "Daha İyi Odaklanmak İçin",
     "titleHighlight": "İhtiyacınız Olan Her Şey",
-    "hero": {
-      "title": "Gerçek İş Gününüzü Görün",
-      "description": "FocusNow uygulamalarınızı otomatik takip eder ve yapay zeka ile zamanınızı odak, nötr ve dikkat dağıtıcı olarak sınıflandırır. Kendiliğinden çalışır."
-    },
-    "timer": {
-      "title": "Odak Seansları",
-      "description": "Kısa bir Pomodoro veya uzun bir Derin Çalışma bloğu seçin, ne kadar odaklandığınızı görün.",
-      "presets": {
-        "pomodoro": "Pomodoro",
-        "deepWork": "Derin Çalışma"
+    "seeIt": "İş başında görün",
+    "cards": {
+      "tracking": {
+        "title": "Otomatik takip",
+        "description": "Kurulacak zamanlayıcı, tutulacak kayıt yok. Bir kez kurun; gerçek iş gününüz panelde belirsin."
       },
-      "remaining": "kalan"
-    },
-    "analytics": {
-      "title": "Haftanıza Bir Bakışta",
-      "description": "En yoğun odak saatlerinizi, 7 günlük trendinizi ve en çok kullandığınız uygulamaları görün — yapay zekâ Günlük Raporu gününüzü sizin için özetlesin."
-    },
-    "privacy": {
-      "title": "Gizlilik Her Şeyden Önce.",
-      "description": "Verileriniz şifreli ve her zaman sizin kontrolünüzde."
-    },
-    "platform": {
-      "title": "Her Yerde Çalışır",
-      "description": "Mac ve Windows'ta aynı deneyim. Şifreli senkronizasyon, çevrimdışı da çalışır."
+      "sessions": {
+        "title": "Odak seansları",
+        "description": "Pomodoro (25 dk) veya Derin Çalışma (90 dk) — her seans bir odak puanıyla biter; o süre gerçekten sizin miydi, bilirsiniz."
+      },
+      "report": {
+        "title": "Yapay Zekâ Günlük Raporu",
+        "description": "Gün sonunda yapay zekâ neyin iyi gittiğini, zamanın nereye sızdığını ve yarın ne deneyeceğinizi özetler."
+      },
+      "privacy": {
+        "title": "Tasarımı gereği özel",
+        "description": "Ekran görüntüsü yok, tuş kaydı yok — neyin dikkat dağıtıcı sayılacağına da siz karar verirsiniz."
+      }
     },
     "included": {
       "title": "Ayrıca dahil",
