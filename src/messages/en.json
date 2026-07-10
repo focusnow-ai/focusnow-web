@@ -732,5 +732,36 @@
       },
       "cta": "Start My Free Tracker"
     }
+  },
+  "showcase": {
+    "title": "See FocusNow",
+    "titleHighlight": "in action",
+    "description": "Real screenshots from the app — this is exactly what you get after a one-minute install.",
+    "tabs": {
+      "dashboard": {
+        "label": "Dashboard",
+        "caption": "Your day at a glance: Focus Score, focus time and a timeline of every app and site — recorded automatically."
+      },
+      "report": {
+        "label": "AI Daily Report",
+        "caption": "An AI-written summary of your day: what went well, where the time leaked, and one thing to try tomorrow."
+      },
+      "analytics": {
+        "label": "Analytics",
+        "caption": "Weekly and monthly trends: focus hours, average score, top apps and total distraction time."
+      },
+      "activities": {
+        "label": "Activities",
+        "caption": "Every app and site, grouped as Focus, Neutral, Personal or Distracting — reclassify anything with one click."
+      },
+      "sessions": {
+        "label": "Sessions",
+        "caption": "Your full Pomodoro and Deep Work history, day by day, with a completion status for every session."
+      },
+      "categories": {
+        "label": "Customization",
+        "caption": "You decide what counts: change how any category affects your score, or create your own."
+      }
+    }
   }
 }
