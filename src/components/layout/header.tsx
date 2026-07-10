@@ -59,9 +59,7 @@ export function Header() {
           <ThemeToggle />
           <Link
             href="/download"
-            className={cn(
-              buttonVariants({ size: "sm" }),
-            )}
+            className={cn(buttonVariants({ size: "lg" }), "px-4")}
           >
             {t("getApp")}
           </Link>

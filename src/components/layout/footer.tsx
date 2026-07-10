@@ -89,6 +89,11 @@ export function Footer() {
                   {nav("about")}
                 </Link>
               </li>
+              <li>
+                <a href="mailto:info@focusnow.ai" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {t("contact")}
+                </a>
+              </li>
             </ul>
           </div>
 

@@ -346,12 +346,12 @@
           "We never take screenshots of your screen",
           "We never record keystrokes, mouse clicks, or form inputs",
           "We never use your data for advertising or marketing profiling",
-          "You can delete your activity history and sessions from within the app at any time, and request full account deletion by emailing privacy@focusnow.ai"
+          "You can delete your activity history and sessions from within the app at any time — and delete your account entirely, whenever you want, from Settings → Account"
         ]
       },
       "dataController": {
         "title": "2. Data Controller",
-        "content": "FocusNow is developed and operated by Barbaros Zongur, based in Turkey. As the data controller, we decide how and why your personal data is processed. For all privacy-related inquiries, you can reach us at privacy@focusnow.ai."
+        "content": "FocusNow is developed and operated by Barbaros Zongur, based in Turkey. As the data controller, we decide how and why your personal data is processed. For all privacy-related inquiries, you can reach us at info@focusnow.ai."
       },
       "collection": {
         "title": "3. Information We Collect",
@@ -473,7 +473,7 @@
           "Withdrawal of consent — withdraw consent for optional processing (such as analytics) at any time in the app or on the website",
           "Complaint — lodge a complaint with your data protection authority (in Turkey, the Personal Data Protection Authority; in the EEA, your national authority)"
         ],
-        "note": "To exercise any of these rights, email privacy@focusnow.ai. We respond within 30 days."
+        "note": "You can export your data and delete your account directly in the app (Settings → Account). For everything else, email info@focusnow.ai — we respond within 30 days."
       },
       "children": {
         "title": "15. Children's Privacy",
@@ -487,7 +487,7 @@
         "title": "17. Contact Us",
         "content": "If you have questions about this Privacy Policy or wish to exercise your data rights:",
         "items": [
-          "Email: privacy@focusnow.ai",
+          "Email: info@focusnow.ai",
           "Response time: within 30 days of receiving your request"
         ],
         "note": "Data Controller: FocusNow — Barbaros Zongur, Turkey. This policy is provided in English and Turkish; if the two versions conflict, the English version prevails."
@@ -568,7 +568,7 @@
       },
       "contact": {
         "title": "15. Contact",
-        "content": "Questions about these Terms: privacy@focusnow.ai. Operator: FocusNow — Barbaros Zongur, Turkey. These Terms are provided in English and Turkish; if the two versions conflict, the English version prevails."
+        "content": "Questions about these Terms: info@focusnow.ai. Operator: FocusNow — Barbaros Zongur, Turkey. These Terms are provided in English and Turkish; if the two versions conflict, the English version prevails."
       }
     }
   },
@@ -606,6 +606,7 @@
     "useCases": "Use Cases",
     "resources": "Resources",
     "legal": "Legal",
+    "contact": "Contact",
     "copyright": "All rights reserved."
   },
   "consent": {
