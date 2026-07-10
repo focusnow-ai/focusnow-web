@@ -42,7 +42,7 @@ function DashboardPreview({ t }: { t: (key: string) => string }) {
       {/* Real screenshot */}
       <div className="relative aspect-[16/10]">
         <Image
-          src="/screenshots/hero-analytics.webp"
+          src="/screenshots/hero-analytics-v2.webp"
           alt=""
           fill
           sizes="(max-width: 1024px) 100vw, 560px"
