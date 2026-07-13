@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { CheckCircle2, Mail } from "lucide-react";
+import { CheckCircle2, ChevronDown, Mail } from "lucide-react";
 
 const TOPICS = ["feedback", "support", "partnership", "other"] as const;
 
@@ -138,18 +138,21 @@ export function ContactPageClient() {
                     >
                       {t("form.topic")}
                     </label>
-                    <select
-                      id="contact-topic"
-                      name="topic"
-                      defaultValue="feedback"
-                      className="w-full h-10 rounded-md border border-input bg-background px-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                    >
-                      {TOPICS.map((topic) => (
-                        <option key={topic} value={topic}>
-                          {t(`form.topics.${topic}`)}
-                        </option>
-                      ))}
-                    </select>
+                    <div className="relative">
+                      <select
+                        id="contact-topic"
+                        name="topic"
+                        defaultValue="feedback"
+                        className="w-full h-10 appearance-none rounded-md border border-input bg-background pl-3 pr-10 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      >
+                        {TOPICS.map((topic) => (
+                          <option key={topic} value={topic}>
+                            {t(`form.topics.${topic}`)}
+                          </option>
+                        ))}
+                      </select>
+                      <ChevronDown className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                    </div>
                   </div>
 
                   <div>
