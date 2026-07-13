@@ -299,7 +299,7 @@
     "title": "FocusNow",
     "titleHighlight": "Hakkında",
     "mission": "Derin çalışma, derin çaba gerektirmemeli.",
-    "description": "FocusNow, yoğun günlerin sonunda sorup durduğumuz bir soruyla başladı: onca zaman gerçekten nereye gitti? Cal Newport'un Deep Work kitabından ve odak üzerine yapılan araştırmalardan ilham alarak basit bir şey yapmaya koyulduk — kendi kendine çalışan, çalışma şeklinize uyum sağlayan ve veriniz sizde kalan bir takipçi.",
+    "description": "FocusNow, yoğun günlerin sonunda sorup durduğumuz bir soruyla başladı: onca zaman gerçekten nereye gitti? Cal Newport'un Deep Work'ünden ve odak üzerine araştırmalardan ilham alarak basit, kuralları size ait bir araç yaptık. Çünkü günün nereye gittiğini bilince haftanın da ayın da gidişatı belli oluyor — ve önemli işlere de, işin dışındaki hayata da yeniden yer açılıyor.",
     "pillars": {
       "privacy": {
         "title": "Gizlilik Öncelikli",
@@ -307,7 +307,7 @@
       },
       "simplicity": {
         "title": "Zahmetsiz",
-        "content": "Basacak düğme yok, başlatacak zamanlayıcı yok. FocusNow arka planda sessizce çalışır ve zamanınızın nereye gittiğini gösterir. Araya girmeyen verimlilik takibi."
+        "content": "Basacak düğme yok, başlatacak zamanlayıcı yok. FocusNow arka planda sessizce çalışır ve zamanınızın nereye gittiğini gösterir. Araya girmeyen verimlilik takibi. Kurallar da sizin — neyin odak, neyin dikkat dağıtıcı sayılacağına siz karar verirsiniz."
       },
       "transparency": {
         "title": "Şeffaf",
@@ -316,7 +316,7 @@
     },
     "founder": {
       "title": "Kuruculardan bir not",
-      "content": "FocusNow'u iki kişi yapıyor — Barbaros ve Cihan. Önce kendimiz için başladık: günlerimizin nereye gittiğini, cevabı bir gözetim aracına teslim etmeden görmek istedik. Ve kuralların — neyin odak, neyin dikkat dağıtıcı sayılacağının — uygulamanın değil, bizim olmasını istedik. FocusNow'u her gün kendimiz kullanıyoruz ve kullanıcılarımızın söyledikleriyle büyüyor. info@focusnow.ai'ye yazdığınızda cevaplayan ikimizden biridir.",
+      "content": "FocusNow'u iki kişi yapıyor — Barbaros ve Cihan. Bu işe kendimizden daha fazla saat çıkarmak için değil, daha az saat ziyan etmek için başladık: odaklı işi odaklı sürede bitirip kalanı ailemize, hobilerimize ve dinlenmeye ayırmak istedik. Günlerimizin nereye gittiğini, cevabı bir gözetim aracına teslim etmeden görmek istiyorduk; biz de kendimizinkini yaptık. FocusNow'u her gün kendimiz kullanıyoruz ve kullanıcılarımızın söyledikleriyle büyüyor. info@focusnow.ai'ye yazdığınızda cevaplayan ikimizden biridir.",
       "signature": "Barbaros ve Cihan — FocusNow'un kurucuları"
     },
     "proof": {
