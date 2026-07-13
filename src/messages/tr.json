@@ -806,6 +806,8 @@
       "errorRate": "Kısa sürede çok fazla mesaj gönderildi. Birkaç dakika sonra tekrar deneyin.",
       "errorGeneric": "Bizim tarafta bir şeyler ters gitti. Lütfen doğrudan info@focusnow.ai adresine yazın."
     },
-    "direct": "Form yerine e-posta isterseniz:"
+    "direct": "Form yerine e-posta isterseniz:",
+    "copy": "Adresi kopyala",
+    "copied": "Kopyalandı"
   }
 }

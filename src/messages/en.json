@@ -806,6 +806,8 @@
       "errorRate": "Too many messages in a short time. Please try again in a few minutes.",
       "errorGeneric": "Something went wrong on our side. Please email us directly at info@focusnow.ai."
     },
-    "direct": "Prefer plain email? Write to"
+    "direct": "Prefer plain email? Write to",
+    "copy": "Copy address",
+    "copied": "Copied"
   }
 }

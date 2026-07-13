@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { CheckCircle2, ChevronDown, Mail } from "lucide-react";
+import { Check, CheckCircle2, ChevronDown, Copy, Mail } from "lucide-react";
 
 const TOPICS = ["feedback", "support", "partnership", "other"] as const;
 
@@ -16,6 +16,17 @@ export function ContactPageClient() {
   const t = useTranslations("contact");
   const [status, setStatus] = useState<Status>("idle");
   const [errorKey, setErrorKey] = useState<string>("errorGeneric");
+  const [copied, setCopied] = useState(false);
+
+  async function copyAddress() {
+    try {
+      await navigator.clipboard.writeText("info@focusnow.ai");
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      /* clipboard unavailable — the address is visible as text anyway */
+    }
+  }
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -205,15 +216,33 @@ export function ContactPageClient() {
             </CardContent>
           </Card>
 
-          <p className="mt-6 text-center text-sm text-muted-foreground">
-            <Mail className="inline h-4 w-4 mr-1.5 align-[-2px]" />
-            {t("direct")}{" "}
-            <a
-              href="mailto:info@focusnow.ai"
-              className="text-purple-600 dark:text-purple-400 hover:underline"
+          <p className="mt-6 flex items-center justify-center gap-1.5 text-center text-sm text-muted-foreground">
+            <Mail className="h-4 w-4" />
+            <span>
+              {t("direct")}{" "}
+              <a
+                href="mailto:info@focusnow.ai"
+                className="text-purple-600 dark:text-purple-400 hover:underline"
+              >
+                info@focusnow.ai
+              </a>
+            </span>
+            <button
+              type="button"
+              onClick={copyAddress}
+              aria-label={t("copy")}
+              title={copied ? t("copied") : t("copy")}
+              className="inline-flex items-center gap-1 rounded-md border border-border/60 px-1.5 py-1 hover:bg-muted/50 transition-colors"
             >
-              info@focusnow.ai
-            </a>
+              {copied ? (
+                <>
+                  <Check className="h-3.5 w-3.5 text-green-500" />
+                  <span className="text-xs">{t("copied")}</span>
+                </>
+              ) : (
+                <Copy className="h-3.5 w-3.5" />
+              )}
+            </button>
           </p>
         </motion.div>
       </div>
