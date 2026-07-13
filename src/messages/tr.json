@@ -775,7 +775,9 @@
         "question": "Çevrimdışı çalışıyor mu?",
         "answer": "Evet. FocusNow internet bağlantısı olmadan da takibe devam eder ve verinizi yerelde saklar. Tekrar çevrimiçi olduğunuzda her zamanki gibi şifreli olarak senkronize eder."
       }
-    ]
+    ],
+    "contactPrompt": "Sorunuz cevapsız mı kaldı?",
+    "contactLink": "Bize yazın"
   },
   "contact": {
     "meta": {

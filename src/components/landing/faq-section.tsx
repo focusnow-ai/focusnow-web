@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -61,6 +62,15 @@ export function FAQSection() {
               ))}
             </CardContent>
           </Card>
+          <p className="mt-6 text-center text-sm text-muted-foreground">
+            {t("contactPrompt")}{" "}
+            <Link
+              href="/contact"
+              className="text-purple-600 dark:text-purple-400 hover:underline"
+            >
+              {t("contactLink")} →
+            </Link>
+          </p>
         </motion.div>
       </div>
     </section>

@@ -775,7 +775,9 @@
         "question": "Does it work offline?",
         "answer": "Yes. FocusNow keeps tracking without an internet connection and stores your data locally. When you're back online, it syncs — encrypted, as always."
       }
-    ]
+    ],
+    "contactPrompt": "Question not answered?",
+    "contactLink": "Write to us"
   },
   "contact": {
     "meta": {
