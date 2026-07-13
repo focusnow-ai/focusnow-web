@@ -50,10 +50,14 @@
     }
   },
   "socialProof": {
-    "noTracking": "No screenshots or keylogging",
-    "encrypted": "Encrypted in transit & at rest",
-    "neverSold": "Your data is never sold",
-    "control": "Export or delete your data anytime"
+    "v1": "0",
+    "l1": "Screenshots — ever",
+    "v2": "0",
+    "l2": "Keystrokes logged",
+    "v3": "1 min",
+    "l3": "From install to first insight",
+    "v4": "100%",
+    "l4": "Automatic — no timers"
   },
   "bentoFeatures": {
     "title": "Everything You Need to",
