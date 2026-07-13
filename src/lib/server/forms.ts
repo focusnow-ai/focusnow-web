@@ -51,11 +51,13 @@ export async function sendNotification(options: {
   text: string;
   replyTo?: string;
 }): Promise<void> {
+  const port = Number(process.env.SMTP_PORT ?? 587);
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST ?? "smtp.office365.com",
-    port: Number(process.env.SMTP_PORT ?? 587),
-    secure: false,
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
+    host: process.env.SMTP_HOST ?? "mail.privateemail.com",
+    port,
+    secure: port === 465,
+    requireTLS: port !== 465,
+    auth: { user: SMTP_USER.trim(), pass: SMTP_PASS.trim() },
   });
 
   await transporter.sendMail({
