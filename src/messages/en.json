@@ -22,7 +22,7 @@
     "titleHighlight": "Now You'll Know.",
     "description": "FocusNow quietly tracks your apps and shows you exactly how you spend your workday. See your most productive hours, spot time sinks, and build better habits — automatically.",
     "cta": "Start My Free Tracker",
-    "secondaryCta": "See How It Works",
+    "secondaryCta": "See It in Action",
     "platformBadge": {
       "mac": "Available on macOS",
       "windows": "Available on Windows"
@@ -50,38 +50,36 @@
     }
   },
   "socialProof": {
-    "freeForever": "Free forever",
-    "platforms": "Mac & Windows",
-    "encrypted": "Your data stays encrypted",
-    "noTracking": "No screenshots or keylogging"
+    "v1": "0",
+    "l1": "Screenshots — ever",
+    "v2": "0",
+    "l2": "Keystrokes logged",
+    "v3": "2 min",
+    "l3": "From download to tracking",
+    "v4": "1",
+    "l4": "Person who sees this: you"
   },
   "bentoFeatures": {
     "title": "Everything You Need to",
     "titleHighlight": "Focus Better",
-    "hero": {
-      "title": "See Your Real Workday",
-      "description": "FocusNow tracks your apps automatically and uses AI to sort your time into focus, neutral, and distraction. It just works."
-    },
-    "timer": {
-      "title": "Focus Sessions",
-      "description": "Pick a Pomodoro sprint or a longer Deep Work block and see how well you stayed on task.",
-      "presets": {
-        "pomodoro": "Pomodoro",
-        "deepWork": "Deep Work"
+    "seeIt": "See it in action",
+    "cards": {
+      "tracking": {
+        "title": "Automatic tracking",
+        "description": "No timers to start, nothing to log. Install it once and your real workday appears on the dashboard."
       },
-      "remaining": "remaining"
-    },
-    "analytics": {
-      "title": "Your Week at a Glance",
-      "description": "Spot your peak focus hours, 7-day trends and most-used apps — and let the AI Daily Report sum up your day."
-    },
-    "privacy": {
-      "title": "Privacy-First. Always.",
-      "description": "Your data is encrypted and never leaves your control."
-    },
-    "platform": {
-      "title": "Works Everywhere",
-      "description": "Same experience on Mac and Windows. Encrypted sync, works offline."
+      "sessions": {
+        "title": "Focus sessions",
+        "description": "Pomodoro (25 min) or Deep Work (90 min) — each session ends with a focus score, so you know if the time was really yours."
+      },
+      "report": {
+        "title": "AI Daily Report",
+        "description": "At the end of the day, AI sums up what went well, where the time leaked, and what to try tomorrow."
+      },
+      "privacy": {
+        "title": "Private by design",
+        "description": "No screenshots, no keystrokes — and you decide what counts as a distraction."
+      }
     },
     "included": {
       "title": "Also included",
@@ -162,7 +160,7 @@
     "steps": {
       "install": {
         "title": "Download & Install",
-        "description": "One-click install on Mac or Windows. Under a minute."
+        "description": "One-click install on Mac or Windows — you're tracking within two minutes."
       },
       "run": {
         "title": "Go About Your Day",
@@ -190,15 +188,15 @@
     "titleHighlight": "Starts Now",
     "description": "Download FocusNow and finally see where your time actually goes. Free forever, no credit card needed.",
     "cta": "Start My Free Tracker",
-    "note": "macOS & Windows. Installs in under a minute."
+    "note": "macOS & Windows. From download to tracking in two minutes."
   },
   "download": {
     "meta": {
       "title": "Download FocusNow Free — Mac & Windows",
-      "description": "Download FocusNow for free. Automatic focus and time tracking for macOS and Windows. Installs in under a minute."
+      "description": "Download FocusNow for free. Automatic focus and time tracking for macOS and Windows. Two-minute setup."
     },
     "title": "Download FocusNow",
-    "description": "Free forever. Installs in under a minute.",
+    "description": "Free forever. Set up in two minutes.",
     "detected": "Detected Platform",
     "downloadFor": "Get FocusNow for {platform}",
     "otherPlatforms": "Other Platforms",
@@ -243,31 +241,6 @@
           "description": "Open FocusNow anytime to see your focus stats, top apps, and productivity trends."
         }
       }
-    },
-    "faq": {
-      "title": "Frequently Asked Questions",
-      "items": [
-        {
-          "question": "Is it really free?",
-          "answer": "Yes — free forever, no credit card. A paid Pro tier may arrive later with team features and advanced extras, but everything you see today stays free."
-        },
-        {
-          "question": "Is this employee monitoring software?",
-          "answer": "No — the opposite. FocusNow is a personal tool: your data lives in your own account and nobody else can see it. It never takes screenshots and never records keystrokes."
-        },
-        {
-          "question": "What data does FocusNow collect?",
-          "answer": "Only what your analytics need: the name of the app in front, its window title, the page address in browsers, and how long you spent there. Everything is encrypted in transit and at rest, and never sold or shared."
-        },
-        {
-          "question": "Can I export or delete my data?",
-          "answer": "Yes. Settings → Account gives you a one-click export of all your data as a JSON file, and you can delete your account — with everything in it — whenever you want."
-        },
-        {
-          "question": "How much CPU and battery does it use?",
-          "answer": "Barely any. FocusNow checks the active window at regular intervals and sits quietly in the background — you won't notice it's running."
-        }
-      ]
     }
   },
   "pricing": {
@@ -736,7 +709,7 @@
   "showcase": {
     "title": "See FocusNow",
     "titleHighlight": "in action",
-    "description": "Real screenshots from the app — this is exactly what you get after a one-minute install.",
+    "description": "Real screenshots from the app — this is exactly what you get after a two-minute setup.",
     "tabs": {
       "dashboard": {
         "label": "Dashboard",
@@ -763,5 +736,34 @@
         "caption": "You decide what counts: change how any category affects your score, or create your own."
       }
     }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "Is it really free?",
+        "answer": "Yes — free forever, no credit card. A paid Pro tier may arrive later with team features and advanced extras, but everything you see today stays free."
+      },
+      {
+        "question": "Is this employee monitoring software?",
+        "answer": "No — the opposite. FocusNow is a personal tool: your data lives in your own account and nobody else can see it. It never takes screenshots and never records keystrokes."
+      },
+      {
+        "question": "What data does FocusNow collect?",
+        "answer": "Only what your analytics need: the name of the app in front, its window title, the page address in browsers, and how long you spent there. Everything is encrypted in transit and at rest, and never sold or shared."
+      },
+      {
+        "question": "Can I export or delete my data?",
+        "answer": "Yes. Settings → Account gives you a one-click export of all your data as a JSON file, and you can delete your account — with everything in it — whenever you want."
+      },
+      {
+        "question": "How much CPU and battery does it use?",
+        "answer": "Barely any. FocusNow checks the active window at regular intervals and sits quietly in the background — you won't notice it's running."
+      },
+      {
+        "question": "Does it work offline?",
+        "answer": "Yes. FocusNow keeps tracking without an internet connection and stores your data locally. When you're back online, it syncs — encrypted, as always."
+      }
+    ]
   }
 }

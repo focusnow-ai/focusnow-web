@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "framer-motion";
@@ -20,6 +20,16 @@ type TabKey = (typeof TABS)[number];
 export function ProductShowcase() {
   const t = useTranslations("showcase");
   const [active, setActive] = useState<TabKey>("dashboard");
+
+  // Benefit cards further down the page can jump to a specific tab.
+  useEffect(() => {
+    const onTab = (e: Event) => {
+      const tab = (e as CustomEvent<string>).detail as TabKey;
+      if (TABS.includes(tab)) setActive(tab);
+    };
+    window.addEventListener("showcase-tab", onTab);
+    return () => window.removeEventListener("showcase-tab", onTab);
+  }, []);
 
   return (
     <section id="product" className="py-20 sm:py-28">

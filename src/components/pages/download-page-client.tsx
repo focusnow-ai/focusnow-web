@@ -1,13 +1,13 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Download, CheckCircle2, ShieldCheck, Monitor, BarChart3, ChevronDown } from "lucide-react";
+import { Download, CheckCircle2, ShieldCheck, Monitor, BarChart3 } from "lucide-react";
 import { AppleIcon } from "@/components/shared/apple-icon";
 import { WindowsIcon } from "@/components/shared/windows-icon";
 import {
@@ -42,32 +42,6 @@ const afterInstallSteps = [
 const emptySubscribe = () => () => {};
 const getServerPlatform = (): Platform => "mac-arm";
 
-function FAQItem({ question, answer }: { question: string; answer: string }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div className="border-b border-border/40 last:border-0">
-      <button
-        onClick={() => setOpen(!open)}
-        className="flex items-center justify-between w-full py-4 text-left"
-      >
-        <span className="font-medium text-sm">{question}</span>
-        <ChevronDown
-          className={cn(
-            "h-4 w-4 text-muted-foreground shrink-0 ml-4 transition-transform",
-            open && "rotate-180"
-          )}
-        />
-      </button>
-      {open && (
-        <p className="pb-4 text-sm text-muted-foreground leading-relaxed">
-          {answer}
-        </p>
-      )}
-    </div>
-  );
-}
-
 export function DownloadPageClient({ links }: { links: DownloadLink[] }) {
   const t = useTranslations("download");
   const platform = useSyncExternalStore<Platform>(
@@ -77,8 +51,6 @@ export function DownloadPageClient({ links }: { links: DownloadLink[] }) {
   );
 
   const primary = getPrimaryDownload(links, platform);
-
-  const faqItems: { question: string; answer: string }[] = t.raw("faq.items");
 
   return (
     <div className="py-20 sm:py-28">
@@ -265,29 +237,6 @@ export function DownloadPageClient({ links }: { links: DownloadLink[] }) {
               </Card>
             ))}
           </div>
-        </motion.div>
-
-        {/* FAQ */}
-        <motion.div
-          className="mt-20 max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          <h3 className="text-2xl font-bold text-center mb-8">
-            {t("faq.title")}
-          </h3>
-          <Card>
-            <CardContent className="p-6">
-              {faqItems.map((item, i) => (
-                <FAQItem
-                  key={i}
-                  question={item.question}
-                  answer={item.answer}
-                />
-              ))}
-            </CardContent>
-          </Card>
         </motion.div>
       </div>
     </div>

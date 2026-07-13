@@ -22,7 +22,7 @@
     "titleHighlight": "Artık Bileceksiniz.",
     "description": "FocusNow arka planda sessizce çalışır, hangi uygulamaları ne kadar kullandığınızı takip eder ve size net bir çalışma tablosu sunar. En verimli saatlerinizi keşfedin, zaman kayıplarınızı görün.",
     "cta": "Ücretsiz Takibimi Başlat",
-    "secondaryCta": "Nasıl Çalıştığını Gör",
+    "secondaryCta": "İş Başında Görün",
     "platformBadge": {
       "mac": "macOS için mevcut",
       "windows": "Windows için mevcut"
@@ -50,38 +50,36 @@
     }
   },
   "socialProof": {
-    "freeForever": "Sonsuza dek ücretsiz",
-    "platforms": "Mac ve Windows",
-    "encrypted": "Verileriniz her zaman şifreli",
-    "noTracking": "Ekran görüntüsü veya tuş kaydı yok"
+    "v1": "0",
+    "l1": "Ekran görüntüsü — asla",
+    "v2": "0",
+    "l2": "Tuş kaydı",
+    "v3": "2 dk",
+    "l3": "İndirmeden takibe",
+    "v4": "1",
+    "l4": "Bu veriyi gören kişi: sen"
   },
   "bentoFeatures": {
     "title": "Daha İyi Odaklanmak İçin",
     "titleHighlight": "İhtiyacınız Olan Her Şey",
-    "hero": {
-      "title": "Gerçek İş Gününüzü Görün",
-      "description": "FocusNow uygulamalarınızı otomatik takip eder ve yapay zeka ile zamanınızı odak, nötr ve dikkat dağıtıcı olarak sınıflandırır. Kendiliğinden çalışır."
-    },
-    "timer": {
-      "title": "Odak Seansları",
-      "description": "Kısa bir Pomodoro veya uzun bir Derin Çalışma bloğu seçin, ne kadar odaklandığınızı görün.",
-      "presets": {
-        "pomodoro": "Pomodoro",
-        "deepWork": "Derin Çalışma"
+    "seeIt": "İş başında görün",
+    "cards": {
+      "tracking": {
+        "title": "Otomatik takip",
+        "description": "Kurulacak zamanlayıcı, tutulacak kayıt yok. Bir kez kurun; gerçek iş gününüz panelde belirsin."
       },
-      "remaining": "kalan"
-    },
-    "analytics": {
-      "title": "Haftanıza Bir Bakışta",
-      "description": "En yoğun odak saatlerinizi, 7 günlük trendinizi ve en çok kullandığınız uygulamaları görün — yapay zekâ Günlük Raporu gününüzü sizin için özetlesin."
-    },
-    "privacy": {
-      "title": "Gizlilik Her Şeyden Önce.",
-      "description": "Verileriniz şifreli ve her zaman sizin kontrolünüzde."
-    },
-    "platform": {
-      "title": "Her Yerde Çalışır",
-      "description": "Mac ve Windows'ta aynı deneyim. Şifreli senkronizasyon, çevrimdışı da çalışır."
+      "sessions": {
+        "title": "Odak seansları",
+        "description": "Pomodoro (25 dk) veya Derin Çalışma (90 dk) — her seans bir odak puanıyla biter; o süre gerçekten sizin miydi, bilirsiniz."
+      },
+      "report": {
+        "title": "Yapay Zekâ Günlük Raporu",
+        "description": "Gün sonunda yapay zekâ neyin iyi gittiğini, zamanın nereye sızdığını ve yarın ne deneyeceğinizi özetler."
+      },
+      "privacy": {
+        "title": "Tasarımı gereği özel",
+        "description": "Ekran görüntüsü yok, tuş kaydı yok — neyin dikkat dağıtıcı sayılacağına da siz karar verirsiniz."
+      }
     },
     "included": {
       "title": "Ayrıca dahil",
@@ -162,7 +160,7 @@
     "steps": {
       "install": {
         "title": "İndirin ve Kurun",
-        "description": "Mac veya Windows'ta tek tıkla kurulum. Bir dakikadan kısa."
+        "description": "Mac veya Windows'ta tek tıkla kurulum — iki dakika içinde takip başlar."
       },
       "run": {
         "title": "Günlük İşlerinize Devam Edin",
@@ -190,15 +188,15 @@
     "titleHighlight": "Şimdi Başlıyor",
     "description": "FocusNow'u indirin ve zamanınızın gerçekte nereye gittiğini görmeye başlayın. Sonsuza dek ücretsiz, kredi kartı gerekmez.",
     "cta": "Ücretsiz Takibimi Başlat",
-    "note": "macOS ve Windows. Bir dakikada kurulur."
+    "note": "macOS ve Windows. İndirmeden takibe iki dakika."
   },
   "download": {
     "meta": {
       "title": "FocusNow'u Ücretsiz İndir — Mac ve Windows",
-      "description": "FocusNow'u ücretsiz indirin. macOS ve Windows için otomatik odak ve zaman takibi. Bir dakikada kurulur."
+      "description": "FocusNow'u ücretsiz indirin. macOS ve Windows için otomatik odak ve zaman takibi. İki dakikada kurulum."
     },
     "title": "FocusNow'u İndirin",
-    "description": "Sonsuza dek ücretsiz. Bir dakikada kurulur.",
+    "description": "Sonsuza dek ücretsiz. İki dakikada kurulum.",
     "detected": "Algılanan Platform",
     "downloadFor": "{platform} için FocusNow'u Al",
     "otherPlatforms": "Diğer Platformlar",
@@ -243,31 +241,6 @@
           "description": "İstediğiniz zaman FocusNow'u açın ve odak istatistiklerinizi, en çok kullandığınız uygulamaları ve verimlilik trendlerinizi görün."
         }
       }
-    },
-    "faq": {
-      "title": "Sık Sorulan Sorular",
-      "items": [
-        {
-          "question": "Gerçekten ücretsiz mi?",
-          "answer": "Evet — sonsuza dek ücretsiz, kart gerekmez. İleride ekip özellikleri gibi ekstralarla ücretli bir Pro katmanı gelebilir; ama bugün gördüğünüz her şey ücretsiz kalacak."
-        },
-        {
-          "question": "Bu bir çalışan takip yazılımı mı?",
-          "answer": "Hayır — tam tersi. FocusNow kişisel bir araçtır: verileriniz kendi hesabınızda durur ve sizden başka kimse göremez. Asla ekran görüntüsü almaz, asla tuş kaydı tutmaz."
-        },
-        {
-          "question": "FocusNow hangi verileri topluyor?",
-          "answer": "Yalnızca analizlerinizin ihtiyacı kadarını: öndeki uygulamanın adı, pencere başlığı, tarayıcılarda sayfa adresi ve orada geçen süre. Her şey aktarımda ve depolamada şifrelenir; asla satılmaz, paylaşılmaz."
-        },
-        {
-          "question": "Verilerimi dışa aktarabilir ya da silebilir miyim?",
-          "answer": "Evet. Ayarlar → Hesap'tan tüm verinizi tek tıkla JSON dosyası olarak indirebilir, dilediğiniz an hesabınızı — içindeki her şeyle birlikte — silebilirsiniz."
-        },
-        {
-          "question": "Ne kadar CPU ve pil kullanıyor?",
-          "answer": "Yok denecek kadar az. FocusNow aktif pencereyi belirli aralıklarla kontrol eder ve arka planda sessizce durur — çalıştığını fark etmezsiniz."
-        }
-      ]
     }
   },
   "pricing": {
@@ -736,7 +709,7 @@
   "showcase": {
     "title": "FocusNow'u",
     "titleHighlight": "iş başında görün",
-    "description": "Uygulamadan gerçek ekran görüntüleri — bir dakikalık kurulumdan sonra karşınıza çıkacak olan tam olarak bu.",
+    "description": "Uygulamadan gerçek ekran görüntüleri — iki dakikalık kurulumdan sonra karşınıza çıkacak olan tam olarak bu.",
     "tabs": {
       "dashboard": {
         "label": "Panel",
@@ -763,5 +736,34 @@
         "caption": "Neyin sayılacağına siz karar verin: herhangi bir kategorinin puanı nasıl etkilediğini değiştirin ya da kendi kategorinizi oluşturun."
       }
     }
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "items": [
+      {
+        "question": "Gerçekten ücretsiz mi?",
+        "answer": "Evet — sonsuza dek ücretsiz, kart gerekmez. İleride ekip özellikleri gibi ekstralarla ücretli bir Pro katmanı gelebilir; ama bugün gördüğünüz her şey ücretsiz kalacak."
+      },
+      {
+        "question": "Bu bir çalışan takip yazılımı mı?",
+        "answer": "Hayır — tam tersi. FocusNow kişisel bir araçtır: verileriniz kendi hesabınızda durur ve sizden başka kimse göremez. Asla ekran görüntüsü almaz, asla tuş kaydı tutmaz."
+      },
+      {
+        "question": "FocusNow hangi verileri topluyor?",
+        "answer": "Yalnızca analizlerinizin ihtiyacı kadarını: öndeki uygulamanın adı, pencere başlığı, tarayıcılarda sayfa adresi ve orada geçen süre. Her şey aktarımda ve depolamada şifrelenir; asla satılmaz, paylaşılmaz."
+      },
+      {
+        "question": "Verilerimi dışa aktarabilir ya da silebilir miyim?",
+        "answer": "Evet. Ayarlar → Hesap'tan tüm verinizi tek tıkla JSON dosyası olarak indirebilir, dilediğiniz an hesabınızı — içindeki her şeyle birlikte — silebilirsiniz."
+      },
+      {
+        "question": "Ne kadar CPU ve pil kullanıyor?",
+        "answer": "Yok denecek kadar az. FocusNow aktif pencereyi belirli aralıklarla kontrol eder ve arka planda sessizce durur — çalıştığını fark etmezsiniz."
+      },
+      {
+        "question": "Çevrimdışı çalışıyor mu?",
+        "answer": "Evet. FocusNow internet bağlantısı olmadan da takibe devam eder ve verinizi yerelde saklar. Tekrar çevrimiçi olduğunuzda her zamanki gibi şifreli olarak senkronize eder."
+      }
+    ]
   }
 }
