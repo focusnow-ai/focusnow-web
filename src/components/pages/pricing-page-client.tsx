@@ -78,7 +78,10 @@ function WaitlistForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className={cn(buttonVariants({ size: "default" }), "press-effect")}
+          className={cn(
+            buttonVariants({ size: "default" }),
+            "h-10 press-effect"
+          )}
         >
           {status === "sending" ? t("joining") : t("cta")}
         </button>
