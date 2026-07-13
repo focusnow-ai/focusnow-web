@@ -299,7 +299,7 @@
     "title": "About",
     "titleHighlight": "FocusNow",
     "mission": "Deep work shouldn't require deep effort.",
-    "description": "FocusNow started with a question we kept asking at the end of busy days: where did all that time actually go? Inspired by Cal Newport's Deep Work and the research on attention, we built something simple that bends to your rules. Because once you know where your day goes, the week and the month follow — and there's room again for the work that matters and the life around it.",
+    "description": "FocusNow started with a question we kept asking at the end of busy days: where did all that time actually go? Inspired by Cal Newport's Deep Work and the science of attention, we built something simple that bends to your rules. Because once you know where your day goes, the week and the month fall into place — and there's room again for the work that matters and the life around it.",
     "pillars": {
       "privacy": {
         "title": "Privacy-First",
@@ -316,7 +316,7 @@
     },
     "founder": {
       "title": "A note from the founders",
-      "content": "FocusNow is built by two people — Barbaros and Cihan. We didn't start it to squeeze more hours out of ourselves; we started it to waste fewer of them — to finish focused work in focused time and keep the rest for family, hobbies, and rest. We wanted to see where our days went without handing that answer to a surveillance tool, so we built our own. We use FocusNow every day, and it grows with what our users tell us. When you write to info@focusnow.ai, one of us answers.",
+      "content": "FocusNow is built by two people — Barbaros and Cihan. We didn't start it to squeeze more hours out of ourselves; we started it to waste fewer of them — to finish focused work in focused time and keep the rest for family, hobbies, and downtime. We wanted to see where our days went without handing that answer to a surveillance tool, so we built our own. We use FocusNow every day, and it grows with what our users tell us. When you write to info@focusnow.ai, one of us answers.",
       "signature": "Barbaros & Cihan — founders of FocusNow"
     },
     "proof": {
