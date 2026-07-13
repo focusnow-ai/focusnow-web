@@ -90,9 +90,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="mailto:info@focusnow.ai" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   {t("contact")}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

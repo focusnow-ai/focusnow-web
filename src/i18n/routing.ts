@@ -38,6 +38,10 @@ export const routing = defineRouting({
       en: "/changelog",
       tr: "/degisiklik-kaydi",
     },
+    "/contact": {
+      en: "/contact",
+      tr: "/iletisim",
+    },
     "/use-cases/remote-workers": {
       en: "/use-cases/remote-workers",
       tr: "/kullanim-alanlari/uzaktan-calisanlar",
