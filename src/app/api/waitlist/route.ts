@@ -34,7 +34,7 @@ export async function POST(request: Request) {
   }
   const locale = body.locale === "tr" ? "tr" : "en";
 
-  if (!storageConfigured) {
+  if (!storageConfigured && !smtpConfigured) {
     if (isDev) {
       console.log("[waitlist:dev] signup:", { email, locale });
       return NextResponse.json({ ok: true });
@@ -42,29 +42,40 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "not_configured" }, { status: 503 });
   }
 
-  try {
-    /* rowKey = encoded email → the same address never creates duplicates. */
-    await storeEntity("Waitlist", {
-      partitionKey: "pro",
-      rowKey: emailRowKey(email),
-      email: email.toLowerCase(),
-      locale,
-      signedUpAt: new Date().toISOString(),
-    });
-  } catch (error) {
-    console.error("[waitlist] storage failed:", error);
-    return NextResponse.json({ error: "delivery_failed" }, { status: 502 });
+  let stored = false;
+  if (storageConfigured) {
+    try {
+      /* rowKey = encoded email → the same address never creates duplicates. */
+      await storeEntity("Waitlist", {
+        partitionKey: "pro",
+        rowKey: emailRowKey(email),
+        email: email.toLowerCase(),
+        locale,
+        signedUpAt: new Date().toISOString(),
+      });
+      stored = true;
+    } catch (error) {
+      console.error("[waitlist] storage failed:", error);
+    }
   }
 
+  /* Email-only mode: the signup notification IS the record until
+     storage is configured. */
+  let notified = false;
   if (smtpConfigured) {
     try {
       await sendNotification({
         subject: "[FocusNow] New Pro waitlist signup",
         text: `${email} joined the Pro waitlist (locale: ${locale}).`,
       });
+      notified = true;
     } catch (error) {
       console.error("[waitlist] notification failed:", error);
     }
+  }
+
+  if (!stored && !notified) {
+    return NextResponse.json({ error: "delivery_failed" }, { status: 502 });
   }
 
   return NextResponse.json({ ok: true });
