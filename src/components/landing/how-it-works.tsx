@@ -31,10 +31,10 @@ export function HowItWorks() {
   const t = useTranslations("howItWorks");
 
   return (
-    <section id="how-it-works" className="py-20 sm:py-28">
+    <section id="how-it-works" className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             {t("title")}{" "}
             <span className="text-purple-600 dark:text-purple-400">{t("titleHighlight")}</span>

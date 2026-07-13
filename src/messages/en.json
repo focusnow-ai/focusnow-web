@@ -160,7 +160,7 @@
     "steps": {
       "install": {
         "title": "Download & Install",
-        "description": "One-click install on Mac or Windows. Under a minute."
+        "description": "One-click install on Mac or Windows — you're tracking within two minutes."
       },
       "run": {
         "title": "Go About Your Day",
@@ -188,15 +188,15 @@
     "titleHighlight": "Starts Now",
     "description": "Download FocusNow and finally see where your time actually goes. Free forever, no credit card needed.",
     "cta": "Start My Free Tracker",
-    "note": "macOS & Windows. Installs in under a minute."
+    "note": "macOS & Windows. From download to tracking in two minutes."
   },
   "download": {
     "meta": {
       "title": "Download FocusNow Free — Mac & Windows",
-      "description": "Download FocusNow for free. Automatic focus and time tracking for macOS and Windows. Installs in under a minute."
+      "description": "Download FocusNow for free. Automatic focus and time tracking for macOS and Windows. Two-minute setup."
     },
     "title": "Download FocusNow",
-    "description": "Free forever. Installs in under a minute.",
+    "description": "Free forever. Set up in two minutes.",
     "detected": "Detected Platform",
     "downloadFor": "Get FocusNow for {platform}",
     "otherPlatforms": "Other Platforms",
@@ -264,6 +264,10 @@
         {
           "question": "How much CPU and battery does it use?",
           "answer": "Barely any. FocusNow checks the active window at regular intervals and sits quietly in the background — you won't notice it's running."
+        },
+        {
+          "question": "Does it work offline?",
+          "answer": "Yes. FocusNow keeps tracking without an internet connection and stores your data locally. When you're back online, it syncs — encrypted, as always."
         }
       ]
     }

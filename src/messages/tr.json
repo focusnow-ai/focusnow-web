@@ -160,7 +160,7 @@
     "steps": {
       "install": {
         "title": "İndirin ve Kurun",
-        "description": "Mac veya Windows'ta tek tıkla kurulum. Bir dakikadan kısa."
+        "description": "Mac veya Windows'ta tek tıkla kurulum — iki dakika içinde takip başlar."
       },
       "run": {
         "title": "Günlük İşlerinize Devam Edin",
@@ -188,15 +188,15 @@
     "titleHighlight": "Şimdi Başlıyor",
     "description": "FocusNow'u indirin ve zamanınızın gerçekte nereye gittiğini görmeye başlayın. Sonsuza dek ücretsiz, kredi kartı gerekmez.",
     "cta": "Ücretsiz Takibimi Başlat",
-    "note": "macOS ve Windows. Bir dakikada kurulur."
+    "note": "macOS ve Windows. İndirmeden takibe iki dakika."
   },
   "download": {
     "meta": {
       "title": "FocusNow'u Ücretsiz İndir — Mac ve Windows",
-      "description": "FocusNow'u ücretsiz indirin. macOS ve Windows için otomatik odak ve zaman takibi. Bir dakikada kurulur."
+      "description": "FocusNow'u ücretsiz indirin. macOS ve Windows için otomatik odak ve zaman takibi. İki dakikada kurulum."
     },
     "title": "FocusNow'u İndirin",
-    "description": "Sonsuza dek ücretsiz. Bir dakikada kurulur.",
+    "description": "Sonsuza dek ücretsiz. İki dakikada kurulum.",
     "detected": "Algılanan Platform",
     "downloadFor": "{platform} için FocusNow'u Al",
     "otherPlatforms": "Diğer Platformlar",
@@ -264,6 +264,10 @@
         {
           "question": "Ne kadar CPU ve pil kullanıyor?",
           "answer": "Yok denecek kadar az. FocusNow aktif pencereyi belirli aralıklarla kontrol eder ve arka planda sessizce durur — çalıştığını fark etmezsiniz."
+        },
+        {
+          "question": "Çevrimdışı çalışıyor mu?",
+          "answer": "Evet. FocusNow internet bağlantısı olmadan da takibe devam eder ve verinizi yerelde saklar. Tekrar çevrimiçi olduğunuzda her zamanki gibi şifreli olarak senkronize eder."
         }
       ]
     }
