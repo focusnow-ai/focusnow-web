@@ -2,16 +2,16 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Shield, Lock, MonitorOff, MonitorSmartphone } from "lucide-react";
+import { Lock, MonitorOff, ShieldCheck, Download } from "lucide-react";
 
 export function SocialProofBar() {
   const t = useTranslations("socialProof");
 
   const items = [
-    { key: "freeForever", icon: Shield },
-    { key: "platforms", icon: MonitorSmartphone },
     { key: "noTracking", icon: MonitorOff },
     { key: "encrypted", icon: Lock },
+    { key: "neverSold", icon: ShieldCheck },
+    { key: "control", icon: Download },
   ];
 
   return (

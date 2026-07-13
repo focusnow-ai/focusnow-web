@@ -50,10 +50,10 @@
     }
   },
   "socialProof": {
-    "freeForever": "Sonsuza dek ücretsiz",
-    "platforms": "Mac ve Windows",
-    "encrypted": "Verileriniz her zaman şifreli",
-    "noTracking": "Ekran görüntüsü veya tuş kaydı yok"
+    "noTracking": "Ekran görüntüsü veya tuş kaydı yok",
+    "encrypted": "Aktarımda ve depolamada şifreli",
+    "neverSold": "Verileriniz asla satılmaz",
+    "control": "Dilediğiniz an dışa aktarın veya silin"
   },
   "bentoFeatures": {
     "title": "Daha İyi Odaklanmak İçin",

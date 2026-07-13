@@ -50,10 +50,10 @@
     }
   },
   "socialProof": {
-    "freeForever": "Free forever",
-    "platforms": "Mac & Windows",
-    "encrypted": "Your data stays encrypted",
-    "noTracking": "No screenshots or keylogging"
+    "noTracking": "No screenshots or keylogging",
+    "encrypted": "Encrypted in transit & at rest",
+    "neverSold": "Your data is never sold",
+    "control": "Export or delete your data anytime"
   },
   "bentoFeatures": {
     "title": "Everything You Need to",
