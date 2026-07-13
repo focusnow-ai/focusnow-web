@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { DownloadPageClient } from "@/components/pages/download-page-client";
 import { getLatestDownloadLinks } from "@/lib/downloads";
-import { getFAQPageLD } from "@/lib/structured-data";
 
 export async function generateMetadata({
   params,
@@ -30,25 +29,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function DownloadPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "download.faq" });
-  const faqItems: { question: string; answer: string }[] = t.raw("items");
+export default async function DownloadPage() {
   const links = await getLatestDownloadLinks();
 
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getFAQPageLD(faqItems)),
-        }}
-      />
-      <DownloadPageClient links={links} />
-    </>
-  );
+  return <DownloadPageClient links={links} />;
 }

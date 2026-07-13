@@ -241,35 +241,6 @@
           "description": "İstediğiniz zaman FocusNow'u açın ve odak istatistiklerinizi, en çok kullandığınız uygulamaları ve verimlilik trendlerinizi görün."
         }
       }
-    },
-    "faq": {
-      "title": "Sık Sorulan Sorular",
-      "items": [
-        {
-          "question": "Gerçekten ücretsiz mi?",
-          "answer": "Evet — sonsuza dek ücretsiz, kart gerekmez. İleride ekip özellikleri gibi ekstralarla ücretli bir Pro katmanı gelebilir; ama bugün gördüğünüz her şey ücretsiz kalacak."
-        },
-        {
-          "question": "Bu bir çalışan takip yazılımı mı?",
-          "answer": "Hayır — tam tersi. FocusNow kişisel bir araçtır: verileriniz kendi hesabınızda durur ve sizden başka kimse göremez. Asla ekran görüntüsü almaz, asla tuş kaydı tutmaz."
-        },
-        {
-          "question": "FocusNow hangi verileri topluyor?",
-          "answer": "Yalnızca analizlerinizin ihtiyacı kadarını: öndeki uygulamanın adı, pencere başlığı, tarayıcılarda sayfa adresi ve orada geçen süre. Her şey aktarımda ve depolamada şifrelenir; asla satılmaz, paylaşılmaz."
-        },
-        {
-          "question": "Verilerimi dışa aktarabilir ya da silebilir miyim?",
-          "answer": "Evet. Ayarlar → Hesap'tan tüm verinizi tek tıkla JSON dosyası olarak indirebilir, dilediğiniz an hesabınızı — içindeki her şeyle birlikte — silebilirsiniz."
-        },
-        {
-          "question": "Ne kadar CPU ve pil kullanıyor?",
-          "answer": "Yok denecek kadar az. FocusNow aktif pencereyi belirli aralıklarla kontrol eder ve arka planda sessizce durur — çalıştığını fark etmezsiniz."
-        },
-        {
-          "question": "Çevrimdışı çalışıyor mu?",
-          "answer": "Evet. FocusNow internet bağlantısı olmadan da takibe devam eder ve verinizi yerelde saklar. Tekrar çevrimiçi olduğunuzda her zamanki gibi şifreli olarak senkronize eder."
-        }
-      ]
     }
   },
   "pricing": {
@@ -765,5 +736,34 @@
         "caption": "Neyin sayılacağına siz karar verin: herhangi bir kategorinin puanı nasıl etkilediğini değiştirin ya da kendi kategorinizi oluşturun."
       }
     }
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "items": [
+      {
+        "question": "Gerçekten ücretsiz mi?",
+        "answer": "Evet — sonsuza dek ücretsiz, kart gerekmez. İleride ekip özellikleri gibi ekstralarla ücretli bir Pro katmanı gelebilir; ama bugün gördüğünüz her şey ücretsiz kalacak."
+      },
+      {
+        "question": "Bu bir çalışan takip yazılımı mı?",
+        "answer": "Hayır — tam tersi. FocusNow kişisel bir araçtır: verileriniz kendi hesabınızda durur ve sizden başka kimse göremez. Asla ekran görüntüsü almaz, asla tuş kaydı tutmaz."
+      },
+      {
+        "question": "FocusNow hangi verileri topluyor?",
+        "answer": "Yalnızca analizlerinizin ihtiyacı kadarını: öndeki uygulamanın adı, pencere başlığı, tarayıcılarda sayfa adresi ve orada geçen süre. Her şey aktarımda ve depolamada şifrelenir; asla satılmaz, paylaşılmaz."
+      },
+      {
+        "question": "Verilerimi dışa aktarabilir ya da silebilir miyim?",
+        "answer": "Evet. Ayarlar → Hesap'tan tüm verinizi tek tıkla JSON dosyası olarak indirebilir, dilediğiniz an hesabınızı — içindeki her şeyle birlikte — silebilirsiniz."
+      },
+      {
+        "question": "Ne kadar CPU ve pil kullanıyor?",
+        "answer": "Yok denecek kadar az. FocusNow aktif pencereyi belirli aralıklarla kontrol eder ve arka planda sessizce durur — çalıştığını fark etmezsiniz."
+      },
+      {
+        "question": "Çevrimdışı çalışıyor mu?",
+        "answer": "Evet. FocusNow internet bağlantısı olmadan da takibe devam eder ve verinizi yerelde saklar. Tekrar çevrimiçi olduğunuzda her zamanki gibi şifreli olarak senkronize eder."
+      }
+    ]
   }
 }
