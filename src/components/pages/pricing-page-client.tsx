@@ -1,13 +1,106 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Check, Sparkles } from "lucide-react";
+import { Check, CheckCircle2, Sparkles } from "lucide-react";
+
+function WaitlistForm() {
+  const t = useTranslations("pricing.pro.waitlist");
+  const locale = useLocale();
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
+  const [errorKey, setErrorKey] = useState<string>("errorGeneric");
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const data = new FormData(form);
+
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: data.get("email"),
+          locale,
+          website: data.get("website"),
+        }),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        return;
+      }
+      const payload = await res.json().catch(() => ({}));
+      setErrorKey(
+        payload.error === "invalid_fields" ? "errorInvalid" : "errorGeneric"
+      );
+      setStatus("error");
+    } catch {
+      setErrorKey("errorGeneric");
+      setStatus("error");
+    }
+  }
+
+  if (status === "success") {
+    return (
+      <div className="mt-6 flex items-start gap-2 text-sm" role="status">
+        <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
+        <span>{t("success")}</span>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="mt-6">
+      <p className="text-sm font-medium mb-2">{t("prompt")}</p>
+      <div className="flex flex-col sm:flex-row gap-2">
+        <label htmlFor="waitlist-email" className="sr-only">
+          Email
+        </label>
+        <input
+          id="waitlist-email"
+          name="email"
+          type="email"
+          required
+          maxLength={254}
+          placeholder={t("emailPlaceholder")}
+          className="flex-1 h-10 rounded-md border border-input bg-background px-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        />
+        <button
+          type="submit"
+          disabled={status === "sending"}
+          className={cn(buttonVariants({ size: "default" }), "press-effect")}
+        >
+          {status === "sending" ? t("joining") : t("cta")}
+        </button>
+      </div>
+      {/* Honeypot — invisible to humans, irresistible to bots */}
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
+      {status === "error" && (
+        <p className="mt-2 text-sm text-red-500" role="alert">
+          {t(errorKey)}
+        </p>
+      )}
+      <p className="mt-2 text-xs text-muted-foreground">{t("privacyNote")}</p>
+    </form>
+  );
+}
 
 export function PricingPageClient() {
   const t = useTranslations("pricing");
@@ -92,6 +185,7 @@ export function PricingPageClient() {
                 <p className="text-muted-foreground mb-6">
                   {t("pro.description")}
                 </p>
+                <WaitlistForm />
                 <ul className="mt-8 space-y-3">
                   {proFeatures.map((feature: string, i: number) => (
                     <li key={i} className="flex items-start gap-3 text-sm">

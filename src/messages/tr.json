@@ -278,7 +278,17 @@
         "Gelişmiş yapay zeka içgörüleri ve öneriler",
         "Ekip ve çalışma alanı özellikleri",
         "Öncelikli destek"
-      ]
+      ],
+      "waitlist": {
+        "prompt": "Pro çıktığında ilk deneyen siz olun.",
+        "emailPlaceholder": "ornek@eposta.com",
+        "cta": "Erken erişime yazıl",
+        "joining": "Yazılıyor…",
+        "success": "Listedesiniz — Pro hazır olduğunda size e-posta göndereceğiz.",
+        "errorInvalid": "Lütfen geçerli bir e-posta adresi girin.",
+        "errorGeneric": "Bir şeyler ters gitti. Lütfen daha sonra tekrar deneyin.",
+        "privacyNote": "Sadece Pro haberi. Bülten yok, spam yok."
+      }
     }
   },
   "about": {
@@ -334,7 +344,8 @@
           "İsteğe bağlı profil bilgileri — dilerseniz paylaştığınız meslek unvanınız ve sektörünüz; içgörülerinizi size daha uygun hâle getirmek için kullanılır",
           "Aktivite verileri — kullandığınız uygulamaların adları ve dosya yolları, pencere başlıkları, ziyaret ettiğiniz web adresleri (URL'ler), aktif/boşta/uzakta durumlarınız, zaman damgaları ve süreler ile odak seansı bilgileriniz. Verimlilik analizleriniz bu verilerle oluşturulur",
           "İsteğe bağlı tanılama ve kullanım analitiği — işletim sistemi ve uygulama sürümü, cihaz mimarisi, dil ve tema ayarları, anonimleştirilmiş kullanım olayları ve hata raporları. Yalnızca açık rıza verirseniz toplanır (bkz. 7. bölüm)",
-          "Web sitesi verileri — focusnow.ai sitesinin ne topladığı aşağıdaki çerezler bölümünde açıklanmıştır"
+          "Web sitesi verileri — focusnow.ai sitesinin ne topladığı aşağıdaki çerezler bölümünde açıklanmıştır",
+          "Web sitesi form verileri — iletişim formunu kullanırsanız gönderdiğiniz ad, e-posta adresi, konu ve mesajı alırız; Pro bekleme listesine yazılırsanız e-posta adresinizi saklarız. Her ikisi de yalnızca size yanıt vermek veya Pro hakkında bilgilendirmek için kullanılır, asla satılmaz veya paylaşılmaz ve talebiniz üzerine silinir"
         ]
       },
       "tracking": {
@@ -765,5 +776,36 @@
         "answer": "Evet. FocusNow internet bağlantısı olmadan da takibe devam eder ve verinizi yerelde saklar. Tekrar çevrimiçi olduğunuzda her zamanki gibi şifreli olarak senkronize eder."
       }
     ]
+  },
+  "contact": {
+    "meta": {
+      "title": "FocusNow İletişim — Geri Bildirim, Destek ve İş Birliği",
+      "description": "FocusNow ekibine ulaşın. Her mesaj doğrudan kurucunun gelen kutusuna düşer — 2 iş günü içinde yanıtlarız."
+    },
+    "title": "Bize",
+    "titleHighlight": "Ulaşın",
+    "description": "Geri bildirim, soru, iş birliği fikri — her mesaj doğrudan kurucunun gelen kutusuna düşer. 2 iş günü içinde yanıtlarız.",
+    "form": {
+      "name": "Ad",
+      "namePlaceholder": "Adınız",
+      "email": "E-posta",
+      "emailPlaceholder": "ornek@eposta.com",
+      "topic": "Konu",
+      "topics": {
+        "feedback": "Geri bildirim",
+        "support": "Destek",
+        "partnership": "Ortaklık ve iş birliği",
+        "other": "Diğer"
+      },
+      "message": "Mesaj",
+      "messagePlaceholder": "Aklınızdakini yazın — her boyutta geri bildirime açığız.",
+      "submit": "Mesajı gönder",
+      "sending": "Gönderiliyor…",
+      "success": "Teşekkürler — mesajınız gelen kutumuzda. 2 iş günü içinde yanıtlarız.",
+      "errorFields": "Lütfen alanları kontrol edip tekrar deneyin.",
+      "errorRate": "Kısa sürede çok fazla mesaj gönderildi. Birkaç dakika sonra tekrar deneyin.",
+      "errorGeneric": "Bizim tarafta bir şeyler ters gitti. Lütfen doğrudan info@focusnow.ai adresine yazın."
+    },
+    "direct": "Form yerine e-posta isterseniz:"
   }
 }
