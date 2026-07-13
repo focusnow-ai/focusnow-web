@@ -24,8 +24,8 @@ const itemVariants = {
 /* ─── Pillar data ─── */
 
 const pillars = [
-  { key: "privacy", icon: Shield },
   { key: "simplicity", icon: Zap },
+  { key: "privacy", icon: Shield },
   { key: "transparency", icon: Eye },
 ] as const;
 
