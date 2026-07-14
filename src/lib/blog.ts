@@ -72,3 +72,12 @@ export function getAllBlogSlugs(locale: string): string[] {
     .filter((f) => f.endsWith(".mdx"))
     .map((f) => f.replace(/\.mdx$/, ""));
 }
+
+/** Human-readable, localized post date (e.g. "July 8, 2026" / "8 Temmuz 2026"). */
+export function formatPostDate(date: string, locale: string): string {
+  return new Intl.DateTimeFormat(locale === "tr" ? "tr-TR" : "en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }).format(new Date(date));
+}

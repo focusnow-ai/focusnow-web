@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 import { Download, Check, AlertCircle } from "lucide-react";
 import { FAQItem } from "@/components/landing/faq-section";
 import { DownloadCTA } from "@/components/landing/download-cta";
-import { getFAQPageLD } from "@/lib/structured-data";
 
 interface UseCaseTemplateProps {
   segment: "remoteWorkers" | "students" | "freelancers" | "developers";
@@ -124,12 +123,6 @@ export function UseCaseTemplate({ segment }: UseCaseTemplateProps) {
           <h2 className="text-2xl font-bold text-center mb-8">
             {faqT("title")}
           </h2>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(getFAQPageLD(faqItems)),
-            }}
-          />
           <Card>
             <CardContent className="p-6">
               {faqItems.map((item, i) => (
