@@ -137,7 +137,16 @@ export function AboutPageClient() {
                   </h2>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  {t("founder.content")}
+                  {t.rich("founder.content", {
+                    mail: (chunks) => (
+                      <a
+                        href="mailto:info@focusnow.ai"
+                        className="text-purple-600 dark:text-purple-400 hover:underline"
+                      >
+                        {chunks}
+                      </a>
+                    ),
+                  })}
                 </p>
                 <p className="mt-4 text-sm font-medium">
                   {t("founder.signature")}
