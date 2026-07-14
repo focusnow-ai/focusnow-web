@@ -126,10 +126,10 @@ export function AboutPageClient() {
                 <div className="flex items-center gap-3 mb-4">
                   <div className="flex -space-x-2">
                     <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/40 border-2 border-card flex items-center justify-center font-semibold text-purple-600 dark:text-purple-400">
-                      B
+                      C
                     </div>
                     <div className="w-10 h-10 rounded-full bg-purple-200 dark:bg-purple-800/40 border-2 border-card flex items-center justify-center font-semibold text-purple-700 dark:text-purple-300">
-                      C
+                      B
                     </div>
                   </div>
                   <h2 className="text-lg font-semibold">
