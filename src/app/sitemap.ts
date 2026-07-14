@@ -18,6 +18,7 @@ const trPaths: Record<string, string> = {
   "/use-cases/students": "/kullanim-alanlari/ogrenciler",
   "/use-cases/freelancers": "/kullanim-alanlari/serbest-calisanlar",
   "/use-cases/developers": "/kullanim-alanlari/yazilimcilar",
+  "/compare/rize": "/karsilastir/rize",
 };
 
 interface PageConfig {
@@ -41,6 +42,7 @@ const staticPages: PageConfig[] = [
   { path: "/use-cases/students", changeFrequency: "monthly", priority: 0.7, trPriority: 0.8 },
   { path: "/use-cases/freelancers", changeFrequency: "monthly", priority: 0.7, trPriority: 0.7 },
   { path: "/use-cases/developers", changeFrequency: "monthly", priority: 0.7, trPriority: 0.7 },
+  { path: "/compare/rize", changeFrequency: "monthly", priority: 0.7, trPriority: 0.5 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -602,7 +602,8 @@
     "resources": "Resources",
     "legal": "Legal",
     "contact": "Contact",
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "compare": "Compare"
   },
   "consent": {
     "message": "We use cookies to analyze site traffic and improve your experience.",
@@ -886,5 +887,134 @@
     "direct": "Prefer plain email? Write to",
     "copy": "Copy address",
     "copied": "Copied"
+  },
+  "compare": {
+    "verified": "Competitor information last verified: July 2026.",
+    "rize": {
+      "meta": {
+        "title": "FocusNow vs Rize: Is the Free Alternative Enough? (2026)",
+        "description": "An honest comparison of FocusNow and Rize: pricing, automatic tracking, focus scores, AI reports, and who each tracker is really for."
+      },
+      "badge": "Comparison",
+      "title": "FocusNow vs",
+      "titleHighlight": "Rize",
+      "description": "Rize is a polished, paid time tracker. FocusNow keeps automatic tracking, focus scores, and AI reports free. Here is an honest look at where each one fits.",
+      "chooseUs": {
+        "title": "Choose FocusNow if...",
+        "items": [
+          "You want automatic time tracking without a subscription",
+          "Focus scores and an AI daily report cover your needs",
+          "You want local-first storage with encrypted sync and one-click data export",
+          "You want a simple tracker that just runs — no projects, clients, or setup to manage"
+        ]
+      },
+      "chooseThem": {
+        "title": "Choose Rize if...",
+        "items": [
+          "You need to block distracting apps and sites during sessions",
+          "You bill clients and need project and client tracking",
+          "You want your calendar meetings tracked automatically",
+          "A monthly subscription is worth the extra automation to you"
+        ]
+      },
+      "table": {
+        "title": "Feature by Feature",
+        "featureCol": "Feature",
+        "usCol": "FocusNow",
+        "themCol": "Rize",
+        "rows": [
+          {
+            "feature": "Price",
+            "us": "Free",
+            "them": "$9.99–$14.99/mo (individual)"
+          },
+          {
+            "feature": "Free plan",
+            "us": "Full app, free",
+            "them": "Free trial only"
+          },
+          {
+            "feature": "Automatic tracking",
+            "us": "yes",
+            "them": "yes"
+          },
+          {
+            "feature": "Focus score",
+            "us": "yes",
+            "them": "yes"
+          },
+          {
+            "feature": "Focus sessions",
+            "us": "Pomodoro (25 min) & Deep Work (90 min)",
+            "them": "Timer & planned sessions"
+          },
+          {
+            "feature": "AI reports",
+            "us": "AI daily report",
+            "them": "AI reports & tag suggestions"
+          },
+          {
+            "feature": "Distraction blocker",
+            "us": "no",
+            "them": "yes"
+          },
+          {
+            "feature": "Calendar integration",
+            "us": "no",
+            "them": "yes"
+          },
+          {
+            "feature": "Focus music",
+            "us": "no",
+            "them": "yes"
+          },
+          {
+            "feature": "Project & client tracking",
+            "us": "no",
+            "them": "Professional plan"
+          },
+          {
+            "feature": "Platforms",
+            "us": "Mac & Windows",
+            "them": "Mac & Windows"
+          }
+        ]
+      },
+      "sections": [
+        {
+          "title": "Two different price philosophies",
+          "body": "Rize charges a subscription and earns it with power features: a distraction blocker, calendar-aware tracking, and project billing. FocusNow takes the opposite path — the core promise of seeing exactly where your time goes stays free. If you bill clients by the hour, Rize's paid tiers can pay for themselves. If you simply want clarity about your day, you shouldn't need a subscription for that."
+        },
+        {
+          "title": "Your data, your rules",
+          "body": "FocusNow records only the active app name and window title — never screenshots, never keystrokes. Your data is stored local-first with encrypted sync, and you can export everything as a single JSON file or delete your account at any time."
+        },
+        {
+          "title": "The honest bottom line",
+          "body": "Rize is an excellent tool, and if you need blocking, calendar integration, or client billing, it's worth the price. But most people looking at time trackers want one thing: to see their real workday and improve it. FocusNow does exactly that, for free. The easiest way to decide is to run FocusNow alongside your current setup for a week — it costs nothing to find out."
+        }
+      ],
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "items": [
+          {
+            "question": "Is FocusNow really free?",
+            "answer": "Yes. Automatic tracking, focus scores, sessions, and the AI daily report are all free — no credit card, no trial clock. A paid Pro plan with team features is planned, but the core tracker stays free."
+          },
+          {
+            "question": "What does Rize cost?",
+            "answer": "As of July 2026, Rize's individual plans run from $9.99/month (billed annually) to $14.99/month for the Professional plan with project and client tracking. There is a free trial but no permanent free plan."
+          },
+          {
+            "question": "Can FocusNow block distracting apps like Rize does?",
+            "answer": "No. FocusNow shows you where your time goes but doesn't block anything today. If hard blocking is essential to how you work, Rize is the better fit for that specific need."
+          },
+          {
+            "question": "How do I switch from Rize to FocusNow?",
+            "answer": "Just download FocusNow and let it run — there's nothing to import or configure. Many people run both side by side for a week and then keep the one that fits."
+          }
+        ]
+      }
+    }
   }
 }
