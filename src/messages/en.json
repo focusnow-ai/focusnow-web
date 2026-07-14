@@ -54,7 +54,7 @@
     "l1": "Screenshots — ever",
     "v2": "0",
     "l2": "Keystrokes logged",
-    "v3": "2 min",
+    "v3": "< 2 min",
     "l3": "From download to tracking",
     "v4": "1",
     "l4": "Person who sees this: you"
@@ -299,7 +299,7 @@
     "title": "About",
     "titleHighlight": "FocusNow",
     "mission": "Deep work shouldn't require deep effort.",
-    "description": "FocusNow was born from a simple idea: you should be able to understand your productivity without giving up your privacy. Most tools either lack depth or compromise your data. We thought there had to be a better way.",
+    "description": "FocusNow started with a question we kept asking at the end of busy days: where did all that time actually go? We dug into the research on attention and focus, took inspiration from Cal Newport's Deep Work, and built something simple that bends to your rules. Because once you know where your day goes, the week and the month fall into place — and there's room again for the work that matters and the life around it.",
     "pillars": {
       "privacy": {
         "title": "Privacy-First",
@@ -307,12 +307,23 @@
       },
       "simplicity": {
         "title": "Effortless",
-        "content": "No buttons to press, no timers to start. FocusNow runs silently in the background and shows you where your time went. Productivity tracking that gets out of your way."
+        "content": "No buttons to press, no timers to start. FocusNow runs silently in the background and shows you where your time went. And the rules are yours — you decide what counts as focus and what counts as distraction."
       },
       "transparency": {
         "title": "Transparent",
         "content": "We're clear about what we collect, how we store it, and why. No dark patterns, no hidden data flows. You own your data and can export or delete it anytime."
       }
+    },
+    "founder": {
+      "title": "A note from the founders",
+      "content": "FocusNow is built by two people — Cihan and Barbaros. We didn't start it to squeeze more hours out of ourselves; we started it to waste fewer of them — to finish focused work in focused time and keep the rest for family, hobbies, and downtime. We wanted to see where our days went without handing that answer to a surveillance tool, so we built our own. We use FocusNow every day, and it grows with what our users tell us. When you write to <mail>info@focusnow.ai</mail>, one of us answers.",
+      "signature": "Cihan & Barbaros — founders of FocusNow"
+    },
+    "proof": {
+      "lead": "Not just words —",
+      "privacyLink": "read our privacy commitment",
+      "middle": "or see what ships in the",
+      "changelogLink": "changelog"
     }
   },
   "privacyPage": {
@@ -627,7 +638,23 @@
           "Build evidence that remote work works for you"
         ]
       },
-      "cta": "Start My Free Tracker"
+      "cta": "Start My Free Tracker",
+      "faq": {
+        "items": [
+          {
+            "question": "Can my employer or team see my data?",
+            "answer": "No. FocusNow is a personal tool — your data lives in your own account and there are no team dashboards or admin views. Only you see your numbers."
+          },
+          {
+            "question": "Does FocusNow watch my meetings or read my messages?",
+            "answer": "No. It never captures your screen, camera, microphone or keystrokes. It only records which app or site is in front and for how long — enough for your analytics, nothing more."
+          },
+          {
+            "question": "Can I keep work and personal time separate?",
+            "answer": "Yes. Custom categories and per-app rules let you decide what counts as work, personal or distraction, and automatic idle detection keeps your numbers honest."
+          }
+        ]
+      }
     },
     "students": {
       "meta": {
@@ -656,7 +683,23 @@
           "Review weekly trends to improve your study habits"
         ]
       },
-      "cta": "Start My Free Tracker"
+      "cta": "Start My Free Tracker",
+      "faq": {
+        "items": [
+          {
+            "question": "Can FocusNow tell studying apart from procrastination?",
+            "answer": "Yes — you set the rules. Mark your note apps and course sites as focus, label YouTube or games as distraction, and your day sorts itself automatically."
+          },
+          {
+            "question": "Do I need to start a timer every study session?",
+            "answer": "No. FocusNow tracks automatically in the background. Pomodoro and Deep Work sessions are there when you want structure — they're optional, not homework."
+          },
+          {
+            "question": "Is it really free for students?",
+            "answer": "Yes. The core app is free forever with no credit card — there's no separate student plan because everyone gets it free."
+          }
+        ]
+      }
     },
     "freelancers": {
       "meta": {
@@ -685,7 +728,23 @@
           "Build data to price your services accurately"
         ]
       },
-      "cta": "Start My Free Tracker"
+      "cta": "Start My Free Tracker",
+      "faq": {
+        "items": [
+          {
+            "question": "Can I use FocusNow to back up my client billing?",
+            "answer": "Yes, as an honest record: you see exactly how long you spent in each app and on each site, day by day, and you can export your data anytime to reconcile with invoices."
+          },
+          {
+            "question": "Do I have to run timers as I switch between projects?",
+            "answer": "No timers. FocusNow records your real activity automatically, and custom categories with per-app rules let you slice the day the way you actually work."
+          },
+          {
+            "question": "Will clients or anyone else see my data?",
+            "answer": "No. Your data lives in your own account, encrypted in transit and at rest — no shared dashboards, no third parties, never sold."
+          }
+        ]
+      }
     },
     "developers": {
       "meta": {
@@ -714,7 +773,23 @@
           "Build data to advocate for more focus time"
         ]
       },
-      "cta": "Start My Free Tracker"
+      "cta": "Start My Free Tracker",
+      "faq": {
+        "items": [
+          {
+            "question": "Does FocusNow read my code or log keystrokes?",
+            "answer": "No. It records app names and window titles only — never keystrokes, clipboard or screen content. Your code stays yours."
+          },
+          {
+            "question": "Does it work with IDEs, terminals and browsers?",
+            "answer": "Yes. Any desktop app counts — VS Code, JetBrains IDEs, terminals, browsers and the sites you visit — so context switches finally become visible."
+          },
+          {
+            "question": "Will it slow down my machine?",
+            "answer": "No. It checks the active window at intervals and sits quietly in the background — lighter than a single browser tab."
+          }
+        ]
+      }
     }
   },
   "showcase": {

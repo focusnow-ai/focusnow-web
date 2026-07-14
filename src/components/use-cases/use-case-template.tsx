@@ -8,6 +8,9 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Download, Check, AlertCircle } from "lucide-react";
+import { FAQItem } from "@/components/landing/faq-section";
+import { DownloadCTA } from "@/components/landing/download-cta";
+import { getFAQPageLD } from "@/lib/structured-data";
 
 interface UseCaseTemplateProps {
   segment: "remoteWorkers" | "students" | "freelancers" | "developers";
@@ -15,12 +18,14 @@ interface UseCaseTemplateProps {
 
 export function UseCaseTemplate({ segment }: UseCaseTemplateProps) {
   const t = useTranslations(`useCases.${segment}`);
+  const faqT = useTranslations("faq");
 
   const painPoints: string[] = t.raw("painPoints.items");
   const solutions: string[] = t.raw("solution.items");
+  const faqItems: { question: string; answer: string }[] = t.raw("faq.items");
 
   return (
-    <div className="py-20 sm:py-28">
+    <div className="pt-20 sm:pt-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Hero */}
         <motion.div
@@ -108,25 +113,39 @@ export function UseCaseTemplate({ segment }: UseCaseTemplateProps) {
           </motion.div>
         </div>
 
-        {/* Bottom CTA */}
+        {/* Persona FAQ */}
         <motion.div
-          className="mt-16 text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-20 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "0px 0px -40px 0px" }}
+          transition={{ duration: 0.5 }}
         >
-          <Link
-            href="/download"
-            className={cn(
-              buttonVariants({ size: "lg" }),
-              "text-base px-8 h-12 press-effect"
-            )}
-          >
-            <Download className="mr-2 h-5 w-5" />
-            {t("cta")}
-          </Link>
+          <h2 className="text-2xl font-bold text-center mb-8">
+            {faqT("title")}
+          </h2>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(getFAQPageLD(faqItems)),
+            }}
+          />
+          <Card>
+            <CardContent className="p-6">
+              {faqItems.map((item, i) => (
+                <FAQItem
+                  key={i}
+                  question={item.question}
+                  answer={item.answer}
+                />
+              ))}
+            </CardContent>
+          </Card>
         </motion.div>
       </div>
+
+      {/* Final CTA — same pattern as the landing page */}
+      <DownloadCTA />
     </div>
   );
 }

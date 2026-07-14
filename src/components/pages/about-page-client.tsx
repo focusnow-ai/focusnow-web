@@ -3,6 +3,9 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Shield, Zap, Eye } from "lucide-react";
+import { Link } from "@/i18n/navigation";
+import { Card, CardContent } from "@/components/ui/card";
+import { DownloadCTA } from "@/components/landing/download-cta";
 
 /* ─── Animation variants ─── */
 
@@ -21,8 +24,8 @@ const itemVariants = {
 /* ─── Pillar data ─── */
 
 const pillars = [
-  { key: "privacy", icon: Shield },
   { key: "simplicity", icon: Zap },
+  { key: "privacy", icon: Shield },
   { key: "transparency", icon: Eye },
 ] as const;
 
@@ -80,8 +83,82 @@ export function AboutPageClient() {
               </motion.div>
             ))}
           </motion.div>
+
+          {/* Values in practice — proof links */}
+          <motion.p
+            className="mt-12 text-center text-sm text-muted-foreground max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            {t("proof.lead")}{" "}
+            <Link
+              href="/privacy"
+              className="text-purple-600 dark:text-purple-400 hover:underline"
+            >
+              {t("proof.privacyLink")}
+            </Link>{" "}
+            {t("proof.middle")}{" "}
+            <Link
+              href="/changelog"
+              className="text-purple-600 dark:text-purple-400 hover:underline"
+            >
+              {t("proof.changelogLink")}
+            </Link>
+            .
+          </motion.p>
         </div>
       </div>
+
+      {/* Founder note */}
+      <div className="pb-20 sm:pb-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "0px 0px -40px 0px" }}
+            transition={{ duration: 0.5 }}
+          >
+            <Card>
+              <CardContent className="p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="flex -space-x-2">
+                    <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/40 border-2 border-card flex items-center justify-center font-semibold text-purple-600 dark:text-purple-400">
+                      C
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-purple-200 dark:bg-purple-800/40 border-2 border-card flex items-center justify-center font-semibold text-purple-700 dark:text-purple-300">
+                      B
+                    </div>
+                  </div>
+                  <h2 className="text-lg font-semibold">
+                    {t("founder.title")}
+                  </h2>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {t.rich("founder.content", {
+                    mail: (chunks) => (
+                      <a
+                        href="mailto:info@focusnow.ai"
+                        className="text-purple-600 dark:text-purple-400 hover:underline"
+                      >
+                        {chunks}
+                      </a>
+                    ),
+                  })}
+                </p>
+                <p className="mt-4 text-sm font-medium">
+                  {t("founder.signature")}
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Final CTA — same pattern as the landing page */}
+      <DownloadCTA />
     </div>
   );
 }

@@ -54,7 +54,7 @@
     "l1": "Ekran görüntüsü — asla",
     "v2": "0",
     "l2": "Tuş kaydı",
-    "v3": "2 dk",
+    "v3": "< 2 dk",
     "l3": "İndirmeden takibe",
     "v4": "1",
     "l4": "Bu veriyi gören kişi: sen"
@@ -299,7 +299,7 @@
     "title": "FocusNow",
     "titleHighlight": "Hakkında",
     "mission": "Derin çalışma, derin çaba gerektirmemeli.",
-    "description": "FocusNow basit bir fikirden doğdu: gizliliğinizden ödün vermeden verimliliğinizi takip edebilmelisiniz. Çoğu araç ya yeterince detaylı değil ya da verilerinizi tehlikeye atıyor. Daha iyi bir yol olması gerektiğini düşündük.",
+    "description": "FocusNow, yoğun günlerin sonunda sorup durduğumuz bir soruyla başladı: onca zaman gerçekten nereye gitti? Dikkat ve odak üzerine araştırmaları derinlemesine inceledik, Cal Newport'un Deep Work'ünden ilham aldık ve basit, kuralları size ait bir araç yaptık. Çünkü günün nereye gittiğini bilince haftanın da ayın da gidişatı belli oluyor — ve önemli işlere de, işin dışındaki hayata da yeniden yer açılıyor.",
     "pillars": {
       "privacy": {
         "title": "Gizlilik Öncelikli",
@@ -307,12 +307,23 @@
       },
       "simplicity": {
         "title": "Zahmetsiz",
-        "content": "Basacak düğme yok, başlatacak zamanlayıcı yok. FocusNow arka planda sessizce çalışır ve zamanınızın nereye gittiğini gösterir. Araya girmeyen verimlilik takibi."
+        "content": "Basacak düğme yok, başlatacak zamanlayıcı yok. FocusNow arka planda sessizce çalışır ve zamanınızın nereye gittiğini gösterir. Kurallar da sizin — neyin odak, neyin dikkat dağıtıcı sayılacağına siz karar verirsiniz."
       },
       "transparency": {
         "title": "Şeffaf",
         "content": "Ne topladığımız, nasıl sakladığımız ve neden yaptığımız konusunda açığız. Gizli veri akışı yok, karanlık kalıp yok. Verileriniz sizin — istediğiniz zaman dışa aktarın veya silin."
       }
+    },
+    "founder": {
+      "title": "Kuruculardan bir not",
+      "content": "FocusNow'u iki kişi yapıyor — Cihan ve Barbaros. Bu işe kendimizden daha fazla saat çıkarmak için değil, daha az saat ziyan etmek için başladık: odaklı işi odaklı sürede bitirip kalanı ailemize, hobilerimize ve dinlenmeye ayırmak istedik. Günlerimizin nereye gittiğini, cevabı bir gözetim aracına teslim etmeden görmek istiyorduk; biz de kendimizinkini yaptık. FocusNow'u her gün kendimiz kullanıyoruz ve kullanıcılarımızın söyledikleriyle büyüyor. <mail>info@focusnow.ai</mail>'ye yazdığınızda cevaplayan ikimizden biridir.",
+      "signature": "Cihan ve Barbaros — FocusNow'un kurucuları"
+    },
+    "proof": {
+      "lead": "Sözde değil, pratikte:",
+      "privacyLink": "gizlilik taahhüdümüzü okuyun",
+      "middle": "ya da neler yayınlandığını görün:",
+      "changelogLink": "değişiklik kaydı"
     }
   },
   "privacyPage": {
@@ -627,7 +638,23 @@
           "Uzaktan çalışmanın işe yaradığına dair somut veriler oluşturun"
         ]
       },
-      "cta": "Ücretsiz Takibimi Başlat"
+      "cta": "Ücretsiz Takibimi Başlat",
+      "faq": {
+        "items": [
+          {
+            "question": "İşverenim veya ekibim verilerimi görebilir mi?",
+            "answer": "Hayır. FocusNow kişisel bir araçtır — veriniz kendi hesabınızda durur; ekip paneli ya da yönetici görünümü yoktur. Rakamlarınızı yalnızca siz görürsünüz."
+          },
+          {
+            "question": "FocusNow toplantılarımı izliyor ya da mesajlarımı okuyor mu?",
+            "answer": "Hayır. Ekranınızı, kameranızı, mikrofonunuzu veya tuş vuruşlarınızı asla kaydetmez. Yalnızca hangi uygulama ya da sitenin önde olduğunu ve ne kadar kaldığını kaydeder — analizleriniz için gereken kadar, fazlası değil."
+          },
+          {
+            "question": "İş ve kişisel zamanı ayrı tutabilir miyim?",
+            "answer": "Evet. Özel kategoriler ve uygulama bazlı kurallarla neyin iş, neyin kişisel, neyin dikkat dağıtıcı sayılacağına siz karar verirsiniz; otomatik boşta algılama da rakamları dürüst tutar."
+          }
+        ]
+      }
     },
     "students": {
       "meta": {
@@ -656,7 +683,23 @@
           "Haftalık trendleri inceleyerek çalışma alışkanlıklarınızı geliştirin"
         ]
       },
-      "cta": "Ücretsiz Takibimi Başlat"
+      "cta": "Ücretsiz Takibimi Başlat",
+      "faq": {
+        "items": [
+          {
+            "question": "FocusNow ders çalışmayla oyalanmayı ayırt edebilir mi?",
+            "answer": "Evet — kuralları siz koyarsınız. Not uygulamalarınızı ve ders sitelerinizi odak, YouTube veya oyunları dikkat dağıtıcı olarak işaretleyin; gününüz kendiliğinden sınıflansın."
+          },
+          {
+            "question": "Her çalışma seansında zamanlayıcı başlatmam gerekiyor mu?",
+            "answer": "Hayır. FocusNow arka planda otomatik takip eder. Pomodoro ve Derin Çalışma seansları yapı istediğinizde oradadır — zorunluluk değil, seçenek."
+          },
+          {
+            "question": "Öğrenciler için gerçekten ücretsiz mi?",
+            "answer": "Evet. Çekirdek uygulama sonsuza dek ücretsiz, kredi kartı da gerekmez — ayrı bir öğrenci planı yok çünkü herkes ücretsiz kullanıyor."
+          }
+        ]
+      }
     },
     "freelancers": {
       "meta": {
@@ -685,7 +728,23 @@
           "Hizmetlerinizi doğru fiyatlandırmak için veri toplayın"
         ]
       },
-      "cta": "Ücretsiz Takibimi Başlat"
+      "cta": "Ücretsiz Takibimi Başlat",
+      "faq": {
+        "items": [
+          {
+            "question": "FocusNow'u müşteri faturalandırmama dayanak yapabilir miyim?",
+            "answer": "Evet, dürüst bir kayıt olarak: her uygulamada ve her sitede gün gün tam olarak ne kadar kaldığınızı görürsünüz; veriyi dilediğiniz an dışa aktarıp faturalarınızla karşılaştırabilirsiniz."
+          },
+          {
+            "question": "Projeler arasında geçerken zamanlayıcı kurmam gerekir mi?",
+            "answer": "Zamanlayıcı yok. FocusNow gerçek aktivitenizi otomatik kaydeder; özel kategoriler ve uygulama kurallarıyla günü gerçekten çalıştığınız gibi dilimlersiniz."
+          },
+          {
+            "question": "Müşterilerim ya da başkası verilerimi görür mü?",
+            "answer": "Hayır. Veriniz kendi hesabınızda, aktarımda ve depolamada şifreli durur — paylaşılan panel yok, üçüncü taraf yok, asla satılmaz."
+          }
+        ]
+      }
     },
     "developers": {
       "meta": {
@@ -714,7 +773,23 @@
           "Daha fazla odak süresi talep etmek için veri toplayın"
         ]
       },
-      "cta": "Ücretsiz Takibimi Başlat"
+      "cta": "Ücretsiz Takibimi Başlat",
+      "faq": {
+        "items": [
+          {
+            "question": "FocusNow kodumu okuyor ya da tuş kaydı yapıyor mu?",
+            "answer": "Hayır. Yalnızca uygulama adlarını ve pencere başlıklarını kaydeder — tuş vuruşu, pano veya ekran içeriği asla. Kodunuz sizde kalır."
+          },
+          {
+            "question": "IDE'ler, terminaller ve tarayıcılarla çalışıyor mu?",
+            "answer": "Evet. Her masaüstü uygulaması sayılır — VS Code, JetBrains IDE'leri, terminaller, tarayıcılar ve ziyaret ettiğiniz siteler — bağlam geçişleri nihayet görünür olur."
+          },
+          {
+            "question": "Makinemi yavaşlatır mı?",
+            "answer": "Hayır. Aktif pencereyi aralıklarla kontrol eder ve arka planda sessizce durur — tek bir tarayıcı sekmesinden bile hafiftir."
+          }
+        ]
+      }
     }
   },
   "showcase": {
