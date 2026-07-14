@@ -58,6 +58,13 @@ export function DownloadPageClient({ links }: { links: DownloadLink[] }) {
   const isStore = (link: DownloadLink) => link.platform === "windows";
   const hrefFor = (link: DownloadLink) =>
     isStore(link) ? getWindowsStoreLink(platform) : link.url;
+  /* Web listing opens in a new tab (visitor keeps the site); the
+     ms-windows-store:// deep link must stay target-less — _blank would
+     leave a blank tab behind while the OS opens the Store app. */
+  const targetFor = (link: DownloadLink) =>
+    isStore(link) && platform !== "windows"
+      ? { target: "_blank", rel: "noopener" }
+      : {};
   const isAvailable = (link: DownloadLink) => isStore(link) || link.available;
   const track = (link: DownloadLink) =>
     trackDownload(
@@ -105,6 +112,7 @@ export function DownloadPageClient({ links }: { links: DownloadLink[] }) {
               {isAvailable(primary) ? (
                 <a
                   href={hrefFor(primary)}
+                  {...targetFor(primary)}
                   onClick={() => track(primary)}
                   className={cn(
                     buttonVariants({ size: "lg" }),
@@ -162,6 +170,7 @@ export function DownloadPageClient({ links }: { links: DownloadLink[] }) {
                     {isAvailable(link) ? (
                       <a
                         href={hrefFor(link)}
+                        {...targetFor(link)}
                         onClick={() => track(link)}
                         className={cn(
                           buttonVariants({ size: "sm", variant: "outline" }),
