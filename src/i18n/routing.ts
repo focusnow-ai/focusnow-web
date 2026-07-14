@@ -58,6 +58,10 @@ export const routing = defineRouting({
       en: "/use-cases/developers",
       tr: "/kullanim-alanlari/yazilimcilar",
     },
+    "/compare/rize": {
+      en: "/compare/rize",
+      tr: "/karsilastir/rize",
+    },
   },
 });
 

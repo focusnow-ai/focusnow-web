@@ -602,7 +602,8 @@
     "resources": "Kaynaklar",
     "legal": "Yasal",
     "contact": "Bize Ulaşın",
-    "copyright": "Tüm hakları saklıdır."
+    "copyright": "Tüm hakları saklıdır.",
+    "compare": "Karşılaştır"
   },
   "consent": {
     "message": "Site trafiğini analiz etmek ve deneyiminizi iyileştirmek için çerezler kullanıyoruz.",
@@ -886,5 +887,134 @@
     "direct": "Form yerine e-posta isterseniz:",
     "copy": "Adresi kopyala",
     "copied": "Kopyalandı"
+  },
+  "compare": {
+    "verified": "Rakip bilgileri son doğrulama: Temmuz 2026.",
+    "rize": {
+      "meta": {
+        "title": "FocusNow vs Rize: Ücretsiz Alternatif Yeterli mi? (2026)",
+        "description": "FocusNow ve Rize'ın dürüst karşılaştırması: fiyat, otomatik takip, odak skorları, AI raporları ve hangisi kimin için."
+      },
+      "badge": "Karşılaştırma",
+      "title": "FocusNow vs",
+      "titleHighlight": "Rize",
+      "description": "Rize cilalı, ücretli bir zaman takip aracı. FocusNow ise otomatik takibi, odak skorlarını ve AI raporlarını ücretsiz sunuyor. Hangisinin nereye oturduğuna dürüstçe bakalım.",
+      "chooseUs": {
+        "title": "Şu durumda FocusNow'u seç...",
+        "items": [
+          "Abonelik ödemeden otomatik zaman takibi istiyorsan",
+          "Odak skoru ve günlük AI raporu ihtiyacını karşılıyorsa",
+          "Verinin önce cihazında durmasını ve tek tıkla dışa aktarmayı önemsiyorsan",
+          "Kendi kendine çalışan sade bir takipçi istiyorsan — yönetilecek proje, müşteri veya kurulum derdi olmadan"
+        ]
+      },
+      "chooseThem": {
+        "title": "Şu durumda Rize'ı seç...",
+        "items": [
+          "Oturum sırasında dikkat dağıtan uygulama ve siteleri engellemen gerekiyorsa",
+          "Müşterilere fatura kesiyor, proje ve müşteri takibi istiyorsan",
+          "Takvimindeki toplantıların otomatik izlenmesini istiyorsan",
+          "Ekstra otomasyon için aylık abonelik senin için sorun değilse"
+        ]
+      },
+      "table": {
+        "title": "Özellik Özellik Karşılaştırma",
+        "featureCol": "Özellik",
+        "usCol": "FocusNow",
+        "themCol": "Rize",
+        "rows": [
+          {
+            "feature": "Fiyat",
+            "us": "Ücretsiz",
+            "them": "$9.99–$14.99/ay (bireysel)"
+          },
+          {
+            "feature": "Ücretsiz plan",
+            "us": "Uygulamanın tamamı ücretsiz",
+            "them": "Yalnızca deneme sürümü"
+          },
+          {
+            "feature": "Otomatik takip",
+            "us": "yes",
+            "them": "yes"
+          },
+          {
+            "feature": "Odak skoru",
+            "us": "yes",
+            "them": "yes"
+          },
+          {
+            "feature": "Odak oturumları",
+            "us": "Pomodoro (25 dk) & Derin Çalışma (90 dk)",
+            "them": "Zamanlayıcı & planlı oturumlar"
+          },
+          {
+            "feature": "AI raporları",
+            "us": "Günlük AI raporu",
+            "them": "AI raporları & etiket önerileri"
+          },
+          {
+            "feature": "Dikkat dağıtıcı engelleyici",
+            "us": "no",
+            "them": "yes"
+          },
+          {
+            "feature": "Takvim entegrasyonu",
+            "us": "no",
+            "them": "yes"
+          },
+          {
+            "feature": "Odak müziği",
+            "us": "no",
+            "them": "yes"
+          },
+          {
+            "feature": "Proje & müşteri takibi",
+            "us": "no",
+            "them": "Professional plan"
+          },
+          {
+            "feature": "Platformlar",
+            "us": "Mac & Windows",
+            "them": "Mac & Windows"
+          }
+        ]
+      },
+      "sections": [
+        {
+          "title": "İki farklı fiyat felsefesi",
+          "body": "Rize abonelik alıyor ve bunu güçlü özelliklerle hak ediyor: dikkat dağıtıcı engelleyici, takvime duyarlı takip ve proje faturalandırması. FocusNow tersini yapıyor — zamanının tam olarak nereye gittiğini görme sözü ücretsiz kalıyor. Saat başı fatura kesiyorsan Rize'ın ücretli planları kendini amorti edebilir. Günün hakkında netlik istiyorsan, bunun için abonelik gerekmemeli."
+        },
+        {
+          "title": "Verin, senin kuralların",
+          "body": "FocusNow yalnızca aktif uygulama adını ve pencere başlığını kaydeder — asla ekran görüntüsü, asla tuş kaydı yok. Verin önce cihazında saklanır, şifreli olarak senkronize edilir; tamamını tek JSON dosyası olarak dışa aktarabilir veya hesabını istediğin an silebilirsin."
+        },
+        {
+          "title": "Dürüst sonuç",
+          "body": "Rize mükemmel bir araç; engelleme, takvim entegrasyonu veya müşteri faturalandırması gerekiyorsa parasına değer. Ama zaman takip aracı arayan çoğu insan tek şey ister: gerçek iş gününü görüp iyileştirmek. FocusNow tam olarak bunu ücretsiz yapar. Karar vermenin en kolay yolu, FocusNow'u bir hafta mevcut düzeninle yan yana çalıştırmak — denemek hiçbir şeye mal olmuyor."
+        }
+      ],
+      "faq": {
+        "title": "Sık Sorulan Sorular",
+        "items": [
+          {
+            "question": "FocusNow gerçekten ücretsiz mi?",
+            "answer": "Evet. Otomatik takip, odak skorları, oturumlar ve günlük AI raporu tamamen ücretsiz — kredi kartı yok, deneme süresi yok. Takım özellikleri içeren ücretli bir Pro plan yolda, ama çekirdek takipçi ücretsiz kalacak."
+          },
+          {
+            "question": "Rize ne kadar?",
+            "answer": "Temmuz 2026 itibarıyla Rize'ın bireysel planları aylık $9.99'dan (yıllık faturalandırma) başlıyor; proje ve müşteri takibi içeren Professional plan $14.99/ay. Ücretsiz deneme var ama kalıcı ücretsiz plan yok."
+          },
+          {
+            "question": "FocusNow, Rize gibi dikkat dağıtan uygulamaları engelleyebilir mi?",
+            "answer": "Hayır. FocusNow zamanının nereye gittiğini gösterir ama bugün hiçbir şeyi engellemez. Sert engelleme senin için vazgeçilmezse, bu özel ihtiyaç için Rize daha uygun."
+          },
+          {
+            "question": "Rize'dan FocusNow'a nasıl geçerim?",
+            "answer": "FocusNow'u indir ve çalışmaya bırak — içe aktarılacak veya ayarlanacak bir şey yok. Çoğu kişi bir hafta ikisini yan yana çalıştırıp kendine uyanı tutuyor."
+          }
+        ]
+      }
+    }
   }
 }

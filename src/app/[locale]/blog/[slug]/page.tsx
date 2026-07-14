@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { getBlogPost, getAllBlogSlugs, formatPostDate } from "@/lib/blog";
 import { renderInline } from "@/lib/markdown";
 import { getBlogPostLD } from "@/lib/structured-data";
+import { BlogReadTracker } from "@/components/shared/blog-read-tracker";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 
 export async function generateMetadata({
@@ -137,6 +138,11 @@ export default async function BlogPostPage({
               );
             })}
           </div>
+          <BlogReadTracker
+            slug={slug}
+            locale={locale}
+            readingTime={post.readingTime}
+          />
         </article>
       </div>
     </div>

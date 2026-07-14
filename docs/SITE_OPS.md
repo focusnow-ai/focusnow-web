@@ -9,10 +9,10 @@ Voice, messaging and copy standards live in `CONTENT_STYLE_GUIDE.md` — this do
 
 | Item | Status | Action |
 |------|--------|--------|
-| Google Search Console | ⬜ not verified | Verify `focusnow.ai` (DNS TXT record), submit `https://focusnow.ai/sitemap.xml`, check Coverage weekly at first |
-| Sitemap & robots | ✅ generated (`src/app/sitemap.ts`, `robots.ts`) | Confirm GSC reads all localized URLs + hreflang |
-| Google Analytics | ⚠️ consent bug | Fix issue #3 (gtag loads before consent) before trusting any numbers |
-| Conversion events | ⬜ missing | Track `download_click` (platform, page) as the single north-star event; secondary: `pricing_view`, `blog_read` |
+| Google Search Console | ✅ verified (domain property, DNS) | Sitemap resubmitted 2026-07-14, 36 URLs read. Weekly routine in `docs/ANALYTICS.md` |
+| Sitemap & robots | ✅ generated (`src/app/sitemap.ts`, `robots.ts`) | GSC reads all localized URLs + hreflang (36 discovered) |
+| Google Analytics | ✅ consent-gated loading | Loads only after cookie consent (`analytics-loader.tsx`) |
+| Conversion events | ✅ live | `download_click` (north star), `contact_submit`, `waitlist_signup`, `blog_read` — see `docs/ANALYTICS.md` |
 | Vercel Analytics / Speed Insights | ⬜ off | Optional; enable Speed Insights free tier for Core Web Vitals |
 
 **North-star metric:** download clicks per week. Everything editorial ultimately feeds this.
