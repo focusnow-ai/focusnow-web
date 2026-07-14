@@ -67,7 +67,7 @@ The site uses **two section styles that alternate** for visual rhythm. See `DESI
 - **Rich sections** (bento grid, hero): Cards with `border-border/40`, embedded interactivity (tabs, SVG animations), window chrome mockups. Icon containers: `w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-900/30`.
 - **Minimal sections** (HowItWorks, About pillars, CTA): Typography-driven. Large faded numbers or icon + heading + paragraph. No cards, no borders. Whitespace does the work.
 - **Rhythm:** Rich → Minimal → Rich → Minimal → CTA. Never stack two rich sections.
-- **Landing page flow:** `HeroSection → SocialProofBar → BentoFeatures → HowItWorks → DownloadCTA`
+- **Landing page flow:** `HeroSection → SocialProofBar → ProductShowcase → BentoFeatures → HowItWorks → FAQSection → DownloadCTA`
 - **Animations:** Always `whileInView` + `viewport={{ once: true }}` with stagger. Never `animate` (except hero header which is above the fold).
 - **Do not** wrap informational-only content in Card components. Do not use window chrome mockup for non-product content. Do not use circle step badges or connector lines.
 
@@ -92,10 +92,48 @@ The site uses **two section styles that alternate** for visual rhythm. See `DESI
 - **New pages:** Follow the new page checklist in `CONTENT_STYLE_GUIDE.md` (routing, translations, metadata, structured data, sitemap, internal links).
 - **Blog posts:** Follow the blog post template in style guide. Target 5th-7th grade reading level. End with a CTA linking to download page.
 
+## Claims & Numbers (Honesty Doctrine)
+
+- Every public claim must be verifiable in the product or our policies. No invented stats, no fake social proof, no fabricated testimonials — ever. When real numbers (downloads, ratings) arrive, they replace product-fact cells in the trust bar (`social-proof-bar.tsx`), starting with the "< 2 min" cell.
+- The setup-time story is "under two minutes, download to tracking". Every mention site-wide (trust bar, how-it-works, download CTA note, showcase, meta descriptions) tells this same story. Never introduce a second number.
+- Time/effort claims use underpromise framing ("< 2 min", "within two minutes") — never exact promises a stopwatch could break.
+- "Free forever" is scoped to the Free plan, never the whole product. The Pro waitlist promises early access only — no discount promises.
+- When Pro ships: update `pricing.meta.description` (currently lists AI + sync as included free) and revisit the "Is it really free?" FAQ answer.
+
+## Page Endings & Conversion
+
+- Every marketing page ends by opening a door: reuse the `DownloadCTA` section — never a bare button. Blog posts end with an inline CTA line linking to `/download`.
+- FAQ sits where objections peak: on the landing page between HowItWorks and DownloadCTA. Use-case pages carry persona-specific FAQs.
+- `FAQPage` JSON-LD comes from `getFAQPageLD()` — exactly ONE per page. Check for duplicates whenever FAQs move between pages.
+- Contact visibility: footer link + the FAQ closing line ("Question not answered?"). Do NOT add Contact to the header nav — self-serve product; the nav is the buying path.
+
+## Founders Voice
+
+- FocusNow is built by two named people: **Cihan & Barbaros** (that order). Never "the team" / "FocusNow Team" — blog bylines, About, and support copy use the real names.
+- Support promise: replies within 2 business days, from a founder ("one of us answers"). Don't promise faster.
+- The origin story lives on About: simple, bends to your rules, inspired by Cal Newport's Deep Work + attention research; the goal is fewer wasted hours and room for family, hobbies, downtime. Tell the story on its own terms — never by criticizing competitors ("most tools...").
+
+## Forms & Backend (contact + waitlist)
+
+- Route handlers: `src/app/api/{contact,waitlist}/route.ts`; shared helpers in `src/lib/server/forms.ts`. Pattern: honeypot field (`website`), per-IP rate limit, length caps, graceful 503 fallback copy when env is missing, dev-mode console fallback so the UI is testable without credentials.
+- Email delivery: Namecheap Private Email SMTP — `mail.privateemail.com`, port 465 (SSL). Auth requires an **app password** (webmail Settings → Security → Application Passwords), NOT the mailbox password.
+- Vercel env vars: `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, optional `CONTACT_TO_EMAIL`. Azure Table storage (`AZURE_TABLES_CONNECTION_STRING`) is optional — email-only mode is supported. Env changes need a redeploy.
+- Form email placeholders: `you@example.com` (EN) / `ornek@eposta.com` (TR). Waitlist consent note: "Only Pro news. No newsletter, no spam."
+
+## Pre-Ship Verification
+
+Before any PR that touches layout or copy:
+
+- `npx tsc --noEmit && npm run lint && npm run build`
+- Responsive pass at 390 / 768 / 1024 / 1280 / 1536+ — no horizontal overflow; hero CTAs stay on one line
+- Both locales render correctly (EN + TR) and both themes (dark + light)
+- If FAQs changed: exactly one FAQPage JSON-LD per page
+
 ## Blog
 
 - MDX files in `src/content/blog/en/` and `src/content/blog/tr/`
-- Frontmatter: `title`, `description`, `date`, `author`, `tags`
+- Frontmatter: `title`, `description`, `date`, `author`, `tags`. Author is always `\"Cihan & Barbaros\"` — never \"FocusNow Team\".
+- Dates render via `formatPostDate()` from `src/lib/blog.ts` (localized, human-readable) — never print the raw ISO string.
 - Utility functions in `src/lib/blog.ts`: `getBlogPosts()`, `getBlogPost()`, `getAllBlogSlugs()`
 - Blog pages are server components
 

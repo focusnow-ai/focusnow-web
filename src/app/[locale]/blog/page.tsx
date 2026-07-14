@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { getBlogPosts } from "@/lib/blog";
+import { getBlogPosts, formatPostDate } from "@/lib/blog";
 import { Clock, ArrowRight } from "lucide-react";
 
 export default async function BlogPage({
@@ -49,7 +49,7 @@ export default async function BlogPage({
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <span>{post.date}</span>
+                        <span>{formatPostDate(post.date, locale)}</span>
                         <span className="flex items-center gap-1">
                           <Clock className="h-3 w-3" />
                           {t("readingTime", { minutes: post.readingTime })}

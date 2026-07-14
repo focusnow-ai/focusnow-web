@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
-import { getBlogPost, getAllBlogSlugs } from "@/lib/blog";
+import { getBlogPost, getAllBlogSlugs, formatPostDate } from "@/lib/blog";
 import { renderInline } from "@/lib/markdown";
 import { getBlogPostLD } from "@/lib/structured-data";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
@@ -87,7 +87,7 @@ export default async function BlogPostPage({
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1">
                 <Calendar className="h-4 w-4" />
-                {t("publishedOn", { date: post.date })}
+                {t("publishedOn", { date: formatPostDate(post.date, locale) })}
               </span>
               <span className="flex items-center gap-1">
                 <Clock className="h-4 w-4" />
