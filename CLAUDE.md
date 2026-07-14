@@ -105,6 +105,7 @@ The site uses **two section styles that alternate** for visual rhythm. See `DESI
 - Every marketing page ends by opening a door: reuse the `DownloadCTA` section — never a bare button. Blog posts end with an inline CTA line linking to `/download`.
 - FAQ sits where objections peak: on the landing page between HowItWorks and DownloadCTA. Use-case pages carry persona-specific FAQs.
 - `FAQPage` JSON-LD comes from `getFAQPageLD()` — exactly ONE per page. Check for duplicates whenever FAQs move between pages.
+- JSON-LD `<script>` tags are ALWAYS rendered in server components (page.tsx), never inside `"use client"` components — React logs a script-tag error on the client and won't execute them.
 - Contact visibility: footer link + the FAQ closing line ("Question not answered?"). Do NOT add Contact to the header nav — self-serve product; the nav is the buying path.
 
 ## Founders Voice

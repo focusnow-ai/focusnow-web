@@ -14,3 +14,4 @@
 - Founders are named Cihan & Barbaros — never "FocusNow Team" in bylines or copy.
 - Responsive pass at 390/768/1024/1280/1536 before any layout PR; hero CTAs never wrap to two lines.
 - Exactly one FAQPage JSON-LD per page (`getFAQPageLD`).
+- JSON-LD scripts live in server components only — never in "use client" files.
