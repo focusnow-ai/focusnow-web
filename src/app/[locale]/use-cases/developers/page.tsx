@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { UseCaseTemplate } from "@/components/use-cases/use-case-template";
+import { getFAQPageLD } from "@/lib/structured-data";
 
 export async function generateMetadata({
   params,
@@ -28,6 +29,24 @@ export async function generateMetadata({
   };
 }
 
-export default function DevelopersPage() {
-  return <UseCaseTemplate segment="developers" />;
+export default async function DevelopersPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "useCases.developers.faq" });
+  const faqItems: { question: string; answer: string }[] = t.raw("items");
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getFAQPageLD(faqItems)),
+        }}
+      />
+      <UseCaseTemplate segment="developers" />
+    </>
+  );
 }
