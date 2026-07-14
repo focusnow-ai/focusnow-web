@@ -241,7 +241,8 @@
           "description": "Open FocusNow anytime to see your focus stats, top apps, and productivity trends."
         }
       }
-    }
+    },
+    "microsoftStore": "Microsoft Store"
   },
   "pricing": {
     "meta": {
