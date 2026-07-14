@@ -7,6 +7,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Check, CheckCircle2, ChevronDown, Copy, Mail } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 const TOPICS = ["feedback", "support", "partnership", "other"] as const;
 
@@ -49,6 +50,9 @@ export function ContactPageClient() {
 
       if (res.ok) {
         setStatus("success");
+        trackEvent("contact_submit", {
+          topic: String(data.get("topic") ?? "unknown"),
+        });
         form.reset();
         return;
       }

@@ -9,6 +9,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Check, CheckCircle2, Sparkles } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 function WaitlistForm() {
   const t = useTranslations("pricing.pro.waitlist");
@@ -37,6 +38,7 @@ function WaitlistForm() {
 
       if (res.ok) {
         setStatus("success");
+        trackEvent("waitlist_signup", { locale });
         return;
       }
       const payload = await res.json().catch(() => ({}));
