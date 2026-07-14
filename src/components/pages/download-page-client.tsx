@@ -15,6 +15,7 @@ import {
   type Platform,
   detectPlatform,
   getPrimaryDownload,
+  getWindowsStoreLink,
 } from "@/lib/downloads";
 import { trackEvent } from "@/lib/analytics";
 
@@ -51,6 +52,17 @@ export function DownloadPageClient({ links }: { links: DownloadLink[] }) {
   );
 
   const primary = getPrimaryDownload(links, platform);
+
+  /* Windows ships via the Microsoft Store: deep link on Windows machines,
+     web listing everywhere else (the deep link is a dead click there). */
+  const isStore = (link: DownloadLink) => link.platform === "windows";
+  const hrefFor = (link: DownloadLink) =>
+    isStore(link) ? getWindowsStoreLink(platform) : link.url;
+  const isAvailable = (link: DownloadLink) => isStore(link) || link.available;
+  const track = (link: DownloadLink) =>
+    trackDownload(
+      isStore(link) ? { ...link, fileName: "microsoft-store" } : link
+    );
 
   return (
     <div className="py-20 sm:py-28">
@@ -90,10 +102,10 @@ export function DownloadPageClient({ links }: { links: DownloadLink[] }) {
                   {primary.arch}
                 </p>
               )}
-              {primary.available ? (
+              {isAvailable(primary) ? (
                 <a
-                  href={primary.url}
-                  onClick={() => trackDownload(primary)}
+                  href={hrefFor(primary)}
+                  onClick={() => track(primary)}
                   className={cn(
                     buttonVariants({ size: "lg" }),
                     "w-full press-effect"
@@ -147,17 +159,17 @@ export function DownloadPageClient({ links }: { links: DownloadLink[] }) {
                     </p>
                   )}
                   <div className="mt-auto pt-3">
-                    {link.available ? (
+                    {isAvailable(link) ? (
                       <a
-                        href={link.url}
-                        onClick={() => trackDownload(link)}
+                        href={hrefFor(link)}
+                        onClick={() => track(link)}
                         className={cn(
                           buttonVariants({ size: "sm", variant: "outline" }),
                           "w-full"
                         )}
                       >
                         <Download className="mr-1 h-3 w-3" />
-                        {link.fileName}
+                        {isStore(link) ? t("microsoftStore") : link.fileName}
                       </a>
                     ) : (
                       <Badge variant="outline">{t("comingSoon")}</Badge>

@@ -241,7 +241,8 @@
           "description": "İstediğiniz zaman FocusNow'u açın ve odak istatistiklerinizi, en çok kullandığınız uygulamaları ve verimlilik trendlerinizi görün."
         }
       }
-    }
+    },
+    "microsoftStore": "Microsoft Store"
   },
   "pricing": {
     "meta": {

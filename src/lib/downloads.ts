@@ -87,3 +87,18 @@ export function getPrimaryDownload(
 ): DownloadLink {
   return links.find((d) => d.platform === platform) ?? links[0];
 }
+
+/* ─── Microsoft Store (Windows distribution channel) ─── */
+
+export const MS_STORE_PRODUCT_ID = "9NDHPHGJK035";
+
+/** Opens the Store app directly — only works on Windows machines. */
+export const MS_STORE_DEEP_LINK = `ms-windows-store://pdp/?productid=${MS_STORE_PRODUCT_ID}`;
+
+/** Web listing — for non-Windows visitors (the deep link is a dead click there). */
+export const MS_STORE_WEB_PAGE = `https://apps.microsoft.com/detail/${MS_STORE_PRODUCT_ID.toLowerCase()}`;
+
+/** Windows ships via the Microsoft Store: deep link on Windows, web listing elsewhere. */
+export function getWindowsStoreLink(current: Platform): string {
+  return current === "windows" ? MS_STORE_DEEP_LINK : MS_STORE_WEB_PAGE;
+}
