@@ -604,7 +604,8 @@
     "legal": "Yasal",
     "contact": "Bize Ulaşın",
     "copyright": "Tüm hakları saklıdır.",
-    "compare": "Karşılaştır"
+    "compare": "Karşılaştır",
+    "guide": "Rehber"
   },
   "consent": {
     "message": "Site trafiğini analiz etmek ve deneyiminizi iyileştirmek için çerezler kullanıyoruz.",
@@ -1017,5 +1018,16 @@
         ]
       }
     }
+  },
+  "guide": {
+    "meta": {
+      "title": "FocusNow Kullanım Rehberi — Kurulum, Odak Skoru & Oturumlar",
+      "description": "FocusNow için adım adım rehberler: kurulum ve izinler, Odak Skoru nasıl çalışır, Pomodoro ve Derin Çalışma oturumları."
+    },
+    "title": "FocusNow",
+    "titleHighlight": "Kullanım Rehberi",
+    "description": "İlk açılıştan analitiklerini okumaya — FocusNow'dan en iyi şekilde yararlanman için gereken her şey.",
+    "backToGuide": "Rehbere Dön",
+    "updatedOn": "Güncelleme: {date}"
   }
 }

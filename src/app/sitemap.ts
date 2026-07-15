@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getBlogPosts } from "@/lib/blog";
+import { getAllGuideSlugs } from "@/lib/guide";
 
 const BASE_URL = "https://focusnow.ai";
 
@@ -19,6 +20,7 @@ const trPaths: Record<string, string> = {
   "/use-cases/freelancers": "/kullanim-alanlari/serbest-calisanlar",
   "/use-cases/developers": "/kullanim-alanlari/yazilimcilar",
   "/compare/rize": "/karsilastir/rize",
+  "/guide": "/rehber",
 };
 
 interface PageConfig {
@@ -43,6 +45,7 @@ const staticPages: PageConfig[] = [
   { path: "/use-cases/freelancers", changeFrequency: "monthly", priority: 0.7, trPriority: 0.7 },
   { path: "/use-cases/developers", changeFrequency: "monthly", priority: 0.7, trPriority: 0.7 },
   { path: "/compare/rize", changeFrequency: "monthly", priority: 0.7, trPriority: 0.5 },
+  { path: "/guide", changeFrequency: "monthly", priority: 0.6, trPriority: 0.6 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -93,5 +96,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...blogEntries, ...trBlogEntries];
+  // Guide pages share the same slug across locales, so each entry can
+  // carry proper hreflang alternates (unlike blog posts, whose slugs differ).
+  const guideEntries: MetadataRoute.Sitemap = getAllGuideSlugs("en").flatMap(
+    (slug) => {
+      const alternates = {
+        languages: {
+          en: `${BASE_URL}/guide/${slug}`,
+          tr: `${BASE_URL}/tr/rehber/${slug}`,
+        },
+      };
+      return [
+        {
+          url: `${BASE_URL}/guide/${slug}`,
+          lastModified: new Date(),
+          changeFrequency: "monthly" as const,
+          priority: 0.5,
+          alternates,
+        },
+        {
+          url: `${BASE_URL}/tr/rehber/${slug}`,
+          lastModified: new Date(),
+          changeFrequency: "monthly" as const,
+          priority: 0.5,
+          alternates,
+        },
+      ];
+    }
+  );
+
+  return [...staticEntries, ...blogEntries, ...trBlogEntries, ...guideEntries];
 }

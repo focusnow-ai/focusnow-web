@@ -97,6 +97,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/guide" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {t("guide")}
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   {nav("about")}
                 </Link>

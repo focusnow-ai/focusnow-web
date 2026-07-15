@@ -604,7 +604,8 @@
     "legal": "Legal",
     "contact": "Contact",
     "copyright": "All rights reserved.",
-    "compare": "Compare"
+    "compare": "Compare",
+    "guide": "Guide"
   },
   "consent": {
     "message": "We use cookies to analyze site traffic and improve your experience.",
@@ -1017,5 +1018,16 @@
         ]
       }
     }
+  },
+  "guide": {
+    "meta": {
+      "title": "FocusNow User Guide — Setup, Focus Score & Sessions",
+      "description": "Step-by-step guides for FocusNow: installation and permissions, how your Focus Score works, and running Pomodoro or Deep Work sessions."
+    },
+    "title": "FocusNow",
+    "titleHighlight": "User Guide",
+    "description": "Everything you need to get the most out of FocusNow — from first launch to reading your analytics.",
+    "backToGuide": "Back to Guide",
+    "updatedOn": "Updated {date}"
   }
 }

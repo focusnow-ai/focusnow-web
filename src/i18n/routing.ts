@@ -62,6 +62,14 @@ export const routing = defineRouting({
       en: "/compare/rize",
       tr: "/karsilastir/rize",
     },
+    "/guide": {
+      en: "/guide",
+      tr: "/rehber",
+    },
+    "/guide/[slug]": {
+      en: "/guide/[slug]",
+      tr: "/rehber/[slug]",
+    },
   },
 });
 
