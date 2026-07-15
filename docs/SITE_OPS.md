@@ -38,8 +38,12 @@ Every post ends with one CTA to `/download`. No post exists without a target key
 | 5 | rescuetime alternative | Free RescueTime Alternatives in 2026 (Honest Comparison) | zaman takip programı ücretsiz | Ücretsiz Zaman Takip Programları: Dürüst Karşılaştırma |
 |   | ⚠️ #5 was published 2026-07-08 and unpublished the same day — first draft gave competitors the spotlight (3 of 4 routing bullets pointed away from us). Rewrite with FocusNow-centered framing: open with the reader's need (free + automatic + insights), show we meet it, then concede niches honestly (mobile → RescueTime, local-only/Linux → ActivityWatch). Keep verified prices + disclosure. |
 | 6 | work from home productivity | Is Remote Work Working for You? Check Your Numbers | evden çalışma verimlilik | Evden Çalışmak Sizin İçin İşliyor mu? Rakamlara Bakın |
+| 7 | best free time tracking app mac | The Best Free Time Tracking Apps for Mac (2026) — listicle, Rize playbook: honest ranked list incl. FocusNow, verified claims per APP_REALITY | ücretsiz zaman takip uygulaması mac | Mac İçin En İyi Ücretsiz Zaman Takip Uygulamaları (2026) |
+| 8 | automatic time tracking | Manual Time Tracking Is Why You Quit Time Tracking | otomatik zaman takibi | Zaman Takibini Bırakmanızın Sebebi Elle Takip |
 
-**Per-post checklist:** target keyword in title + first paragraph · 5th–7th grade reading level · claims match the shipped app · internal link to one use-case page · CTA to `/download` · both locales · frontmatter date = publish date.
+**Per-post checklist:** target keyword in title + first paragraph · 5th–7th grade reading level · claims match the shipped app · internal link to one use-case page **and, where natural, to `/compare/rize`** (internal links feed the comparison pages' authority) · CTA to `/download` · both locales · frontmatter date = publish date.
+
+**Off-site (July 2026, one-time):** submit FocusNow to AlternativeTo, SaaSHub, Slant — first backlinks + visibility in "X alternative" searches. Requires owner's account; Claude prepares listing copy, owner submits (or approves form-fill in a shared session).
 
 ## 3. Recurring Routines
 

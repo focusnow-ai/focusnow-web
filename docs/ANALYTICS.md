@@ -133,8 +133,22 @@ Haftada bir, tercihen pazartesi:
 6. **Acquisition → Traffic acquisition**: Organic Search payı büyüyor mu?
    Blog stratejisinin işe yarayıp yaramadığının göstergesi budur.
 
+7. **Explore → "Main funnel: Visit to Download"**: üç adımlı huniye bak
+   (Siteye geldi → Download sayfası → İndirdi). Taban çizgisi Tem 2026:
+   7 ziyaretçi → 3 sayfa → 1 indirme (%14). Hangi adımda kayıp büyükse
+   iyileştirme oraya yapılır: 1→2 kaybı = site CTA'ları zayıf;
+   2→3 kaybı = download sayfası ikna etmiyor.
+
 Ayda bir ek olarak: GSC **Experience → Core Web Vitals**'a göz at
 (hepsi "Good" olmalı) ve `waitlist_signup` toplamını kontrol et.
+
+**Kurulum notları (Tem 2026):** `download_click` key event olarak işaretli
+(dönüşüm sayılır); GA4 kurulum sihirbazından kalan `close_convert_lead` /
+`qualify_lead` şablon key event'leri kaldırıldı. Veri saklama süresi
+2 aydan **14 aya** çıkarıldı (Admin → Data retention) — bu yapılmasaydı
+funnel/exploration verileri 2 ay sonra silinirdi. `waitlist_signup` ilk kez
+tetiklendi; Admin → Events → Recent events listesine düşünce (≈24 saat)
+yıldızlanıp key event yapılmalı.
 
 ---
 
