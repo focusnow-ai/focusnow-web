@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
@@ -15,6 +16,13 @@ type Status = "idle" | "sending" | "success" | "error";
 
 export function ContactPageClient() {
   const t = useTranslations("contact");
+  // Pre-select the topic when linked with ?topic=... (e.g. the desktop
+  // app's feedback links) — invalid values fall back to the default.
+  const searchParams = useSearchParams();
+  const topicParam = searchParams.get("topic");
+  const initialTopic = TOPICS.includes(topicParam as (typeof TOPICS)[number])
+    ? (topicParam as (typeof TOPICS)[number])
+    : "feedback";
   const [status, setStatus] = useState<Status>("idle");
   const [errorKey, setErrorKey] = useState<string>("errorGeneric");
   const [copied, setCopied] = useState(false);
@@ -157,7 +165,7 @@ export function ContactPageClient() {
                       <select
                         id="contact-topic"
                         name="topic"
-                        defaultValue="feedback"
+                        defaultValue={initialTopic}
                         className="w-full h-10 appearance-none rounded-md border border-input bg-background pl-3 pr-10 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                       >
                         {TOPICS.map((topic) => (

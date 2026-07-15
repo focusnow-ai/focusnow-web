@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { ContactPageClient } from "@/components/pages/contact-page-client";
@@ -29,5 +30,11 @@ export async function generateMetadata({
 }
 
 export default function ContactPage() {
-  return <ContactPageClient />;
+  // Suspense boundary is required because ContactPageClient reads
+  // useSearchParams() (for ?topic= pre-selection from the desktop app).
+  return (
+    <Suspense>
+      <ContactPageClient />
+    </Suspense>
+  );
 }
