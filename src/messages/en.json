@@ -329,7 +329,7 @@
   },
   "privacyPage": {
     "title": "Privacy Policy",
-    "lastUpdated": "Effective date: July 3, 2026",
+    "lastUpdated": "Effective date: July 30, 2026",
     "intro": "FocusNow (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy covers the FocusNow website and desktop application. It explains exactly what data we collect, how we use and store it, who processes it on our behalf, and the rights you have over your personal information. This version replaces the version dated May 25, 2025.",
     "sections": {
       "trustPromise": {
@@ -353,9 +353,9 @@
         "content": "We collect only the data needed to provide you with productivity insights. Here is exactly what we collect and why:",
         "items": [
           "Account information — your email address, display name, and which sign-in provider you used (Google or Microsoft). We never receive or store passwords",
-          "Optional profile details — your job title and sector, if you choose to provide them, to make your insights more relevant",
+          "Optional profile details — your job title and sector, if you choose to provide them, and your working hours, if you set them. These make your AI daily report more relevant (see section 6)",
           "Activity data — the names and file paths of the applications you use, window titles, the web addresses (URLs) you visit, whether you are active, idle, or away, timestamps and durations, and your focus session details. This powers your productivity analytics",
-          "Optional diagnostics and usage analytics — operating system and app version, device architecture, language and theme settings, anonymized usage events, and error reports. Collected only if you opt in (see section 7)",
+          "Diagnostics and usage analytics — operating system and app version, device architecture, language and theme settings, usage events, approximate location, and error reports. Collected only if you opt in, apart from two anonymous events that contain no identifier (see section 7)",
           "Website data — what the focusnow.ai website collects is described in the cookies section below",
           "Website form data — if you use the contact form we receive the name, email address, topic and message you submit; if you join the Pro waitlist we store your email address. Both are used solely to reply to you or to notify you about Pro, are never sold or shared, and are deleted on request"
         ]
@@ -384,19 +384,20 @@
       },
       "aiInsights": {
         "title": "6. AI-Generated Insights",
-        "content": "When you request a daily report, that day's activity records — application names, window titles, URLs, timestamps, and categories — are processed by Azure OpenAI Service running inside our own Microsoft Azure subscription in the European Union. Your data is not used to train AI models. The generated report is stored in your account so it does not have to be regenerated.",
+        "content": "When you request a daily report, that day's activity records — application names, window titles, URLs, timestamps, and categories — are processed by Azure OpenAI Service running inside our own Microsoft Azure subscription in the European Union. If you have provided them, your job title, sector and working hours are included as well, so the report can interpret your day in the context of your actual work rather than in the abstract. Your name and email address are never sent. Your data is not used to train AI models. The generated report is stored in your account so it does not have to be regenerated.",
         "note": "AI-generated insights are informational only and can be inaccurate. They are not professional, medical, or employment advice."
       },
       "analytics": {
-        "title": "7. Optional Analytics and Diagnostics (Opt-In)",
-        "content": "The desktop app asks for your consent on first launch before sending any analytics or diagnostics. If you decline, nothing is sent. If you opt in:",
+        "title": "7. Analytics and Diagnostics",
+        "content": "The desktop app asks for your consent on first launch before sending any analytics or diagnostics that can be linked to you. Whichever way you answer, the app sends two anonymous events — that it was launched, and what you answered — carrying only the app version, operating system and system language. These let us count how many people install FocusNow and which versions and systems to support. They contain no identifier of any kind, no location, and no link to your account or to each other, nothing is stored on your device to enable them, and they cannot be traced back to you. We send them on the basis of our legitimate interest in maintaining the app. Everything below is sent only if you consent:",
         "items": [
           "Error and diagnostic reports are sent to Azure Application Insights so we can find and fix bugs",
-          "Product usage events (for example, which features are used) are sent to PostHog, hosted in the European Union, under a random anonymous identifier — not your name or email",
+          "Product usage events (for example, which features are used) are sent to PostHog, hosted in the European Union. Before you sign in they are recorded under a random identifier stored only on your device; afterwards, under the random account identifier our servers generate for you — never your name or email",
+          "Your approximate location (country and region), derived from the IP address your device connects from, so we know which countries to support",
           "Session replay captures how the FocusNow app's own interface is used, with all text inputs masked. It never records your screen, other applications, or their content",
-          "Your job title and sector are never included in analytics data"
+          "Your job title and sector are never included in analytics data — they are used only to shape your AI daily report (see section 6)"
         ],
-        "note": "You can change your choice at any time in Settings → Privacy. Turning analytics off stops all collection immediately."
+        "note": "You can change your choice at any time in Settings → Privacy. Turning analytics off immediately stops everything listed above, including location; only the two anonymous events described at the top continue."
       },
       "storage": {
         "title": "8. Data Storage and Infrastructure",

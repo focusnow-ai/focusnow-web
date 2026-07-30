@@ -329,7 +329,7 @@
   },
   "privacyPage": {
     "title": "Gizlilik Politikası",
-    "lastUpdated": "Yürürlük tarihi: 3 Temmuz 2026",
+    "lastUpdated": "Yürürlük tarihi: 30 Temmuz 2026",
     "intro": "FocusNow (\"biz\") olarak gizliliğinizi korumayı taahhüt ediyoruz. Bu Gizlilik Politikası, FocusNow web sitesini ve masaüstü uygulamasını kapsar; hangi verileri topladığımızı, bunları nasıl kullandığımızı ve sakladığımızı, bizim adımıza kimlerin işlediğini ve kişisel verileriniz üzerindeki haklarınızı açıklar. Bu metin, 25 Mayıs 2025 tarihli sürümün yerine geçer. Türkçe metin bilgilendirme amaçlı bir çeviridir; herhangi bir çelişki hâlinde İngilizce sürüm esas alınır.",
     "sections": {
       "trustPromise": {
@@ -353,9 +353,9 @@
         "content": "Yalnızca size verimlilik içgörüleri sunmak için gereken verileri topluyoruz. Neyi neden topladığımız tam olarak şöyle:",
         "items": [
           "Hesap bilgileri — e-posta adresiniz, görünen adınız ve hangi giriş sağlayıcısını kullandığınız (Google veya Microsoft). Parolanızı hiçbir zaman görmeyiz ve saklamayız",
-          "İsteğe bağlı profil bilgileri — dilerseniz paylaştığınız meslek unvanınız ve sektörünüz; içgörülerinizi size daha uygun hâle getirmek için kullanılır",
+          "İsteğe bağlı profil bilgileri — dilerseniz paylaştığınız meslek unvanınız ve sektörünüz ile belirlerseniz çalışma saatleriniz; yapay zekâ günlük raporunuzu size daha uygun hâle getirmek için kullanılır (bkz. 6. bölüm)",
           "Aktivite verileri — kullandığınız uygulamaların adları ve dosya yolları, pencere başlıkları, ziyaret ettiğiniz web adresleri (URL'ler), aktif/boşta/uzakta durumlarınız, zaman damgaları ve süreler ile odak seansı bilgileriniz. Verimlilik analizleriniz bu verilerle oluşturulur",
-          "İsteğe bağlı tanılama ve kullanım analitiği — işletim sistemi ve uygulama sürümü, cihaz mimarisi, dil ve tema ayarları, anonimleştirilmiş kullanım olayları ve hata raporları. Yalnızca açık rıza verirseniz toplanır (bkz. 7. bölüm)",
+          "Tanılama ve kullanım analitiği — işletim sistemi ve uygulama sürümü, cihaz mimarisi, dil ve tema ayarları, kullanım olayları, yaklaşık konum ve hata raporları. Hiçbir tanımlayıcı içermeyen iki anonim olay dışında yalnızca açık rıza verirseniz toplanır (bkz. 7. bölüm)",
           "Web sitesi verileri — focusnow.ai sitesinin ne topladığı aşağıdaki çerezler bölümünde açıklanmıştır",
           "Web sitesi form verileri — iletişim formunu kullanırsanız gönderdiğiniz ad, e-posta adresi, konu ve mesajı alırız; Pro bekleme listesine yazılırsanız e-posta adresinizi saklarız. Her ikisi de yalnızca size yanıt vermek veya Pro hakkında bilgilendirmek için kullanılır, asla satılmaz veya paylaşılmaz ve talebiniz üzerine silinir"
         ]
@@ -384,19 +384,20 @@
       },
       "aiInsights": {
         "title": "6. Yapay Zekâ Destekli Raporlar",
-        "content": "Günlük rapor istediğinizde, o güne ait aktivite kayıtlarınız — uygulama adları, pencere başlıkları, URL'ler, zaman damgaları ve kategoriler — Avrupa Birliği'ndeki kendi Microsoft Azure aboneliğimiz içinde çalışan Azure OpenAI Service tarafından işlenir. Verileriniz yapay zekâ modellerinin eğitiminde kullanılmaz. Üretilen rapor, yeniden oluşturulmasına gerek kalmaması için hesabınızda saklanır.",
+        "content": "Günlük rapor istediğinizde, o güne ait aktivite kayıtlarınız — uygulama adları, pencere başlıkları, URL'ler, zaman damgaları ve kategoriler — Avrupa Birliği'ndeki kendi Microsoft Azure aboneliğimiz içinde çalışan Azure OpenAI Service tarafından işlenir. Girdiyseniz meslek unvanınız, sektörünüz ve çalışma saatleriniz de bu işleme dahil edilir; böylece rapor gününüzü soyut bir şekilde değil, gerçek işinizin bağlamında yorumlayabilir. Adınız ve e-posta adresiniz hiçbir zaman gönderilmez. Verileriniz yapay zekâ modellerinin eğitiminde kullanılmaz. Üretilen rapor, yeniden oluşturulmasına gerek kalmaması için hesabınızda saklanır.",
         "note": "Yapay zekâ tarafından üretilen içgörüler yalnızca bilgilendirme amaçlıdır ve hatalı olabilir; mesleki, tıbbi veya istihdama ilişkin tavsiye niteliği taşımaz."
       },
       "analytics": {
-        "title": "7. İsteğe Bağlı Analitik ve Tanılama (Açık Rıza ile)",
-        "content": "Masaüstü uygulaması, herhangi bir analitik veya tanılama verisi göndermeden önce ilk açılışta rızanızı ister. Reddederseniz hiçbir şey gönderilmez. Rıza verirseniz:",
+        "title": "7. Analitik ve Tanılama",
+        "content": "Masaüstü uygulaması, sizinle ilişkilendirilebilecek herhangi bir analitik veya tanılama verisi göndermeden önce ilk açılışta rızanızı ister. Hangi yanıtı verirseniz verin, uygulama iki anonim olay gönderir — açıldığı bilgisi ve rıza sorusuna verdiğiniz yanıt — ve bunlar yalnızca uygulama sürümünü, işletim sistemini ve sistem dilini taşır. Bu iki olay, FocusNow'ı kaç kişinin kurduğunu ve hangi sürüm ile sistemleri desteklememiz gerektiğini saymamızı sağlar. Hiçbir tanımlayıcı, konum bilgisi ya da hesabınızla veya birbirleriyle bağlantı içermez; bunları mümkün kılmak için cihazınıza hiçbir şey yazılmaz ve size kadar geri izlenemezler. Bunları, uygulamayı sürdürmeye yönelik meşru menfaatimize dayanarak gönderiyoruz. Aşağıdakilerin tamamı yalnızca rıza verirseniz gönderilir:",
         "items": [
           "Hata ve tanılama raporları, sorunları bulup düzeltebilmemiz için Azure Application Insights'a gönderilir",
-          "Ürün kullanım olayları (ör. hangi özelliklerin kullanıldığı), adınız veya e-postanız yerine rastgele ve anonim bir kimlik altında, Avrupa Birliği'nde barındırılan PostHog'a gönderilir",
+          "Ürün kullanım olayları (ör. hangi özelliklerin kullanıldığı), Avrupa Birliği'nde barındırılan PostHog'a gönderilir. Giriş yapmadan önce yalnızca cihazınızda saklanan rastgele bir kimlik altında, giriş yaptıktan sonra ise sunucularımızın sizin için ürettiği rastgele hesap kimliği altında kaydedilir — adınız veya e-postanız hiçbir zaman kullanılmaz",
+          "Cihazınızın bağlandığı IP adresinden türetilen yaklaşık konumunuz (ülke ve bölge), hangi ülkeleri desteklememiz gerektiğini bilmemiz için",
           "Oturum kaydı (session replay) yalnızca FocusNow uygulamasının kendi arayüzünün nasıl kullanıldığını, tüm metin girişleri maskelenmiş hâlde kaydeder. Ekranınızı, diğer uygulamaları veya onların içeriğini asla kaydetmez",
-          "Meslek unvanınız ve sektörünüz analitik verilerine hiçbir zaman dahil edilmez"
+          "Meslek unvanınız ve sektörünüz analitik verilerine hiçbir zaman dahil edilmez; yalnızca yapay zekâ günlük raporunuzu biçimlendirmek için kullanılır (bkz. 6. bölüm)"
         ],
-        "note": "Tercihlerinizi Ayarlar → Gizlilik bölümünden dilediğiniz an değiştirebilirsiniz; analitiği kapattığınızda veri toplama anında durur."
+        "note": "Tercihlerinizi Ayarlar → Gizlilik bölümünden dilediğiniz an değiştirebilirsiniz. Analitiği kapattığınızda yukarıda sayılanların tamamı, konum dahil, anında durur; yalnızca en üstte açıklanan iki anonim olay devam eder."
       },
       "storage": {
         "title": "8. Veri Depolama ve Altyapı",
