@@ -70,7 +70,7 @@
       },
       "sessions": {
         "title": "Focus sessions",
-        "description": "Pomodoro (25 min) or Deep Work (90 min) — each session ends with a focus score, so you know if the time was really yours."
+        "description": "Pomodoro (25 min) or Deep Work (90 min) — every session keeps an honest record of where the time went, so you know if it was really yours."
       },
       "report": {
         "title": "AI Daily Report",
@@ -85,8 +85,13 @@
       "title": "Also included",
       "items": [
         "AI Daily Report",
+        "Calendar view — revisit any day from the last 90 days",
+        "Working hours — score your workday, not your whole day",
+        "Floating session widget with pause & resume",
+        "Command palette — ⌘K to anywhere",
         "Idle & away detection",
         "Custom categories and per-app rules",
+        "Search across apps, sites and window titles",
         "Sign in with Google or Microsoft",
         "Offline mode with encrypted sync",
         "Data export",
@@ -96,8 +101,7 @@
     "roadmap": {
       "title": "What's Next",
       "items": [
-        "Distraction alerts — gentle nudges when you drift off task",
-        "AI insights — personalized focus recommendations"
+        "A paid Pro plan is on the way — we're still shaping what goes in it. The core tracker stays free."
       ]
     }
   },
@@ -132,16 +136,16 @@
         "title": "Your Rules",
         "items": [
           "Figma → Focus",
-          "YouTube → Distracting",
+          "YouTube → Distraction",
           "Custom category: Design"
         ]
       },
       "sessions": {
         "title": "Recent Sessions",
         "items": [
-          "Pomodoro — 25m · 86% focus",
-          "Deep Work — 1h 30m · 92% focus",
-          "Pomodoro — 25m · 74% focus"
+          "Pomodoro — 25m of 25m · completed",
+          "Deep Work — 1h 24m of 1h 30m",
+          "3 sessions today"
         ]
       },
       "settings": {
@@ -230,7 +234,7 @@
       "steps": {
         "permissions": {
           "title": "Grant Permissions",
-          "description": "Sign in with Google or Microsoft, then grant accessibility permission so FocusNow can see which app is in the foreground. It only reads the app name, window title, and for browsers the page address — never your screen contents or keystrokes."
+          "description": "Sign in with Google or Microsoft, then let the setup walk you through the one permission FocusNow needs on macOS (Windows needs no extra step). It only reads the app name, window title, and for browsers the page address — never your screen contents or keystrokes."
         },
         "run": {
           "title": "Let It Run",
@@ -574,11 +578,28 @@
     "description": "See what's new in FocusNow.",
     "versions": [
       {
-        "version": "0.0.14",
-        "date": "2026-07-01",
+        "version": "0.2.0",
+        "date": "2026-07-31",
         "title": "Latest Release",
         "changes": [
-          "Activities view with Focus, Neutral and Distracting columns plus custom categories and per-app rules",
+          "Full design refresh: Focus Score ring on the dashboard, a richer six-state timeline, collapsible sidebar and a command palette (⌘K / Ctrl+K)",
+          "New Insights page: your finished days summarized by AI, with highlights and recommendations tailored to your role",
+          "Focus Score v2 — neutral time now earns half credit, so the score reflects your real workday",
+          "Personal category: mark banking, health and life admin so it never counts for or against your score",
+          "Working hours: score your workday, not your whole day — with a work / off-hours / all-day scope selector in Analytics",
+          "Calendar view: browse any day from the last 90 days, window title by window title, with search",
+          "Sessions: pause and resume right from the floating widget, plus a detailed history of past sessions",
+          "First-run setup wizard with role selection, so AI reports speak your language from day one",
+          "Little ⓘ explanations on every metric and chart — in English and Turkish",
+          "Windows now ships through the Microsoft Store; macOS adds an Intel build"
+        ]
+      },
+      {
+        "version": "0.0.14",
+        "date": "2026-07-01",
+        "title": "First public build",
+        "changes": [
+          "Activities view with Focus, Neutral and Distraction columns plus custom categories and per-app rules",
           "Analytics with Today / 7 days / 30 days / All ranges, custom date picker and an AI Daily Report",
           "Pomodoro (25 min) and Deep Work (90 min) focus sessions",
           "Automatic idle and away detection",
@@ -815,7 +836,7 @@
       },
       "activities": {
         "label": "Activities",
-        "caption": "Every app and site, grouped as Focus, Neutral, Personal or Distracting — reclassify anything with one click."
+        "caption": "Every app and site, grouped as Focus, Neutral, Personal or Distraction — reclassify anything with one click."
       },
       "sessions": {
         "label": "Sessions",
@@ -1023,7 +1044,7 @@
   "guide": {
     "meta": {
       "title": "FocusNow User Guide — Setup, Focus Score & Sessions",
-      "description": "Step-by-step guides for FocusNow: installation and permissions, how your Focus Score works, and running Pomodoro or Deep Work sessions."
+      "description": "Step-by-step guides for FocusNow: setup, how your Focus Score works, focus sessions, AI daily reports, working hours and owning your data."
     },
     "title": "FocusNow",
     "titleHighlight": "User Guide",

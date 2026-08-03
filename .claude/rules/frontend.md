@@ -2,7 +2,7 @@
 
 - Every user-facing string lives in `src/messages/en.json` AND `src/messages/tr.json`. No hardcoded copy in components — including single words like "remaining".
 - Turkish copy is written natively from the same brief, never translated word-for-word.
-- Product claims must match the shipped desktop app (terminology, feature names, session durations, platforms). Activity kinds: Focus / Neutral / Distracting (Odak / Nötr / Dikkat Dağıtıcı).
+- Product claims must match the shipped desktop app (terminology, feature names, session durations, platforms). Activity kinds (four, per `docs/APP_REALITY.md`): Focus / Neutral / Personal / Distraction (Odak / Nötr / Kişisel / Dikkat Dağıtıcı); timeline adds Idle / Away. Sessions report completion of target, never a per-session focus score. Focus Score in TR is "Odak Puanı" — never "Odak Skoru".
 - Colors and typography come from design tokens (`globals.css`, `tokens.json`); never hardcode hex/oklch in components. Update `DESIGN_SYSTEM.md` when tokens change.
 - Section rhythm on landing: Rich → Minimal → Rich → Minimal → CTA. Never stack two rich sections.
 - Navigation always uses `Link` from `@/i18n/navigation`.

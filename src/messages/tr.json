@@ -70,7 +70,7 @@
       },
       "sessions": {
         "title": "Odak seansları",
-        "description": "Pomodoro (25 dk) veya Derin Çalışma (90 dk) — her seans bir odak puanıyla biter; o süre gerçekten sizin miydi, bilirsiniz."
+        "description": "Pomodoro (25 dk) veya Derin Çalışma (90 dk) — her seans zamanın nereye gittiğinin dürüst kaydını tutar; o süre gerçekten sizin miydi, bilirsiniz."
       },
       "report": {
         "title": "Yapay Zekâ Günlük Raporu",
@@ -85,8 +85,13 @@
       "title": "Ayrıca dahil",
       "items": [
         "Yapay zekâ Günlük Raporu",
+        "Calendar görünümü — son 90 günün herhangi bir gününe geri dön",
+        "Çalışma saatleri — bütün gününüz değil, iş gününüz puanlansın",
+        "Duraklat/devam düğmeli yüzen oturum widget'ı",
+        "Komut paleti — ⌘K ile her yere",
         "Boşta ve uzakta algılama",
         "Özel kategoriler ve uygulama bazlı kurallar",
+        "Uygulama, site ve pencere başlıklarında arama",
         "Google veya Microsoft ile giriş",
         "Şifreli senkronizasyonlu çevrimdışı mod",
         "Veri dışa aktarma",
@@ -96,8 +101,7 @@
     "roadmap": {
       "title": "Sırada Ne Var",
       "items": [
-        "Dikkat dağınıklığı uyarıları — odağınız dağıldığında hafif hatırlatmalar",
-        "Yapay zeka içgörüleri — size özel odaklanma önerileri"
+        "Ücretli bir Pro plan yolda — kapsamını hâlâ şekillendiriyoruz. Çekirdek takipçi ücretsiz kalacak."
       ]
     }
   },
@@ -139,9 +143,9 @@
       "sessions": {
         "title": "Son Seanslar",
         "items": [
-          "Pomodoro — 25dk · %86 odak",
-          "Derin Çalışma — 1s 30dk · %92 odak",
-          "Pomodoro — 25dk · %74 odak"
+          "Pomodoro — 25 dk'nın 25'i · tamamlandı",
+          "Derin Çalışma — 1s 30dk'nın 1s 24'ü",
+          "Bugün 3 oturum"
         ]
       },
       "settings": {
@@ -230,7 +234,7 @@
       "steps": {
         "permissions": {
           "title": "İzinleri Verin",
-          "description": "Google veya Microsoft hesabınızla giriş yapın, ardından FocusNow'un ön plandaki uygulamayı görebilmesi için erişilebilirlik iznini verin. Yalnızca uygulama adını, pencere başlığını ve tarayıcılarda sayfa adresini okur — ekran içeriğinizi veya tuş vuruşlarınızı asla."
+          "description": "Google veya Microsoft hesabınızla giriş yapın; kurulum sihirbazı macOS'te FocusNow'un ihtiyaç duyduğu tek izinde size yol gösterir (Windows'ta ek adım gerekmez). Yalnızca uygulama adını, pencere başlığını ve tarayıcılarda sayfa adresini okur — asla ekran içeriğinizi veya tuş vuruşlarınızı değil."
         },
         "run": {
           "title": "Çalışmasına İzin Verin",
@@ -574,9 +578,26 @@
     "description": "FocusNow'daki yenilikleri görün.",
     "versions": [
       {
+        "version": "0.2.0",
+        "date": "2026-07-31",
+        "title": "Güncel Sürüm",
+        "changes": [
+          "Baştan tasarım: Dashboard'da Odak Puanı halkası, altı durumlu daha zengin zaman çizelgesi, daraltılabilir kenar çubuğu ve komut paleti (⌘K / Ctrl+K)",
+          "Yeni Insights sayfası: biten günlerin yapay zekâ özeti — öne çıkanlar ve rolüne göre öneriler",
+          "Odak Puanı v2 — nötr süre artık yarım sayılıyor; puan gerçek iş gününü yansıtıyor",
+          "Kişisel kategorisi: bankacılık, sağlık ve özel işlerini işaretle; puanı ne yukarı ne aşağı çeksin",
+          "Çalışma saatleri: bütün gün değil, iş günü puanlansın — Analytics'te çalışma saatleri / mesai dışı / tüm gün kapsam seçici",
+          "Calendar görünümü: son 90 günün herhangi bir gününü başlık başlık incele, arama destekli",
+          "Oturumlar: yüzen widget'tan duraklat ve devam ettir; geçmiş oturumlar için ayrıntılı geçmiş görünümü",
+          "Rol seçimli ilk kurulum sihirbazı — yapay zekâ raporları ilk günden senin işine göre konuşsun",
+          "Her metrik ve grafikte küçük ⓘ açıklamaları — İngilizce ve Türkçe",
+          "Windows artık Microsoft Store'dan geliyor; macOS'e Intel sürümü eklendi"
+        ]
+      },
+      {
         "version": "0.0.14",
         "date": "2026-07-01",
-        "title": "Güncel Sürüm",
+        "title": "İlk Genel Sürüm",
         "changes": [
           "Odak, Nötr ve Dikkat Dağıtıcı kolonlarıyla Aktiviteler ekranı; özel kategoriler ve uygulama bazlı kurallar",
           "Bugün / 7 gün / 30 gün / Tümü aralıkları, özel tarih seçici ve yapay zekâ Günlük Raporu ile Analizler",
@@ -896,17 +917,17 @@
     "rize": {
       "meta": {
         "title": "FocusNow vs Rize: Ücretsiz Alternatif Yeterli mi? (2026)",
-        "description": "FocusNow ve Rize'ın dürüst karşılaştırması: fiyat, otomatik takip, odak skorları, AI raporları ve hangisi kimin için."
+        "description": "FocusNow ve Rize'ın dürüst karşılaştırması: fiyat, otomatik takip, odak puanları, AI raporları ve hangisi kimin için."
       },
       "badge": "Karşılaştırma",
       "title": "FocusNow vs",
       "titleHighlight": "Rize",
-      "description": "Rize cilalı, ücretli bir zaman takip aracı. FocusNow ise otomatik takibi, odak skorlarını ve AI raporlarını ücretsiz sunuyor. Hangisinin nereye oturduğuna dürüstçe bakalım.",
+      "description": "Rize cilalı, ücretli bir zaman takip aracı. FocusNow ise otomatik takibi, odak puanlarını ve AI raporlarını ücretsiz sunuyor. Hangisinin nereye oturduğuna dürüstçe bakalım.",
       "chooseUs": {
         "title": "Şu durumda FocusNow'u seç...",
         "items": [
           "Abonelik ödemeden otomatik zaman takibi istiyorsan",
-          "Odak skoru ve günlük AI raporu ihtiyacını karşılıyorsa",
+          "Odak puanı ve günlük AI raporu ihtiyacını karşılıyorsa",
           "Verinin önce cihazında durmasını ve tek tıkla dışa aktarmayı önemsiyorsan",
           "Kendi kendine çalışan sade bir takipçi istiyorsan — yönetilecek proje, müşteri veya kurulum derdi olmadan"
         ]
@@ -942,7 +963,7 @@
             "them": "yes"
           },
           {
-            "feature": "Odak skoru",
+            "feature": "Odak puanı",
             "us": "yes",
             "them": "yes"
           },
@@ -1002,7 +1023,7 @@
         "items": [
           {
             "question": "FocusNow gerçekten ücretsiz mi?",
-            "answer": "Evet. Otomatik takip, odak skorları, oturumlar ve günlük AI raporu tamamen ücretsiz — kredi kartı yok, deneme süresi yok. Takım özellikleri içeren ücretli bir Pro plan yolda, ama çekirdek takipçi ücretsiz kalacak."
+            "answer": "Evet. Otomatik takip, odak puanları, oturumlar ve günlük AI raporu tamamen ücretsiz — kredi kartı yok, deneme süresi yok. Takım özellikleri içeren ücretli bir Pro plan yolda, ama çekirdek takipçi ücretsiz kalacak."
           },
           {
             "question": "Rize ne kadar?",
@@ -1022,8 +1043,8 @@
   },
   "guide": {
     "meta": {
-      "title": "FocusNow Kullanım Rehberi — Kurulum, Odak Skoru & Oturumlar",
-      "description": "FocusNow için adım adım rehberler: kurulum ve izinler, Odak Skoru nasıl çalışır, Pomodoro ve Derin Çalışma oturumları."
+      "title": "FocusNow Kullanım Rehberi — Kurulum, Odak Puanı & Oturumlar",
+      "description": "FocusNow için adım adım rehberler: kurulum, Odak Puanı nasıl çalışır, odak oturumları, yapay zekâ günlük raporları, çalışma saatleri ve verinizin kontrolü."
     },
     "title": "FocusNow",
     "titleHighlight": "Kullanım Rehberi",

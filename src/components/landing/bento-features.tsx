@@ -77,13 +77,13 @@ export function BentoFeatures() {
           <div className="lg:col-span-2 rounded-xl border border-border/40 bg-card p-6">
             <h3 className="font-semibold">{t("included.title")}</h3>
             <ul className="mt-4 grid sm:grid-cols-2 gap-x-6 gap-y-2.5">
-              {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+              {(t.raw("included.items") as string[]).map((item, i) => (
                 <li
                   key={i}
                   className="flex items-start gap-2 text-sm text-muted-foreground"
                 >
                   <Check className="h-4 w-4 mt-0.5 shrink-0 text-purple-600 dark:text-purple-400" />
-                  {t(`included.items.${i}`)}
+                  {item}
                 </li>
               ))}
             </ul>
@@ -91,13 +91,13 @@ export function BentoFeatures() {
           <div className="rounded-xl border border-border/40 bg-card p-6">
             <h3 className="font-semibold">{t("roadmap.title")}</h3>
             <ul className="mt-4 space-y-2.5">
-              {[0, 1].map((i) => (
+              {(t.raw("roadmap.items") as string[]).map((item, i) => (
                 <li
                   key={i}
                   className="flex items-start gap-2 text-sm text-muted-foreground"
                 >
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-400 shrink-0" />
-                  {t(`roadmap.items.${i}`)}
+                  {item}
                 </li>
               ))}
             </ul>
