@@ -44,7 +44,7 @@ src/
 ## Component Conventions
 
 - **UI components** (`src/components/ui/`): shadcn/ui with `@base-ui/react` primitives + CVA. Do not modify these unless updating the design system.
-- **Shared components** (`src/components/shared/`): Reusable across pages. Always `"use client"`.
+- **Shared components** (`src/components/shared/`): Reusable across pages. `"use client"` only when they need interactivity or browser APIs.
 - **Landing sections** (`src/components/landing/`): Self-contained, `"use client"`, use framer-motion for animations.
 - **Layout** (`src/components/layout/`): Header and Footer.
 - **Use-case pages** (`src/components/use-cases/`): Shared template for audience segmentation pages.
@@ -117,7 +117,7 @@ The site uses **two section styles that alternate** for visual rhythm. See `DESI
 ## Forms & Backend (contact + waitlist)
 
 - Route handlers: `src/app/api/{contact,waitlist}/route.ts`; shared helpers in `src/lib/server/forms.ts`. Pattern: honeypot field (`website`), per-IP rate limit, length caps, graceful 503 fallback copy when env is missing, dev-mode console fallback so the UI is testable without credentials.
-- Email delivery: Namecheap Private Email SMTP — `mail.privateemail.com`, port 465 (SSL). Auth requires an **app password** (webmail Settings → Security → Application Passwords), NOT the mailbox password.
+- Email delivery: Namecheap Private Email SMTP — `mail.privateemail.com`, port 587 with STARTTLS by default (`SMTP_PORT=465` switches to implicit SSL, `src/lib/server/forms.ts`). Auth requires an **app password** (webmail Settings → Security → Application Passwords), NOT the mailbox password.
 - Vercel env vars: `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, optional `CONTACT_TO_EMAIL`. Azure Table storage (`AZURE_TABLES_CONNECTION_STRING`) is optional — email-only mode is supported. Env changes need a redeploy.
 - Form email placeholders: `you@example.com` (EN) / `ornek@eposta.com` (TR). Waitlist consent note: "Only Pro news. No newsletter, no spam."
 
@@ -133,7 +133,7 @@ Before any PR that touches layout or copy:
 ## Blog
 
 - MDX files in `src/content/blog/en/` and `src/content/blog/tr/`
-- Frontmatter: `title`, `description`, `date`, `author`, `tags`. Author is always `\"Cihan & Barbaros\"` — never \"FocusNow Team\".
+- Frontmatter: `title`, `description`, `date`, `author`, `tags`. Author is the founder who wrote it — `\"Cihan\"` (guides) or `\"Barbaros\"` (essays/blog) — never \"FocusNow Team\".
 - Dates render via `formatPostDate()` from `src/lib/blog.ts` (localized, human-readable) — never print the raw ISO string.
 - Utility functions in `src/lib/blog.ts`: `getBlogPosts()`, `getBlogPost()`, `getAllBlogSlugs()`
 - Blog pages are server components

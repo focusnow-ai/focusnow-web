@@ -157,7 +157,7 @@ For highlighted text (section titles, links), use these instead of semantic toke
 |---|---|---|
 | Body / UI | Inter | Variable font, loaded via `next/font/google` |
 | Headings | Inter | Same as body for visual consistency |
-| Code / Mono | Geist Mono | Loaded via `next/font/local` |
+| Code / Mono | System mono | `ui-monospace, SFMono-Regular, Menlo, monospace` (no web font) |
 
 ### Font Sizes (Tailwind Scale)
 
@@ -182,7 +182,7 @@ For highlighted text (section titles, links), use these instead of semantic toke
 | Hover | `hover:bg-primary/90` | Slight opacity shift |
 | Small CTA (header) | `buttonVariants({ size: "sm" })` | Same solid style |
 
-**What we don't use on buttons:** `gradient-primary`, `glow-md`, `glow-lg`. These utility classes still exist in `globals.css` but are not applied to any interactive element.
+**What we don't use on buttons:** gradients and glow shadows.
 
 **Decision rationale:** Solid buttons are cleaner at all sizes, especially small (header "Get App"). Gradient buttons read as dated. Modern SaaS (Linear, Vercel, Notion) uses solid-color primaries.
 
@@ -190,42 +190,16 @@ For highlighted text (section titles, links), use these instead of semantic toke
 
 ## Utility Classes (globals.css)
 
-### Active utilities
-
 | Class | Description | Used on |
 |---|---|---|
-| `.elevation-0` to `.elevation-4` | Notion-inspired shadow scale | Cards, popovers, modals |
-| `.hover-lift` | Lift 4px on hover with shadow | Feature cards |
-| `.card-hover` | Lift 2px on hover | Blog cards, download cards |
+| `.elevation-2` / `.elevation-4` | Shadow scale (hover lift / floating) | Feature, pricing and download cards; hero and showcase screenshots, cookie banner |
+| `.card-hover` | Lift 2px on hover | Blog, guide and download cards |
 | `.press-effect` | Scale to 97% on active press | Primary CTAs |
-| `.transition-smooth` | 200ms ease transition | General |
-| `.glass` | Glassmorphism backdrop blur | Header, window chrome |
-| `.border-glow` | Gradient border on hover (purple/pink/teal) | Pricing card, download detected card only |
-| `.gradient-glow` | Subtle purple ambient glow behind screenshots | Hero screenshot, screenshot showcase |
-| `.bento-grid` | Responsive CSS Grid with named areas for bento feature layout | Landing page features section |
-
-### `.bento-grid` Layout
-
-Responsive grid using `grid-template-areas` for the landing page feature cards:
-
-| Breakpoint | Columns | Layout |
-|---|---|---|
-| Mobile (<640px) | 1 | Single column: hero → privacy → timer → analytics → platform |
-| Tablet (640px+) | 2 | Hero spans 2 cols, timer/analytics side by side, privacy/platform full width |
-| Desktop (1024px+) | 3 | Hero 2×2 (top-left), timer + analytics stacked (right), privacy 2×1 + platform 1×1 (bottom) |
-
-Grid areas: `hero`, `timer`, `analytics`, `privacy`, `platform`. Each child uses `style={{ gridArea: "..." }}`.
-
-### Deprecated / unused utilities
-
-These are defined in `globals.css` but **not used in any component**. Kept for potential future use:
-
-| Class | Description |
-|---|---|
-| `.gradient-primary` | Purple -> Pink horizontal gradient (removed from buttons) |
-| `.gradient-text` | Gradient as text fill (replaced with solid `text-purple-600`) |
-| `.gradient-subtle` | Low-opacity gradient background (never used) |
-| `.glow-sm` / `.glow-md` / `.glow-lg` | Purple box-shadow glow (removed from buttons) |
+| `.glass` | Glassmorphism backdrop blur | Window chrome of hero and showcase screenshots |
+| `.border-glow` | Gradient border on hover (purple/pink/teal) | Pricing, comparison and download cards |
+| `.gradient-glow` | Subtle purple ambient glow behind screenshots | Hero screenshot, product showcase |
+| `.text-shadow-sm` | Soft text shadow | Hero |
+| `.text-balance` | `text-wrap: balance` | Section headings |
 
 ---
 
@@ -239,32 +213,20 @@ Used for **product showcases** where the goal is to demonstrate what the product
 
 | Pattern | Where Used | Key Elements |
 |---|---|---|
-| Bento grid | Landing `BentoFeatures` | Variable-size cards (`grid-template-areas`), embedded interactivity (tabs, SVG animations, bar charts), window chrome mockups (`glass` + traffic light dots) |
+| Product showcase | Landing `ProductShowcase` | Real app screenshots in a window chrome (`glass` + traffic light dots) with six tabs: dashboard, report, analytics, activities, sessions, categories |
+| Feature cards | Landing `BentoFeatures` | Four equal cards (`grid sm:grid-cols-2 lg:grid-cols-4`); each card is a button that opens its showcase tab. Below them an "included" list |
 
-**Bento card anatomy:**
+**Feature card anatomy:**
 ```
-Card (border-border/40, h-full)
-└─ CardContent (p-5 sm:p-6, h-full flex flex-col)
-   ├─ Header: flex items-center gap-3 mb-4
-   │   ├─ Icon container: w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-900/30
-   │   │   └─ Icon: h-5 w-5 text-purple-600 dark:text-purple-400
-   │   └─ Title: font-semibold text-lg
-   ├─ Description: text-sm text-muted-foreground (optional, under title or beside it)
-   └─ Visual content: flex-1 (SVG, chart, mockup, badge list, etc.)
-```
-
-**Window chrome mockup:** Used inside bento hero card for product demo previews.
-```
-rounded-lg border border-border/40 bg-gradient-to-br from-card to-muted/60 elevation-3
-├─ Title bar: h-7 glass border-b border-border/40
-│   ├─ Traffic lights: w-2 h-2 rounded-full (bg-red-400, bg-yellow-400, bg-green-400)
-│   └─ Title: text-[10px] text-muted-foreground
-└─ Content area
+button (rounded-xl border border-border/40 bg-card p-6, hover:border-purple-400/50 hover:elevation-2)
+├─ Icon container: w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/30
+│   └─ Icon: h-5 w-5 text-purple-600 dark:text-purple-400
+├─ Title: mt-4 font-semibold text-lg
+├─ Description: mt-2 text-sm text-muted-foreground
+└─ Hover-only link hint (ArrowUpRight)
 ```
 
-**Bento hero screenshot tabs:** The bento hero card's window mockup has **5 tabs matching the desktop app's IA**: Dashboard, Analytics, Activities, Sessions, Settings (lucide icons: `LayoutDashboard`, `BarChart3`, `AppWindow`, `Timer`, `Settings`). Item dots on the Dashboard / Activities / Sessions tabs use activity-status colors (see Color Palette); Analytics / Settings fall back to the brand CSS-variable rotation (primary / secondary / accent).
-
-**Hero dashboard mockup:** `HeroSection`'s `DashboardMockup` is a mini replica of the real desktop Dashboard: 3 metric cards (Focus Score with purple value + progress bar, Focus Time, Sessions), a timeline block with `Today | Yesterday | Week` pills (active pill `bg-purple-600 text-white`), an animated stacked activity bar, a 4-item legend, and a 3-row activity list — all using activity-status colors. Numbers and app names are decorative and hardcoded; labels come from i18n (`hero.mockup.dashboard.*`).
+**Hero screenshot:** `HeroSection` shows a real app screenshot (`/screenshots/hero-analytics-v3.webp`) inside the same window chrome (`glass` title bar + traffic lights).
 
 ### Minimal / Typographic Sections
 
@@ -281,10 +243,12 @@ Used for **explanatory content** where the goal is clarity and scannability, not
 
 **Rich → Minimal → CTA.** The landing page alternates between dense and sparse:
 ```
-HeroSection (rich — split layout, dashboard mockup)
+HeroSection (rich — split layout, real screenshot)
 SocialProofBar (minimal — icon + text strip)
-BentoFeatures (rich — interactive bento grid)
+ProductShowcase (rich — tabbed real screenshots)
+BentoFeatures (rich — four feature cards)
 HowItWorks (minimal — typographic numbered steps)
+FAQSection (minimal — expandable questions)
 DownloadCTA (minimal — centered text + button with gradient bg)
 ```
 

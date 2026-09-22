@@ -26,6 +26,11 @@ Single source of truth for all editorial, copywriting, and content decisions.
 | **Secondary** | "Your data stays yours — encrypted, never sold" | Support — answers the trust objection |
 | **Tertiary** | "Mac & Windows. Set it and forget it." | Friction removal |
 
+**Positioning wedge (decided 2026-07-31, global/English market, organic only):**
+- *Conversion:* what Rize ($14.99/mo) and RescueTime ($9–12/mo) charge for — automatic tracking + focus sessions + AI daily report — is **free, no card, Mac & Windows**.
+- *Credibility (HN/Reddit):* **the AI never makes up a number.** Code computes every metric (`FocusFactsCalculator`); the LLM only groups window titles into projects and narrates facts it is given.
+- *Trust:* no screenshots, no keylogging, browser visits kept as domain only.
+
 **Rule:** Never lead with privacy. It supports, it doesn't sell. Privacy is table-stakes (every competitor says "no screenshots, no keyloggers") — clarity and self-knowledge are the differentiator.
 
 ---
@@ -50,17 +55,17 @@ Single source of truth for all editorial, copywriting, and content decisions.
 
 ### Privacy Claims
 
-Ground truth: FocusNow records the active app name and window title (never screenshots or keystrokes); AI categorization runs on our backend; data is encrypted with TLS in transit and AES-256 at rest on Azure; local-first storage with encrypted cloud sync. All privacy copy must match this reality.
+Ground truth: FocusNow records the active app name, window title and, in browsers, the website's domain only — never the full URL, screenshots or keystrokes; activity is categorized on the device, and only the AI daily report runs on our backend; data is encrypted with TLS in transit and AES-256 at rest on Azure; local-first storage with encrypted cloud sync. All privacy copy must match this reality.
 
 **APPROVED phrasing:**
 - "encrypted in transit and at rest"
 - "no screenshots, no keylogging" / "never screenshots or keystrokes"
 - "local-first with encrypted sync"
-- "records only the active app name and window title"
+- "records only the active app name, window title and website domain"
 - "never sold or shared — used only to power your own analytics"
 
 **FORBIDDEN phrasing:**
-- "end-to-end encrypted" — factually wrong; our backend processes activity data for AI categorization
+- "end-to-end encrypted" — factually wrong; our backend processes activity data for the AI daily report
 - "local-only" — cloud sync exists
 - "only you can see it" / "no one — including us — can access it" — same reason
 - "AES-256" in marketing copy — technical implementation detail; allowed **only** on the Privacy Policy page and in privacy-focused blog posts where the Azure at-rest context is explained
@@ -134,9 +139,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t("meta.title"),
     description: t("meta.description"),
     alternates: {
-      canonical: `https://focusnow.ai/${locale}/path`,
+      canonical: locale === "en" ? "/path" : `/${locale}/localized-path`,
       languages: {
-        en: "/en/path",
+        en: "/path",
         tr: "/tr/localized-path",
       },
     },
@@ -159,7 +164,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 title: "[Keyword-Rich Title Under 60 Chars]"
 description: "[Compelling meta description under 155 chars]"
 date: "YYYY-MM-DD"
-author: "FocusNow Team" / "FocusNow Ekibi"
+author: "Cihan" or "Barbaros" — the founder who wrote it, never "FocusNow Team"
 tags: ["relevant", "keywords"]
 ---
 

@@ -803,7 +803,7 @@
         "items": [
           {
             "question": "Does FocusNow read my code or log keystrokes?",
-            "answer": "No. It records app names and window titles only — never keystrokes, clipboard or screen content. Your code stays yours."
+            "answer": "No. It records app names, window titles and the website's domain in browsers — never full URLs, keystrokes, clipboard or screen content. Your code stays yours."
           },
           {
             "question": "Does it work with IDEs, terminals and browsers?",
@@ -1011,7 +1011,7 @@
         },
         {
           "title": "Your data, your rules",
-          "body": "FocusNow records only the active app name and window title — never screenshots, never keystrokes. Your data is stored local-first with encrypted sync, and you can export everything as a single JSON file or delete your account at any time."
+          "body": "FocusNow records only the active app name, its window title and, in browsers, the website's domain — never screenshots, never keystrokes. Your data is stored local-first with encrypted sync, and you can export everything as a single JSON file or delete your account at any time."
         },
         {
           "title": "The honest bottom line",

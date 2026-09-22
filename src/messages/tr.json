@@ -803,7 +803,7 @@
         "items": [
           {
             "question": "FocusNow kodumu okuyor ya da tuş kaydı yapıyor mu?",
-            "answer": "Hayır. Yalnızca uygulama adlarını ve pencere başlıklarını kaydeder — tuş vuruşu, pano veya ekran içeriği asla. Kodunuz sizde kalır."
+            "answer": "Hayır. Yalnızca uygulama adlarını, pencere başlıklarını ve tarayıcıda sitenin alan adını kaydeder — tam URL, tuş vuruşu, pano veya ekran içeriği asla. Kodunuz sizde kalır."
           },
           {
             "question": "IDE'ler, terminaller ve tarayıcılarla çalışıyor mu?",
@@ -1011,7 +1011,7 @@
         },
         {
           "title": "Verin, senin kuralların",
-          "body": "FocusNow yalnızca aktif uygulama adını ve pencere başlığını kaydeder — asla ekran görüntüsü, asla tuş kaydı yok. Verin önce cihazında saklanır, şifreli olarak senkronize edilir; tamamını tek JSON dosyası olarak dışa aktarabilir veya hesabını istediğin an silebilirsin."
+          "body": "FocusNow yalnızca aktif uygulama adını, pencere başlığını ve tarayıcıda sitenin alan adını kaydeder — asla ekran görüntüsü, asla tuş kaydı yok. Verin önce cihazında saklanır, şifreli olarak senkronize edilir; tamamını tek JSON dosyası olarak dışa aktarabilir veya hesabını istediğin an silebilirsin."
         },
         {
           "title": "Dürüst sonuç",

@@ -102,7 +102,7 @@ okuma tamamlama). "Sayfada gezindi" tarzı gürültü olaylar ekleme.
 - **Average position (Ortalama konum):** aramada kaçıncı sıradasın.
   1-10 = ilk sayfa. 11+ görünüyorsa o sayfanın içeriğini güçlendir.
 - **Indexed pages:** Google'ın dizinine aldığı sayfa sayısı. Sitemap'teki
-  URL sayısına (şu an 36) yakınsamalı. "Page with redirect" gibi tekil
+  URL sayısına yakınsamalı. "Page with redirect" gibi tekil
   istisnalar normaldir, dert etme.
 
 **İkisinin farkı:** GSC "Google'da nasıl görünüyorsun"u, GA4 "siteye gelen
