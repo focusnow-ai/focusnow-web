@@ -8,7 +8,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   --font-heading: "Inter", ui-sans-serif, system-ui, sans-serif;
   --color-ring: var(--ring);
   --color-input: var(--input);
@@ -27,6 +27,12 @@
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
   --color-success: var(--success);
+  --color-scene: var(--scene);
+  --color-scene-foreground: var(--scene-foreground);
+  --color-scene-muted: var(--scene-muted);
+  --color-scene-border: var(--scene-border);
+  --color-emphasis: var(--emphasis);
+  --color-wash: var(--wash);
   --color-warning: var(--warning);
   --color-info: var(--info);
   --radius-sm: calc(var(--radius) * 0.6);
@@ -69,6 +75,14 @@
   --chart-3: oklch(0.845 0.108 176.891);
   --chart-4: oklch(0.723 0.219 149.579);
   --chart-5: oklch(0.623 0.214 259.815);
+  --emphasis: oklch(0.558 0.288 302.321);       /* purple-600, text emphasis */
+  --wash: oklch(0.977 0.014 308.299);           /* purple-50, lavender section wash */
+  --glow: oklch(0.827 0.119 306.383 / 0.35);    /* purple-300, hero light */
+  --scene: hsl(24 6% 9%);                       /* warm near-black focus scene */
+  --scene-foreground: hsl(30 10% 94%);
+  --scene-muted: hsl(30 6% 66%);
+  --scene-border: hsl(30 6% 20%);
+  --shadow-tint: 270 60% 25%;
 }
 
 /* ============================================
@@ -101,6 +115,14 @@
   --chart-3: oklch(0.845 0.108 176.891);
   --chart-4: oklch(0.723 0.219 149.579);
   --chart-5: oklch(0.623 0.214 259.815);
+  --emphasis: oklch(0.714 0.203 305.504);       /* purple-400 */
+  --wash: hsl(270 12% 13%);                     /* faint violet-tinted surface */
+  --glow: oklch(0.496 0.265 301.924 / 0.22);    /* purple-700, dimmed */
+  --scene: hsl(0 0% 7%);                        /* deeper than the page so the scene still reads as a stage */
+  --scene-foreground: hsl(0 0% 92%);
+  --scene-muted: hsl(0 0% 62%);
+  --scene-border: hsl(0 0% 18%);
+  --shadow-tint: 0 0% 0%;
 }
 
 /* ============================================
@@ -128,32 +150,21 @@
   html {
     @apply font-sans scroll-smooth;
   }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  .dark :focus-visible {
+    outline-color: var(--emphasis);
+  }
 }
 
 /* ============================================
    Utility Extensions
    ============================================ */
 @layer utilities {
-  .gradient-glow {
-    @apply bg-purple-400/15 dark:bg-purple-600/10;
-  }
-
-  .elevation-2 {
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
-  }
   .elevation-4 {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.08);
-  }
-
-  .card-hover {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(0);
-  }
-  .card-hover:hover {
-    transform: translateY(-2px);
-    box-shadow:
-      0 10px 20px -5px rgba(0, 0, 0, 0.1),
-      0 4px 6px -2px rgba(0, 0, 0, 0.04);
   }
 
   .press-effect {
@@ -163,52 +174,73 @@
     transform: scale(0.97);
   }
 
-  /* Glassmorphism */
-  .glass {
-    background-color: hsl(0 0% 100% / 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid hsl(0 0% 100% / 0.2);
-  }
-  .dark .glass,
-  :is(.dark *) .glass {
-    background-color: hsl(0 0% 11% / 0.6);
-    border-color: hsl(0 0% 100% / 0.06);
-  }
-
-  /* Border glow on hover */
-  .border-glow {
-    position: relative;
-    transition: all 0.3s ease;
-  }
-  .border-glow::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    padding: 1px;
-    background: linear-gradient(135deg,
-      rgba(147, 51, 234, 0.3),
-      rgba(219, 39, 119, 0.15),
-      rgba(20, 184, 166, 0.3));
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-  }
-  .border-glow:hover::before {
-    opacity: 1;
-  }
-
-  /* Text shadows for hero sections */
-  .text-shadow-sm {
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
   /* Text balance */
   .text-balance {
     text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Product window: layered, tinted depth under real screenshots */
+  .shadow-window {
+    box-shadow:
+      0 1px 2px hsl(var(--shadow-tint) / 0.06),
+      0 12px 32px -8px hsl(var(--shadow-tint) / 0.16),
+      0 40px 80px -24px hsl(var(--shadow-tint) / 0.22);
+  }
+  .shadow-detail {
+    box-shadow:
+      0 1px 2px hsl(var(--shadow-tint) / 0.08),
+      0 18px 40px -12px hsl(var(--shadow-tint) / 0.3);
+  }
+
+  /* Soft lavender light behind hero and CTA product scenes */
+  .scene-light {
+    background:
+      radial-gradient(60% 55% at 70% 35%, var(--glow), transparent 70%),
+      radial-gradient(40% 40% at 15% 10%, color-mix(in oklch, var(--glow) 60%, transparent), transparent 70%);
+  }
+  .scene-dark-glow {
+    background:
+      radial-gradient(50% 60% at 75% 40%, oklch(0.496 0.265 301.924 / 0.28), transparent 70%),
+      radial-gradient(35% 45% at 10% 90%, oklch(0.627 0.265 303.9 / 0.12), transparent 70%);
+  }
+}
+
+/* ============================================
+   Motion: content is visible by default. Entry and
+   scroll reveals only run where the browser supports
+   them and the visitor has not asked for reduced motion.
+   ============================================ */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes float-in {
+  from { opacity: 0; transform: translateY(24px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .enter {
+    animation: rise-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .enter-scene {
+    animation: float-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+  }
+  .enter-detail {
+    animation: float-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+  }
+  .enter-detail-late {
+    animation: float-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+  }
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: rise-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
   }
 }
 

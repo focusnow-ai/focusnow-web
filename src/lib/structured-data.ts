@@ -1,7 +1,7 @@
 export function getSoftwareApplicationLD(locale?: string) {
   const descriptions: Record<string, string> = {
-    en: "Free desktop app that tracks your apps automatically and shows where your workday goes. No screenshots, no keylogging. Mac & Windows.",
-    tr: "Hangi uygulamada ne kadar vakit geçirdiğinizi otomatik takip eden ücretsiz masaüstü uygulaması. Ekran görüntüsü ve tuş kaydı yok. Mac ve Windows.",
+    en: "Automatic time tracking for Mac and Windows with focus sessions, an AI daily report and timecards for client hours. No screenshots, no keylogging.",
+    tr: "Mac ve Windows için odak oturumları, AI günlük raporu ve müşteri saatleri için zaman kartları sunan otomatik zaman takibi. Ekran görüntüsü ve tuş kaydı yok.",
   };
 
   return {
@@ -64,8 +64,8 @@ export function getWebsiteLD(locale?: string) {
     inLanguage: locale === "tr" ? "tr" : "en",
     description:
       locale === "tr"
-        ? "Hangi uygulamalara ne kadar vakit harcadığınızı otomatik takip eden ücretsiz masaüstü uygulaması."
-        : "Free desktop app that automatically tracks your apps and shows how you spend your workday.",
+        ? "Mac ve Windows için otomatik zaman takibi, odak oturumları ve müşteri saatleri."
+        : "Automatic time tracking, focus sessions and client hours for Mac and Windows.",
   };
 }
 
@@ -98,5 +98,45 @@ export function getFAQPageLD(
         text: item.answer,
       },
     })),
+  };
+}
+
+export function getBreadcrumbLD(items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
+export function getArticleLD(article: {
+  headline: string;
+  description: string;
+  url: string;
+  locale: string;
+  dateModified: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.headline,
+    description: article.description,
+    url: article.url,
+    inLanguage: article.locale === "tr" ? "tr" : "en",
+    dateModified: article.dateModified,
+    author: [
+      { "@type": "Person", name: "Cihan" },
+      { "@type": "Person", name: "Barbaros" },
+    ],
+    publisher: {
+      "@type": "Organization",
+      name: "FocusNow",
+      url: "https://focusnow.ai",
+    },
   };
 }

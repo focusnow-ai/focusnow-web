@@ -80,21 +80,18 @@ export function ContactPageClient() {
   }
 
   return (
-    <div className="py-20 sm:py-28">
+    <div className="pb-24 pt-14 sm:pt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="text-center max-w-2xl mx-auto mb-12"
+          className="mx-auto mb-12 max-w-xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            {t("title")}{" "}
-            <span className="text-purple-600 dark:text-purple-400">
-              {t("titleHighlight")}
-            </span>
+          <h1 className="text-[2.75rem] font-semibold leading-[1.02] tracking-[-0.035em] sm:text-6xl">
+            {t("title")}
           </h1>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
             {t("description")}
           </p>
         </motion.div>

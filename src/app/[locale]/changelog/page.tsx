@@ -1,10 +1,10 @@
-"use client";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { DownloadCTA } from "@/components/landing/download-cta";
+import { formatPostDate } from "@/lib/blog";
+import { pageMetadata } from "@/lib/seo";
 
-import { useTranslations } from "next-intl";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { motion } from "framer-motion";
-import { GitCommit, Check } from "lucide-react";
+type Params = { params: Promise<{ locale: string }> };
 
 interface ChangelogVersion {
   version: string;
@@ -13,67 +13,49 @@ interface ChangelogVersion {
   changes: string[];
 }
 
-export default function ChangelogPage() {
-  const t = useTranslations("changelog");
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "changelog.meta" });
+  return pageMetadata({ pathname: "/changelog", locale, title: t("title"), description: t("description") });
+}
 
+export default async function ChangelogPage({ params }: Params) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "changelog" });
   const versions: ChangelogVersion[] = t.raw("versions");
 
   return (
-    <div className="py-20 sm:py-28">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h1 className="text-4xl font-bold tracking-tight">{t("title")}</h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            {t("description")}
-          </p>
-        </motion.div>
+    <>
+      <div className="pb-20 pt-14 sm:pt-20">
+        <div className="mx-auto max-w-[84rem] px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <h1 className="text-[2.75rem] font-semibold leading-[1.02] tracking-[-0.035em] sm:text-6xl">{t("title")}</h1>
+            <p className="mt-5 text-lg text-muted-foreground">{t("description")}</p>
+          </div>
 
-        <div className="space-y-8">
-          {versions.map((version, i) => (
-            <motion.div
-              key={version.version}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 * (i + 1) }}
-            >
-              <Card className="card-hover">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                      <GitCommit className="h-5 w-5 text-white" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <h2 className="font-semibold">{version.title}</h2>
-                        <Badge variant="outline">v{version.version}</Badge>
-                      </div>
-                      <p className="text-xs text-muted-foreground">
-                        {version.date}
-                      </p>
-                    </div>
-                  </div>
-                  <ul className="space-y-2 ml-[3.25rem]">
-                    {version.changes.map((change, j) => (
-                      <li
-                        key={j}
-                        className="flex items-start gap-2 text-sm text-muted-foreground"
-                      >
-                        <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
-                        {change}
-                      </li>
+          <ol className="mt-14 space-y-14">
+            {versions.map((version) => (
+              <li key={version.version} className="grid gap-4 border-t border-border/70 pt-8 md:grid-cols-[14rem_1fr] md:gap-10">
+                <div>
+                  <p className="font-mono text-2xl font-medium">v{version.version}</p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    <time dateTime={version.date}>{formatPostDate(version.date, locale)}</time>
+                  </p>
+                </div>
+                <div>
+                  <h2 className="text-xl font-semibold tracking-tight">{version.title}</h2>
+                  <ul className="mt-4 list-disc space-y-2.5 pl-5 text-[15px] leading-relaxed text-foreground/80 marker:text-emphasis/70">
+                    {version.changes.map((change) => (
+                      <li key={change}>{change}</li>
                     ))}
                   </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
-    </div>
+      <DownloadCTA />
+    </>
   );
 }

@@ -1,209 +1,143 @@
 {
   "metadata": {
-    "title": "FocusNow — Zamanınız Nereye Gidiyor? | Ücretsiz Masaüstü Takip",
-    "description": "Hangi uygulamada ne kadar vakit geçirdiğinizi otomatik takip eden ücretsiz masaüstü uygulaması. Ekran görüntüsü ve tuş kaydı yok. Mac ve Windows.",
-    "keywords": "zaman takip uygulaması, odaklanma uygulaması, verimlilik takibi, masaüstü zaman takip, pomodoro zamanlayıcı masaüstü"
+    "title": "FocusNow: Mac ve Windows için Otomatik Zaman Takibi",
+    "description": "Mac ve Windows için otomatik zaman takibi. Günün nereye gittiğini gör, odaklanmaya yer aç, çalışma kayıtlarını müşteri saatlerine dönüştür.",
+    "keywords": "otomatik zaman takibi, zaman takip programı, mac zaman takibi, windows zaman takibi, odaklanma uygulaması, pomodoro, serbest çalışan zaman takibi"
   },
   "nav": {
-    "features": "Özellikler",
-    "download": "İndir",
+    "primary": "Ana menü",
+    "skip": "İçeriğe geç",
+    "home": "FocusNow ana sayfa",
     "pricing": "Fiyatlandırma",
-    "blog": "Blog",
-    "about": "Hakkımızda",
-    "changelog": "Değişiklik Kaydı",
+    "download": "İndir",
+    "menu": "Menü",
+    "toggleTheme": "Temayı değiştir",
+    "useLight": "Açık temaya geç",
+    "useDark": "Koyu temaya geç",
+    "switchLanguage": "Switch to English",
     "privacy": "Gizlilik",
     "terms": "Kullanım Koşulları",
-    "getApp": "FocusNow'u Ücretsiz Al",
-    "menu": "Menü"
+    "groups": {
+      "product": {
+        "label": "Ürün",
+        "links": {
+          "tracking": {
+            "title": "Otomatik zaman takibi",
+            "description": "Kronometre olmadan her uygulama ve site."
+          },
+          "focus": {
+            "title": "Odak oturumları",
+            "description": "Pomodoro, Derin Çalışma, görev ve müzik."
+          },
+          "timecards": {
+            "title": "Zaman kartları ve müşteri saatleri",
+            "description": "Kayıttan çalışma dökümüne."
+          },
+          "changelog": {
+            "title": "Yenilikler",
+            "description": "Her sürümün değişiklik notları."
+          }
+        }
+      },
+      "useCases": {
+        "label": "Kullanım alanları",
+        "links": {
+          "freelancers": {
+            "title": "Serbest çalışanlar",
+            "description": "Açıklayabildiğin müşteri saatleri."
+          },
+          "developers": {
+            "title": "Yazılımcılar",
+            "description": "Kod zamanını bölünmekten koru."
+          },
+          "remoteWorkers": {
+            "title": "Uzaktan çalışanlar",
+            "description": "Evde de sınırı belli bir iş günü."
+          },
+          "students": {
+            "title": "Öğrenciler",
+            "description": "Birikerek ilerleyen çalışma oturumları."
+          }
+        }
+      },
+      "compare": {
+        "label": "Karşılaştır",
+        "links": {
+          "hub": {
+            "title": "Tüm karşılaştırmalar",
+            "description": "FocusNow nerede, dürüstçe."
+          },
+          "rize": {
+            "title": "FocusNow ve Rize",
+            "description": "İki otomatik takip, iki yaklaşım."
+          },
+          "rescuetime": {
+            "title": "FocusNow ve RescueTime",
+            "description": "Odak araçları ve zaman çizelgeleri."
+          },
+          "toggl": {
+            "title": "FocusNow ve Toggl Track",
+            "description": "Önce kronometre mi, önce kayıt mı?"
+          },
+          "alternatives": {
+            "title": "Zaman takip uygulaması seçmek",
+            "description": "İhtiyaca göre altı araç."
+          }
+        }
+      },
+      "resources": {
+        "label": "Kaynaklar",
+        "links": {
+          "guide": {
+            "title": "Kullanım rehberi",
+            "description": "Kurulum, Odak Puanı, raporlar ve fazlası."
+          },
+          "blog": {
+            "title": "Blog",
+            "description": "Odak ve zaman üzerine yazılar."
+          },
+          "about": {
+            "title": "Hakkımızda",
+            "description": "Cihan ve Barbaros'un ürünü."
+          }
+        }
+      }
+    }
   },
   "hero": {
-    "badge": "Sonsuza dek ücretsiz. Kart gerekmez.",
-    "title": "Gününüz Nereye Gidiyor?",
-    "titleHighlight": "Artık Bileceksiniz.",
-    "description": "FocusNow arka planda sessizce çalışır, hangi uygulamaları ne kadar kullandığınızı takip eder ve size net bir çalışma tablosu sunar. En verimli saatlerinizi keşfedin, zaman kayıplarınızı görün.",
-    "cta": "Ücretsiz Takibimi Başlat",
-    "secondaryCta": "İş Başında Görün",
-    "platformBadge": {
-      "mac": "macOS için mevcut",
-      "windows": "Windows için mevcut"
-    },
-    "screenshotAlt": "FocusNow uygulama ekran görüntüsü önizleme",
-    "mockup": {
-      "dashboard": {
-        "focusScore": "Odak Puanı",
-        "focusTime": "Odak Süresi",
-        "sessions": "Seanslar",
-        "timeline": "Zaman Çizelgesi",
-        "tabs": {
-          "today": "Bugün",
-          "yesterday": "Dün",
-          "week": "Hafta"
-        },
-        "legend": {
-          "focus": "Odak",
-          "neutral": "Nötr",
-          "distraction": "Dikkat Dağıtıcı",
-          "idle": "Boşta"
-        },
-        "tracking": "Takipte"
-      }
+    "category": "Mac ve Windows için otomatik zaman takibi",
+    "title": "Zamanını gör. Odağını bul.",
+    "description": "Gününün nereye gittiğini gör, odaklanmaya yer aç ve çalışma kayıtlarını anlaşılır müşteri saatlerine dönüştür.",
+    "cta": "FocusNow'ı Ücretsiz İndir",
+    "secondaryCta": "Uygulamayı Keşfet",
+    "platformNote": "macOS 12+ ve Windows 10+. Temel takip ücretsiz, kart gerekmez.",
+    "scene": {
+      "mainAlt": "FocusNow Odak sayfası: 25 dakikalık Pomodoro zamanlayıcısı ve 88 Odak Puanlı günlük özet",
+      "insightsTitle": "İçgörüler",
+      "insightsAlt": "AI günlük raporundan öne çıkanlar, örneğin günün en uzun kesintisiz çalışma bloğu",
+      "timerAlt": "Bir müşteri projesi için çalışan, faturalanabilir işaretli zaman kartı sayacı",
+      "demoNote": "Gerçek uygulama ekranları, örnek verilerle."
     }
-  },
-  "socialProof": {
-    "v1": "0",
-    "l1": "Ekran görüntüsü — asla",
-    "v2": "0",
-    "l2": "Tuş kaydı",
-    "v3": "< 2 dk",
-    "l3": "İndirmeden takibe",
-    "v4": "1",
-    "l4": "Bu veriyi gören kişi: sen"
-  },
-  "bentoFeatures": {
-    "title": "Daha İyi Odaklanmak İçin",
-    "titleHighlight": "İhtiyacınız Olan Her Şey",
-    "seeIt": "İş başında görün",
-    "cards": {
-      "tracking": {
-        "title": "Otomatik takip",
-        "description": "Kurulacak zamanlayıcı, tutulacak kayıt yok. Bir kez kurun; gerçek iş gününüz panelde belirsin."
-      },
-      "sessions": {
-        "title": "Odak seansları",
-        "description": "Pomodoro (25 dk) veya Derin Çalışma (90 dk) — her seans zamanın nereye gittiğinin dürüst kaydını tutar; o süre gerçekten sizin miydi, bilirsiniz."
-      },
-      "report": {
-        "title": "Yapay Zekâ Günlük Raporu",
-        "description": "Gün sonunda yapay zekâ neyin iyi gittiğini, zamanın nereye sızdığını ve yarın ne deneyeceğinizi özetler."
-      },
-      "privacy": {
-        "title": "Tasarımı gereği özel",
-        "description": "Ekran görüntüsü yok, tuş kaydı yok — neyin dikkat dağıtıcı sayılacağına da siz karar verirsiniz."
-      }
-    },
-    "included": {
-      "title": "Ayrıca dahil",
-      "items": [
-        "Yapay zekâ Günlük Raporu",
-        "Calendar görünümü — son 90 günün herhangi bir gününe geri dön",
-        "Çalışma saatleri — bütün gününüz değil, iş gününüz puanlansın",
-        "Duraklat/devam düğmeli yüzen oturum widget'ı",
-        "Komut paleti — ⌘K ile her yere",
-        "Boşta ve uzakta algılama",
-        "Özel kategoriler ve uygulama bazlı kurallar",
-        "Uygulama, site ve pencere başlıklarında arama",
-        "Google veya Microsoft ile giriş",
-        "Şifreli senkronizasyonlu çevrimdışı mod",
-        "Veri dışa aktarma",
-        "Koyu ve açık tema, 5 dil"
-      ]
-    },
-    "roadmap": {
-      "title": "Sırada Ne Var",
-      "items": [
-        "Ücretli bir Pro plan yolda — kapsamını hâlâ şekillendiriyoruz. Çekirdek takipçi ücretsiz kalacak."
-      ]
-    }
-  },
-  "screenshots": {
-    "title": "FocusNow'u",
-    "titleHighlight": "Çalışırken Görün",
-    "tabs": {
-      "dashboard": "Kontrol Paneli",
-      "analytics": "Analizler",
-      "activities": "Aktiviteler",
-      "sessions": "Seanslar",
-      "settings": "Ayarlar"
-    },
-    "content": {
-      "dashboard": {
-        "title": "Bugüne Bir Bakış",
-        "items": [
-          "Odak Puanı — %87",
-          "Odak Süresi — 4s 32dk",
-          "Seanslar — 3 tamamlandı"
-        ]
-      },
-      "analytics": {
-        "title": "Alışkanlıklarınız",
-        "items": [
-          "En yoğun odak: 09–11",
-          "7 günlük odak trendi ↑",
-          "En çok kullanılan: VS Code — 2s 15dk"
-        ]
-      },
-      "activities": {
-        "title": "Kurallarınız",
-        "items": [
-          "Figma → Odak",
-          "YouTube → Dikkat Dağıtıcı",
-          "Özel kategori: Tasarım"
-        ]
-      },
-      "sessions": {
-        "title": "Son Seanslar",
-        "items": [
-          "Pomodoro — 25 dk'nın 25'i · tamamlandı",
-          "Derin Çalışma — 1s 30dk'nın 1s 24'ü",
-          "Bugün 3 oturum"
-        ]
-      },
-      "settings": {
-        "title": "Size Göre Ayarlayın",
-        "items": [
-          "Çalışma saatleri: 09:00–18:00",
-          "Tema: Koyu · Açık · Sistem",
-          "Dil: EN · ES · RU · TR · DE"
-        ]
-      }
-    }
-  },
-  "howItWorks": {
-    "title": "Nasıl",
-    "titleHighlight": "Çalışır",
-    "steps": {
-      "install": {
-        "title": "İndirin ve Kurun",
-        "description": "Mac veya Windows'ta tek tıkla kurulum — iki dakika içinde takip başlar."
-      },
-      "run": {
-        "title": "Günlük İşlerinize Devam Edin",
-        "description": "FocusNow sessizce çalışır. Hiçbir düğmeye basmanız gerekmez."
-      },
-      "insights": {
-        "title": "Analizlerinize Göz Atın",
-        "description": "İstediğiniz zaman paneli açın ve zamanınızın nereye gittiğini görün."
-      }
-    }
-  },
-  "privacySection": {
-    "title": "Verileriniz şifreli ve",
-    "titleHighlight": "tamamen sizin kontrolünüzde.",
-    "badges": {
-      "encrypted": "Aktarımda ve Depolamada Şifreli",
-      "noScreenshots": "Ekran Görüntüsü Yok",
-      "noKeylogging": "Tuş Kaydı Yok",
-      "yourData": "Veriler Sizin"
-    },
-    "link": "Gizlilik taahhüdümüzün tamamını okuyun"
   },
   "downloadCta": {
-    "title": "En Verimli Haftanız",
-    "titleHighlight": "Şimdi Başlıyor",
-    "description": "FocusNow'u indirin ve zamanınızın gerçekte nereye gittiğini görmeye başlayın. Sonsuza dek ücretsiz, kredi kartı gerekmez.",
-    "cta": "Ücretsiz Takibimi Başlat",
-    "note": "macOS ve Windows. İndirmeden takibe iki dakika."
+    "title": "Bugünden başla.",
+    "description": "FocusNow'ı kur, her zamanki gibi çalış, akşam açıp gününü gör.",
+    "cta": "FocusNow'ı Ücretsiz İndir",
+    "note": "Mac ve Windows. İndirmeden takibe iki dakikadan kısa.",
+    "todayAlt": "Günün özeti: Odak Puanı 88, 7 sa 56 dk aktif sürenin 6 sa 45 dk'sı odak, 3 oturum tamamlandı",
+    "timerAlt": "Bir müşteri projesi için çalışan zaman kartı sayacı"
   },
   "download": {
     "meta": {
-      "title": "FocusNow'u Ücretsiz İndir — Mac ve Windows",
-      "description": "FocusNow'u ücretsiz indirin. macOS ve Windows için otomatik odak ve zaman takibi. İki dakikada kurulum."
+      "title": "FocusNow'ı İndir: Mac ve Windows (Ücretsiz)",
+      "description": "FocusNow'ı macOS için (Apple Silicon ve Intel) ücretsiz indir ya da Windows'ta Microsoft Store'dan al. İki dakikadan kısa sürede takipte."
     },
-    "title": "FocusNow'u İndirin",
-    "description": "Sonsuza dek ücretsiz. İki dakikada kurulum.",
-    "detected": "Algılanan Platform",
-    "downloadFor": "{platform} için FocusNow'u Al",
-    "otherPlatforms": "Diğer Platformlar",
+    "title": "FocusNow'ı indir",
+    "description": "Mac ve Windows için ücretsiz. İndirmeden takibe iki dakikadan kısa.",
+    "detected": "Bu bilgisayar için önerilen",
+    "downloadFor": "{platform} için indir",
+    "storeFor": "Microsoft Store'dan al",
+    "otherPlatforms": "Tüm platformlar",
     "comingSoon": "Yakında",
     "platforms": {
       "mac-arm": "macOS (Apple Silicon)",
@@ -211,130 +145,156 @@
       "windows": "Windows"
     },
     "requirements": {
-      "title": "Sistem Gereksinimleri",
+      "title": "Sistem gereksinimleri",
       "mac": {
         "title": "macOS",
         "items": [
-          "macOS 12 (Monterey) veya üzeri",
-          "Apple Silicon veya Intel",
-          "500 MB disk alanı"
+          "macOS 12 (Monterey) ve üzeri",
+          "Apple Silicon ya da Intel",
+          "İmzalı, onaylı ve kendini güncelliyor"
         ]
       },
       "windows": {
         "title": "Windows",
         "items": [
-          "Windows 10 veya üzeri",
-          "64-bit işlemci",
-          "500 MB disk alanı"
+          "Windows 10 ve üzeri",
+          "64 bit",
+          "Microsoft Store üzerinden kurulur ve güncellenir"
         ]
       }
     },
     "afterInstall": {
-      "title": "Kurduktan Sonra",
+      "title": "Kurduktan sonra",
       "steps": {
         "permissions": {
-          "title": "İzinleri Verin",
-          "description": "Google veya Microsoft hesabınızla giriş yapın; kurulum sihirbazı macOS'te FocusNow'un ihtiyaç duyduğu tek izinde size yol gösterir (Windows'ta ek adım gerekmez). Yalnızca uygulama adını, pencere başlığını ve tarayıcılarda sayfa adresini okur — asla ekran içeriğinizi veya tuş vuruşlarınızı değil."
+          "title": "Takibe izin ver",
+          "description": "macOS'ta kurulum Erişilebilirlik iznini ister. Windows'ta ek adım yok. FocusNow uygulama adını, pencere başlığını ve sitenin alan adını okur; ekranını ya da tuş vuruşlarını asla."
         },
         "run": {
-          "title": "Çalışmasına İzin Verin",
-          "description": "FocusNow arka planda sessizce çalışır. Normal iş gününüze devam edin."
+          "title": "Rolünü seç",
+          "description": "AI günlük raporu senin dilinden konuşsun diye rolünü seç. Sonra Ayarlar'dan değiştirebilirsin."
         },
         "dashboard": {
-          "title": "Panelinize Göz Atın",
-          "description": "İstediğiniz zaman FocusNow'u açın ve odak istatistiklerinizi, en çok kullandığınız uygulamaları ve verimlilik trendlerinizi görün."
+          "title": "Her zamanki gibi çalış",
+          "description": "Oturum başlatmak için Odak sayfasını aç ya da çalışmaya devam et, akşam gününe bak."
         }
       }
     },
-    "microsoftStore": "Microsoft Store"
+    "microsoftStore": "Microsoft Store",
+    "demoAlt": "Pomodoro zamanlayıcısı ve günün Odak Puanı ile FocusNow Odak sayfası",
+    "noLinux": "Linux ya da mobil sürüm yok."
   },
   "pricing": {
     "meta": {
-      "title": "Fiyatlandırma — FocusNow Sonsuza Dek Ücretsiz",
-      "description": "FocusNow kredi kartı gerektirmeden tamamen ücretsiz. Yapay zeka destekli aktivite takibi, odak seansları, analizler ve şifreli senkronizasyon dahil."
+      "title": "Fiyatlandırma: Ücretsiz Otomatik Zaman Takibi",
+      "description": "FocusNow'da temel takip, odak oturumları ve AI günlük raporu senkronizasyonla birlikte ücretsiz. Zaman kartları ve faturalama erken erişimde ücretsiz."
     },
-    "title": "Basit, Şeffaf",
-    "titleHighlight": "Fiyatlandırma",
-    "description": "FocusNow tamamen ücretsiz. Verimlilik araçlarının herkesin kullanabilmesi gerektiğine inanıyoruz.",
+    "category": "Fiyatlandırma",
+    "title": "Başlaması ücretsiz. Sonrası da açık.",
+    "description": "Temel takip ücretsiz. Müşteri araçları erken erişim boyunca ücretsiz; bir şey değişmeden önce Pro koşullarını paylaşacağız.",
     "free": {
-      "title": "Ücretsiz",
-      "price": "₺0",
-      "period": "sonsuza dek",
-      "description": "Odaklanmanızı takip etmek ve geliştirmek için ihtiyacınız olan her şey.",
+      "label": "Ücretsiz",
+      "price": "0 $",
+      "period": "kart yok, deneme süresi yok",
+      "description": "Gününü görmek ve odak zamanını korumak için gereken her şey.",
       "features": [
-        "Yapay zeka sınıflandırmalı otomatik aktivite takibi",
-        "Yapay zekâ Günlük Raporu — gününüzü sizin için özetler",
-        "Pomodoro ve Derin Çalışma odak seansları",
-        "Odak Puanı, zaman çizelgesi ve saatlik analizler",
-        "Özel kategoriler, uygulama kuralları ve hariç tutma listeleri",
-        "Çevrimdışı modlu şifreli bulut senkronizasyonu",
-        "Veri dışa aktarma ve hesap silme",
-        "Koyu ve açık tema, 5 dil desteği",
-        "macOS ve Windows desteği"
+        "Otomatik uygulama ve site takibi",
+        "Pomodoro ve Derin Çalışma odak oturumları",
+        "Tahmin ve gerçek süreli görevler",
+        "Odak Müziği ve arka plan sesleri",
+        "Verimlilik görünümleri ve Odak Puanı",
+        "Etkinlikler ve Takvim",
+        "AI günlük raporu",
+        "Şifreli senkronizasyon ve eksiksiz veri dışa aktarma"
       ],
-      "cta": "Ücretsiz Takibimi Başlat"
+      "cta": "FocusNow'ı Ücretsiz İndir"
+    },
+    "clients": {
+      "label": "Erken erişim",
+      "title": "Müşteri araçları",
+      "price": "0 $",
+      "period": "erken erişim boyunca",
+      "description": "Saatle çalışan serbest çalışanlar ve danışmanlar için.",
+      "features": [
+        "Takip kayıtlarından, sayaçtan ya da elle zaman kartları",
+        "Projeler, müşteriler, etiketler ve istediğin para biriminde ücretler",
+        "PDF ya da CSV çalışma dökümleri",
+        "Zaman kartına girmemiş takip süresinin kapsaması",
+        "Doluluk oranlı raporlar ve CSV dışa aktarma"
+      ],
+      "note": "Bunları ileride ücretli bir Pro planına katmayı planlıyoruz. Fiyat ve zamanlama önceden duyurulacak."
     },
     "pro": {
+      "label": "Pro",
       "title": "Pro",
-      "price": "Yakında",
-      "description": "İleri düzey kullanıcılar için gelişmiş özellikler.",
-      "features": [
-        "Ücretsiz plandaki her şey",
-        "Gelişmiş yapay zeka içgörüleri ve öneriler",
-        "Ekip ve çalışma alanı özellikleri",
-        "Öncelikli destek"
-      ],
+      "price": "Henüz fiyatlanmadı",
+      "description": "Müşteri işi için ücretli bir plan yolda. İlk duyan olmak ve açıldığında erken erişim almak için listeye katıl.",
       "waitlist": {
-        "prompt": "Pro çıktığında ilk deneyen siz olun.",
+        "prompt": "Pro haberlerini ilk sen al.",
+        "emailLabel": "E-posta",
         "emailPlaceholder": "ornek@eposta.com",
-        "cta": "Erken erişime yazıl",
-        "joining": "Yazılıyor…",
-        "success": "Listedesiniz — Pro hazır olduğunda size e-posta göndereceğiz.",
-        "errorInvalid": "Lütfen geçerli bir e-posta adresi girin.",
-        "errorGeneric": "Bir şeyler ters gitti. Lütfen daha sonra tekrar deneyin.",
+        "cta": "Pro listesine katıl",
+        "joining": "Ekleniyor…",
+        "success": "Listedesin. Pro hazır olduğunda sana e-posta göndereceğiz.",
+        "errorInvalid": "Lütfen geçerli bir e-posta adresi gir.",
+        "errorGeneric": "Bir şeyler ters gitti. Lütfen daha sonra tekrar dene.",
         "privacyNote": "Sadece Pro haberi. Bülten yok, spam yok."
       }
-    }
+    },
+    "faqTitle": "Fiyatlandırma soruları",
+    "faq": [
+      {
+        "question": "Ne ücretsiz kalacak?",
+        "answer": "Otomatik takip, odak oturumları, görevler ve Verimlilik görünümleri FocusNow'ın ücretsiz çekirdeği."
+      },
+      {
+        "question": "Pro çıktığında müşteri araçlarına ne olacak?",
+        "answer": "Zaman kartları, faturalama ve raporları Pro'ya taşımayı planlıyoruz. Fiyatı ve zamanlamayı uygulamada ve bu sayfada önceden duyuracağız."
+      },
+      {
+        "question": "Verilerimi alabilir miyim?",
+        "answer": "Evet. Ayarlar → Hesap'tan bütün verini istediğin zaman dışa aktarabilirsin; zaman kartları ayrıca CSV olarak da aktarılır."
+      }
+    ]
   },
   "about": {
     "meta": {
-      "title": "FocusNow Hakkında — Misyonumuz",
-      "description": "FocusNow basit bir fikirden doğdu: gizliliğinizden ödün vermeden verimliliğinizi takip edebilmelisiniz."
+      "title": "FocusNow Hakkında: Cihan ve Barbaros",
+      "description": "FocusNow'ı iki kişi yapıyor: Cihan ve Barbaros. Daha az saat ziyan etmek, aileye, hobilere ve dinlenmeye yer açmak için. Hikâyemizi oku."
     },
-    "title": "FocusNow",
-    "titleHighlight": "Hakkında",
+    "category": "FocusNow hakkında",
     "mission": "Derin çalışma, derin çaba gerektirmemeli.",
-    "description": "FocusNow, yoğun günlerin sonunda sorup durduğumuz bir soruyla başladı: onca zaman gerçekten nereye gitti? Dikkat ve odak üzerine araştırmaları derinlemesine inceledik, Cal Newport'un Deep Work'ünden ilham aldık ve basit, kuralları size ait bir araç yaptık. Çünkü günün nereye gittiğini bilince haftanın da ayın da gidişatı belli oluyor — ve önemli işlere de, işin dışındaki hayata da yeniden yer açılıyor.",
+    "description": "FocusNow, yoğun günlerin sonunda sorup durduğumuz bir soruyla başladı: onca zaman nereye gitti? Dikkat üzerine araştırmaları okuduk, Cal Newport'un Deep Work'ünden ilham aldık ve kurallarını senin koyduğun basit bir araç yaptık. Günün nereye gittiğini bilince hafta da ay da yerine oturuyor; önemli işe de, işin dışındaki hayata da yeniden yer açılıyor.",
     "pillars": {
-      "privacy": {
-        "title": "Gizlilik Öncelikli",
-        "content": "Verimlilik verileriniz size özeldir. Her şey hem aktarım sırasında hem beklemede şifrelenir, asla satılmaz ve sizin koşullarınızda saklanır. FocusNow'u içgörü ile gizlilik arasında seçim yapmak zorunda kalmayasınız diye geliştirdik."
-      },
       "simplicity": {
         "title": "Zahmetsiz",
-        "content": "Basacak düğme yok, başlatacak zamanlayıcı yok. FocusNow arka planda sessizce çalışır ve zamanınızın nereye gittiğini gösterir. Kurallar da sizin — neyin odak, neyin dikkat dağıtıcı sayılacağına siz karar verirsiniz."
+        "content": "Takip edilmek için basacak bir düğme yok. FocusNow arka planda çalışır, zamanının nereye gittiğini gösterir. Kurallar senin: neyin odak, neyin dikkat dağıtıcı sayılacağına sen karar verirsin."
+      },
+      "privacy": {
+        "title": "Baştan gizlilik",
+        "content": "Ekran görüntüsü yok, tuş kaydı yok. Verilerin aktarımda ve depolamada şifrelenir, asla satılmaz. İstediğin an dışa aktarabilir ya da hesabını silebilirsin."
       },
       "transparency": {
-        "title": "Şeffaf",
-        "content": "Ne topladığımız, nasıl sakladığımız ve neden yaptığımız konusunda açığız. Gizli veri akışı yok, karanlık kalıp yok. Verileriniz sizin — istediğiniz zaman dışa aktarın veya silin."
+        "title": "Dürüst",
+        "content": "Neyi, nasıl ve neden topladığımızı söyleriz. FocusNow'ın neyi yapmadığını da söyleriz; karşılaştırma sayfalarımızda ve uygulamada."
       }
     },
     "founder": {
       "title": "Kuruculardan bir not",
-      "content": "FocusNow'u iki kişi yapıyor — Cihan ve Barbaros. Bu işe kendimizden daha fazla saat çıkarmak için değil, daha az saat ziyan etmek için başladık: odaklı işi odaklı sürede bitirip kalanı ailemize, hobilerimize ve dinlenmeye ayırmak istedik. Günlerimizin nereye gittiğini, cevabı bir gözetim aracına teslim etmeden görmek istiyorduk; biz de kendimizinkini yaptık. FocusNow'u her gün kendimiz kullanıyoruz ve kullanıcılarımızın söyledikleriyle büyüyor. <mail>info@focusnow.ai</mail>'ye yazdığınızda cevaplayan ikimizden biridir.",
-      "signature": "Cihan ve Barbaros — FocusNow'un kurucuları"
+      "content": "FocusNow'ı iki kişi yapıyor: Cihan ve Barbaros. Bu işe kendimizden daha fazla saat çıkarmak için değil, daha az saat ziyan etmek için başladık: odaklı işi odaklı sürede bitirip kalanı ailemize, hobilerimize ve dinlenmeye ayırmak istedik. Günlerimizin nereye gittiğini, cevabı bir gözetim aracına teslim etmeden görmek istiyorduk; biz de kendimizinkini yaptık. FocusNow'ı her gün kullanıyoruz ve kullanıcılarımızın söyledikleriyle büyüyor. <mail>info@focusnow.ai</mail> adresine yazdığında cevaplayan ikimizden biri olur.",
+      "signature": "Cihan ve Barbaros, FocusNow'ın kurucuları"
     },
     "proof": {
       "lead": "Sözde değil, pratikte:",
-      "privacyLink": "gizlilik taahhüdümüzü okuyun",
-      "middle": "ya da neler yayınlandığını görün:",
+      "privacyLink": "gizlilik politikamızı oku",
+      "middle": "ya da neler yayınlandığını gör:",
       "changelogLink": "değişiklik kaydı"
     }
   },
   "privacyPage": {
     "title": "Gizlilik Politikası",
-    "lastUpdated": "Yürürlük tarihi: 30 Temmuz 2026",
-    "intro": "FocusNow (\"biz\") olarak gizliliğinizi korumayı taahhüt ediyoruz. Bu Gizlilik Politikası, FocusNow web sitesini ve masaüstü uygulamasını kapsar; hangi verileri topladığımızı, bunları nasıl kullandığımızı ve sakladığımızı, bizim adımıza kimlerin işlediğini ve kişisel verileriniz üzerindeki haklarınızı açıklar. Bu metin, 25 Mayıs 2025 tarihli sürümün yerine geçer. Türkçe metin bilgilendirme amaçlı bir çeviridir; herhangi bir çelişki hâlinde İngilizce sürüm esas alınır.",
+    "lastUpdated": "Yürürlük tarihi: 26 Eylül 2026",
+    "intro": "FocusNow (\"biz\") olarak gizliliğinizi korumayı taahhüt ediyoruz. Bu Gizlilik Politikası, FocusNow web sitesini ve masaüstü uygulamasını kapsar; hangi verileri topladığımızı, bunları nasıl kullandığımızı ve sakladığımızı, bizim adımıza kimlerin işlediğini ve kişisel verileriniz üzerindeki haklarınızı açıklar. Bu metin, 30 Temmuz 2026 tarihli sürümün yerine geçer. Türkçe metin bilgilendirme amaçlı bir çeviridir; herhangi bir çelişki hâlinde İngilizce sürüm esas alınır.",
     "sections": {
       "trustPromise": {
         "title": "1. Gizlilik Sözümüz",
@@ -359,6 +319,7 @@
           "Hesap bilgileri — e-posta adresiniz, görünen adınız ve hangi giriş sağlayıcısını kullandığınız (Google veya Microsoft). Parolanızı hiçbir zaman görmeyiz ve saklamayız",
           "İsteğe bağlı profil bilgileri — dilerseniz paylaştığınız meslek unvanınız ve sektörünüz ile belirlerseniz çalışma saatleriniz; yapay zekâ günlük raporunuzu size daha uygun hâle getirmek için kullanılır (bkz. 6. bölüm)",
           "Aktivite verileri — kullandığınız uygulamaların adları ve dosya yolları, pencere başlıkları, ziyaret ettiğiniz web adresleri (URL'ler), aktif/boşta/uzakta durumlarınız, zaman damgaları ve süreler ile odak seansı bilgileriniz. Verimlilik analizleriniz bu verilerle oluşturulur",
+          "Zaman kartı ve faturalama verileri — zaman kartlarını kullanırsanız oluşturduğunuz projeler, müşteriler, görevler, etiketler, zaman girişleri, ücretler, para birimleri, notlar ve çalışma dökümleri. Müşteri kayıtları, o müşteri için girdiğiniz iletişim kişisi, e-posta, telefon, adres ve vergi numarasını içerebilir. Bu veriler cihazlarınız arasında erişilebilir olması için senkronize edilir ve dışa aktarılabilir",
           "Tanılama ve kullanım analitiği — işletim sistemi ve uygulama sürümü, cihaz mimarisi, dil ve tema ayarları, kullanım olayları, yaklaşık konum ve hata raporları. Hiçbir tanımlayıcı içermeyen iki anonim olay dışında yalnızca açık rıza verirseniz toplanır (bkz. 7. bölüm)",
           "Web sitesi verileri — focusnow.ai sitesinin ne topladığı aşağıdaki çerezler bölümünde açıklanmıştır",
           "Web sitesi form verileri — iletişim formunu kullanırsanız gönderdiğiniz ad, e-posta adresi, konu ve mesajı alırız; Pro bekleme listesine yazılırsanız e-posta adresinizi saklarız. Her ikisi de yalnızca size yanıt vermek veya Pro hakkında bilgilendirmek için kullanılır, asla satılmaz veya paylaşılmaz ve talebiniz üzerine silinir"
@@ -455,9 +416,11 @@
         "content": "Verilerinizi yalnızca gerektiği süre boyunca saklarız:",
         "items": [
           "Aktivite kayıtları, odak oturumları ve AI günlük özet raporları buluttan en fazla 12 ay içinde (kayan pencere ile) otomatik olarak silinir; hesap ve profil bilgileriniz ise hesabınız aktif olduğu sürece saklanır",
-          "Cihazınızda, senkronlanmış 90 günden eski aktivite kayıtları otomatik olarak temizlenir; bulut geçmişiniz yukarıdaki 12 aylık bulut saklama penceresi içinde erişilebilir kalır",
+          "Zaman kartları, projeler, müşteriler ve çalışma dökümleri faturalama kayıtlarınız olduğu için bulutta otomatik olarak silinmez; siz silene ya da hesabınızı silene kadar saklanır",
+          "Cihazınızda veriler yaşa göre silinmez: yerel veritabanı, eşleşen bulut kayıtlarının süresi dolmuş olsa bile, uygulamadan silene ya da FocusNow'ı kaldırana kadar geçmişinizi tutar",
           "Uygulama içinden sildiğiniz veriler hem buluttan hem cihazınızdan kaldırılır",
           "Hesap silme talepleri 30 gün içinde tamamlanır; ilgili mevzuatın gerektirdiği hâllerde bazı veriler daha uzun süre saklanabilir",
+          "Onay tercihlerinizin kaydı (neyi kabul ya da reddettiğiniz, ne zaman ve nerede), onayın nasıl verildiğini gerektiğinde gösterebilmemiz için hesap silindikten sonra da saklanır; bu kayıt aktivite verisi içermez",
           "Sizi tanımlayamayan toplu ve anonim istatistikler, hizmeti iyileştirmek için saklanabilir"
         ]
       },
@@ -493,12 +456,16 @@
         ],
         "note": "Veri Sorumlusu: FocusNow — Barbaros Zongur, Türkiye. Bu politika İngilizce ve Türkçe olarak sunulur; iki sürüm arasında çelişki olursa İngilizce sürüm geçerlidir."
       }
+    },
+    "meta": {
+      "title": "Gizlilik Politikası",
+      "description": "FocusNow'ın neyi topladığı, nasıl sakladığı ve işlediği, kimlerle çalıştığımız ve GDPR ile KVKK kapsamındaki hakların."
     }
   },
   "termsPage": {
     "meta": {
-      "title": "Kullanım Koşulları — FocusNow",
-      "description": "FocusNow masaüstü uygulamasını ve web sitesini kullanırken geçerli olan koşullar: lisans, kabul edilebilir kullanım, yapay zekâ içeriği ve sorumluluk."
+      "title": "Kullanım Koşulları",
+      "description": "FocusNow masaüstü uygulaması ve web sitesinin kullanım koşulları: lisans, kabul edilebilir kullanım, AI içeriği, garanti ve sorumluluk."
     },
     "title": "Kullanım Koşulları",
     "lastUpdated": "Yürürlük tarihi: 2 Temmuz 2026",
@@ -578,9 +545,26 @@
     "description": "FocusNow'daki yenilikleri görün.",
     "versions": [
       {
+        "version": "0.3.0",
+        "date": "2026-09-25",
+        "title": "Zaman kartları ve faturalama",
+        "changes": [
+          "Zaman kartları: süreyi sayaçla, elle ya da bir günün takip kayıtlarından gir; zaman aralıkları, çakışma uyarıları ve CSV dışa aktarma dahil",
+          "Projeler, müşteriler, görevler ve etiketler; proje ya da görev başına, istediğin para biriminde ücret",
+          "Faturalama: müşteri başına faturalanacaklar listesi, yuvarlama ve giriş başına fiyatlandırmalı çalışma dökümleri, faturalanan bir girişin dökümün altından değişmemesi için kilitleme",
+          "Raporlar: zaman kartı raporları için yeni sayfa, tutarlar para birimine göre gruplanır",
+          "Odak artık ana ekran: açık oturum kontrolleri, Odak Puanı'nı gösteren günlük şerit ve zamanlayıcıda aktif görev",
+          "Odak Müziği: üst çubukta radyo istasyonları ve arka plan sesleri; istersen yalnızca odak oturumlarında çalar",
+          "Analiz sayfasının adı Verimlilik oldu",
+          "AI günlük raporu, rapor oluşturulamadığında genel bir hata yerine nedenini söylüyor",
+          "Kategori adları uygulama dilinde gösteriliyor",
+          "Her silme işlemi artık onay istiyor; oturum açma, başarısız token yenilemelerinden kendini toparlıyor"
+        ]
+      },
+      {
         "version": "0.2.0",
         "date": "2026-07-31",
-        "title": "Güncel Sürüm",
+        "title": "Tasarım yenilemesi ve İçgörüler",
         "changes": [
           "Baştan tasarım: Dashboard'da Odak Puanı halkası, altı durumlu daha zengin zaman çizelgesi, daraltılabilir kenar çubuğu ve komut paleti (⌘K / Ctrl+K)",
           "Yeni Insights sayfası: biten günlerin yapay zekâ özeti — öne çıkanlar ve rolüne göre öneriler",
@@ -607,7 +591,11 @@
           "Otomatik güncellemeli macOS (Apple Silicon) ve Windows sürümleri"
         ]
       }
-    ]
+    ],
+    "meta": {
+      "title": "Değişiklik Kaydı: FocusNow'daki Yenilikler",
+      "description": "Her FocusNow sürümünün notları: Mac ve Windows uygulaması için yeni özellikler, iyileştirmeler ve düzeltmeler."
+    }
   },
   "blog": {
     "title": "Blog",
@@ -616,18 +604,19 @@
     "readingTime": "{minutes} dk okuma",
     "backToBlog": "Blog'a Dön",
     "publishedOn": "{date} tarihinde yayınlandı",
-    "noPosts": "Henüz blog yazısı yok. Yakında tekrar kontrol edin!"
+    "noPosts": "Henüz blog yazısı yok. Yakında tekrar kontrol edin!",
+    "meta": {
+      "title": "Blog: Odak, Zaman ve Derin Çalışma",
+      "description": "FocusNow kurucularından odak oturumları, ekran süresi ve derin çalışma üzerine yazılar ve pratik rehberler."
+    }
   },
   "footer": {
-    "description": "Zamanınızın nereye gittiğini görün. Mac ve Windows için ücretsiz masaüstü takip.",
-    "product": "Ürün",
-    "useCases": "Kullanım Alanları",
-    "resources": "Kaynaklar",
+    "description": "Mac ve Windows için otomatik zaman takibi, odak oturumları ve müşteri saatleri.",
+    "founders": "Cihan ve Barbaros'un elinden.",
     "legal": "Yasal",
-    "contact": "Bize Ulaşın",
     "copyright": "Tüm hakları saklıdır.",
-    "compare": "Karşılaştır",
-    "guide": "Rehber"
+    "platforms": "macOS 12+ ve Windows 10+",
+    "contact": "İletişim"
   },
   "consent": {
     "message": "Site trafiğini analiz etmek ve deneyiminizi iyileştirmek için çerezler kullanıyoruz.",
@@ -636,260 +625,224 @@
     "learnMore": "Daha fazla bilgi"
   },
   "useCases": {
-    "remoteWorkers": {
-      "meta": {
-        "title": "Uzaktan Çalışanlar İçin Odak Takibi",
-        "description": "Evden çalışmak gerçekten verimli mi? Odaklanmanızı takip edin, verimli saatlerinizi keşfedin ve daha iyi uzaktan çalışma alışkanlıkları oluşturun."
-      },
-      "badge": "Uzaktan Çalışanlar İçin",
-      "title": "Uzaktan Çalışmak Gerçekten",
-      "titleHighlight": "Verimli mi?",
-      "description": "Evden çalışmak özgürlük demek — ama aynı zamanda daha fazla dikkat dağınıklığı. FocusNow uzaktan iş gününüzün gerçekte nasıl göründüğünü gösterir.",
-      "painPoints": {
-        "title": "Tanıdık Geldi mi?",
-        "items": [
-          "Bütün gün meşgulsünüz ama ne yaptığınızı somut olarak gösteremiyorsunuz",
-          "Ev ortamındaki dikkat dağıtıcılar farkında olmadan derin çalışma sürenizi yiyor",
-          "Ofisten daha mı verimli yoksa daha mı az verimli olduğunuzu bilmiyorsunuz",
-          "Gün içinde kaybettiğiniz odak yüzünden iş akşam saatlerine sarkıyor"
-        ]
-      },
-      "solution": {
-        "title": "FocusNow Nasıl Yardımcı Olur",
-        "items": [
-          "Gerçek verimli saatlerinizi ve dikkat dağınıklığına kaybettiğiniz zamanı görün",
-          "En yoğun odak saatlerinizi bulun ve koruyun",
-          "Otomatik boşta ve uzakta algılama istatistiklerinizi dürüst tutar — ne zaman durmanız gerektiğini bilin",
-          "Uzaktan çalışmanın işe yaradığına dair somut veriler oluşturun"
-        ]
-      },
-      "cta": "Ücretsiz Takibimi Başlat",
-      "faq": {
-        "items": [
-          {
-            "question": "İşverenim veya ekibim verilerimi görebilir mi?",
-            "answer": "Hayır. FocusNow kişisel bir araçtır — veriniz kendi hesabınızda durur; ekip paneli ya da yönetici görünümü yoktur. Rakamlarınızı yalnızca siz görürsünüz."
-          },
-          {
-            "question": "FocusNow toplantılarımı izliyor ya da mesajlarımı okuyor mu?",
-            "answer": "Hayır. Ekranınızı, kameranızı, mikrofonunuzu veya tuş vuruşlarınızı asla kaydetmez. Yalnızca hangi uygulama ya da sitenin önde olduğunu ve ne kadar kaldığını kaydeder — analizleriniz için gereken kadar, fazlası değil."
-          },
-          {
-            "question": "İş ve kişisel zamanı ayrı tutabilir miyim?",
-            "answer": "Evet. Özel kategoriler ve uygulama bazlı kurallarla neyin iş, neyin kişisel, neyin dikkat dağıtıcı sayılacağına siz karar verirsiniz; otomatik boşta algılama da rakamları dürüst tutar."
-          }
-        ]
-      }
-    },
-    "students": {
-      "meta": {
-        "title": "Öğrenciler İçin Odak Takibi",
-        "description": "Ders çalışma seanslarınızı takip edin ve zamanınızın nereye gittiğini görün. Otomatik odak takibiyle daha iyi çalışma alışkanlıkları oluşturun."
-      },
-      "badge": "Öğrenciler İçin",
-      "title": "Ders Çalışırken Saatler",
-      "titleHighlight": "Nereye Gidiyor?",
-      "description": "3 saat çalışmaya oturuyorsunuz ama gerçekte ne kadarı odaklı geçiyor? FocusNow ekran sürenizi otomatik takip eder, böylece daha akıllı çalışabilirsiniz.",
-      "painPoints": {
-        "title": "Tanıdık Geldi mi?",
-        "items": [
-          "Saatlerce çalışmayı planlıyorsunuz ama sosyal medyaya dalıyorsunuz",
-          "Hangi derslerin en çok zamanınızı aldığını bilmiyorsunuz",
-          "Sınav dönemi kaotik geçiyor — yeterince çalışıp çalışmadığınızdan emin olamıyorsunuz",
-          "Çalışma yöntemlerinizin gerçekten işe yarayıp yaramadığını anlayamıyorsunuz"
-        ]
-      },
-      "solution": {
-        "title": "FocusNow Nasıl Yardımcı Olur",
-        "items": [
-          "Gerçekten ne kadar çalıştığınızı ve ne kadar dikkatinizin dağıldığını görün",
-          "Ders çalışma sırasında hangi uygulamaları kullandığınızı takip edin",
-          "Pomodoro veya Derin Çalışma seanslarıyla odakta kalın",
-          "Haftalık trendleri inceleyerek çalışma alışkanlıklarınızı geliştirin"
-        ]
-      },
-      "cta": "Ücretsiz Takibimi Başlat",
-      "faq": {
-        "items": [
-          {
-            "question": "FocusNow ders çalışmayla oyalanmayı ayırt edebilir mi?",
-            "answer": "Evet — kuralları siz koyarsınız. Not uygulamalarınızı ve ders sitelerinizi odak, YouTube veya oyunları dikkat dağıtıcı olarak işaretleyin; gününüz kendiliğinden sınıflansın."
-          },
-          {
-            "question": "Her çalışma seansında zamanlayıcı başlatmam gerekiyor mu?",
-            "answer": "Hayır. FocusNow arka planda otomatik takip eder. Pomodoro ve Derin Çalışma seansları yapı istediğinizde oradadır — zorunluluk değil, seçenek."
-          },
-          {
-            "question": "Öğrenciler için gerçekten ücretsiz mi?",
-            "answer": "Evet. Çekirdek uygulama sonsuza dek ücretsiz, kredi kartı da gerekmez — ayrı bir öğrenci planı yok çünkü herkes ücretsiz kullanıyor."
-          }
-        ]
-      }
-    },
     "freelancers": {
       "meta": {
-        "title": "Serbest Çalışanlar İçin Odak Takibi",
-        "description": "Her çalışma saatinizin nereye gittiğini bilin. Serbest çalışanlar için otomatik masaüstü takibi — zamanlayıcı yok, elle kayıt yok."
+        "title": "Serbest Çalışanlar için Otomatik Zaman Takibi",
+        "description": "Müşteri işini otomatik takip et, kayıtları zaman kartına ekle, çalışma dökümünü PDF ya da CSV hazırla. Mac ve Windows için ücretsiz temel takip."
       },
-      "badge": "Serbest Çalışanlar İçin",
-      "title": "Her Saatiniz",
-      "titleHighlight": "Nereye Gidiyor?",
-      "description": "Serbest çalışan olarak zamanınız geliriniz demek. FocusNow çalışmanızı otomatik takip eder, böylece her zaman zamanınızı nasıl harcadığınızı bilirsiniz.",
-      "painPoints": {
-        "title": "Tanıdık Geldi mi?",
-        "items": [
-          "İşlerin ne kadar sürdüğünü olduğundan kısa tahmin edip düşük fiyat veriyorsunuz",
-          "İdari işler ve iletişim faturalanamayan saatleri yiyor",
-          "Projeler arasında geçiş yapıyorsunuz ve zamanın nereye gittiğini kaybediyorsunuz",
-          "Ay sonunda tüm saatlerinizin nereye gittiğini merak ediyorsunuz"
-        ]
-      },
-      "solution": {
-        "title": "FocusNow Nasıl Yardımcı Olur",
-        "items": [
-          "Her uygulamada geçen gerçek süreyi görün — uygulamaları özel kategorilerle gruplayın",
-          "E-posta ve Slack gibi faturalandırılamayan zaman kayıplarını tespit edin",
-          "Önemli işleri planlamak için en verimli saatlerinizi takip edin",
-          "Hizmetlerinizi doğru fiyatlandırmak için veri toplayın"
-        ]
-      },
-      "cta": "Ücretsiz Takibimi Başlat",
+      "who": "Serbest çalışanlar için",
+      "title": "Faturayı hafızana göre değil, yaptığın işe göre hazırla.",
+      "description": "FocusNow gününü kendiliğinden kaydeder. Hafta sonunda neyin hangi müşteriye ait olduğunu seçersin; saatler ve tutarlar kendiliğinden toplanır.",
+      "heroAlt": "Projeler sayfası: kaydedilen ve faturalanabilir saatleri, tutarı, bütçe kullanımı ve son girişleriyle bir müşteri projesi",
+      "day": "Sabahlar Brightline tasarımında, öğleden sonra Northwind ile bir görüşme, arada e-postalar. Cuma günü Takvim'i açıp her müşteriye ait kayıtları seçer, zaman kartına eklersin. Kapsama, takip edilen haftanın ne kadarının zaman kartına girdiğini gösterir; Faturalanacaklar her müşteriyi saat ve tutarıyla listeler.",
+      "scenes": [
+        {
+          "title": "Her müşteri faturaya hazır",
+          "body": "Faturalanabilir girişler müşteri başına saat ve tutarla toplanır. Hazır olduğunda çalışma dökümü oluştur, PDF ya da CSV olarak aktar.",
+          "alt": "Faturalanacaklar: müşteri başına saat ve tutar, her birinde döküm oluşturma düğmesi"
+        },
+        {
+          "title": "Gerçek doluluk oranını bil",
+          "body": "Raporlar faturalanabilir saatleri müsait çalışma saatlerinle karşılaştırır; süreyi proje, müşteri, görev ya da etikete göre gruplar.",
+          "alt": "Yüzde 43 doluluk: 198 saat müsait sürenin 84 sa 43 dk'sı faturalanabilir, hedef yüzde 70-75"
+        }
+      ],
+      "compareText": "FocusNow'ı kronometre odaklı bir araçla mı karşılaştırıyorsun?",
+      "compareLink": "FocusNow ve Toggl Track",
+      "featureLink": "Zaman kartları nasıl çalışır",
       "faq": {
         "items": [
           {
-            "question": "FocusNow'u müşteri faturalandırmama dayanak yapabilir miyim?",
-            "answer": "Evet, dürüst bir kayıt olarak: her uygulamada ve her sitede gün gün tam olarak ne kadar kaldığınızı görürsünüz; veriyi dilediğiniz an dışa aktarıp faturalarınızla karşılaştırabilirsiniz."
+            "question": "Müşteriye göndereceğim özeti FocusNow hazırlayabilir mi?",
+            "answer": "Evet, çalışma dökümü olarak: bir müşterinin faturalanabilir girişleri PDF ya da CSV olarak aktarılır. Bu bir vergi faturası değildir. Faturayı muhasebe aracında kes, numarasını dökümüne referans olarak ekle."
           },
           {
-            "question": "Projeler arasında geçerken zamanlayıcı kurmam gerekir mi?",
-            "answer": "Zamanlayıcı yok. FocusNow gerçek aktivitenizi otomatik kaydeder; özel kategoriler ve uygulama kurallarıyla günü gerçekten çalıştığınız gibi dilimlersiniz."
+            "question": "Proje değiştirirken sayaç çalıştırmam gerekiyor mu?",
+            "answer": "Hayır. FocusNow etkinliğini otomatik kaydeder. Sonra bir projeye ait kayıtları seçip zaman kartına eklersin. İstersen sayaç da var."
           },
           {
-            "question": "Müşterilerim ya da başkası verilerimi görür mü?",
-            "answer": "Hayır. Veriniz kendi hesabınızda, aktarımda ve depolamada şifreli durur — paylaşılan panel yok, üçüncü taraf yok, asla satılmaz."
+            "question": "Müşterilerim etkinliğimi görür mü?",
+            "answer": "Hayır. Kayıtların kendi hesabında kalır. Müşteri yalnızca çalışma dökümüne koyduğunu görür."
+          },
+          {
+            "question": "Zaman kartları ücretsiz mi?",
+            "answer": "Zaman kartları, faturalama ve raporlar erken erişim boyunca ücretsiz. İleride ücretli bir Pro planına katmayı planlıyoruz; bir şey değişmeden önce koşulları paylaşacağız. Temel takip ücretsiz kalır."
           }
         ]
       }
     },
     "developers": {
       "meta": {
-        "title": "Yazılımcılar İçin Odak Takibi",
-        "description": "Kodlama sürenizi, kod inceleme saatlerinizi ve toplantı yükünü takip edin. Gerçek geliştirme iş akışınızı görün."
+        "title": "Yazılımcılar için Zaman Takibi: Odak ve Görevler",
+        "description": "Kod, toplantı ve bağlam değişimlerini kronometresiz gör. Görevlere bağlı Derin Çalışma oturumları ve isabetlenen tahminler. Mac ve Windows için ücretsiz."
       },
-      "badge": "Yazılımcılar İçin",
-      "title": "O Kod İncelemesi Gerçekten",
-      "titleHighlight": "3 Saat mi Sürüyor?",
-      "description": "Kodlama, kod inceleme, toplantılar ve Slack arasında gününüzün gerçekte nereye gittiğini bilmek zor. FocusNow size gerçek tabloyu gösterir.",
-      "painPoints": {
-        "title": "Tanıdık Geldi mi?",
-        "items": [
-          "Toplantılar ve kod incelemeleri derin çalışma zamanınızı parçalıyor",
-          "Bütün gün kod yazdığınızı hissediyorsunuz ama elle tutulur bir şey çıkmadı",
-          "PR'lar, Slack ve IDE arasında sürekli geçiş yapmak akışınızı bozuyor",
-          "Gerçek geliştirmeye ne kadar zaman harcadığınızı sayısal olarak gösteremiyorsunuz"
-        ]
-      },
-      "solution": {
-        "title": "FocusNow Nasıl Yardımcı Olur",
-        "items": [
-          "IDE, tarayıcı ve iletişim araçlarında geçirdiğiniz süreyi görün",
-          "Derin kodlama seanslarını takip edin, saatlik odak grafiğinde zirve saatlerinizi görün",
-          "Toplantı yükünü ve bağlam değiştirme maliyetini tespit edin",
-          "Daha fazla odak süresi talep etmek için veri toplayın"
-        ]
-      },
-      "cta": "Ücretsiz Takibimi Başlat",
+      "who": "Yazılımcılar için",
+      "title": "Kod zamanını bölünmeden koru.",
+      "description": "Günün ne kadarının editörde, incelemelerde ve sohbette geçtiğini gör; sonraki bloğu önündeki göreve bağlı bir Derin Çalışma oturumuyla koru.",
+      "heroAlt": "Görevler sayfası: 0,7 kat tahmin isabeti, gerçek süre ve her birinde harcanan süre ile Oturum düğmesi olan görev listesi",
+      "day": "Saat onda stand-up, planlanandan uzun süren bir kod incelemesi, sonra editörde uzun bir öğleden sonra. FocusNow hepsini kronometresiz tutar. Üzerinde olduğun biletten Derin Çalışma'yı başlatırsın, yüzen pencere süreyi gözünün önünde tutar, görev de gerçek süresini tahmininle karşılaştırır.",
+      "scenes": [
+        {
+          "title": "Günün gerçekte nereye gittiğini gör",
+          "body": "En çok kullanılan uygulamalar ve kategoriler, istediğin tarih aralığında editör, tarayıcı ve sohbet süresini gösterir.",
+          "alt": "Bu haftanın en çok kullanılan uygulamaları: Code 17 sa 40 dk, Google Chrome 7 sa 6 dk, Figma 4 sa 13 dk, Notion 2 sa 44 dk"
+        },
+        {
+          "title": "Derin Çalışma bir tık uzağında",
+          "body": "Pomodoro ya da 90 dakikalık Derin Çalışma. 1-4 tuşları modu değiştirir, ⌘/Ctrl+K her şeyi açar.",
+          "alt": "Pomodoro, Derin Çalışma, Kısa Mola ve Uzun Mola modları ve 25:00 zamanlayıcısıyla Odak sayfası"
+        }
+      ],
+      "compareText": "Rize'a da mı bakıyorsun?",
+      "compareLink": "FocusNow ve Rize",
+      "featureLink": "Odak oturumları nasıl çalışır",
       "faq": {
         "items": [
           {
-            "question": "FocusNow kodumu okuyor ya da tuş kaydı yapıyor mu?",
-            "answer": "Hayır. Yalnızca uygulama adlarını, pencere başlıklarını ve tarayıcıda sitenin alan adını kaydeder — tam URL, tuş vuruşu, pano veya ekran içeriği asla. Kodunuz sizde kalır."
+            "question": "FocusNow kodumu okuyor ya da tuş vuruşlarımı kaydediyor mu?",
+            "answer": "Hayır. Uygulama adlarını, pencere başlıklarını ve tarayıcıda sitenin alan adını kaydeder. Tuş vuruşunu, panoyu ya da ekran içeriğini asla kaydetmez."
           },
           {
-            "question": "IDE'ler, terminaller ve tarayıcılarla çalışıyor mu?",
-            "answer": "Evet. Her masaüstü uygulaması sayılır — VS Code, JetBrains IDE'leri, terminaller, tarayıcılar ve ziyaret ettiğiniz siteler — bağlam geçişleri nihayet görünür olur."
+            "question": "IDE, terminal ve tarayıcılarla çalışıyor mu?",
+            "answer": "Evet. VS Code, JetBrains IDE'leri, terminaller ve tarayıcılar dahil her masaüstü uygulaması sayılır; bağlam değişimleri görünür olur."
           },
           {
-            "question": "Makinemi yavaşlatır mı?",
-            "answer": "Hayır. Aktif pencereyi aralıklarla kontrol eder ve arka planda sessizce durur — tek bir tarayıcı sekmesinden bile hafiftir."
+            "question": "Bilet başına süre takip edebilir miyim?",
+            "answer": "Evet. Bilet için bir görev oluştur, oturumları oradan başlat. Görevin gerçek süresi bu oturumlarla ona bağladığın kayıtların toplamıdır."
+          },
+          {
+            "question": "Bilgisayarımı yavaşlatır mı?",
+            "answer": "Yaklaşık iki saniyede bir öndeki pencereye bakar, geri kalan zamanda arka planda sessizce durur."
+          }
+        ]
+      }
+    },
+    "remoteWorkers": {
+      "meta": {
+        "title": "Evden Çalışanlar için Zaman Takip Uygulaması",
+        "description": "Evden çalıştığın günü çalışma saatlerin içinde gör, odağın nerede kaydığını fark et, günü AI özetiyle kapat. Mac ve Windows için ücretsiz, özel takip."
+      },
+      "who": "Uzaktan çalışanlar için",
+      "title": "Evde de sınırı belli bir iş günü.",
+      "description": "Çalışma saatlerini belirle, FocusNow gününü o saatlerin içinde okusun. Ne kadar odaklandığını, nerede kaydığını ve akşamın ne zaman başladığını görürsün.",
+      "heroAlt": "Çalışma saatlerine göre filtrelenmiş Verimlilik sayfası: odak süresi, ortalama Odak Puanı, en çok kullanılan uygulama ve site",
+      "day": "Dokuzda bilgisayar açılır, bir görüntülü görüşme, kapıda bir kargo, öğleden önce de iyi bir çalışma bloğu. FocusNow boşta ve uzakta geçen süreyi kendiliğinden fark eder. Gün sonunda Verimlilik görünümü çalışma saatlerin içindeki odağı gösterir, bir bildirim de ne kadar etkinliğin bu saatlerin dışında kaldığını söyler.",
+      "scenes": [
+        {
+          "title": "Haftan tek bakışta",
+          "body": "Takvim her gün için takip edilen süreyi; odak, nötr, kişisel ve dikkat dağıtıcı süreyi gösteren bir çubukla verir.",
+          "alt": "Takvimde dört hafta, her gün takip süresi ve renkli bir çubukla"
+        },
+        {
+          "title": "Günü bir özetle kapat",
+          "body": "Biten bir günü seç; AI günlük raporu öne çıkanlar ve önerilerle özetlesin.",
+          "alt": "AI günlük raporundan öne çıkanlar, örneğin günün en uzun kesintisiz çalışma bloğu"
+        }
+      ],
+      "compareText": "Kişisel zaman takip uygulamalarını mı karşılaştırıyorsun?",
+      "compareLink": "FocusNow ve RescueTime",
+      "featureLink": "Otomatik takip nasıl çalışır",
+      "faq": {
+        "items": [
+          {
+            "question": "İşverenim ya da ekibim verilerimi görebilir mi?",
+            "answer": "Hayır. FocusNow kişisel bir araçtır. Verilerin kendi hesabında durur; ekip paneli ya da yönetici görünümü yoktur."
+          },
+          {
+            "question": "Toplantılarımı izliyor ya da mesajlarımı okuyor mu?",
+            "answer": "Hayır. Ekranını, kameranı, mikrofonunu ya da tuş vuruşlarını asla kaydetmez. Yalnızca önde hangi uygulama ya da site olduğunu ve ne kadar süre kaldığını kaydeder."
+          },
+          {
+            "question": "İş ve kişisel zamanı ayırabilir miyim?",
+            "answer": "Evet. Çalışma saatleri rakamlarını iş gününe sınırlar, Kişisel kategori özel işlerini puanın dışında tutar, boşta geçen süre de kendiliğinden algılanır."
+          }
+        ]
+      }
+    },
+    "students": {
+      "meta": {
+        "title": "Öğrenciler için Ders Çalışma Zamanlayıcısı",
+        "description": "Pomodoro oturumlarıyla ders çalış, çalışma süren gerçekte nereye gidiyor gör. Mac ve Windows için otomatik takip ve ücretsiz odak zamanlayıcısı."
+      },
+      "who": "Öğrenciler için",
+      "title": "Birikerek ilerleyen çalışma oturumları.",
+      "description": "Bir dersi görev olarak planla, Pomodoro bloklarıyla çalış; akşamın ne kadarının derse, ne kadarının başka şeylere gittiğini dürüstçe gör.",
+      "heroAlt": "Pomodoro zamanlayıcısı, günün özeti ve görev listesiyle Odak sayfası",
+      "day": "Perşembeye kadar bitmesi gereken üç ünite. Her birini tahmini süresiyle görev olarak eklersin, bir Pomodoro başlatır, zamanlayıcı söyleyince molanı verirsin. Sonra Etkinlikler, akşamın notların, ders sitesi ve geri kalan her şey arasında nasıl bölündüğünü gösterir.",
+      "scenes": [
+        {
+          "title": "Dürüst tahminli görevler",
+          "body": "Her görev tahminine karşı harcanan süreyi gösterir; sonraki haftayı planlamak kolaylaşır.",
+          "alt": "Harcanan süre, tahmin ve her görev için oturum başlatma düğmesi olan görev listesi"
+        },
+        {
+          "title": "Akşamın nereye gittiğini gör",
+          "body": "Uygulamalar ve siteler Odak, Nötr, Kişisel ya da Dikkat Dağıtıcı gruplarına ayrılır. İstediğin zaman birini başka gruba taşı.",
+          "alt": "Kişisel ve Dikkat Dağıtıcı sütunları: Messages ve Spotify, ardından youtube.com, x.com ve news.ycombinator.com"
+        }
+      ],
+      "compareText": "Ders çalışmak için RescueTime'ı mı düşünüyorsun?",
+      "compareLink": "FocusNow ve RescueTime",
+      "featureLink": "Odak oturumları nasıl çalışır",
+      "faq": {
+        "items": [
+          {
+            "question": "FocusNow ders çalışmayı oyalanmaktan ayırabilir mi?",
+            "answer": "Kuralları sen koyarsın. Not uygulamanı ve ders sitelerini Odak, bir video sitesini Dikkat Dağıtıcı olarak işaretle; günün kendiliğinden ayrışsın."
+          },
+          {
+            "question": "Her çalışmada zamanlayıcı başlatmam gerekiyor mu?",
+            "answer": "Hayır. Takip kendiliğinden çalışır. Pomodoro ve Derin Çalışma oturumları düzen istediğinde orada."
+          },
+          {
+            "question": "Öğrenciler için ücretsiz mi?",
+            "answer": "Evet. Temel takip ve odak oturumları herkes için ücretsiz; kart ya da ayrı bir öğrenci planı gerekmez."
           }
         ]
       }
     }
   },
-  "showcase": {
-    "title": "FocusNow'u",
-    "titleHighlight": "iş başında görün",
-    "description": "Uygulamadan gerçek ekran görüntüleri — iki dakikalık kurulumdan sonra karşınıza çıkacak olan tam olarak bu.",
-    "tabs": {
-      "dashboard": {
-        "label": "Panel",
-        "caption": "Gününüz tek bakışta: Odak Puanı, odak süresi ve her uygulamanın zaman çizelgesi — tamamen otomatik kaydedilir."
-      },
-      "report": {
-        "label": "Yapay Zekâ Raporu",
-        "caption": "Gününüzün yapay zekâ tarafından yazılmış özeti: ne iyi gitti, zaman nereye sızdı ve yarın için tek bir öneri."
-      },
-      "analytics": {
-        "label": "Analizler",
-        "caption": "Haftalık ve aylık eğilimler: odak saatleri, ortalama puan, en çok kullanılan uygulamalar ve toplam dikkat dağınıklığı."
-      },
-      "activities": {
-        "label": "Aktiviteler",
-        "caption": "Her uygulama ve site; Odak, Nötr, Kişisel veya Dikkat Dağıtıcı olarak gruplanır — tek tıkla yeniden sınıflandırın."
-      },
-      "sessions": {
-        "label": "Seanslar",
-        "caption": "Tüm Pomodoro ve Derin Çalışma geçmişiniz, gün gün ve her seansın tamamlanma durumuyla."
-      },
-      "categories": {
-        "label": "Özelleştirme",
-        "caption": "Neyin sayılacağına siz karar verin: herhangi bir kategorinin puanı nasıl etkilediğini değiştirin ya da kendi kategorinizi oluşturun."
-      }
-    }
-  },
   "faq": {
-    "title": "Sık Sorulan Sorular",
+    "title": "Kurmadan önce sorulanlar",
     "items": [
       {
-        "question": "Gerçekten ücretsiz mi?",
-        "answer": "Evet — sonsuza dek ücretsiz, kart gerekmez. İleride ekip özellikleri gibi ekstralarla ücretli bir Pro katmanı gelebilir; ama bugün gördüğünüz her şey ücretsiz kalacak."
+        "question": "FocusNow ücretsiz mi?",
+        "answer": "Temel takip, odak oturumları ve Verimlilik görünümleri ücretsiz, kart gerekmez. Zaman kartları, faturalama ve raporlar erken erişim boyunca ücretsiz. Bunları ileride ücretli bir Pro planına taşımayı planlıyoruz; koşulları önceden duyuracağız."
       },
       {
-        "question": "Bu bir çalışan takip yazılımı mı?",
-        "answer": "Hayır — tam tersi. FocusNow kişisel bir araçtır: verileriniz kendi hesabınızda durur ve sizden başka kimse göremez. Asla ekran görüntüsü almaz, asla tuş kaydı tutmaz."
+        "question": "Hangi bilgisayarlarda çalışıyor?",
+        "answer": "İndirme sayfamızdan macOS 12 (Monterey) ve üzeri, Apple Silicon ya da Intel; Microsoft Store'dan Windows 10 ve üzeri (64 bit). Linux ve mobil uygulama yok."
       },
       {
-        "question": "FocusNow hangi verileri topluyor?",
-        "answer": "Yalnızca analizlerinizin ihtiyacı kadarını: öndeki uygulamanın adı, pencere başlığı, tarayıcılarda sayfa adresi ve orada geçen süre. Her şey aktarımda ve depolamada şifrelenir; asla satılmaz, paylaşılmaz."
+        "question": "FocusNow neyi kaydediyor?",
+        "answer": "Önündeki uygulamayı, pencere başlığını, tarayıcıda sitenin alan adını ve aktif, boşta ya da uzakta olup olmadığını. Asla ekran görüntüsü almaz, tuş vuruşu kaydetmez."
       },
       {
-        "question": "Verilerimi dışa aktarabilir ya da silebilir miyim?",
-        "answer": "Evet. Ayarlar → Hesap'tan tüm verinizi tek tıkla JSON dosyası olarak indirebilir, dilediğiniz an hesabınızı — içindeki her şeyle birlikte — silebilirsiniz."
+        "question": "Zamanımı müşterilere kendisi mi atıyor?",
+        "answer": "Hayır. Hangi kayıtların zaman kartına gireceğini ve hangi projeye ait olduğunu sen seçersin. FocusNow kaydı tutar, hesabı yapar."
       },
       {
-        "question": "Ne kadar CPU ve pil kullanıyor?",
-        "answer": "Yok denecek kadar az. FocusNow aktif pencereyi belirli aralıklarla kontrol eder ve arka planda sessizce durur — çalıştığını fark etmezsiniz."
+        "question": "Çalışma dökümü fatura mı?",
+        "answer": "Hayır. Bir müşteri için yaptığın işi özetler, PDF ya da CSV olarak dışa aktarılır. FocusNow vergi faturası düzenlemez, ödeme almaz. Dökümüne kendi fatura numaranı ekleyebilirsin."
       },
       {
-        "question": "Çevrimdışı çalışıyor mu?",
-        "answer": "Evet. FocusNow internet bağlantısı olmadan da takibe devam eder ve verinizi yerelde saklar. Tekrar çevrimiçi olduğunuzda her zamanki gibi şifreli olarak senkronize eder."
+        "question": "İnternetsiz çalışıyor mu, verilerimi alabilir miyim?",
+        "answer": "Takip internet yokken de sürer; oturum açıkken bağlantı gelince senkronize olur. Ayarlar → Hesap'tan bütün verini dışa aktarabilir, hesabını dilediğin an silebilirsin."
       }
     ],
-    "contactPrompt": "Sorunuz cevapsız mı kaldı?",
-    "contactLink": "Bize yazın"
+    "contactPrompt": "Sorunun burada yok mu?",
+    "contactLink": "Bize yaz"
   },
   "contact": {
     "meta": {
-      "title": "FocusNow İletişim — Geri Bildirim, Destek ve İş Birliği",
-      "description": "FocusNow ekibine ulaşın. Her mesaj doğrudan kurucunun gelen kutusuna düşer — 2 iş günü içinde yanıtlarız."
+      "title": "FocusNow İletişim: Geri Bildirim ve Destek",
+      "description": "FocusNow'ın kurucuları Cihan ve Barbaros'a yaz. Her mesaj bir kurucuya ulaşır, 2 iş günü içinde yanıtlarız."
     },
-    "title": "Bize",
-    "titleHighlight": "Ulaşın",
-    "description": "Geri bildirim, soru, iş birliği fikri — her mesaj doğrudan kurucunun gelen kutusuna düşer. 2 iş günü içinde yanıtlarız.",
+    "title": "Kuruculara yaz.",
+    "description": "Geri bildirim, soru ya da iş birliği fikri. Her mesaj Cihan'a ya da Barbaros'a ulaşır; 2 iş günü içinde yanıtlarız.",
     "form": {
       "name": "Ad",
-      "namePlaceholder": "Adınız",
+      "namePlaceholder": "Adın",
       "email": "E-posta",
       "emailPlaceholder": "ornek@eposta.com",
       "topic": "Konu",
@@ -900,156 +853,870 @@
         "other": "Diğer"
       },
       "message": "Mesaj",
-      "messagePlaceholder": "Aklınızdakini yazın — her boyutta geri bildirime açığız.",
+      "messagePlaceholder": "Aklındakini yaz; her boyutta geri bildirime açığız.",
       "submit": "Mesajı gönder",
       "sending": "Gönderiliyor…",
-      "success": "Teşekkürler — mesajınız gelen kutumuzda. 2 iş günü içinde yanıtlarız.",
-      "errorFields": "Lütfen alanları kontrol edip tekrar deneyin.",
-      "errorRate": "Kısa sürede çok fazla mesaj gönderildi. Birkaç dakika sonra tekrar deneyin.",
-      "errorGeneric": "Bizim tarafta bir şeyler ters gitti. Lütfen doğrudan info@focusnow.ai adresine yazın."
+      "success": "Teşekkürler, mesajın gelen kutumuzda. 2 iş günü içinde yanıtlarız.",
+      "errorFields": "Lütfen alanları kontrol edip tekrar dene.",
+      "errorRate": "Kısa sürede çok fazla mesaj gönderildi. Birkaç dakika sonra tekrar dene.",
+      "errorGeneric": "Bizim tarafta bir şeyler ters gitti. Lütfen doğrudan info@focusnow.ai adresine yaz."
     },
-    "direct": "Form yerine e-posta isterseniz:",
+    "direct": "Form yerine e-posta mı? Şu adrese yaz:",
     "copy": "Adresi kopyala",
     "copied": "Kopyalandı"
   },
   "compare": {
-    "verified": "Rakip bilgileri son doğrulama: Temmuz 2026.",
     "rize": {
       "meta": {
-        "title": "FocusNow vs Rize: Ücretsiz Alternatif Yeterli mi? (2026)",
-        "description": "FocusNow ve Rize'ın dürüst karşılaştırması: fiyat, otomatik takip, odak puanları, AI raporları ve hangisi kimin için."
+        "title": "FocusNow ve Rize: Özellik, Fiyat ve Uyum (2026)",
+        "description": "FocusNow ve Rize karşılaştırması: otomatik takip, AI, odak araçları, müşteri işi ve fiyat. Çalışma şekline hangi zaman takip uygulamasının uyduğunu gör."
       },
-      "badge": "Karşılaştırma",
-      "title": "FocusNow vs",
-      "titleHighlight": "Rize",
-      "description": "Rize cilalı, ücretli bir zaman takip aracı. FocusNow ise otomatik takibi, odak puanlarını ve AI raporlarını ücretsiz sunuyor. Hangisinin nereye oturduğuna dürüstçe bakalım.",
-      "chooseUs": {
-        "title": "Şu durumda FocusNow'u seç...",
-        "items": [
-          "Abonelik ödemeden otomatik zaman takibi istiyorsan",
-          "Odak puanı ve günlük AI raporu ihtiyacını karşılıyorsa",
-          "Verinin önce cihazında durmasını ve tek tıkla dışa aktarmayı önemsiyorsan",
-          "Kendi kendine çalışan sade bir takipçi istiyorsan — yönetilecek proje, müşteri veya kurulum derdi olmadan"
-        ]
-      },
-      "chooseThem": {
-        "title": "Şu durumda Rize'ı seç...",
-        "items": [
-          "Oturum sırasında dikkat dağıtan uygulama ve siteleri engellemen gerekiyorsa",
-          "Müşterilere fatura kesiyor, proje ve müşteri takibi istiyorsan",
-          "Takvimindeki toplantıların otomatik izlenmesini istiyorsan",
-          "Ekstra otomasyon için aylık abonelik senin için sorun değilse"
-        ]
-      },
-      "table": {
-        "title": "Özellik Özellik Karşılaştırma",
-        "featureCol": "Özellik",
-        "usCol": "FocusNow",
-        "themCol": "Rize",
-        "rows": [
-          {
-            "feature": "Fiyat",
-            "us": "Ücretsiz",
-            "them": "$9.99–$14.99/ay (bireysel)"
-          },
-          {
-            "feature": "Ücretsiz plan",
-            "us": "Uygulamanın tamamı ücretsiz",
-            "them": "Yalnızca deneme sürümü"
-          },
-          {
-            "feature": "Otomatik takip",
-            "us": "yes",
-            "them": "yes"
-          },
-          {
-            "feature": "Odak puanı",
-            "us": "yes",
-            "them": "yes"
-          },
-          {
-            "feature": "Odak oturumları",
-            "us": "Pomodoro (25 dk) & Derin Çalışma (90 dk)",
-            "them": "Zamanlayıcı & planlı oturumlar"
-          },
-          {
-            "feature": "AI raporları",
-            "us": "Günlük AI raporu",
-            "them": "AI raporları & etiket önerileri"
-          },
-          {
-            "feature": "Dikkat dağıtıcı engelleyici",
-            "us": "no",
-            "them": "yes"
-          },
-          {
-            "feature": "Takvim entegrasyonu",
-            "us": "no",
-            "them": "yes"
-          },
-          {
-            "feature": "Odak müziği",
-            "us": "no",
-            "them": "yes"
-          },
-          {
-            "feature": "Proje & müşteri takibi",
-            "us": "no",
-            "them": "Professional plan"
-          },
-          {
-            "feature": "Platformlar",
-            "us": "Mac & Windows",
-            "them": "Mac & Windows"
-          }
-        ]
-      },
-      "sections": [
+      "title": "FocusNow ve Rize",
+      "summary": "İki uygulama da bilgisayar başındaki zamanını otomatik takip eder. Rize işi projelere atamak için AI'a yaslanır, abonelikle engelleme ve ekip raporları ekler. FocusNow temel takibi ücretsiz tutar, günü odak oturumlarının etrafında kurar ve proje seçimini sana bırakır.",
+      "pickThemTitle": "Rize sana uyar, eğer",
+      "pickUs": [
+        "Otomatik takibi ve odak oturumlarını abonelik olmadan istiyorsan",
+        "Hangi kaydın hangi müşteriye gideceğine kendin karar vermek istiyorsan",
+        "Görevlere bağlı Pomodoro ve Derin Çalışma ile Odak Müziği istiyorsan",
+        "Tek başına çalışıyor, zaman kartlarını ve çalışma dökümlerini aynı uygulamada istiyorsan"
+      ],
+      "pickThem": [
+        "Çalışma oturumlarının müşteri ve projelere AI ile atanmasını istiyorsan",
+        "Dikkat dağıtan siteleri engellemen gerekiyorsa",
+        "Google Takvim toplantılarının projelere işlenmesini istiyorsan",
+        "Bir ekip yönetiyorsan ya da API, webhook veya Zapier gerekiyorsa"
+      ],
+      "themCol": "Rize",
+      "rows": [
         {
-          "title": "İki farklı fiyat felsefesi",
-          "body": "Rize abonelik alıyor ve bunu güçlü özelliklerle hak ediyor: dikkat dağıtıcı engelleyici, takvime duyarlı takip ve proje faturalandırması. FocusNow tersini yapıyor — zamanının tam olarak nereye gittiğini görme sözü ücretsiz kalıyor. Saat başı fatura kesiyorsan Rize'ın ücretli planları kendini amorti edebilir. Günün hakkında netlik istiyorsan, bunun için abonelik gerekmemeli."
+          "criterion": "Otomatik uygulama ve site takibi",
+          "us": "Var, macOS ve Windows'ta",
+          "them": "Var, macOS ve Windows'ta"
         },
         {
-          "title": "Verin, senin kuralların",
-          "body": "FocusNow yalnızca aktif uygulama adını, pencere başlığını ve tarayıcıda sitenin alan adını kaydeder — asla ekran görüntüsü, asla tuş kaydı yok. Verin önce cihazında saklanır, şifreli olarak senkronize edilir; tamamını tek JSON dosyası olarak dışa aktarabilir veya hesabını istediğin an silebilirsin."
+          "criterion": "Sürenin projeye aktarılması",
+          "us": "Takip kayıtlarını seçip zaman kartına eklersin ya da sayacı çalıştırırsın",
+          "them": "AI, pencere başlıkları, URL'ler ve öğrenilen düzenlerle oturumları müşteri ya da projelere atar"
         },
         {
-          "title": "Dürüst sonuç",
-          "body": "Rize mükemmel bir araç; engelleme, takvim entegrasyonu veya müşteri faturalandırması gerekiyorsa parasına değer. Ama zaman takip aracı arayan çoğu insan tek şey ister: gerçek iş gününü görüp iyileştirmek. FocusNow tam olarak bunu ücretsiz yapar. Karar vermenin en kolay yolu, FocusNow'u bir hafta mevcut düzeninle yan yana çalıştırmak — denemek hiçbir şeye mal olmuyor."
+          "criterion": "Odak oturumları",
+          "us": "Görevlere bağlı Pomodoro ve Derin Çalışma, 1-180 dakika",
+          "them": "Oturum zamanlayıcısı, planlı oturumlar ve AI mola önerileri"
+        },
+        {
+          "criterion": "Odak müziği",
+          "us": "Beş istasyon; kahverengi, pembe ve beyaz gürültü",
+          "them": "Var"
+        },
+        {
+          "criterion": "Dikkat engelleme",
+          "us": "Yok",
+          "them": "Var"
+        },
+        {
+          "criterion": "AI'ın yaptığı iş",
+          "us": "Biten bir günü öne çıkanlar ve önerilerle özetler",
+          "them": "Kategorilendirme, etiketleme, sohbet, içgörüler ve proje ataması; Pro'da otomasyonlar ve ajanlar"
+        },
+        {
+          "criterion": "Müşteriye verdiğin çıktı",
+          "us": "PDF ya da CSV çalışma dökümleri",
+          "them": "Pro'da PDF ya da CSV müşteri ve zamanlanmış raporlar"
+        },
+        {
+          "criterion": "Takvim",
+          "us": "Kendi takip geçmişin; harici takvim senkronizasyonu yok",
+          "them": "Google Takvim entegrasyonu"
+        },
+        {
+          "criterion": "Ekipler",
+          "us": "Bireyler için",
+          "them": "Ekip panelleri ve ekip planları"
+        },
+        {
+          "criterion": "Entegrasyonlar",
+          "us": "Yok",
+          "them": "Pro'da API, webhook ve Zapier; MCP sunucu erişimi"
+        },
+        {
+          "criterion": "Platformlar",
+          "us": "macOS 12+ ve Windows 10+",
+          "them": "macOS 10.14.6+ ve Windows 10+"
+        },
+        {
+          "criterion": "Fiyat",
+          "us": "Temel takip ücretsiz; zaman kartları ve faturalama erken erişimde ücretsiz",
+          "them": "Yıllık ödemede aylık Basic 9,99, Pro 23,99, Max 39,99 USD; 7 günlük ücretsiz deneme"
         }
       ],
+      "experience": "Günün arka planda kaydedilir. Odak sayfasında görevlerden oturum başlatırsın, hafta sonunda Etkinlikler ya da Takvim'i gözden geçirip kayıtları zaman kartlarına eklersin. Her müşteri saati senin seçtiğin bir saattir.",
+      "experienceAlt": "Çalışan sayaç, kaydedilen ve faturalanabilir süre, kapsama ve takip kaydı taşıyan girişlerle Zaman kartları sayfası",
+      "sections": [
+        {
+          "title": "Süreyi projeye aktarmanın iki yolu",
+          "body": "Rize bir oturumun hangi projeye ait olduğuna AI'ın karar vermesine izin verir, sen oradan düzeltirsin. FocusNow bu adımı senin elinde tutar: kayıtları sen seçersin, zaman kartı onları kanıt olarak taşır. Süre atamak en çok kurtulmak istediğin işse Rize tam bunun için. Her müşteri saatinin senin kararın olmasını istiyorsan FocusNow uyar."
+        },
+        {
+          "title": "Odak araçları",
+          "body": "İkisinde de oturum zamanlayıcısı ve odak müziği var. FocusNow günü Odak sayfasında toplar: görevlere bağlı Pomodoro ve Derin Çalışma oturumları, tahmine karşı harcanan süre. Rize ise FocusNow'da olmayan dikkat engellemeyi ekler."
+        },
+        {
+          "title": "Fiyat",
+          "body": "Rize 7 günlük denemesi olan bir abonelik. FocusNow'da temel takip, odak oturumları ve Verimlilik görünümleri ücretsiz; müşteri araçları erken erişim boyunca ücretsiz. İleride müşteri araçları için ücretli bir Pro planı planlıyoruz, bir şey değişmeden önce koşulları paylaşacağız."
+        }
+      ],
+      "switch": "Rize'dan içe aktarma yok. FocusNow kurduğun gün kaydetmeye başlar; en kolay deneme ikisini gerçek bir iş haftası boyunca birlikte çalıştırmak. Önce Rize'dan ihtiyacın olanı dışa aktar, sonra haftasını okumayı daha çok sevdiğin aracı tut.",
       "faq": {
-        "title": "Sık Sorulan Sorular",
         "items": [
           {
-            "question": "FocusNow gerçekten ücretsiz mi?",
-            "answer": "Evet. Otomatik takip, odak puanları, oturumlar ve günlük AI raporu tamamen ücretsiz — kredi kartı yok, deneme süresi yok. Takım özellikleri içeren ücretli bir Pro plan yolda, ama çekirdek takipçi ücretsiz kalacak."
+            "question": "Rize'ın ücretsiz sürümü var mı?",
+            "answer": "26 Eylül 2026'da Rize'ın fiyat sayfası tam erişimli 7 günlük ücretsiz deneme ve yıllık ödemede aylık 9,99 USD'den başlayan ücretli planlar listeliyordu. Kalıcı bir ücretsiz plan görmedik."
           },
           {
-            "question": "Rize ne kadar?",
-            "answer": "Temmuz 2026 itibarıyla Rize'ın bireysel planları aylık $9.99'dan (yıllık faturalandırma) başlıyor; proje ve müşteri takibi içeren Professional plan $14.99/ay. Ücretsiz deneme var ama kalıcı ücretsiz plan yok."
+            "question": "FocusNow, Rize gibi dikkat dağıtan siteleri engelleyebilir mi?",
+            "answer": "Hayır. FocusNow zamanının nereye gittiğini gösterir ama hiçbir şeyi engellemez. Engelleme senin için en önemlisiyse Rize bu ihtiyaca daha uygun."
           },
           {
-            "question": "FocusNow, Rize gibi dikkat dağıtan uygulamaları engelleyebilir mi?",
-            "answer": "Hayır. FocusNow zamanının nereye gittiğini gösterir ama bugün hiçbir şeyi engellemez. Sert engelleme senin için vazgeçilmezse, bu özel ihtiyaç için Rize daha uygun."
-          },
-          {
-            "question": "Rize'dan FocusNow'a nasıl geçerim?",
-            "answer": "FocusNow'u indir ve çalışmaya bırak — içe aktarılacak veya ayarlanacak bir şey yok. Çoğu kişi bir hafta ikisini yan yana çalıştırıp kendine uyanı tutuyor."
+            "question": "FocusNow süreyi müşterilere otomatik atıyor mu?",
+            "answer": "Hayır. Hangi takip kayıtlarının zaman kartına gireceğini ve hangi projeye ait olduğunu sen seçersin. Rize, AI ile proje atamayı bir özellik olarak listeliyor."
           }
         ]
-      }
+      },
+      "ogKicker": "Dürüst karşılaştırma, Eylül 2026'da kontrol edildi"
+    },
+    "rescuetime": {
+      "meta": {
+        "title": "FocusNow ve RescueTime: Dürüst Karşılaştırma (2026)",
+        "description": "FocusNow ve RescueTime: otomatik takip, odak oturumları, engelleme, zaman çizelgeleri ve fiyat. Çalışma şekline uyan zaman takip uygulamasını bul."
+      },
+      "title": "FocusNow ve RescueTime",
+      "summary": "RescueTime yıllardır bilgisayar başındaki zamanı takip ediyor; bugün engellemeli Focus planları ve müşteri işi için Timesheets sunuyor, masaüstünde ve mobilde. FocusNow ise ücretsiz temel takibi, görevlere bağlı odak oturumlarını ve erken erişimdeki zaman kartlarını bir araya getiren bir masaüstü uygulaması.",
+      "pickThemTitle": "RescueTime sana uyar, eğer",
+      "pickUs": [
+        "Temel takibi ve odak oturumlarını deneme süresi olmadan ücretsiz istiyorsan",
+        "İnternetsiz de çalışan bir masaüstü uygulamasını tercih ediyorsan",
+        "Pomodoro, Derin Çalışma, görevler ve müziği tek bir Odak sayfasında istiyorsan",
+        "Zaman kartlarından PDF ya da CSV çalışma dökümü istiyorsan"
+      ],
+      "pickThem": [
+        "Odak oturumlarında dikkat dağıtan siteleri engellemek istiyorsan",
+        "iOS ya da Android uygulamasına ihtiyacın varsa",
+        "Ekipte çalışıyor, ortak müşteri, proje ve raporlara ihtiyaç duyuyorsan",
+        "Günlük hedefler için hedef ve uyarılar istiyorsan"
+      ],
+      "themCol": "RescueTime",
+      "rows": [
+        {
+          "criterion": "Otomatik takip",
+          "us": "macOS ve Windows masaüstü uygulamaları",
+          "them": "Masaüstü, web ve mobil uygulamalarla otomatik etkinlik takibi"
+        },
+        {
+          "criterion": "Boşta süre algılama",
+          "us": "Aktif, boşta ve uzakta süre otomatik algılanır",
+          "them": "Boşta süre algılama"
+        },
+        {
+          "criterion": "Odak oturumları",
+          "us": "Görevlere bağlı Pomodoro ve Derin Çalışma",
+          "them": "Zamanlayıcılı Focus Sessions"
+        },
+        {
+          "criterion": "Dikkat engelleme",
+          "us": "Yok",
+          "them": "Focus Sessions sırasında"
+        },
+        {
+          "criterion": "Hedefler ve uyarılar",
+          "us": "Yok",
+          "them": "Günlük hedeflerle Goals & Alerts"
+        },
+        {
+          "criterion": "Müşteri ve proje süresi",
+          "us": "Takip kayıtlarından, sayaçtan ya da elle zaman kartları; erken erişimde ücretsiz",
+          "them": "Solo+ ve Team+ planlarında müşteri, proje, görev ve faturalanabilir ücretli Timesheets"
+        },
+        {
+          "criterion": "AI'ın yaptığı iş",
+          "us": "Biten bir günü öne çıkanlar ve önerilerle özetler",
+          "them": "Bir asistan, etkinlik düzeni analizi ve gözden geçirdiğin öneriler"
+        },
+        {
+          "criterion": "Ekipler",
+          "us": "Bireyler için",
+          "them": "Rol tabanlı erişimli Team Focus ve Team+ planları"
+        },
+        {
+          "criterion": "Platformlar",
+          "us": "macOS 12+ ve Windows 10+",
+          "them": "Masaüstü, web, iOS ve Android"
+        },
+        {
+          "criterion": "Fiyat",
+          "us": "Temel takip ücretsiz; zaman kartları ve faturalama erken erişimde ücretsiz",
+          "them": "Yıllık ödemede aylık Solo Focus 7, Timesheets'li Solo+ 12 USD (aylık ödemede 9 ve 15 USD); 14 günlük ücretsiz deneme"
+        }
+      ],
+      "experience": "FocusNow Odak sayfasıyla açılır: bir görev seç, oturumu başlat, günün Odak Puanı'nı zamanlayıcının altında gör. Otomatik kayıt Verimlilik, Etkinlikler ve Takvim'i doldurur; müşteri saatleri senin seçtiğin kayıtlardan gelir.",
+      "experienceAlt": "Pomodoro zamanlayıcısı, günün Odak Puanı ve görev listesiyle Odak sayfası",
+      "sections": [
+        {
+          "title": "Odak: engelleme mi, sessiz bir zamanlayıcı mı",
+          "body": "RescueTime'ın Focus Sessions'ı dikkat dağıtan siteleri engelleyebilir. FocusNow hiçbir şeyi engellemez; bir göreve bağlı zamanlayıcı, isteğe bağlı müzik ve her oturumun gerçek süresini verir."
+        },
+        {
+          "title": "Müşteri süresi: zaman çizelgesi mi, zaman kartı mı",
+          "body": "RescueTime'ın Solo+ planı faturalanabilir ücretli ve gözden geçirdiğin öneriler içeren Timesheets ekler. FocusNow'da zaman kartları senin seçtiğin kayıtlardan oluşur, Faturalama da faturalanabilir girişleri çalışma dökümüne çevirir. İkisinde de karar sende; FocusNow'ın müşteri araçları erken erişimde ücretsiz."
+        },
+        {
+          "title": "Nerede kullanırsın",
+          "body": "RescueTime'ın web ve mobil uygulamaları var. FocusNow yalnızca macOS ve Windows'ta çalışır, internet yokken de takibe devam eder."
+        }
+      ],
+      "switch": "RescueTime'dan içe aktarma yok. FocusNow'ı kur, bir hafta RescueTime'la birlikte çalıştır, sonra iki haftalık görünümü karşılaştır. Bir şeyi iptal etmeden önce RescueTime'dan ihtiyacın olanı dışa aktar.",
+      "faq": {
+        "items": [
+          {
+            "question": "RescueTime'ın ücretsiz planı var mı?",
+            "answer": "26 Eylül 2026'da fiyat sayfası 14 günlük ücretsiz denemeli ücretli planlar listeliyordu. Güncel seçenekler için rescuetime.com'a bak."
+          },
+          {
+            "question": "FocusNow siteleri engelleyebilir mi?",
+            "answer": "Hayır. Odak sırasında engelleme senin için önemliyse RescueTime bunu sunuyor, FocusNow sunmuyor."
+          },
+          {
+            "question": "FocusNow'ın mobil uygulaması var mı?",
+            "answer": "Hayır. FocusNow yalnızca macOS ve Windows'ta çalışır."
+          }
+        ]
+      },
+      "ogKicker": "Dürüst karşılaştırma, Eylül 2026'da kontrol edildi"
+    },
+    "toggl": {
+      "meta": {
+        "title": "FocusNow ve Toggl Track: Kronometre mi Otomatik mi?",
+        "description": "FocusNow ve Toggl Track: kronometre, masaüstü zaman çizelgesi, odak araçları, ücretler, faturalama ve fiyat karşılaştırması. Hangisi sana uyar?"
+      },
+      "title": "FocusNow ve Toggl Track",
+      "summary": "Toggl Track; kronometre, proje ve ekip raporları etrafında kurulmuş olgun bir takip aracı, masaüstünde uygulama ve siteleri kaydeden bir Timeline'ı da var. FocusNow otomatik kayıttan başlar, odak oturumları ekler ve takip kayıtlarını tek başına çalışanların müşteri işi için zaman kartlarına dönüştürür.",
+      "pickThemTitle": "Toggl Track sana uyar, eğer",
+      "pickUs": [
+        "Merkezde kronometre değil otomatik kayıt olsun istiyorsan",
+        "Odak Puanı, odak oturumları ve Verimlilik görünümlerini tek uygulamada istiyorsan",
+        "Biten her gün için bir AI özeti istiyorsan",
+        "Tek başına çalışıyor, zaman kartlarından çalışma dökümü istiyorsan"
+      ],
+      "pickThem": [
+        "Ekipte çalışıyor, ortak projeler ve ekip raporları istiyorsan",
+        "Mobil uygulama ve tarayıcı eklentisi istiyorsan",
+        "Küçük bir ekibi de kapsayan ücretsiz bir plan istiyorsan",
+        "Faturalama ve kârlılık raporlarına ihtiyacın varsa"
+      ],
+      "themCol": "Toggl Track",
+      "rows": [
+        {
+          "criterion": "Süre nasıl toplanır",
+          "us": "Önce otomatik kayıt; istersen sayaç ve elle giriş",
+          "them": "Önce sayaç ve elle giriş; masaüstü Timeline uygulama ve siteleri kaydeder"
+        },
+        {
+          "criterion": "Etkinliği girişe çevirmek",
+          "us": "Takip kayıtlarını seçip zaman kartına eklersin",
+          "them": "Timeline etkinliği dizer, hangisinin girişe dönüşeceğine sen karar verirsin"
+        },
+        {
+          "criterion": "Odak araçları",
+          "us": "Görevlere bağlı Pomodoro ve Derin Çalışma, Odak Müziği",
+          "them": "Pomodoro zamanlayıcısı ve odak modu"
+        },
+        {
+          "criterion": "Odak Puanı ve dikkat dağılma oranı",
+          "us": "Var; uygulama, site, kategori ve saate göre Verimlilik görünümleriyle",
+          "them": "Baktığımız sayfalarda listelenmiyor"
+        },
+        {
+          "criterion": "Faturalanabilir ücretler",
+          "us": "Görev ya da proje ücreti, istediğin para biriminde",
+          "them": "Starter ve üstünde çalışma alanı, üye, proje ya da proje üyesi ücreti"
+        },
+        {
+          "criterion": "Müşteriye verdiğin çıktı",
+          "us": "PDF ya da CSV çalışma dökümleri",
+          "them": "Faturalama; PDF, CSV ve XLSX rapor dışa aktarma"
+        },
+        {
+          "criterion": "Takvim",
+          "us": "Kendi takip geçmişin; harici takvim senkronizasyonu yok",
+          "them": "Takvim etkinliklerini otomatik takip eder"
+        },
+        {
+          "criterion": "Boşta süre",
+          "us": "Boşta ve uzakta süre otomatik algılanır",
+          "them": "Sayaç çalışırken cihaz sessizleşirse sorar"
+        },
+        {
+          "criterion": "Ekipler",
+          "us": "Bireyler için",
+          "them": "Ekip planları ve ekip raporları"
+        },
+        {
+          "criterion": "Platformlar",
+          "us": "macOS 12+ ve Windows 10+",
+          "them": "Web, macOS, Windows, iOS, Android ve tarayıcı eklentileri"
+        },
+        {
+          "criterion": "Fiyat",
+          "us": "Temel takip ücretsiz; zaman kartları ve faturalama erken erişimde ücretsiz",
+          "them": "Ücretsiz plan; yıllık ödemede kullanıcı başına aylık Starter 9, Premium 16 USD (aylık ödemede 12 ve 24 USD)"
+        }
+      ],
+      "experience": "FocusNow'da takip edilmek için bir şey başlatmazsın. Kayıt kendiliğinden oluşur, Odak sayfası oturumlarını ve görevlerini tutar; hafta sonunda takip kayıtlarını zaman kartlarına ekler, bir çalışma dökümü hazırlarsın.",
+      "experienceAlt": "Her gün için takip süresi ve renkli çubuk gösteren aylık Takvim görünümü",
+      "sections": [
+        {
+          "title": "Önce kronometre mi, önce kayıt mı",
+          "body": "Toggl Track'te genellikle bir sayaç başlatırsın, Timeline da güvenlik ağıdır. FocusNow'da kayıt hep oradadır; zaman kartını hazırlarken içinden seçersin. Sayaç başlatıp durdurmayı seviyorsan Toggl Track bunda çok iyi. Sık sık unutuyorsan FocusNow'ın yaklaşımı sana daha uygun olabilir."
+        },
+        {
+          "title": "Saatlerden fazlası",
+          "body": "FocusNow günün ne kadar odaklı geçtiğini de gösterir: Odak Puanı, dikkat dağılma oranı, odak oturumları ve AI günlük raporu. Toggl Track zaman girişleri, projeler ve ekip raporlarına odaklanır."
+        },
+        {
+          "title": "Ekipler ve faturalama",
+          "body": "Toggl Track'in ekip planları, faturalaması ve kârlılık raporları var. FocusNow bireyler için; fatura yerine çalışma dökümü hazırlar, entegrasyonu ya da API'si yoktur."
+        }
+      ],
+      "switch": "Toggl Track'ten içe aktarma yok. Ekip işi ve faturalama için Toggl'ı tutup otomatik kayıt ve odak için FocusNow'ı kullanabilir ya da ikisini bir hafta çalıştırıp sana uyanı seçebilirsin.",
+      "faq": {
+        "items": [
+          {
+            "question": "Toggl Track otomatik takip ediyor mu?",
+            "answer": "Masaüstü uygulamalarında uygulama ve siteleri kaydeden, bunları zaman girişine çevirmeni sağlayan Timeline var. Ana takip yöntemi yine de sayaç."
+          },
+          {
+            "question": "FocusNow, Toggl Track'in ücretsiz planı gibi ücretsiz mi?",
+            "answer": "FocusNow'da temel takip, odak oturumları ve Verimlilik görünümleri ücretsiz. Zaman kartları, faturalama ve raporlar erken erişimde ücretsiz; ileride ücretli bir Pro planına girmesi planlanıyor."
+          },
+          {
+            "question": "FocusNow fatura gönderebilir mi?",
+            "answer": "Hayır. FocusNow PDF ya da CSV çalışma dökümü hazırlar; vergi faturası düzenlemez, ödeme almaz."
+          }
+        ]
+      },
+      "ogKicker": "Dürüst karşılaştırma, Eylül 2026'da kontrol edildi"
     }
   },
   "guide": {
     "meta": {
-      "title": "FocusNow Kullanım Rehberi — Kurulum, Odak Puanı & Oturumlar",
-      "description": "FocusNow için adım adım rehberler: kurulum, Odak Puanı nasıl çalışır, odak oturumları, yapay zekâ günlük raporları, çalışma saatleri ve verinizin kontrolü."
+      "title": "FocusNow Kullanım Rehberi: Kurulum, Odak Puanı",
+      "description": "FocusNow için adım adım rehberler: kurulum, Odak Puanı, odak oturumları, AI günlük raporu, çalışma saatleri ve verilerin."
     },
-    "title": "FocusNow",
-    "titleHighlight": "Kullanım Rehberi",
-    "description": "İlk açılıştan analitiklerini okumaya — FocusNow'dan en iyi şekilde yararlanman için gereken her şey.",
+    "title": "Kullanım rehberi",
+    "description": "İlk açılıştan raporlarını okumaya kadar FocusNow'dan en iyi şekilde yararlanmak için gereken her şey.",
     "backToGuide": "Rehbere Dön",
     "updatedOn": "Güncelleme: {date}"
+  },
+  "common": {
+    "earlyAccess": "Erken erişim, şimdilik ücretsiz",
+    "demoData": "Örnek veri",
+    "lastChecked": "Kontrol tarihi: {date}",
+    "breadcrumbHome": "Ana sayfa",
+    "getApp": "FocusNow'ı Ücretsiz İndir"
+  },
+  "screens": {
+    "focus": "Odak",
+    "productivity": "Verimlilik",
+    "insights": "İçgörüler",
+    "activities": "Etkinlikler",
+    "calendar": "Takvim",
+    "tasks": "Görevler",
+    "timecards": "Zaman kartları",
+    "projects": "Projeler",
+    "billing": "Faturalama",
+    "reports": "Raporlar"
+  },
+  "trustStrip": {
+    "label": "Kısaca FocusNow",
+    "platforms": "Mac ve Windows",
+    "free": "Temel takip ücretsiz, kredi kartı yok",
+    "private": "Ekran görüntüsü ve tuş kaydı yok",
+    "setup": "İki dakikadan kısa sürede takipte"
+  },
+  "daySection": {
+    "title": "Gününün izini kaybetme.",
+    "description": "FocusNow önündeki uygulamayı, pencereyi ve siteyi not eder. Akşam açtığında gerçekten yaşadığın gün seni bekler.",
+    "viewsLabel": "Takip edilen günün görünümleri",
+    "views": {
+      "productivity": "Verimlilik",
+      "calendar": "Takvim"
+    },
+    "alts": {
+      "productivity": "Verimlilik görünümü: bu hafta 37 sa 6 dk aktif sürenin 28 sa 40 dk'sı odak; odak süresi, en çok kullanılan uygulama ve odak eğilimi grafiği",
+      "calendar": "Takvim görünümü: bir ayın takip edilen günleri, her birinde toplam süre ve odak, nötr, kişisel, dikkat dağıtıcı çubuğu"
+    },
+    "points": {
+      "apps": {
+        "title": "Hangi uygulama ve siteler",
+        "body": "En çok kullandığın uygulamalar, siteler ve kategoriler, gerçekten harcadığın süreye göre."
+      },
+      "hours": {
+        "title": "Hangi saatler",
+        "body": "Çalışma saatlerini belirle; akşamlar ve hafta sonu hesabı karıştırmasın."
+      },
+      "patterns": {
+        "title": "Hangi düzen",
+        "body": "Odak eğilimi, saat saat Odak Puanı ve takip ettiğin her günü yeniden açan bir takvim."
+      }
+    },
+    "link": "Otomatik takibi keşfet"
+  },
+  "focusScene": {
+    "title": "İyi işe yer aç.",
+    "description": "Bir görev seç, oturumu başlat, gerisini zamanlayıcıya bırak. Bitirdiğinde oturum gerçek süresiyle kaydedilir.",
+    "facts": {
+      "timer": {
+        "title": "Pomodoro ya da Derin Çalışma",
+        "body": "Varsayılan 25 ve 90 dakika. Her süreyi 1 ile 180 dakika arasında değiştirebilirsin."
+      },
+      "tasks": {
+        "title": "Görev hep gözünün önünde",
+        "body": "Tahminine karşı harcanan süre ve aşağı yukarı ne zaman biteceği."
+      },
+      "music": {
+        "title": "İstersen Odak Müziği",
+        "body": "Üst çubukta istasyonlar ve arka plan sesleri. Sen başlatmadıkça hiçbir şey çalmaz."
+      }
+    },
+    "stationsLabel": "Müzik istasyonları ve arka plan sesleri",
+    "stations": [
+      "Lo-fi",
+      "Jazzy",
+      "Night",
+      "Rainy",
+      "Ambient",
+      "Kahverengi gürültü",
+      "Pembe gürültü",
+      "Beyaz gürültü"
+    ],
+    "alt": "Koyu temada FocusNow Odak sayfası: Pomodoro zamanlayıcısı, günün Odak Puanı ve tahmine karşı harcanan süreyi gösteren görev listesi",
+    "link": "Odak oturumları nasıl çalışır"
+  },
+  "featureBento": {
+    "title": "Günündeki düzeni gör.",
+    "description": "Tekrar tekrar açacağın dört görünüm. Hepsi aynı otomatik kayıttan beslenir.",
+    "cards": {
+      "analytics": {
+        "title": "Saatlerin nereye gittiğini bil",
+        "body": "İstediğin tarih aralığı için en çok kullanılan uygulamalar, siteler ve kategoriler; yanında Odak Puanı ve dikkat dağılma oranı.",
+        "link": "Otomatik zaman takibi",
+        "alt": "Bu haftanın en çok kullanılan uygulamaları: Code 17 sa 40 dk, Google Chrome 7 sa 6 dk, Figma 4 sa 13 dk, Notion 2 sa 44 dk"
+      },
+      "report": {
+        "title": "Biten günün kısa özeti",
+        "body": "Bir gün seç; AI o günün kayıtlarına dayanarak öne çıkanları ve önerileri içeren kısa bir özet yazsın.",
+        "link": "AI günlük raporu hakkında",
+        "alt": "AI günlük raporundan öneriler; örneğin günün ilk iki saatini derin çalışmaya ayırmak"
+      },
+      "tasks": {
+        "title": "Her seferinde daha iyi tahmin",
+        "body": "Biten görevler, tahminlerinin gerçekte geçen süreye ne kadar yakın olduğunu gösterir.",
+        "link": "Görevler ve odak oturumları",
+        "alt": "Tahmin isabeti kartı: ortalamada tahminin 0,7 katını harcıyorsun"
+      },
+      "calendar": {
+        "title": "İlk günden bugüne her gün",
+        "body": "Takvimde bir günü aç, üzerinde çalıştığın her şeyi başlık başlık gör.",
+        "link": "Takvim ve verilerin",
+        "alt": "Takip süresi ve zaman kartındaki süreyle dört takvim günü"
+      }
+    }
+  },
+  "clientWork": {
+    "title": "Müşteri saatlerin netleşsin.",
+    "description": "Kaydı FocusNow tutar. Neyin hangi müşteriye ait olduğuna sen karar verirsin, sonra arkasında durabileceğin bir çalışma dökümü hazırlarsın.",
+    "moments": {
+      "review": {
+        "label": "Gözden geçir",
+        "title": "Güne geri bak",
+        "body": "Açtığın her gün için uygulamalar, siteler ve pencere başlıkları hazır.",
+        "alt": "Odak sütunundaki etkinlikler: Code 17 sa 40 dk, Figma 4 sa 13 dk, Notion, Slack, Zoom ve Mail"
+      },
+      "assign": {
+        "label": "Seç",
+        "title": "Projeyi sen seçersin",
+        "body": "Kayıtları zaman kartına ekle ya da sayacı başlat. Proje, ücret ve faturalanabilirlik senin kararın.",
+        "timerAlt": "Orbit Web App projesi seçili ve faturalanabilir açık şekilde çalışan sayaç",
+        "recordsAlt": "Kanıt olarak 1 ve 3 takip kaydı taşıyan zaman kartı girişleri"
+      },
+      "statement": {
+        "label": "Hazırla",
+        "title": "Çalışma dökümü oluştur",
+        "body": "Faturalanabilir girişler müşteri başına toplanır. Dökümü kesinleştir, PDF ya da CSV olarak dışa aktar.",
+        "alt": "Faturalanacaklar: müşteri başına saat ve tutar, her birinde döküm oluşturma düğmesi"
+      }
+    },
+    "note": "Çalışma dökümü yaptığın işin kaydıdır, vergi faturası değildir. FocusNow fatura göndermez ve ödeme almaz.",
+    "link": "Zaman kartları nasıl çalışır"
+  },
+  "useCaseGrid": {
+    "title": "Sana uyan kullanımı bul.",
+    "items": {
+      "freelancers": {
+        "who": "Serbest çalışanlar",
+        "title": "Her müşteri saati yerli yerinde",
+        "body": "Otomatik kaydın üstüne müşteri, proje ve ücret. Faturayı hafızana göre değil, yaptığın işe göre hazırla.",
+        "alt": "Müşterileri ve kaydedilen saatleriyle proje listesi"
+      },
+      "developers": {
+        "who": "Yazılımcılar",
+        "title": "Kod zamanını bölme",
+        "body": "Bir görev seç, Derin Çalışma'yı başlat, tahminlerinin nasıl tuttuğunu gör.",
+        "alt": "Her görev için tahmine karşı harcanan süreyi gösteren görev listesi"
+      },
+      "remoteWorkers": {
+        "who": "Uzaktan çalışanlar",
+        "title": "Sınırı belli bir gün",
+        "body": "Çalışma saatleri akşamı rakamlarının dışında tutar.",
+        "alt": "Odak süresi kartı: bu hafta 37 sa 6 dk aktif sürenin 28 sa 40 dk'sı"
+      },
+      "students": {
+        "who": "Öğrenciler",
+        "title": "Oturum oturum çalış",
+        "body": "Pomodoro blokları ve ders çalışma süresine dürüst bir bakış.",
+        "alt": "25 dakikaya ayarlı Pomodoro zamanlayıcısı"
+      }
+    }
+  },
+  "compareTeaser": {
+    "title": "Sana uygun zaman takip uygulamasını seç.",
+    "description": "Zamanı iyi takip eden birçok araç var. FocusNow'ın nerede güçlü olduğunu ve başka bir aracın ne zaman sana daha uygun olabileceğini anlatıyoruz.",
+    "allLink": "Tüm karşılaştırmalar",
+    "guideLink": "Zaman takip uygulaması nasıl seçilir"
+  },
+  "trustOffer": {
+    "trust": {
+      "title": "Neyi kaydettiği belli.",
+      "recorded": {
+        "title": "Kaydedilen",
+        "items": [
+          "Önündeki uygulama",
+          "Pencere başlığı",
+          "Tarayıcıda sitenin alan adı",
+          "Aktif, boşta ve uzakta geçen süre"
+        ]
+      },
+      "never": {
+        "title": "Asla kaydedilmeyen",
+        "items": [
+          "Ekran görüntüsü",
+          "Tuş vuruşları ya da pano",
+          "Kamera ya da mikrofon",
+          "Dosyalarının içeriği"
+        ]
+      },
+      "storage": "Kayıtlar önce bilgisayarına yazılır, internet yokken de takip sürer. Oturum açıkken hesabınla senkronize edilir; aktarımda ve depolamada şifrelenir.",
+      "link": "Gizlilik politikasını oku"
+    },
+    "offer": {
+      "free": {
+        "price": "0 $",
+        "title": "Temel takip ücretsiz",
+        "body": "Otomatik takip, odak oturumları ve Verimlilik görünümleri. Deneme süresi yok, kart yok."
+      },
+      "clients": {
+        "title": "Erken erişimde müşteri araçları",
+        "body": "Zaman kartları, faturalama ve raporlar erken erişim boyunca ücretsiz. İleride ücretli bir Pro planına katmayı planlıyoruz; bir şey değişmeden önce koşulları paylaşacağız."
+      },
+      "link": "Fiyatlandırmaya bak"
+    }
+  },
+  "compareHub": {
+    "items": {
+      "rize": {
+        "summary": "İkisi de otomatik takip eder. Rize abonelikle AI proje ataması, dikkat engelleme ve ekip raporları sunar. FocusNow temel takibi ücretsiz tutar, proje seçimini sana bırakır.",
+        "cta": "FocusNow ve Rize karşılaştırmasını oku"
+      },
+      "rescuetime": {
+        "summary": "RescueTime engellemeli odak oturumları, mobil uygulamalar ve ücretli Timesheets planı sunar. FocusNow ücretsiz masaüstü takibini erken erişimdeki zaman kartlarıyla birleştirir.",
+        "cta": "FocusNow ve RescueTime karşılaştırmasını oku"
+      },
+      "toggl": {
+        "summary": "Toggl Track kronometre, ekip raporları ve faturalamayla öne çıkar; masaüstü zaman çizelgesi de var. FocusNow otomatik kayıttan başlar, üstüne odak araçları ekler.",
+        "cta": "FocusNow ve Toggl Track karşılaştırmasını oku"
+      }
+    },
+    "meta": {
+      "title": "Zaman Takip Uygulaması Karşılaştırmaları",
+      "description": "FocusNow'ın Rize, RescueTime ve Toggl Track ile dürüst ve tarihli karşılaştırmaları. Her sayfa diğer aracın nerede daha uygun olduğunu söyler."
+    },
+    "title": "FocusNow nasıl karşılaştırılır",
+    "description": "FocusNow'la birlikte sıkça değerlendirilen araçlarla açık karşılaştırmalar. Her sayfa, diğer aracın nerede daha iyi bir seçim olduğunu da söyler.",
+    "method": {
+      "title": "Bunları nasıl yazıyoruz",
+      "items": [
+        "Rakip bilgileri, kontrol tarihiyle birlikte resmi fiyat ve ürün sayfalarından gelir.",
+        "FocusNow bilgileri uygulamanın bugün yaptığıyla, yapmadıkları dahil, örtüşür.",
+        "Her karşılaştırmayı en az üç ayda bir yeniden kontrol ederiz."
+      ]
+    },
+    "guide": {
+      "title": "Neye ihtiyacın olduğundan emin değil misin?",
+      "body": "Beş soruyla ve FocusNow dışındakiler de dahil altı araç hakkında kısa notlarla başla.",
+      "link": "Rehberi oku"
+    },
+    "ogKicker": "Dürüst ve tarihli karşılaştırmalar"
+  },
+  "featurePage": {
+    "outcomesTitle": "Sana kazandırdıkları",
+    "flowTitle": "Nasıl çalışır",
+    "relatedTitle": "Keşfetmeye devam et",
+    "breadcrumb": "Özellikler"
+  },
+  "features": {
+    "tracking": {
+      "secondaryCta": "Kurulum rehberini oku",
+      "meta": {
+        "title": "Mac ve Windows için Otomatik Zaman Takibi",
+        "description": "FocusNow önündeki uygulamayı, pencereyi ve siteyi kaydeder; iş günün kronometre olmadan ortaya çıkar. Ekran görüntüsü ve tuş kaydı yok. Ücretsiz."
+      },
+      "category": "Otomatik zaman takibi",
+      "title": "Bütün iş günün, tek bir kronometre olmadan.",
+      "description": "FocusNow, Mac ve Windows'ta önündeki uygulamayı, pencere başlığını ve siteyi not eder. Ne zaman açsan, gerçekten yaşadığın gün orada.",
+      "heroAlt": "Etkinlikler sayfası: Odak, Nötr, Kişisel ve Dikkat Dağıtıcı olarak ayrılmış uygulama ve siteler, her birinin süresiyle",
+      "outcomes": [
+        {
+          "title": "Günü doğru hatırla",
+          "body": "Her uygulama ve site, harcadığın süreyle birlikte Odak, Nötr, Kişisel ve Dikkat Dağıtıcı olarak ayrılır."
+        },
+        {
+          "title": "Neyin sayılacağına sen karar ver",
+          "body": "Kategoriyi tek tıkla değiştir, kendi kategorini ekle ya da bir uygulamayı takip dışı bırak."
+        },
+        {
+          "title": "Anlamlı çalışma saatleri",
+          "body": "Saatlerini belirle, odağını o saatler içinde oku. Akşamlar ve hafta sonları puanına karışmaz."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Takibe bir kez izin ver",
+          "body": "macOS'ta kurulum sırasında Erişilebilirlik iznini verirsin. Windows'ta ek adım yok."
+        },
+        {
+          "title": "Her zamanki gibi çalış",
+          "body": "FocusNow yaklaşık iki saniyede bir öndeki pencereye bakar, bilgisayardan kalktığını da fark eder."
+        },
+        {
+          "title": "Gününü aç",
+          "body": "Verimlilik, Etkinlikler ve Takvim aynı kaydı üç farklı açıdan gösterir."
+        },
+        {
+          "title": "Neyin sayılacağını ayarla",
+          "body": "Bir uygulamayı ya da siteyi başka kategoriye taşı, rakamların da onunla güncellensin."
+        }
+      ],
+      "flowAlt": "Bu haftanın odak süresi, ortalama Odak Puanı, en çok kullanılan uygulama ve site ile odak eğilimini gösteren Verimlilik sayfası",
+      "related": {
+        "gettingStarted": "FocusNow'a başlarken",
+        "focusScore": "Odak Puanı nasıl hesaplanır",
+        "workingHours": "Çalışma saatleri",
+        "remote": "Uzaktan çalışanlar için FocusNow",
+        "rize": "FocusNow ve Rize"
+      }
+    },
+    "focus": {
+      "secondaryCta": "Odak rehberini oku",
+      "meta": {
+        "title": "Pomodoro ve Derin Çalışma için Odak Zamanlayıcısı",
+        "description": "Görevlerine bağlı Pomodoro ve Derin Çalışma oturumları, Odak Müziği ve gerçek oturum süreleri. Mac ve Windows için ücretsiz odak zamanlayıcısı."
+      },
+      "category": "Odak oturumları",
+      "title": "Görevlerine bağlı Pomodoro ve Derin Çalışma.",
+      "description": "25 dakikalık bir Pomodoro ya da 90 dakikalık bir Derin Çalışma bloğunu Odak sayfasından veya doğrudan bir görevden başlat. Her oturum gerçek süresiyle kaydedilir.",
+      "heroAlt": "Pomodoro zamanlayıcısı, günün özeti ve tahmine karşı harcanan süreyi gösteren görev listesiyle Odak sayfası",
+      "outcomes": [
+        {
+          "title": "Sürtünmesiz başla",
+          "body": "Dört mod tek tık uzağında. 1-4 tuşları modu değiştirir, ⌘/Ctrl+K geri kalan her şeyi açar."
+        },
+        {
+          "title": "Güvenebileceğin tahminler",
+          "body": "Görev başına gerçek süre oturumlardan ve bağlı kayıtlardan gelir, tahmininin hemen yanında durur."
+        },
+        {
+          "title": "Yardım eden ses, varsayılan sessizlik",
+          "body": "Beş müzik istasyonu, kahverengi, pembe ve beyaz gürültü. Gürültü internetsiz de çalışır; sen seçmedikçe ses çıkmaz."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Bir görev seç",
+          "body": "Üzerinde çalışacağın işi seç. Görev kalan süreyi ve aşağı yukarı ne zaman biteceğini gösterir."
+        },
+        {
+          "title": "Oturumu başlat",
+          "body": "Pomodoro, Derin Çalışma ya da mola. Süreleri 1 ile 180 dakika arasında sen belirlersin."
+        },
+        {
+          "title": "Akışta kal",
+          "body": "Yüzen küçük pencere, başka uygulamalarda çalışırken zamanlayıcıyı gözünün önünde tutar; duraklat ve devam et."
+        },
+        {
+          "title": "Bitir ve geriye bak",
+          "body": "İşin bitince oturumu sonlandır. Geçmiş sekmesi her oturumu, hedefinin ne kadarına ulaştığınla listeler."
+        }
+      ],
+      "flowAlt": "Tahmin isabeti, gerçek süre ve her birinde oturum başlatma düğmesi bulunan görev listesiyle Görevler sayfası",
+      "related": {
+        "focusSessions": "Rehber: odak oturumları",
+        "shortcuts": "Kısayollar ve ipuçları",
+        "students": "Öğrenciler için FocusNow",
+        "developers": "Yazılımcılar için FocusNow",
+        "rescuetime": "FocusNow ve RescueTime"
+      }
+    },
+    "timecards": {
+      "secondaryCta": "Serbest çalışanlar için gör",
+      "meta": {
+        "title": "Zaman Kartı ve Müşteri Saatleri Takibi",
+        "description": "Takip kayıtlarını zaman kartına dönüştür, çalışma dökümünü PDF ya da CSV hazırla. Saatle çalışan serbest çalışanlar için; erken erişimde ücretsiz."
+      },
+      "category": "Zaman kartları ve müşteri saatleri",
+      "title": "Gerçekte yaptığın işten zaman kartları.",
+      "description": "Takip kayıtlarını seç, bir projeye bağla; saatleri ve tutarları FocusNow toplasın. Müşterin özet istediğinde bir çalışma dökümü hazırla.",
+      "heroAlt": "Çalışan sayaç, filtreler, kaydedilen ve faturalanabilir süre, kapsama ve takip kaydı taşıyan girişlerle Zaman kartları sayfası",
+      "outcomes": [
+        {
+          "title": "Her girişin arkasında kanıt",
+          "body": "Takip kayıtlarından oluşturulan giriş, o kayıtları zaman aralıklarıyla birlikte taşır."
+        },
+        {
+          "title": "Hiçbir şey arada kaybolmaz",
+          "body": "Kapsama, takip edilen sürenin ne kadarının zaman kartında olduğunu gösterir; Faturalama henüz olmayanları listeler."
+        },
+        {
+          "title": "Ücret ve para birimi senin tercihin",
+          "body": "Görev ya da proje ücreti, istediğin para biriminde. Toplamlar para birimine göre ayrı tutulur."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Süreyi üç yolla gir",
+          "body": "Sayacı çalıştır, saatleri elle yaz ya da takip kayıtlarını seçip bir girişe ekle."
+        },
+        {
+          "title": "Faturalamadan önce kontrol et",
+          "body": "Uzun süre açık kalan sayaçlar, eksik proje ya da ücret ve çakışan girişler işaretlenir."
+        },
+        {
+          "title": "Çalışma dökümü oluştur",
+          "body": "Faturalanacaklar, faturalanabilir girişleri müşteri başına toplar. Kesinleştirdiğinde girişler kilitlenir ve faturalandı olarak işaretlenir."
+        },
+        {
+          "title": "Dışa aktar, döngüyü kapat",
+          "body": "PDF ya da CSV olarak aktar, fatura referansını ekle, ödeme geldiğinde ödendi olarak işaretle."
+        }
+      ],
+      "flowAlt": "Müşteri başına çalışma dökümleri, durumları, tutarları, fatura referansları ve PDF, CSV dışa aktarma ile Faturalama sayfası",
+      "note": "Zaman kartları, faturalama ve raporlar erken erişim boyunca ücretsiz. İleride ücretli bir Pro planına katmayı planlıyoruz. Çalışma dökümü vergi faturası değildir; FocusNow ödeme almaz.",
+      "related": {
+        "freelancers": "Serbest çalışanlar için FocusNow",
+        "pricing": "Fiyatlandırma ve erken erişim",
+        "toggl": "FocusNow ve Toggl Track",
+        "alternatives": "Zaman takip uygulaması seçmek"
+      }
+    }
+  },
+  "useCasePage": {
+    "breadcrumb": "Kullanım alanları",
+    "dayTitle": "Seninkine benzer bir gün",
+    "faqTitle": "Senin gibi kullananların soruları",
+    "nextTitle": "Sonra nereye bakmalı"
+  },
+  "comparePage": {
+    "breadcrumb": "Karşılaştır",
+    "tableTitle": "Yan yana",
+    "criterionCol": "Karar verdiğin konu",
+    "usCol": "FocusNow",
+    "experienceTitle": "FocusNow'ı kullanmak nasıl bir şey",
+    "switchTitle": "Geçmeyi düşünüyorsan",
+    "sourcesTitle": "Kaynaklar",
+    "checked": "Rakip bilgileri 26 Eylül 2026'da resmi sayfalarından kontrol edildi. Fiyatlar vergi hariç USD liste fiyatlarıdır ve değişebilir.",
+    "faqTitle": "Sık sorulanlar",
+    "moreTitle": "Diğer karşılaştırmalar",
+    "guideLink": "Zaman takip uygulaması nasıl seçilir",
+    "pickUsTitle": "FocusNow sana uyar, eğer"
+  },
+  "alternatives": {
+    "meta": {
+      "title": "Zaman Takip Uygulamaları: Nasıl Seçilir? (2026)",
+      "description": "İhtiyaca göre altı zaman takip uygulaması: kişisel odak, müşteri saatleri, ekipler, yerel veri ve platform. FocusNow yazdı, tarafımız açık."
+    },
+    "breadcrumb": "Zaman takip uygulaması seçmek",
+    "title": "Zaman takip uygulaması nasıl seçilir",
+    "intro": "Zaman takip uygulamalarının çoğu temel işi iyi yapar. Doğru olanı, rakamlara ne için ihtiyaç duyduğun belirler. Aşağıdaki sorularla başla, sonra altı araç hakkındaki kısa notları oku.",
+    "disclosure": "FocusNow'ı biz yapıyoruz; bunu akılda tutarak oku. Her aracı elimizden geldiğince adil anlattık, bilgileri 26 Eylül 2026'da resmi sayfalardan kontrol ettik ve başka bir aracın nerede daha iyi olduğunu yazdık. Listede yer almak için kimse ödeme yapmadı.",
+    "criteriaTitle": "Önce sorulacak beş soru",
+    "criteria": [
+      {
+        "title": "Odağın için mi, faturaların için mi?",
+        "body": "Odak araçları düzeni ve oturumları gösterir. Müşteri araçları süreyi girişe, ücrete ve dökümlere çevirir. Bazıları ikisini de yapar."
+      },
+      {
+        "title": "Kronometre mi, otomatik kayıt mı?",
+        "body": "Kronometre, hatırladığında kesindir. Otomatik takip her şeyi yakalar, düzenlemeyi sonraya bırakır."
+      },
+      {
+        "title": "Yalnızca sen mi, bir ekip mi?",
+        "body": "Ekip planları ortak projeler, roller ve raporlar ekler. Tek kişilik araçlar daha sade kalır."
+      },
+      {
+        "title": "Veriler nerede dursun?",
+        "body": "Bazı araçlar her şeyi cihazında tutar. Bazıları başka yerden de ulaşabilmen için buluta senkronize eder."
+      },
+      {
+        "title": "Hangi cihazlar?",
+        "body": "Karar vermeden önce macOS, Windows, Linux ve mobil desteğini kontrol et."
+      }
+    ],
+    "toolsTitle": "Kısaca altı araç",
+    "fitLabel": "Kime uyar",
+    "considerLabel": "Akılda tut",
+    "priceLabel": "Fiyat",
+    "officialSite": "Resmi site",
+    "compareLink": "Ayrıntılı karşılaştırma",
+    "tools": {
+      "focusnow": {
+        "fit": "Otomatik takip, odak oturumları ve zaman kartlarını tek bir masaüstü uygulamasında isteyen, tek başına çalışan profesyoneller.",
+        "consider": "Dikkat engelleme, mobil ya da Linux uygulaması ve ekip özellikleri yok. Süreyi müşterilere sen atarsın.",
+        "price": "Temel takip ücretsiz; zaman kartları ve faturalama erken erişimde ücretsiz."
+      },
+      "rize": {
+        "fit": "Oturumların projelere AI ile atanmasını, engellemeyi, entegrasyonları ve ekip panellerini isteyenler.",
+        "consider": "7 günlük denemeden sonra abonelik.",
+        "price": "Yıllık ödemede aylık 9,99 USD'den başlar."
+      },
+      "rescuetime": {
+        "fit": "Engellemeli odak oturumları, hedef ve uyarılar ile mobil uygulama isteyenler. Müşteri işi için Timesheets, Solo+ ile gelir.",
+        "consider": "14 günlük denemeden sonra ücretli planlar.",
+        "price": "Yıllık ödemede aylık 7 USD'den başlar; Solo+ 12 USD."
+      },
+      "toggl": {
+        "fit": "Kronometreyi sevenler ve web, masaüstü ve mobilde proje, faturalanabilir ücret, faturalama ve rapor isteyen ekipler.",
+        "consider": "Ana alışkanlık sayaç. Otomatik Timeline masaüstü uygulamalarında yardımcı bir özellik.",
+        "price": "Ücretsiz plan; ücretliler yıllık ödemede kullanıcı başına aylık 9 USD'den başlar."
+      },
+      "timely": {
+        "fit": "Otomatik kayıttan AI ile hazırlanan zaman çizelgeleri isteyen ajanslar ve danışmanlık şirketleri.",
+        "consider": "Kullanıcı başına fiyatlanır, 14 günlük deneme var.",
+        "price": "Yıllık ödemede kullanıcı başına aylık 9 USD'den başlar."
+      },
+      "activitywatch": {
+        "fit": "Verisini kendi cihazında tutan, Linux dahil ücretsiz ve açık kaynak takip isteyen gizlilik hassasiyeti yüksek kullanıcılar.",
+        "consider": "Odak zamanlayıcısı ve müşteri faturalaması yok; cihazlar arası senkronizasyon hâlâ geliştiriliyor.",
+        "price": "Ücretsiz ve açık kaynak (MPL-2.0)."
+      }
+    },
+    "closing": "Hangisini seçersen seç, karar vermeden önce gerçek işle geçen tam bir hafta dene."
   }
 }

@@ -1,34 +1,26 @@
-"use client";
-
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { EyeOff, Laptop, Timer, Wallet } from "lucide-react";
+
+const facts = [
+  { key: "platforms", icon: Laptop },
+  { key: "free", icon: Wallet },
+  { key: "private", icon: EyeOff },
+  { key: "setup", icon: Timer },
+] as const;
 
 export function SocialProofBar() {
-  const t = useTranslations("socialProof");
-
-  const stats = [1, 2, 3, 4] as const;
+  const t = useTranslations("trustStrip");
 
   return (
-    <section className="py-8 sm:py-10 border-y border-border/40 bg-muted/20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          {stats.map((i) => (
-            <div key={i} className="flex flex-col items-center gap-1">
-              <span className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-600 dark:text-purple-400">
-                {t(`v${i}`)}
-              </span>
-              <span className="text-sm text-muted-foreground">
-                {t(`l${i}`)}
-              </span>
-            </div>
-          ))}
-        </motion.div>
-      </div>
+    <section aria-label={t("label")} className="border-y border-border/60 bg-background/60">
+      <ul className="mx-auto grid max-w-[84rem] grid-cols-1 gap-x-8 gap-y-4 px-4 py-6 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+        {facts.map(({ key, icon: Icon }) => (
+          <li key={key} className="flex items-center gap-3 text-sm">
+            <Icon className="size-4 shrink-0 text-emphasis" aria-hidden="true" />
+            <span className="text-foreground/80">{t(key)}</span>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

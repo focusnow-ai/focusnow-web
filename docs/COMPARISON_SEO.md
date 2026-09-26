@@ -3,7 +3,7 @@
 Rize'ın "vs Toggl / vs Clockify" taktiğinin FocusNow uyarlaması: kimin için,
 neden, hangi sırayla, nasıl ölçülür. `docs/ANALYTICS.md` ile birlikte okunmalı.
 
-Son güncelleme: 14 Temmuz 2026
+İçerik doğrulaması: 26 Eylül 2026 (v0.3.0; planlama takvimi tarihsel).
 
 ---
 
@@ -13,14 +13,13 @@ Satın almaya en yakın aramalar rakip adı içerenlerdir:
 
 - `focusnow vs rize` / `rize vs focusnow` — bizi rakiple kıyaslayan kişi
 - `rize alternative`, `free rize alternative` — rakipten memnun olmayan kişi
-- `rescuetime alternative` — kategorinin en hacimli "alternatif" sorgusu
+- `rescuetime alternative`, `toggl alternative` — başka aracı sorgulayan kişi
 
-Bu aramaları yapan kişi zaten bir araç arıyor; blog okuyucusundan çok daha
-yüksek dönüşüm oranıyla indirir. Rakip adı geçen sayfalar bu aramalarda
-çıkmanın tek yoludur — genel landing page bu sorgularda görünmez.
+Bu aramaları yapan kişi büyük olasılıkla zaten bir araç arıyor. Rakip adı geçen
+sayfalar bu sorgulara doğrudan cevap veren içerik sunar; hacim ve sıralama
+garantisi değildir, GSC verisiyle doğrulanmalıdır.
 
-**Bizim yapısal avantajımız:** Rize $9.99-29.99/ay, RescueTime ücretli,
-FocusNow ücretsiz. "Free X alternative" sorgularında doğal kazananız.
+**Güncel fiyat kaynağı:** https://rize.io/pricing. Rize bireysel planları yıllık ödemede aylık $9.99’dan başlar. FocusNow temel takibi ücretsiz tutar; zaman kartları ve faturalama şu an erken erişimde ücretsizdir.
 
 ## 2. Dürüstlük kuralları (editör şapkası)
 
@@ -31,7 +30,7 @@ Karşılaştırma sayfalarında ek kurallar:
    güven verir ve dönüşümü artırır. Çamur atan karşılaştırma sayfası
    ziyaretçiyi de Google'ı da kaçırır.
 2. **Her satır `APP_REALITY.md`'ye dayanmalı.** Bizde olmayan özellik
-   (distraction blocker, takvim entegrasyonu, proje takibi) tabloda dürüstçe
+   (distraction blocker, dış takvim entegrasyonu) tabloda dürüstçe
    "yok" gösterilir. Rakibin güçlü yanını saklamak yerine "kimin için hangisi"
    çerçevesiyle sunulur.
 3. **Rakip bilgisi tarihlenir.** Fiyat/özellik değişir; her sayfada
@@ -41,46 +40,48 @@ Karşılaştırma sayfalarında ek kurallar:
 
 ## 3. Sayfa şablonu (UX/UI şapkası)
 
-URL yapısı: `/compare/<rakip>` (EN), `/karsilastir/<rakip>` (TR).
-Tasarım mevcut design system'i kullanır (Card, Badge, FAQItem, DownloadCTA).
+URL yapısı: `/compare/<rakip>` (EN), `/karsilastir/<rakip>` (TR). Merkez sayfa `/compare`
+(`/karsilastir`), seçim rehberi `/alternatives` (`/alternatifler`). Bileşen:
+`src/components/compare/comparison-template.tsx`; veri `src/lib/comparisons.ts`
+(kaynak URL'leri, kontrol tarihi), metin `compare.<rakip>` mesajlarında.
 
-Sayfa anatomisi — yukarıdan aşağı karar hunisi:
+Sayfa anatomisi (yukarıdan aşağı karar hunisi):
 
-1. **Hero:** "FocusNow vs Rize" başlık + tek cümle dürüst özet
-   ("Rize is a powerful paid tracker; FocusNow keeps the essentials free").
-2. **Hızlı karar kutuları:** iki Card yan yana — "Choose FocusNow if..." /
-   "Choose Rize if..." — madde madde. Tarayıcı kullanıcı %10'u okur;
-   bu blok tek başına sayfanın işini görür.
-3. **Karşılaştırma tablosu:** ~10 satır (fiyat, otomatik takip, focus score,
-   oturumlar, AI raporu, distraction blocker, takvim, proje takibi, dil,
-   platform, veri sahipliği). Check/X/metin hücreler; mobilde yatay scroll değil
-   kartlaşan satırlar.
-4. **Derinlemesine bölüm:** 3-4 kısa paragraf — fiyat felsefesi, veri/gizlilik
-   yaklaşımı, kimin için hangisi. (SEO: sorgu çeşitlerini yakalayan doğal metin.)
-5. **FAQ (4 soru):** "Is FocusNow really free?", "Can I switch from Rize?" vb.
-   → `getFAQPageLD` ile FAQ structured data (Google'da zengin sonuç şansı).
-6. **DownloadCTA** (mevcut bileşen).
+1. **Hero:** rakip adı geçen H1, kime uyduğunu söyleyen kısa özet, indirme CTA'sı,
+   yanında "FocusNow fits if / X fits if" karar kutuları.
+2. **Karar tablosu:** 10-12 kriter (otomatik kayıt, süreyi projeye aktarma,
+   odak araçları, engelleme, AI'ın yaptığı iş, müşteriye çıktı, takvim, ekip,
+   entegrasyon, platform, fiyat). Metin hücreler; mobilde kartlaşan satırlar.
+   Altında kontrol tarihi ve fiyat koşulu notu.
+3. **FocusNow deneyimi:** gerçek ekran görüntüsü + kısa akış.
+4. **Üç kısa fark bölümü** ve **"geçmeyi düşünüyorsan"** notu (içe aktarma yok).
+5. **Kaynaklar, diğer karşılaştırmalar, FAQ (3 soru), DownloadCTA.**
 
-Görsel dil: nötr zemin, iki ürün de logo/isimle eşit ağırlıkta; bizim satırlar
-yeşil check ile öne çıkar ama rakibin check'leri de gerçek check'tir.
+Yapısal veri: `Article` (dateModified = kontrol tarihi), `BreadcrumbList` ve
+görünen sorularla birebir `FAQPage` (sayfa başına bir tane). Google FAQ zengin
+sonuç desteğini 2026'da kaldırdı; FAQ ziyaretçiye yardım için vardır, SEO vaadi
+değildir.
 
-## 4. Takvim ve sıralama
+## 4. Mevcut sayfalar ve sonraki adaylar
 
-| Ne zaman | Sayfa | Hedef sorgular | Not |
-|----------|-------|----------------|-----|
-| **Şimdi (Tem 2026)** | `/compare/rize` | rize alternative, focusnow vs rize, free rize alternative | En yakın rakip, en net fark (ücretsiz) |
-| +4-6 hafta | `/compare/rescuetime` | rescuetime alternative (yüksek hacim) | Site biraz otorite kazansın diye ikinci |
-| +8-10 hafta | `/compare/activitywatch` | activitywatch vs, activitywatch alternative | Açık kaynak kitlesi; "kolay kurulum" açısı |
-| Sonra (veriye göre) | Toggl/Clockify | toggl alternative automatic tracking | Farklı kategori (manuel takip); "otomatik alternatif" açısıyla |
+| Durum | Sayfa | Hedef niyet |
+|-------|-------|-------------|
+| Yayında | `/compare/rize` | FocusNow vs Rize; Rize alternative |
+| Yayında | `/compare/rescuetime` | FocusNow vs RescueTime; RescueTime alternative |
+| Yayında | `/compare/toggl` | FocusNow vs Toggl; Toggl alternative |
+| Yayında | `/compare`, `/alternatives` | karşılaştırma merkezi; zaman takip uygulaması seçimi |
+| Aday | Timely, ActivityWatch, Clockify | Yalnızca her biri için özgün, doğrulanmış içerik hazır olduğunda |
 
-Kural: yeni sayfa, bir öncekinin GSC'de gösterim almaya başlamasından sonra
-açılır. Aynı anda 5 sayfa açmak sinyali bölmekten başka işe yaramaz.
+Aynı arama niyetini hedefleyen ikinci sayfa açılmaz (ör. `/alternatives/rize`);
+Rize karşılaştırması "Rize alternative" ihtiyacını da karşılar. Yeni sayfa
+açma temposu için kesin bir kural yok; ölçüt, sayfanın özgün ve doğrulanmış
+içeriğe sahip olmasıdır.
 
 ## 5. İç linkleme (Rize'ın footer taktiği)
 
-- Footer'a "Compare" sütunu: tüm compare sayfalarına link. Her sayfadan link
-  almak Google'ın sayfaları bulmasını ve otorite akışını sağlar — Rize'ın
-  yaptığının aynısı. Ziyaretçi için sessiz, crawler için görünür.
+- Ana sayfa gövdesinde `CompareTeaser` bölümü, üst menüde "Compare" menüsü ve
+  footer'da "Compare" sütunu: merkez, üç karşılaştırma ve seçim rehberi.
+- Kullanım senaryosu ve özellik sayfalarından ilgili karşılaştırmaya bağlam içi link.
 - İlgili blog yazılarından compare sayfalarına bağlam içi link
   (ör. deep work yazısından "FocusNow vs Rize" sayfasına).
 - Compare sayfaları sitemap'e girer (`src/app/sitemap.ts`).
@@ -90,7 +91,7 @@ açılır. Aynı anda 5 sayfa açmak sinyali bölmekten başka işe yaramaz.
 Haftalık rutine (ANALYTICS.md §4) eklenen kontroller:
 
 - **GSC → Performance → Queries**: `rize` geçen sorgular belirdi mi?
-  İlk hedef gösterim, sonra tık. 4-8 hafta içinde gösterim beklenir.
+  İlk hedef gösterim, sonra tık. Süre tahmini yapılmaz; trend haftalık izlenir.
 - **GSC → Pages**: `/compare/rize` gösterim/tık trendi.
 - **GA4**: compare sayfasından gelen oturumların `download_click` oranı —
   bu sayfaların ana sayfadan daha yüksek dönüşmesi beklenir; dönüşmüyorsa
@@ -102,11 +103,22 @@ Haftalık rutine (ANALYTICS.md §4) eklenen kontroller:
 tabloyu doğrula, "Last verified" tarihini güncelle. Yanlış rakip bilgisi
 hem güven hem hukuki risk — bu adım atlanmaz.
 
-## 8. Rakip bilgi kaynağı (Tem 2026 itibarıyla doğrulandı)
+## 8. Rakip bilgi kaynağı (26 Eylül 2026'da resmî sayfalardan doğrulandı)
 
-Rize: bireysel planlar $9.99/ay (yıllık, Basic) - $12.99/ay (aylık);
-Professional $14.99/ay (proje/müşteri takibi); takım planları $20+/koltuk.
-Ücretsiz kalıcı plan yok, deneme var. Özellikler: otomatik takip, Focus
-Quality Score, planlı oturumlar, distraction blocker, takvim entegrasyonu,
-odak müziği, AI etiket önerileri. Mac + Windows. Kaynaklar: rize.io/pricing,
-rize.io/features/productivity, docs.rize.io.
+- **Rize** (rize.io/pricing, rize.io, rize.io/features/productivity, rize.io/features/project-tracking):
+  Basic $9.99, Pro $23.99, Max $39.99 aylık (yıllık ödeme); 7 günlük tam erişimli deneme,
+  kalıcı ücretsiz plan görülmedi. Otomatik takip, AI kategorilendirme/etiketleme/sohbet,
+  AI ile oturumları proje/müşteriye atama, oturum zamanlayıcısı ve planlı oturumlar,
+  AI mola önerileri, dikkat engelleyici, odak müziği, Google Calendar, ekip panelleri;
+  Pro'da müşteri raporları (PDF/CSV), API, webhook, Zapier, MCP. macOS 10.14.6+, Windows 10+.
+- **RescueTime** (rescuetime.com/pricing): Solo Focus $7 ($9 aylık), Solo+ $12 ($15 aylık),
+  Team $10 ($12), Team+ $16 ($18); 14 günlük deneme. Otomatik takip, boşta algılama,
+  engellemeli Focus Sessions, Goals & Alerts; Solo+/Team+ Timesheets (müşteri, proje,
+  görev, faturalanabilir ücret); Assistant. Masaüstü, web, iOS, Android.
+- **Toggl Track** (toggl.com/track/pricing, toggl.com/track/features): Free; Starter $9 ($12 aylık),
+  Premium $16 ($24 aylık) kullanıcı başına. Masaüstü Timeline (uygulama/site kaydı → kullanıcı
+  girişe çevirir), takvim etkinliklerini takip, Pomodoro/odak modu, Starter+ ücretler,
+  faturalama, PDF/CSV/XLSX; web, masaüstü, mobil, tarayıcı eklentisi.
+- **Timely** (timely.com/pricing): Starter $9/kullanıcı (yıllık), 14 gün deneme, AI ile
+  zaman çizelgesi taslağı. **ActivityWatch** (activitywatch.net): ücretsiz, açık kaynak
+  (MPL-2.0), veri cihazda; Windows, macOS, Linux, Android; senkronizasyon geliştiriliyor.

@@ -2,12 +2,11 @@
 
 import { useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
-import { Download, CheckCircle2, ShieldCheck, Monitor, BarChart3 } from "lucide-react";
+import { Download, ShieldCheck, UserRound, Laptop } from "lucide-react";
+import { AppWindow } from "@/components/shared/product-shot";
 import { AppleIcon } from "@/components/shared/apple-icon";
 import { WindowsIcon } from "@/components/shared/windows-icon";
 import {
@@ -27,15 +26,15 @@ function trackDownload(link: DownloadLink) {
 }
 
 const platformIcons: Record<string, React.ReactNode> = {
-  "mac-arm": <AppleIcon className="h-6 w-6" />,
-  "mac-intel": <AppleIcon className="h-6 w-6" />,
-  windows: <WindowsIcon className="h-6 w-6" />,
+  "mac-arm": <AppleIcon className="size-6" />,
+  "mac-intel": <AppleIcon className="size-6" />,
+  windows: <WindowsIcon className="size-5" />,
 };
 
 const afterInstallSteps = [
   { key: "permissions", icon: ShieldCheck },
-  { key: "run", icon: Monitor },
-  { key: "dashboard", icon: BarChart3 },
+  { key: "run", icon: UserRound },
+  { key: "dashboard", icon: Laptop },
 ] as const;
 
 // Hydration-safe platform detection: server renders the default,
@@ -72,194 +71,119 @@ export function DownloadPageClient({ links }: { links: DownloadLink[] }) {
     );
 
   return (
-    <div className="py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          className="text-center max-w-2xl mx-auto mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
+    <section className="relative isolate overflow-hidden">
+      <div className="scene-light pointer-events-none absolute inset-0 -z-10" aria-hidden="true" />
+      <div className="mx-auto grid max-w-[84rem] items-start gap-12 px-4 pb-20 pt-14 sm:px-6 sm:pt-20 lg:grid-cols-[6fr_5fr] lg:gap-16 lg:px-8">
+        <div className="enter">
+          <h1 className="text-[2.75rem] font-semibold leading-[1.02] tracking-[-0.035em] sm:text-6xl">
             {t("title")}
           </h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            {t("description")}
-          </p>
-        </motion.div>
+          <p className="mt-5 text-lg leading-relaxed text-muted-foreground sm:text-xl">{t("description")}</p>
 
-        {/* Primary download */}
-        <motion.div
-          className="max-w-md mx-auto mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <Card className="border-primary/20 elevation-2 border-glow">
-            <CardContent className="p-6 text-center">
-              <Badge className="mb-4">{t("detected")}</Badge>
-              <div className="flex justify-center mb-4">
-                {platformIcons[primary.platform]}
+          <div className="mt-10 rounded-3xl border border-emphasis/30 bg-card p-6 shadow-detail sm:p-8">
+            <p className="text-sm font-medium text-emphasis">{t("detected")}</p>
+            <div className="mt-4 flex items-center gap-3">
+              {platformIcons[primary.platform]}
+              <div>
+                <h2 className="text-xl font-semibold">{t(`platforms.${primary.platform}`)}</h2>
+                {primary.arch && <p className="text-sm text-muted-foreground">{primary.arch}</p>}
               </div>
-              <h2 className="text-xl font-semibold mb-2">
-                {t(`platforms.${primary.platform}`)}
-              </h2>
-              {primary.arch && (
-                <p className="text-sm text-muted-foreground mb-4">
-                  {primary.arch}
-                </p>
-              )}
-              {isAvailable(primary) ? (
-                <a
-                  href={hrefFor(primary)}
-                  {...targetFor(primary)}
-                  onClick={() => track(primary)}
-                  className={cn(
-                    buttonVariants({ size: "lg" }),
-                    "w-full press-effect"
-                  )}
-                >
-                  <Download className="mr-2 h-5 w-5" />
-                  {t("downloadFor", { platform: t(`platforms.${primary.platform}`) })}
-                </a>
-              ) : (
-                <div
-                  className={cn(
-                    buttonVariants({ size: "lg", variant: "outline" }),
-                    "w-full pointer-events-none opacity-60"
-                  )}
-                >
-                  {t("comingSoon")}
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        </motion.div>
-
-        {/* Other platforms */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <h3 className="text-xl font-semibold text-center mb-6">
-            {t("otherPlatforms")}
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-            {links.map((link) => (
-              <Card
-                key={link.platform}
-                className={cn(
-                  "card-hover h-full",
-                  link.platform === primary.platform && "border-primary/40"
-                )}
+            </div>
+            {isAvailable(primary) ? (
+              <a
+                href={hrefFor(primary)}
+                {...targetFor(primary)}
+                onClick={() => track(primary)}
+                className={cn(buttonVariants({ size: "lg" }), "mt-6 h-12 w-full text-base press-effect")}
               >
-                <CardContent className="p-4 text-center h-full flex flex-col">
-                  <div className="flex justify-center mb-2">
-                    {platformIcons[link.platform]}
-                  </div>
-                  <h4 className="font-medium text-sm">
-                    {t(`platforms.${link.platform}`)}
-                  </h4>
-                  {link.arch && (
-                    <p className="text-xs text-muted-foreground mt-1">
-                      {link.arch}
-                    </p>
-                  )}
-                  <div className="mt-auto pt-3">
-                    {isAvailable(link) ? (
-                      <a
-                        href={hrefFor(link)}
-                        {...targetFor(link)}
-                        onClick={() => track(link)}
-                        className={cn(
-                          buttonVariants({ size: "sm", variant: "outline" }),
-                          "w-full"
-                        )}
-                      >
-                        <Download className="mr-1 h-3 w-3" />
-                        {isStore(link) ? t("microsoftStore") : link.fileName}
-                      </a>
-                    ) : (
-                      <Badge variant="outline">{t("comingSoon")}</Badge>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                <Download className="size-5" aria-hidden="true" />
+                {isStore(primary)
+                  ? t("storeFor")
+                  : t("downloadFor", { platform: t(`platforms.${primary.platform}`) })}
+              </a>
+            ) : (
+              <div className={cn(buttonVariants({ size: "lg", variant: "outline" }), "pointer-events-none mt-6 h-12 w-full opacity-60")}>
+                {t("comingSoon")}
+              </div>
+            )}
           </div>
-        </motion.div>
 
-        {/* After You Install */}
-        <motion.div
-          className="mt-20"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <h3 className="text-2xl font-bold text-center mb-10">
-            {t("afterInstall.title")}
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {afterInstallSteps.map(({ key, icon: Icon }, i) => (
-              <div key={key} className="text-center">
-                <div className="relative mx-auto mb-4 w-14 h-14">
-                  <div className="w-14 h-14 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center">
-                    <Icon className="h-6 w-6 text-purple-600 dark:text-purple-400" />
-                  </div>
-                  <div className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center">
-                    {i + 1}
+          <h2 className="mt-12 text-sm font-medium text-muted-foreground">{t("otherPlatforms")}</h2>
+          <ul className="mt-3 divide-y divide-border/70 rounded-2xl border border-border/80 bg-background/70">
+            {links.map((link) => (
+              <li key={link.platform} className="flex items-center justify-between gap-4 px-5 py-4">
+                <div className="flex items-center gap-3">
+                  {platformIcons[link.platform]}
+                  <div>
+                    <p className="font-medium">{t(`platforms.${link.platform}`)}</p>
+                    {link.arch && <p className="text-xs text-muted-foreground">{link.arch}</p>}
                   </div>
                 </div>
-                <h4 className="font-semibold mb-1.5">
-                  {t(`afterInstall.steps.${key}.title`)}
-                </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed max-w-xs mx-auto">
-                  {t(`afterInstall.steps.${key}.description`)}
-                </p>
-              </div>
+                {isAvailable(link) ? (
+                  <a
+                    href={hrefFor(link)}
+                    {...targetFor(link)}
+                    onClick={() => track(link)}
+                    className={cn(buttonVariants({ variant: "outline", size: "lg" }), "shrink-0")}
+                  >
+                    <Download className="size-4" aria-hidden="true" />
+                    {isStore(link) ? t("microsoftStore") : "DMG"}
+                  </a>
+                ) : (
+                  <Badge variant="outline">{t("comingSoon")}</Badge>
+                )}
+              </li>
             ))}
-          </div>
-        </motion.div>
+          </ul>
+          <p className="mt-3 text-sm text-muted-foreground">{t("noLinux")}</p>
+        </div>
 
-        {/* System Requirements */}
-        <motion.div
-          className="mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <h3 className="text-xl font-semibold text-center mb-8">
-            {t("requirements.title")}
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            {(["mac", "windows"] as const).map((os) => (
-              <Card key={os}>
-                <CardContent className="p-5">
-                  <h4 className="font-semibold mb-3 flex items-center gap-2">
-                    {os === "mac" && <AppleIcon className="h-4 w-4" />}
-                    {os === "windows" && <WindowsIcon className="h-4 w-4" />}
-                    {t(`requirements.${os}.title`)}
-                  </h4>
-                  <ul className="space-y-2">
-                    {(t.raw(`requirements.${os}.items`) as string[]).map(
-                      (item: string, i: number) => (
-                        <li
-                          key={i}
-                          className="flex items-start gap-2 text-sm text-muted-foreground"
-                        >
-                          <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
-                          {item}
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+        <div className="enter-scene space-y-10 lg:pt-4">
+          <AppWindow
+            shot="focusTimer"
+            alt={t("demoAlt")}
+            sizes="(min-width: 1344px) 540px, (min-width: 1024px) 40vw, 92vw"
+            priority
+            frameClassName="shadow-window"
+          />
+
+          <div>
+            <h2 className="text-2xl font-semibold tracking-tight">{t("afterInstall.title")}</h2>
+            <ol className="mt-6 space-y-6 border-l border-border pl-6">
+              {afterInstallSteps.map(({ key, icon: Icon }) => (
+                <li key={key} className="relative">
+                  <span className="absolute -left-[2.35rem] top-0 flex size-7 items-center justify-center rounded-full border border-border bg-background">
+                    <Icon className="size-3.5 text-emphasis" aria-hidden="true" />
+                  </span>
+                  <h3 className="font-semibold">{t(`afterInstall.steps.${key}.title`)}</h3>
+                  <p className="mt-1 text-[15px] leading-relaxed text-muted-foreground">
+                    {t(`afterInstall.steps.${key}.description`)}
+                  </p>
+                </li>
+              ))}
+            </ol>
           </div>
-        </motion.div>
+
+          <div>
+            <h2 className="text-sm font-medium text-muted-foreground">{t("requirements.title")}</h2>
+            <div className="mt-3 grid gap-3 sm:grid-cols-2">
+              {(["mac", "windows"] as const).map((os) => (
+                <div key={os} className="rounded-2xl border border-border/80 p-5">
+                  <h3 className="flex items-center gap-2 font-semibold">
+                    {os === "mac" ? <AppleIcon className="size-4" /> : <WindowsIcon className="size-4" />}
+                    {t(`requirements.${os}.title`)}
+                  </h3>
+                  <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
+                    {(t.raw(`requirements.${os}.items`) as string[]).map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -58,9 +58,37 @@ export const routing = defineRouting({
       en: "/use-cases/developers",
       tr: "/kullanim-alanlari/yazilimcilar",
     },
+    "/compare": {
+      en: "/compare",
+      tr: "/karsilastir",
+    },
     "/compare/rize": {
       en: "/compare/rize",
       tr: "/karsilastir/rize",
+    },
+    "/compare/rescuetime": {
+      en: "/compare/rescuetime",
+      tr: "/karsilastir/rescuetime",
+    },
+    "/compare/toggl": {
+      en: "/compare/toggl",
+      tr: "/karsilastir/toggl",
+    },
+    "/alternatives": {
+      en: "/alternatives",
+      tr: "/alternatifler",
+    },
+    "/features/automatic-time-tracking": {
+      en: "/features/automatic-time-tracking",
+      tr: "/ozellikler/otomatik-zaman-takibi",
+    },
+    "/features/focus-sessions": {
+      en: "/features/focus-sessions",
+      tr: "/ozellikler/odak-oturumlari",
+    },
+    "/features/timecards": {
+      en: "/features/timecards",
+      tr: "/ozellikler/zaman-kartlari",
     },
     "/guide": {
       en: "/guide",

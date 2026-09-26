@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
 import { getBlogPost, getAllBlogSlugs, formatPostDate } from "@/lib/blog";
-import { renderInline } from "@/lib/markdown";
+import { MarkdownBody } from "@/lib/markdown";
 import { getBlogPostLD } from "@/lib/structured-data";
 import { BlogReadTracker } from "@/components/shared/blog-read-tracker";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
@@ -17,10 +17,13 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const post = getBlogPost(slug, locale);
   if (!post) return {};
+  const path = locale === "en" ? `/blog/${slug}` : `/${locale}/blog/${slug}`;
   return {
     title: post.title,
     description: post.description,
+    alternates: { canonical: path },
     openGraph: {
+      url: `https://focusnow.ai${path}`,
       title: post.title,
       description: post.description,
       type: "article",
@@ -54,14 +57,14 @@ export default async function BlogPostPage({
   }
 
   return (
-    <div className="py-20 sm:py-28">
+    <div className="pb-24 pt-12 sm:pt-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(getBlogPostLD(post)),
         }}
       />
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[44rem] px-4 sm:px-6">
         <Link
           href="/blog"
           className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
@@ -71,7 +74,7 @@ export default async function BlogPostPage({
         </Link>
 
         <article>
-          <header className="mb-8">
+          <header className="mb-12 border-b border-border/70 pb-8">
             <div className="flex items-center gap-2 mb-4">
               {post.tags.map((tag) => (
                 <Badge key={tag} variant="outline" className="text-xs">
@@ -79,10 +82,10 @@ export default async function BlogPostPage({
                 </Badge>
               ))}
             </div>
-            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+            <h1 className="mb-5 text-4xl font-semibold leading-[1.1] tracking-[-0.03em] text-balance sm:text-5xl">
               {post.title}
             </h1>
-            <p className="text-lg text-muted-foreground mb-4">
+            <p className="mb-5 text-xl leading-relaxed text-muted-foreground">
               {post.description}
             </p>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
@@ -98,46 +101,7 @@ export default async function BlogPostPage({
             </div>
           </header>
 
-          <div className="prose prose-neutral dark:prose-invert max-w-none">
-            {post.content.split("\n").map((paragraph, i) => {
-              const trimmed = paragraph.trim();
-              if (!trimmed) return null;
-              if (trimmed.startsWith("## ")) {
-                return (
-                  <h2 key={i} className="text-2xl font-bold mt-8 mb-4">
-                    {renderInline(trimmed.replace("## ", ""))}
-                  </h2>
-                );
-              }
-              if (trimmed.startsWith("### ")) {
-                return (
-                  <h3 key={i} className="text-xl font-semibold mt-6 mb-3">
-                    {renderInline(trimmed.replace("### ", ""))}
-                  </h3>
-                );
-              }
-              if (trimmed.startsWith("- ")) {
-                return (
-                  <li key={i} className="text-muted-foreground ml-4">
-                    {renderInline(trimmed.replace("- ", ""))}
-                  </li>
-                );
-              }
-              const ordered = trimmed.match(/^(\d+)\.\s+(.*)$/);
-              if (ordered) {
-                return (
-                  <p key={i} className="text-muted-foreground leading-relaxed mb-2 ml-4">
-                    {ordered[1]}. {renderInline(ordered[2])}
-                  </p>
-                );
-              }
-              return (
-                <p key={i} className="text-muted-foreground leading-relaxed mb-4">
-                  {renderInline(trimmed)}
-                </p>
-              );
-            })}
-          </div>
+          <MarkdownBody content={post.content} locale={locale} />
           <BlogReadTracker
             slug={slug}
             locale={locale}

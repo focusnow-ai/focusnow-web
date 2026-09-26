@@ -15,17 +15,23 @@ src/
 │   └── [locale]/           # Locale-prefixed routes
 │       ├── layout.tsx      # Providers (ThemeProvider, NextIntlClientProvider)
 │       ├── page.tsx        # Landing page assembly
-│       ├── use-cases/      # Audience segmentation pages (remote-workers, students, freelancers, developers)
-│       └── */page.tsx      # Pages: download, pricing, about, blog, changelog, privacy, terms
+│       ├── features/       # Product pages (automatic-time-tracking, focus-sessions, timecards)
+│       ├── use-cases/      # Audience pages (freelancers, developers, remote-workers, students)
+│       ├── compare/        # Compare hub + rize, rescuetime, toggl
+│       ├── alternatives/   # "How to choose a time tracker" guide
+│       └── */page.tsx      # download, pricing, about, blog, guide, changelog, contact, privacy, terms
+│   (each marketing route also has opengraph-image.tsx / twitter-image.tsx built by src/lib/og-image.tsx)
 ├── components/
 │   ├── ui/                 # shadcn/ui components (Base UI + CVA)
 │   ├── layout/             # Header, Footer
-│   ├── shared/             # ThemeProvider, ThemeToggle, LocaleSwitcher, FocusNowLogo, CookieConsentBanner
-│   ├── landing/            # Landing sections (hero, social-proof-bar, bento-features, how-it-works, download-cta)
-│   └── use-cases/          # UseCaseTemplate shared component
+│   ├── shared/             # ProductShot/AppWindow, FaqList, Breadcrumbs, JsonLd, LegalDocument, ThemeToggle, LocaleSwitcher, FocusNowLogo…
+│   ├── landing/            # Home scenes (hero, trust strip, day, focus scene, bento, client work, use cases, compare teaser, trust/offer, FAQ, download CTA)
+│   ├── features/           # FeaturePage template
+│   ├── compare/            # ComparisonTemplate
+│   └── use-cases/          # UseCaseTemplate
 ├── content/blog/           # MDX blog posts (en/, tr/)
 ├── i18n/                   # routing.ts, navigation.ts, request.ts
-├── lib/                    # utils.ts, blog.ts, downloads.ts, analytics.ts, structured-data.ts
+├── lib/                    # screens.ts (screenshot crops), site-nav.ts, seo.ts, features.ts, use-cases.ts, comparisons.ts, *-route.tsx factories, og-image.tsx, structured-data.ts, blog.ts, downloads.ts
 ├── messages/               # en.json, tr.json (translation files)
 └── middleware.ts            # next-intl locale middleware
 ```
@@ -45,7 +51,7 @@ src/
 
 - **UI components** (`src/components/ui/`): shadcn/ui with `@base-ui/react` primitives + CVA. Do not modify these unless updating the design system.
 - **Shared components** (`src/components/shared/`): Reusable across pages. `"use client"` only when they need interactivity or browser APIs.
-- **Landing sections** (`src/components/landing/`): Self-contained, `"use client"`, use framer-motion for animations.
+- **Landing sections** (`src/components/landing/`): Server components by default. Only interactive leaves are `"use client"` (`day-views.tsx`, header menus, forms).
 - **Layout** (`src/components/layout/`): Header and Footer.
 - **Use-case pages** (`src/components/use-cases/`): Shared template for audience segmentation pages.
 - **Icons:** Always use `lucide-react`. Do not add other icon libraries.
@@ -57,19 +63,20 @@ src/
 - Tailwind CSS v4 with `@tailwindcss/postcss`
 - Semantic colors via CSS custom properties in `globals.css` (`:root` for light, `.dark` for dark)
 - Buttons: Solid `bg-primary`, no gradients. See `DESIGN_SYSTEM.md` for full details.
-- Text emphasis: `text-purple-600 dark:text-purple-400` (not `text-primary` which is too dark in dark mode)
+- Text emphasis: `text-emphasis` token (purple-600 light / purple-400 dark), not `text-primary`, which is too dark in dark mode
 - Dark mode: `.dark` class toggled by `next-themes`. Warm neutrals, not pure black.
 
 ## Section Design Patterns
 
-The site uses **two section styles that alternate** for visual rhythm. See `DESIGN_SYSTEM.md` for full details.
+The site follows `docs/WEBSITE_CREATIVE_IMPLEMENTATION_BRIEF.md` (26 Sep 2026): calm energy, strong product scenes. See `DESIGN_SYSTEM.md` for the full catalogue.
 
-- **Rich sections** (bento grid, hero): Cards with `border-border/40`, embedded interactivity (tabs, SVG animations), window chrome mockups. Icon containers: `w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-900/30`.
-- **Minimal sections** (HowItWorks, About pillars, CTA): Typography-driven. Large faded numbers or icon + heading + paragraph. No cards, no borders. Whitespace does the work.
-- **Rhythm:** Rich → Minimal → Rich → Minimal → CTA. Never stack two rich sections.
-- **Landing page flow:** `HeroSection → SocialProofBar → ProductShowcase → BentoFeatures → HowItWorks → FAQSection → DownloadCTA`
-- **Animations:** Always `whileInView` + `viewport={{ once: true }}` with stagger. Never `animate` (except hero header which is above the fold).
-- **Do not** wrap informational-only content in Card components. Do not use window chrome mockup for non-product content. Do not use circle step badges or connector lines.
+- **Product first.** Every product visual is a real screenshot region from `public/screenshots/{light,dark}` rendered by `AppWindow`/`ProductShot` with a named crop in `src/lib/screens.ts`. Crop to the region that tells the story; never shrink a full window. Small crops use `capToSource` so they are never enlarged past a crisp size. No div-built fake UI.
+- **Layered scenes are honest.** Detail layers carry their own window title, so separate screens never read as one automatic process. Show a "sample data" note near product scenes.
+- **Home flow (nine scenes):** `HeroSection → SocialProofBar → DaySection → FocusScene (dark stage) → FeatureBento → ClientWork → UseCaseGrid → CompareTeaser → TrustOffer → FAQSection → DownloadCTA`. Each uses a different layout family; do not repeat one family twice on a page.
+- **Cards are allowed when they carry a product behavior or a decision** (bento cards, use-case cards, pricing, comparison picks). Plain informational text still uses typography and `border-t`/`border-l` rules instead of cards.
+- **Headings:** left-aligned by default; center only where the composition calls for it (DaySection). No per-section eyebrow labels; at most one small label per three sections.
+- **Motion:** content is visible without JavaScript. Hero uses CSS `.enter*` classes; below-the-fold sections use `.reveal` (CSS scroll-driven, progressive enhancement). Both are disabled under `prefers-reduced-motion`. Do not use framer-motion `initial={{ opacity: 0 }}` for page content.
+- **Do not** use circle step badges, window chrome for non-product content, or decorative motion (particles, pulsing counters, autoplaying audio).
 
 ## Design System
 
@@ -82,7 +89,7 @@ The site uses **two section styles that alternate** for visual rhythm. See `DESI
 
 - **App reality:** `docs/APP_REALITY.md` documents what the desktop app actually does (pages, features, terminology, mechanics, and a "never claim" list). Check every product claim against it before writing or editing copy.
 - **Style guide:** All content voice, tone, copywriting standards, and editorial checklists are in `CONTENT_STYLE_GUIDE.md`. Read it before writing any user-facing text.
-- **Messaging hierarchy:** Primary = clarity/self-knowledge ("See where your time goes"). Secondary = privacy/trust. Tertiary = friction removal. Never lead with privacy.
+- **Messaging hierarchy (creative brief, 26 Sep 2026):** Lead with the whole product: automatic time tracking + focus + understanding the day + client work ("Your workday, in focus." / "Zamanını gör. Odağını bul."). The "automatic time tracking" category stays visible in the hero. Independent professionals are the strongest use case, not the whole story. Client flow is always: automatic record → the user reviews and assigns → work statement. Never lead with privacy, and never imply the app assigns projects, issues invoices or keeps data only on the device.
 - **Headlines:** Always benefit-driven, not feature-driven. "See Your Real Workday" not "Automatic Tracking."
 - **CTAs:** Use first-person language ("Start My..." / "Get My..."). See CTA matrix in style guide.
 - **Turkish content:** Write natively from the same brief as EN, never translate word-for-word. Follow Turkish-specific standards in style guide (SOV structure, active voice, colloquial warmth, KVKK references).
@@ -103,7 +110,7 @@ The site uses **two section styles that alternate** for visual rhythm. See `DESI
 ## Page Endings & Conversion
 
 - Every marketing page ends by opening a door: reuse the `DownloadCTA` section — never a bare button. Blog posts end with an inline CTA line linking to `/download`.
-- FAQ sits where objections peak: on the landing page between HowItWorks and DownloadCTA. Use-case pages carry persona-specific FAQs.
+- FAQ sits just before the closing CTA on the home page. Use-case, comparison and pricing pages carry their own FAQs. FAQ exists to help people; Google retired FAQ rich results in 2026, so it is not an SEO lever.
 - `FAQPage` JSON-LD comes from `getFAQPageLD()` — exactly ONE per page. Check for duplicates whenever FAQs move between pages.
 - JSON-LD `<script>` tags are ALWAYS rendered in server components (page.tsx), never inside `"use client"` components — React logs a script-tag error on the client and won't execute them.
 - Contact visibility: footer link + the FAQ closing line ("Question not answered?"). Do NOT add Contact to the header nav — self-serve product; the nav is the buying path.

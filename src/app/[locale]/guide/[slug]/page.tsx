@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { getGuidePage, getAllGuideSlugs } from "@/lib/guide";
-import { renderInline } from "@/lib/markdown";
+import { MarkdownBody } from "@/lib/markdown";
 import { ArrowLeft, Clock } from "lucide-react";
 import { formatPostDate } from "@/lib/blog";
 
@@ -58,8 +58,8 @@ export default async function GuidePageDetail({
   }
 
   return (
-    <div className="py-20 sm:py-28">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <div className="pb-24 pt-12 sm:pt-16">
+      <div className="mx-auto max-w-[44rem] px-4 sm:px-6">
         <Link
           href="/guide"
           className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
@@ -69,11 +69,11 @@ export default async function GuidePageDetail({
         </Link>
 
         <article>
-          <header className="mb-8">
-            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+          <header className="mb-12 border-b border-border/70 pb-8">
+            <h1 className="mb-5 text-4xl font-semibold leading-[1.1] tracking-[-0.03em] text-balance sm:text-5xl">
               {page.title}
             </h1>
-            <p className="text-lg text-muted-foreground mb-4">
+            <p className="mb-5 text-xl leading-relaxed text-muted-foreground">
               {page.description}
             </p>
             {page.updated && (
@@ -84,52 +84,7 @@ export default async function GuidePageDetail({
             )}
           </header>
 
-          <div className="prose prose-neutral dark:prose-invert max-w-none">
-            {page.content.split("\n").map((paragraph, i) => {
-              const trimmed = paragraph.trim();
-              if (!trimmed) return null;
-              if (trimmed.startsWith("## ")) {
-                return (
-                  <h2 key={i} className="text-2xl font-bold mt-8 mb-4">
-                    {renderInline(trimmed.replace("## ", ""))}
-                  </h2>
-                );
-              }
-              if (trimmed.startsWith("### ")) {
-                return (
-                  <h3 key={i} className="text-xl font-semibold mt-6 mb-3">
-                    {renderInline(trimmed.replace("### ", ""))}
-                  </h3>
-                );
-              }
-              if (trimmed.startsWith("- ")) {
-                return (
-                  <li key={i} className="text-muted-foreground ml-4">
-                    {renderInline(trimmed.replace("- ", ""))}
-                  </li>
-                );
-              }
-              const ordered = trimmed.match(/^(\d+)\.\s+(.*)$/);
-              if (ordered) {
-                return (
-                  <p
-                    key={i}
-                    className="text-muted-foreground leading-relaxed mb-2 ml-4"
-                  >
-                    {ordered[1]}. {renderInline(ordered[2])}
-                  </p>
-                );
-              }
-              return (
-                <p
-                  key={i}
-                  className="text-muted-foreground leading-relaxed mb-4"
-                >
-                  {renderInline(trimmed)}
-                </p>
-              );
-            })}
-          </div>
+          <MarkdownBody content={page.content} locale={locale} />
         </article>
       </div>
     </div>

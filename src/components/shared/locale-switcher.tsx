@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
@@ -13,6 +13,7 @@ const localeNames: Record<string, string> = {
 
 export function LocaleSwitcher() {
   const locale = useLocale();
+  const t = useTranslations("nav");
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
@@ -41,9 +42,11 @@ export function LocaleSwitcher() {
       variant="ghost"
       size="sm"
       onClick={handleSwitch}
-      className="gap-1.5 text-sm"
+      className="h-9 gap-1.5 text-sm"
+      aria-label={t("switchLanguage")}
+      lang={nextLocale}
     >
-      <Globe className="h-4 w-4" />
+      <Globe className="h-4 w-4" aria-hidden="true" />
       {localeNames[nextLocale]}
     </Button>
   );

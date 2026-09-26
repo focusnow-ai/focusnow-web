@@ -127,37 +127,32 @@ Brand colors (`secondary`, `accent`) remain the same across modes. `primary` shi
 
 All feature section icons use a single color: **purple** (`bg-purple-100` / `text-purple-600`). Monochromatic icons keep the feature grid calm and professional — the icon shape and title already differentiate each card. No multi-color icon schemes.
 
-### Activity Status Colors
+### Scene & Emphasis Tokens (added 26 Sep 2026)
 
-Product mockups (hero dashboard mockup, bento screenshot tabs) use shared activity-status colors that mirror the desktop app's activity semantics. Defined once in `src/lib/activity-colors.ts` — always import from there, never hardcode.
+| Token | Light | Dark | Used for |
+|---|---|---|---|
+| `emphasis` | purple-600 | purple-400 | Link text, small labels, list marks, active rules (`text-emphasis`, `border-emphasis/40`) |
+| `wash` | purple-50 | `#1f1d23` | Lavender band behind product-heavy sections (`bg-wash`) |
+| `glow` | purple-300 @ 35% | purple-700 @ 22% | Radial light behind hero and CTA scenes (`.scene-light`) |
+| `scene` / `scene-foreground` / `scene-muted` / `scene-border` | warm near-black `#181614` | `#121212` | The dark focus stage on the home page and the founders note on About. In dark mode it sits one step deeper than the page and gets a top/bottom border so it still reads as a stage. |
 
-| Status | Light | Dark |
-|---|---|---|
-| Focus | `bg-emerald-500` | `dark:bg-emerald-400` |
-| Neutral | `bg-blue-500` | `dark:bg-blue-400` |
-| Distraction | `bg-red-500` | `dark:bg-red-400` |
-| Idle / Away | `bg-gray-400` | `dark:bg-gray-500` |
+Brand `primary` stays for buttons. `text-primary` is never used for text on dark surfaces; use `text-emphasis`.
 
-Used for stacked timeline bars, legend dots, and activity-row status dots.
-
-### Text Emphasis Colors
-
-For highlighted text (section titles, links), use these instead of semantic tokens -- `--primary` is optimized for backgrounds, not text readability:
-
-| Context | Light Mode | Dark Mode |
-|---|---|---|
-| Section title highlights | `text-purple-600` | `dark:text-purple-400` |
-| Links / "Read More" | `text-purple-600` | `dark:text-purple-400` |
-
----
+Activity colors inside screenshots come from the app itself; the site no longer draws its own activity bars.
 
 ## Typography
 
 | Role | Font Family | Notes |
 |---|---|---|
-| Body / UI | Inter | Variable font, loaded via `next/font/google` |
-| Headings | Inter | Same as body for visual consistency |
-| Code / Mono | System mono | `ui-monospace, SFMono-Regular, Menlo, monospace` (no web font) |
+| Body / UI | Inter | Variable font, loaded via `next/font/google` as `--font-inter` |
+| Headings | Inter | Same as body. `font-semibold tracking-tight`, sentence case on the landing page and use-case pages |
+| Data / Mono | Geist Mono | Loaded via `next/font/google` as `--font-geist-mono`. Same pair as the desktop app (Inter + Geist Mono) |
+
+**Mono usage:** prices on pricing and offer blocks, version numbers in the changelog, the small moment labels in ClientWork. Never for body copy or headlines.
+
+**Display scale:** hero H1 `text-[2.75rem] → sm:text-6xl → lg:text-[4.25rem] → xl:text-[4.75rem]`, `leading-[1.02] tracking-[-0.035em]`, weight 600. Section H2 `text-4xl sm:text-5xl lg:text-[3.5rem]`, `tracking-[-0.03em]`. Body lead 18-20px, `text-muted-foreground`, `text-pretty`.
+
+**Heading color:** plain `foreground`. Brand color appears on actions and small labels, not across headline words.
 
 ### Font Sizes (Tailwind Scale)
 
@@ -192,117 +187,74 @@ For highlighted text (section titles, links), use these instead of semantic toke
 
 | Class | Description | Used on |
 |---|---|---|
-| `.elevation-2` / `.elevation-4` | Shadow scale (hover lift / floating) | Feature, pricing and download cards; hero and showcase screenshots, cookie banner |
-| `.card-hover` | Lift 2px on hover | Blog, guide and download cards |
-| `.press-effect` | Scale to 97% on active press | Primary CTAs |
-| `.glass` | Glassmorphism backdrop blur | Window chrome of hero and showcase screenshots |
-| `.border-glow` | Gradient border on hover (purple/pink/teal) | Pricing, comparison and download cards |
-| `.gradient-glow` | Subtle purple ambient glow behind screenshots | Hero screenshot, product showcase |
-| `.text-shadow-sm` | Soft text shadow | Hero |
-| `.text-balance` | `text-wrap: balance` | Section headings |
+| `.shadow-window` | Layered shadow tinted by `--shadow-tint` (purple in light, black in dark) | Main product windows |
+| `.shadow-detail` | Tighter shadow for overlapping detail windows, menus and lead cards | Hero details, header menus, pricing lead card |
+| `.scene-light` | Radial `--glow` light | Hero, page heroes, DownloadCTA panel |
+| `.scene-dark-glow` | Violet light on the dark focus stage | FocusScene |
+| `.enter`, `.enter-scene`, `.enter-detail`, `.enter-detail-late` | One-time CSS entry (rise / float-in) with staggered delays | Above-the-fold hero content |
+| `.reveal` | CSS scroll-driven reveal (`animation-timeline: view()`), progressive enhancement | Below-the-fold blocks |
+| `.elevation-4` | Floating shadow | Cookie banner |
+| `.press-effect` | Scale to 97% on press | Primary CTAs |
+| `.text-balance` / `.text-pretty` | `text-wrap` helpers | Headings / leads |
+
+Removed on 26 Sep 2026 because nothing used them: `.glass`, `.border-glow`, `.gradient-glow`, `.card-hover`, `.elevation-2`, `.text-shadow-sm`.
 
 ---
 
 ## Section Design Patterns
 
-The site uses two distinct section styles that alternate to create visual rhythm. **Do not mix these patterns within a single section.**
+Direction (from `docs/WEBSITE_CREATIVE_IMPLEMENTATION_BRIEF.md`): **calm energy, strong product scenes.** Bright surfaces with a lavender light, one dark focus stage, real product views, and a different composition for every section.
 
-### Rich / Interactive Sections
+### Product screenshots
 
-Used for **product showcases** where the goal is to demonstrate what the product does.
+- Sources: `public/screenshots/{light,dark}/*.webp`, 1920×1157, captured from the seeded demo (see `docs/APP_REALITY.md`).
+- Every region is a named crop in `src/lib/screens.ts` (`x`, `y`, `w`, `h` as fractions). Add a crop there; never inline one.
+- `ProductShot` renders the crop, swapping light/dark files with the theme (or forced with `theme="dark"`). `AppWindow` adds neutral window chrome whose title is the app screen name (`screens.*` in messages).
+- Crop to the region that tells the story and keep text near its natural size. `capToSource` caps a small crop at 72% of its source pixels so it is never blown up.
+- Provide a mobile crop (`md:hidden` / `hidden md:block`) for any full-width view: phones get a close-up, not a miniature.
+- Layered scenes (hero, ClientWork) keep each layer in its own titled window so separate screens never look like one automatic process. Show "sample data" near product scenes.
 
-| Pattern | Where Used | Key Elements |
+### Home page scenes
+
+| # | Component | Composition |
 |---|---|---|
-| Product showcase | Landing `ProductShowcase` | Real app screenshots in a window chrome (`glass` + traffic light dots) with six tabs: dashboard, report, analytics, activities, sessions, categories |
-| Feature cards | Landing `BentoFeatures` | Four equal cards (`grid sm:grid-cols-2 lg:grid-cols-4`); each card is a button that opens its showcase tab. Below them an "included" list |
+| 1 | `HeroSection` | 45/55 split. Left: category label, H1, lead, two CTAs, platform note. Right: Focus window + Insights and Timecards detail windows. |
+| – | `SocialProofBar` | Four product facts in one row with icons. No invented numbers. |
+| 2 | `DaySection` | Centered heading, Productivity/Calendar tab switch (`DayViews`), wide window, three `border-l` notes. |
+| 3 | `FocusScene` | Full-bleed dark `scene` stage, 5/7 split, dark Focus window, three facts, music station chips. No audio. |
+| 4 | `FeatureBento` | 12-column bento: 7/5 then 5/7, tinted surfaces, each card with a real crop and a working link. |
+| 5 | `ClientWork` | `bg-wash` band, three connected moments (Review → Choose → Prepare) with arrows, early-access badge, invoice note. |
+| 6 | `UseCaseGrid` | Freelancers card 2×2, developers 2×1, remote and students 1×1, each with a different product focus. |
+| 7 | `CompareTeaser` | Heading + links left, divided list of three comparisons right. |
+| 8 | `TrustOffer` | Recorded / never recorded panel + storage note, next to free and early-access offer blocks. |
+| 9 | `FAQSection` + `DownloadCTA` | Two-column native `<details>` FAQ; lavender CTA panel with a small product composition. |
 
-**Feature card anatomy:**
-```
-button (rounded-xl border border-border/40 bg-card p-6, hover:border-purple-400/50 hover:elevation-2)
-├─ Icon container: w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/30
-│   └─ Icon: h-5 w-5 text-purple-600 dark:text-purple-400
-├─ Title: mt-4 font-semibold text-lg
-├─ Description: mt-2 text-sm text-muted-foreground
-└─ Hover-only link hint (ArrowUpRight)
-```
+### Page families
 
-**Hero screenshot:** `HeroSection` shows a real app screenshot (`/screenshots/hero-analytics-v3.webp`) inside the same window chrome (`glass` title bar + traffic lights).
+- **Feature** (`FeaturePage`): breadcrumb, stacked hero with full-width window, three outcomes (`border-t` accents), sticky flow with timeline dots on `bg-wash`, related links, DownloadCTA.
+- **Use case** (`UseCaseTemplate`): split hero, "a day like yours" editorial paragraph on `bg-wash`, two alternating scenes, FAQ with next-step links, DownloadCTA.
+- **Comparison** (`ComparisonTemplate`): H1 with the competitor name, "fits if" decision boxes, criteria table (stacked cards on mobile), FocusNow experience scene, three short sections, switching note, sources + check date, FAQ, DownloadCTA.
+- **Hub pages** (`/compare`, `/alternatives`): typographic hero, rich rows or tool cards, method/disclosure note.
+- **Reading** (blog, guide, legal): 44-46rem column, 17px/32px body via `MarkdownBody` or `LegalDocument`. Never used on the home page.
 
-### Minimal / Typographic Sections
+### What NOT to use
 
-Used for **explanatory content** where the goal is clarity and scannability, not visual richness. Typography and whitespace do the work.
-
-| Pattern | Where Used | Key Elements |
-|---|---|---|
-| Numbered steps | Landing `HowItWorks` | Large faded numbers (`text-5xl/6xl`, `purple-600/15` opacity), bold titles, single-sentence descriptions. No cards, no borders, no illustrations. |
-| Value pillars | About page | Icon + heading + 2-3 sentence paragraph per pillar. No cards, no borders. Equal-weight grid (`grid-cols-1 md:grid-cols-3`). |
-| Social proof strip | Landing `SocialProofBar` | Inline icon + text pairs, flex row, `text-sm text-muted-foreground`. |
-| CTA block | Landing `DownloadCTA` | Centered heading + description + single button. Gradient background. |
-
-### Rhythm Rule
-
-**Rich → Minimal → CTA.** The landing page alternates between dense and sparse:
-```
-HeroSection (rich — split layout, real screenshot)
-SocialProofBar (minimal — icon + text strip)
-ProductShowcase (rich — tabbed real screenshots)
-BentoFeatures (rich — four feature cards)
-HowItWorks (minimal — typographic numbered steps)
-FAQSection (minimal — expandable questions)
-DownloadCTA (minimal — centered text + button with gradient bg)
-```
-
-This prevents "card fatigue" and gives the eye rest between dense sections.
-
-### What NOT to Use
-
-Based on research of modern SaaS patterns (Linear, Raycast, Vercel, Rize, Superhuman):
-
-- **No "Step 1, Step 2, Step 3" with circle badges and connector lines.** This is the most template-looking SaaS pattern. Use large faded numbers + typography instead.
-- **No abstract/whimsical illustrations** (Undraw, Humaaans style). Show the actual product or use pure typography.
-- **No window chrome mockup for non-product content.** The glass + traffic lights pattern is for product demo previews only, not for data lists or tech stacks.
-- **No gratuitous motion.** Parallax, floating elements, spinning icons signal 2019. Motion should demonstrate functionality or reveal content on scroll.
-- **No card wrappers on informational-only content.** If a section just has title + paragraph (like About pillars or HowItWorks steps), use typography and whitespace, not cards.
+- Div-built fake UI, abstract illustrations, invented logos or user counts.
+- The same layout family twice on one page; three image/text zigzags in a row.
+- Eyebrow labels on every section (max one per three sections).
+- Circle step badges with connector lines, gradient buttons, glow shadows on buttons.
+- Motion that hides content: no `initial={{ opacity: 0 }}` on page content, no scroll hijacking, no looping decorative animation.
 
 ---
 
 ## Animation Patterns
 
-All sections use `framer-motion`. Two standard patterns:
+Content must be readable without JavaScript and with reduced motion.
 
-### Container Stagger (for groups of items)
-```tsx
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.12–0.2 } },
-};
-const itemVariants = {
-  hidden: { opacity: 0, y: 16–24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
-};
-
-// Usage:
-<motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }}>
-  <motion.div variants={itemVariants}>...</motion.div>
-</motion.div>
-```
-
-- `staggerChildren: 0.12` for bento grid (5 items, fast reveal)
-- `staggerChildren: 0.15–0.2` for smaller groups (3 items)
-- Always use `whileInView` + `viewport={{ once: true }}`, never `animate` (which fires on page load)
-- Exception: page hero headers use `animate` since they're above the fold
-
-### SVG / Chart Animations (viewport-triggered)
-```tsx
-<motion.div
-  initial={{ width: "0%" / height: 0 / strokeDashoffset: circumference }}
-  whileInView={{ width: "80%" / height: "72%" / strokeDashoffset: target }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.5–1.5, ease: "easeOut" }}
-/>
-```
-
-Used in bento cards for progress bars, bar charts, and circular progress rings.
+- **Hero:** CSS keyframes `rise-in` / `float-in` via `.enter*` classes (0.6-0.9s, `cubic-bezier(0.16, 1, 0.3, 1)`, staggered 0.12-0.6s).
+- **Below the fold:** `.reveal` uses `animation-timeline: view()` inside `@supports`; browsers without it simply show the content.
+- **State changes:** `DayViews` cross-fades stacked panels (opacity only) so switching never waits for an image.
+- Everything is wrapped in `@media (prefers-reduced-motion: no-preference)`; the global reduced-motion block also shortens transitions.
 
 ---
 
@@ -313,7 +265,7 @@ Badges use a visual hierarchy to communicate their role. The `secondary` variant
 | Role | Variant / Classes | Appearance | Where |
 |---|---|---|---|
 | Primary action | `default` (`bg-primary`) | Solid purple | Pricing "Free", Download "Detected" |
-| Hero emphasis | Custom purple classes | Light purple bg | Hero badge (custom) |
+| Status note | `EarlyAccessBadge` (`border-emphasis/30`, `text-emphasis`) | Outlined pill | Client tools, timecards pages, pricing |
 | Informational | `variant="outline"` | Bordered, neutral | Blog tags, changelog version, download platform |
 | Passive / pending | `bg-muted text-muted-foreground border-border` | Gray bg | Pricing "Pro", Feature "Coming Soon" |
 
@@ -330,5 +282,8 @@ Badges use a visual hierarchy to communicate their role. The `secondary` variant
 - CSS custom properties in `:root` (light) and `.dark` (dark) drive all semantic colors.
 - Dark mode uses warm neutral tones (`hsl(0 0% ...)`) for a Notion-like feel, avoiding pure black.
 - Brand colors (primary, secondary, accent) are identical across modes.
-- Text emphasis uses `purple-600` (light) / `purple-400` (dark) for readability.
-- `.glass` automatically adapts its background opacity and border color.
+- Text emphasis uses the `emphasis` token (`purple-600` light / `purple-400` dark).
+
+### Responsive navigation and pricing notes
+
+Header: Product · Use cases · Compare · Resources (disclosure menus from `src/lib/site-nav.ts`, Escape/outside-click close, links always in the HTML) + Pricing + Download button. The full navigation starts at `lg` (1024px); smaller widths use a grouped sheet with the same links. Contact stays in the footer. Pricing shows three columns: Free core, client tools in early access, and a Pro news signup without a price or feature promises.

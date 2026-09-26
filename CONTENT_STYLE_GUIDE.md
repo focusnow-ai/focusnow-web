@@ -22,9 +22,13 @@ Single source of truth for all editorial, copywriting, and content decisions.
 
 | Level | Message | Role |
 |-------|---------|------|
-| **Primary** | "See exactly where your time goes" | Lead — the emotional hook is *clarity* and *self-knowledge* |
-| **Secondary** | "Your data stays yours — encrypted, never sold" | Support — answers the trust objection |
-| **Tertiary** | "Mac & Windows. Set it and forget it." | Friction removal |
+| **Primary** | "Your workday, in focus." / "Zamanını gör. Odağını bul." | The whole product: automatic time tracking, focus, understanding the day and client work, in one app. The hero always keeps the category "Automatic time tracking for Mac & Windows" visible. |
+| **Strong use case** | "Client hours you can explain." / "Müşteri saatlerin netleşsin." | Independent professionals: automatic record → the user reviews and assigns → work statement. Early access, stated once where client tools first appear. |
+| **Daily reason** | "Make room for your best work." / "İyi işe yer aç." | Focus sessions, tasks, Focus Music, Productivity and the AI daily report |
+| **Supporting** | "Clear about what it records." / "Neyi kaydettiği belli." | Answers the trust objection; never the lead |
+| **Tertiary** | "Mac & Windows. From download to tracking in under two minutes." | Friction removal |
+
+**Positioning update (26 Sep 2026):** the site follows `docs/WEBSITE_CREATIVE_IMPLEMENTATION_BRIEF.md`; the strategy document is background research. The mechanism is always told in three steps with an honest split of work: FocusNow records automatically; the user decides which records go on a timecard and what goes on a statement. A work statement is a record of work, not a tax invoice. The headline candidates are test drafts; replace them when user research says so.
 
 **Positioning wedge (decided 2026-07-31, global/English market, organic only):**
 - *Conversion:* what Rize ($14.99/mo) and RescueTime ($9–12/mo) charge for — automatic tracking + focus sessions + AI daily report — is **free, no card, Mac & Windows**.
@@ -55,7 +59,7 @@ Single source of truth for all editorial, copywriting, and content decisions.
 
 ### Privacy Claims
 
-Ground truth: FocusNow records the active app name, window title and, in browsers, the website's domain only — never the full URL, screenshots or keystrokes; activity is categorized on the device, and only the AI daily report runs on our backend; data is encrypted with TLS in transit and AES-256 at rest on Azure; local-first storage with encrypted cloud sync. All privacy copy must match this reality.
+Ground truth: FocusNow records the active app name, window title and, in browsers, the website's domain only — never the full URL, screenshots or keystrokes; activity is categorized on the device, while the AI daily report is generated on our backend; data is encrypted with TLS in transit and AES-256 at rest on Azure; local-first storage with encrypted cloud sync. All privacy copy must match this reality.
 
 **APPROVED phrasing:**
 - "encrypted in transit and at rest"
@@ -76,19 +80,17 @@ Ground truth: FocusNow records the active app name, window title and, in browser
 
 | Location | EN | TR |
 |----------|----|----|
-| Hero primary | Start My Free Tracker | Ücretsiz Takibimi Başlat |
-| Hero secondary | See How It Works | Nasıl Çalıştığını Gör |
-| Header button | Get FocusNow Free | FocusNow'u Ücretsiz Al |
-| Bottom CTA | Get My Free Tracker | Ücretsiz Takibimi Al |
-| Pricing Free | Start Free | Ücretsiz Başla |
-| Download page | Get FocusNow for {platform} | {platform} için FocusNow'u Al |
-| Use-case pages | Start My Free Tracker | Ücretsiz Takibimi Başlat |
+| Download intent (hero, page heroes, closing CTA, pricing Free) | Get FocusNow Free | FocusNow'ı Ücretsiz İndir |
+| Header button | Download | İndir |
+| Hero secondary | Explore the app | Uygulamayı Keşfet |
+| Download page | Download for {platform} / Get it from the Microsoft Store | {platform} için indir / Microsoft Store'dan al |
+| Pro list | Join the Pro list | Pro listesine katıl |
+| In-section links | Verb + destination ("How timecards work") | Aynı yapı ("Zaman kartları nasıl çalışır") |
 
 **Rules:**
-- First-person language ("My", "Takibimi") for primary CTAs
-- Benefit-driven, not action-only ("Start My Free Tracker" not "Download")
-- Varied across the page — don't repeat the same CTA text
-- "Start My..." for starting actions, "Get My..." for download actions, "See How..." for secondary
+- One label per intent on a page. Download intent always reads "Get FocusNow Free" (header: "Download").
+- Link text says where it goes; no bare "Learn more".
+- CTAs stay on one line at desktop in both languages.
 
 ---
 
@@ -103,23 +105,30 @@ Ground truth: FocusNow records the active app name, window title and, in browser
    - Cold: "Ücretsiz İndir" → Warm: "Hemen Dene — Ücretsiz"
 5. **Cultural references** — Blog posts should reference Turkish work culture, exam seasons (YKS, KPSS), remote work trends in Turkey.
 6. **KVKK mention** — Reference Turkey's data protection law (KVKK) alongside GDPR in privacy-related content.
-7. **Consistent "siz" form** — Formal "siz" for product pages. Can use warmer tone in blog posts.
+7. **"Sen" on marketing pages, "siz" on legal pages.** Home, feature, use-case, comparison, pricing, download, about and contact pages use the warm "sen" form from the creative brief ("Zamanını gör. Odağını bul."). Privacy, terms and other legal text keep formal "siz". Existing blog and guide articles still use "siz"; convert them in one pass when they are next edited rather than mixing forms inside one article.
 
 ---
 
 ## 6. SEO Standards
 
-### Per-Page Keyword Mapping
+### Per-Page Search Intent
 
-| Page | EN Primary Keyword | TR Primary Keyword |
-|------|-------------------|-------------------|
-| Homepage | focus tracking app, automatic time tracking | odaklanma uygulaması, zaman takibi |
-| Download | free time tracker mac/windows | ücretsiz zaman takip programı indir |
-| Pricing | free productivity tracker | ücretsiz verimlilik uygulaması |
-| Use-case: Remote | focus tracker remote workers | evden çalışma verimlilik takibi |
-| Use-case: Students | study focus tracker | sınav çalışması odaklanma, YKS verimlilik |
-| Use-case: Freelancers | freelance time tracker free | freelancer zaman takibi ücretsiz |
-| Use-case: Developers | developer focus tracker | yazılımcı odak takibi |
+These are target intents, not volume or ranking guarantees. Each page answers its own intent with its own visuals; don't stack keyword variants in titles.
+
+| Page | EN intent | TR intent |
+|------|-----------|-----------|
+| Home | FocusNow; automatic time tracking app; Mac & Windows | otomatik zaman takibi; zaman takip programı |
+| `/features/automatic-time-tracking` | automatic app / website time tracking | otomatik zaman takibi, uygulama süresi takibi |
+| `/features/focus-sessions` | focus timer; deep work; Pomodoro desktop app | odak zamanlayıcısı, pomodoro masaüstü |
+| `/features/timecards` | tracked activity to timecards; client hours | zaman kartı, müşteri saatleri |
+| `/use-cases/freelancers` | automatic time tracking for freelancers | serbest çalışan zaman takibi |
+| `/compare/rize` | FocusNow vs Rize; Rize alternative | Rize alternatifi |
+| `/compare/rescuetime` | FocusNow vs RescueTime; RescueTime alternative | RescueTime alternatifi |
+| `/compare/toggl` | FocusNow vs Toggl; Toggl alternative | Toggl alternatifi |
+| `/alternatives` | time tracking alternatives; choosing a time tracker | zaman takip uygulaması seçimi |
+| Download / Pricing | free time tracker mac/windows | ücretsiz zaman takip programı indir |
+
+Titles: under 60 characters including the " | FocusNow" suffix (titles that already contain "FocusNow" are rendered without the suffix). Descriptions: under 155 characters.
 
 ### Metadata Requirements
 - **Title:** Under 60 characters, keyword-rich, unique per page

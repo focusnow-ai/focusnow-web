@@ -1,141 +1,94 @@
-"use client";
-
-import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { activityColors } from "@/lib/activity-colors";
-import { motion } from "framer-motion";
 import { ArrowDown, Download } from "lucide-react";
+import { Link } from "@/i18n/navigation";
+import { buttonVariants } from "@/components/ui/button";
+import { AppWindow } from "@/components/shared/product-shot";
 import { AppleIcon } from "@/components/shared/apple-icon";
 import { WindowsIcon } from "@/components/shared/windows-icon";
+import { cn } from "@/lib/utils";
 
-/* ─── App preview: real dashboard screenshot inside our window chrome ─── */
+function HeroScene() {
+  const t = useTranslations("hero.scene");
 
-function DashboardPreview({ t }: { t: (key: string) => string }) {
   return (
-    <div
-      className="rounded-xl border border-border/40 bg-gradient-to-br from-card to-muted/60 elevation-4 overflow-hidden select-none"
-      aria-hidden="true"
-    >
-      {/* Window chrome */}
-      <div className="h-8 glass flex items-center px-4 gap-2 border-b border-border/40">
-        <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
-        <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
-        <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
-        <span className="ml-3 text-[11px] text-muted-foreground font-medium">
-          FocusNow
-        </span>
-        <span className="ml-auto flex items-center gap-1.5 text-[10px] text-muted-foreground font-medium">
-          <span
-            className={cn(
-              "w-1.5 h-1.5 rounded-full animate-pulse",
-              activityColors.focus
-            )}
-          />
-          {t("mockup.dashboard.tracking")}
-        </span>
+    <div className="relative">
+      <div className="enter-scene relative sm:pr-[20%]">
+        <AppWindow
+          shot="focusTimer"
+          alt={t("mainAlt")}
+          sizes="(min-width: 1344px) 580px, (min-width: 1024px) 42vw, (min-width: 640px) 74vw, 92vw"
+          priority
+          frameClassName="shadow-window"
+        />
       </div>
 
-      {/* Real screenshot */}
-      <div className="relative aspect-[2.2/1]">
-        <Image
-          src="/screenshots/hero-analytics-v3.webp"
-          alt=""
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 768px, (max-width: 1536px) 860px, 990px"
-          className="object-cover"
+      <div className="enter-detail absolute right-0 top-[14%] hidden w-[38%] sm:block">
+        <AppWindow
+          shot="insightsHighlights"
+          alt={t("insightsAlt")}
+          title={t("insightsTitle")}
+          sizes="(min-width: 1344px) 300px, (min-width: 1024px) 22vw, 36vw"
+          compact
           priority
+          frameClassName="shadow-detail"
+        />
+      </div>
+
+      <div className="enter-detail-late relative -mt-5 ml-auto w-[82%] sm:-ml-[3%] sm:mr-0 sm:w-[54%]">
+        <AppWindow
+          shot="timecardTimer"
+          alt={t("timerAlt")}
+          sizes="(min-width: 1344px) 420px, (min-width: 640px) 30vw, 70vw"
+          compact
+          priority
+          frameClassName="shadow-detail"
         />
       </div>
     </div>
   );
 }
 
-/* ─── Hero section ─── */
-
 export function HeroSection() {
   const t = useTranslations("hero");
 
   return (
-    <section className="relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-50 to-background dark:from-purple-950/20 dark:to-background" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-purple-400/20 dark:bg-purple-600/10 rounded-full blur-3xl" />
-      </div>
+    <section className="relative isolate overflow-hidden">
+      <div className="scene-light pointer-events-none absolute inset-0 -z-10" aria-hidden="true" />
+      <div className="mx-auto grid max-w-[84rem] items-center gap-12 px-4 pb-20 pt-12 sm:px-6 sm:pt-16 lg:grid-cols-[45fr_55fr] lg:gap-10 lg:px-8 lg:pb-24 lg:pt-20">
+        <div className="enter max-w-xl">
+          <p className="text-sm font-medium text-emphasis">{t("category")}</p>
+          <h1 className="mt-4 text-[2.75rem] font-semibold leading-[1.02] tracking-[-0.035em] text-balance sm:text-6xl lg:text-[4.25rem] xl:text-[4.75rem]">
+            {t("title")}
+          </h1>
+          <p className="mt-6 max-w-[34rem] text-lg leading-relaxed text-muted-foreground sm:text-xl text-pretty">
+            {t("description")}
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              href="/download"
+              className={cn(buttonVariants({ size: "lg" }), "h-12 px-6 text-base press-effect")}
+            >
+              <Download className="size-5" aria-hidden="true" />
+              {t("cta")}
+            </Link>
+            <a
+              href="#your-day"
+              className={cn(buttonVariants({ variant: "outline", size: "lg" }), "h-12 px-6 text-base")}
+            >
+              {t("secondaryCta")}
+              <ArrowDown className="size-4" aria-hidden="true" />
+            </a>
+          </div>
+          <p className="mt-5 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
+            <AppleIcon className="size-4" />
+            <WindowsIcon className="size-3.5" />
+            <span>{t("platformNote")}</span>
+          </p>
+        </div>
 
-      <div className="mx-auto max-w-[94rem] px-4 sm:px-6 lg:px-8 pt-20 pb-16 sm:pt-28 sm:pb-20">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 2xl:gap-12 items-center">
-          {/* Left: Text + CTA */}
-          <motion.div
-            className="lg:col-span-6 xl:col-span-5 2xl:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Badge className="mb-6 px-4 py-1.5 text-sm bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 border-purple-200 dark:border-purple-800">
-              {t("badge")}
-            </Badge>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-5xl font-bold tracking-tight text-balance dark:text-shadow-sm">
-              {t("title")}{" "}
-              <span className="text-purple-600 dark:text-purple-400">
-                {t("titleHighlight")}
-              </span>
-            </h1>
-
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl text-balance">
-              {t("description")}
-            </p>
-
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/download"
-                className={cn(
-                  buttonVariants({ size: "lg" }),
-                  "text-base px-5 h-12 press-effect"
-                )}
-              >
-                <Download className="mr-2 h-5 w-5" />
-                {t("cta")}
-              </Link>
-              <a
-                href="#product"
-                className={cn(
-                  buttonVariants({ variant: "outline", size: "lg" }),
-                  "text-base px-5 h-12"
-                )}
-              >
-                {t("secondaryCta")}
-                <ArrowDown className="ml-2 h-4 w-4" />
-              </a>
-            </div>
-
-            <div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-4">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <AppleIcon className="h-4 w-4" />
-                {t("platformBadge.mac")}
-              </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <WindowsIcon className="h-4 w-4" />
-                {t("platformBadge.windows")}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right: App preview */}
-          <motion.div
-            className="lg:col-span-6 xl:col-span-7 2xl:col-span-8 relative w-full max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-none mx-auto"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <DashboardPreview t={t} />
-            <div className="absolute -inset-4 -z-10 gradient-glow rounded-2xl blur-2xl opacity-60" />
-          </motion.div>
+        <div className="lg:pl-4">
+          <HeroScene />
+          <p className="mt-4 text-right text-xs text-muted-foreground">{t("scene.demoNote")}</p>
         </div>
       </div>
     </section>

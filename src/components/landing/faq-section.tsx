@@ -1,77 +1,26 @@
-"use client";
-
-import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { Card, CardContent } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-
-export function FAQItem({ question, answer }: { question: string; answer: string }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div className="border-b border-border/40 last:border-0">
-      <button
-        onClick={() => setOpen(!open)}
-        className="flex items-center justify-between w-full py-4 text-left"
-      >
-        <span className="font-medium text-base">{question}</span>
-        <ChevronDown
-          className={cn(
-            "h-4 w-4 text-muted-foreground shrink-0 ml-4 transition-transform",
-            open && "rotate-180"
-          )}
-        />
-      </button>
-      {open && (
-        <p className="pb-4 text-sm text-muted-foreground leading-relaxed">
-          {answer}
-        </p>
-      )}
-    </div>
-  );
-}
+import { FaqList, type FaqItem } from "@/components/shared/faq-list";
 
 export function FAQSection() {
   const t = useTranslations("faq");
-  const items: { question: string; answer: string }[] = t.raw("items");
+  const items: FaqItem[] = t.raw("items");
 
   return (
-    <section id="faq" className="py-16 sm:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          className="max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "0px 0px -40px 0px" }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-center mb-10">
+    <section id="faq" className="scroll-mt-20 border-t border-border/60 py-24 sm:py-32">
+      <div className="mx-auto grid max-w-[84rem] gap-10 px-4 sm:px-6 lg:grid-cols-[4fr_7fr] lg:gap-16 lg:px-8">
+        <div className="reveal">
+          <h2 className="text-4xl font-semibold tracking-[-0.03em] text-balance sm:text-5xl lg:leading-[1.05]">
             {t("title")}
           </h2>
-          <Card>
-            <CardContent className="p-6">
-              {items.map((item, i) => (
-                <FAQItem
-                  key={i}
-                  question={item.question}
-                  answer={item.answer}
-                />
-              ))}
-            </CardContent>
-          </Card>
-          <p className="mt-6 text-center text-sm text-muted-foreground">
+          <p className="mt-5 text-muted-foreground">
             {t("contactPrompt")}{" "}
-            <Link
-              href="/contact"
-              className="text-purple-600 dark:text-purple-400 hover:underline"
-            >
-              {t("contactLink")} →
+            <Link href="/contact" className="font-medium text-emphasis underline-offset-4 hover:underline">
+              {t("contactLink")}
             </Link>
           </p>
-        </motion.div>
+        </div>
+        <FaqList items={items} className="reveal" />
       </div>
     </section>
   );

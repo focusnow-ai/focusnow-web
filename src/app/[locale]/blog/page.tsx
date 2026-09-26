@@ -1,72 +1,62 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { DownloadCTA } from "@/components/landing/download-cta";
 import { getBlogPosts, formatPostDate } from "@/lib/blog";
-import { Clock, ArrowRight } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
 
-export default async function BlogPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+type Params = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations("blog");
+  const t = await getTranslations({ locale, namespace: "blog.meta" });
+  return pageMetadata({ pathname: "/blog", locale, title: t("title"), description: t("description") });
+}
+
+export default async function BlogPage({ params }: Params) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "blog" });
   const posts = getBlogPosts(locale);
 
   return (
-    <div className="py-20 sm:py-28">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold tracking-tight">{t("title")}</h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            {t("description")}
-          </p>
-        </div>
-
-        {posts.length === 0 ? (
-          <p className="text-center text-muted-foreground">{t("noPosts")}</p>
-        ) : (
-          <div className="flex flex-col gap-8">
-            {posts.map((post) => (
-              <Link
-                key={post.slug}
-                href={{ pathname: "/blog/[slug]", params: { slug: post.slug } }}
-                className="block"
-              >
-                <Card className="card-hover transition-all hover:border-primary/30">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      {post.tags.map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-xs">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                    <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
-                    <p className="text-muted-foreground mb-4">
-                      {post.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <span>{formatPostDate(post.date, locale)}</span>
-                        <span className="flex items-center gap-1">
-                          <Clock className="h-3 w-3" />
-                          {t("readingTime", { minutes: post.readingTime })}
-                        </span>
-                      </div>
-                      <span className="text-sm text-purple-600 dark:text-purple-400 flex items-center gap-1">
-                        {t("readMore")}
-                        <ArrowRight className="h-3 w-3" />
-                      </span>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
+    <>
+      <div className="pb-20 pt-14 sm:pt-20">
+        <div className="mx-auto max-w-[84rem] px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <h1 className="text-[2.75rem] font-semibold leading-[1.02] tracking-[-0.035em] sm:text-6xl">{t("title")}</h1>
+            <p className="mt-5 text-lg text-muted-foreground">{t("description")}</p>
           </div>
-        )}
+
+          {posts.length === 0 ? (
+            <p className="mt-14 text-muted-foreground">{t("noPosts")}</p>
+          ) : (
+            <ul className="mt-14 grid gap-4 md:grid-cols-2">
+              {posts.map((post, index) => (
+                <li key={post.slug} className={index === 0 ? "md:col-span-2" : undefined}>
+                  <Link
+                    href={{ pathname: "/blog/[slug]", params: { slug: post.slug } }}
+                    className="group flex h-full flex-col rounded-3xl border border-border/80 bg-card p-6 transition-colors hover:border-emphasis/40 sm:p-8"
+                  >
+                    <p className="text-sm text-muted-foreground">
+                      {formatPostDate(post.date, locale)} · {post.author} · {t("readingTime", { minutes: post.readingTime })}
+                    </p>
+                    <h2 className={index === 0 ? "mt-3 text-3xl font-semibold tracking-tight sm:text-4xl" : "mt-3 text-xl font-semibold tracking-tight"}>
+                      {post.title}
+                    </h2>
+                    <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">{post.description}</p>
+                    <span className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-medium text-emphasis">
+                      {t("readMore")}
+                      <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
-    </div>
+      <DownloadCTA />
+    </>
   );
 }

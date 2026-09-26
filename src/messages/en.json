@@ -1,340 +1,300 @@
 {
   "metadata": {
-    "title": "FocusNow — See Where Your Time Goes | Free Desktop Tracker",
-    "description": "Free desktop app that tracks your apps automatically and shows where your workday goes. No screenshots, no keylogging. Mac & Windows.",
-    "keywords": "focus tracking app, automatic time tracking desktop, app usage tracker mac, deep work tracker, productivity, pomodoro"
+    "title": "FocusNow: Automatic Time Tracking for Mac & Windows",
+    "description": "Automatic time tracking for Mac and Windows. See where your day goes, make room for deep work and turn tracked activity into client hours. Free.",
+    "keywords": "automatic time tracking app, time tracker mac, time tracker windows, focus timer, deep work app, timecards for freelancers"
   },
   "nav": {
-    "features": "Features",
-    "download": "Download",
+    "primary": "Main",
+    "skip": "Skip to content",
+    "home": "FocusNow home",
     "pricing": "Pricing",
-    "blog": "Blog",
-    "about": "About",
-    "changelog": "Changelog",
+    "download": "Download",
+    "menu": "Menu",
+    "toggleTheme": "Toggle theme",
+    "useLight": "Switch to light theme",
+    "useDark": "Switch to dark theme",
+    "switchLanguage": "Türkçe sürüme geç",
     "privacy": "Privacy",
     "terms": "Terms of Use",
-    "getApp": "Get FocusNow Free",
-    "menu": "Menu"
+    "groups": {
+      "product": {
+        "label": "Product",
+        "links": {
+          "tracking": {
+            "title": "Automatic time tracking",
+            "description": "Every app and site, without timers."
+          },
+          "focus": {
+            "title": "Focus sessions",
+            "description": "Pomodoro, Deep Work, tasks and music."
+          },
+          "timecards": {
+            "title": "Timecards & client hours",
+            "description": "From tracked work to a work statement."
+          },
+          "changelog": {
+            "title": "What's new",
+            "description": "Release notes for every version."
+          }
+        }
+      },
+      "useCases": {
+        "label": "Use cases",
+        "links": {
+          "freelancers": {
+            "title": "Freelancers",
+            "description": "Client hours you can explain."
+          },
+          "developers": {
+            "title": "Developers",
+            "description": "Keep coding time whole."
+          },
+          "remoteWorkers": {
+            "title": "Remote workers",
+            "description": "A home workday with clear edges."
+          },
+          "students": {
+            "title": "Students",
+            "description": "Study sessions that add up."
+          }
+        }
+      },
+      "compare": {
+        "label": "Compare",
+        "links": {
+          "hub": {
+            "title": "All comparisons",
+            "description": "Where FocusNow fits, honestly."
+          },
+          "rize": {
+            "title": "FocusNow vs Rize",
+            "description": "Automatic trackers, two approaches."
+          },
+          "rescuetime": {
+            "title": "FocusNow vs RescueTime",
+            "description": "Focus tools and timesheets."
+          },
+          "toggl": {
+            "title": "FocusNow vs Toggl Track",
+            "description": "Timer-first or record-first."
+          },
+          "alternatives": {
+            "title": "Choosing a time tracker",
+            "description": "Six tools, sorted by need."
+          }
+        }
+      },
+      "resources": {
+        "label": "Resources",
+        "links": {
+          "guide": {
+            "title": "User guide",
+            "description": "Setup, Focus Score, reports and more."
+          },
+          "blog": {
+            "title": "Blog",
+            "description": "Essays on focus and time."
+          },
+          "about": {
+            "title": "About us",
+            "description": "Built by Cihan & Barbaros."
+          }
+        }
+      }
+    }
   },
   "hero": {
-    "badge": "Free forever. No credit card.",
-    "title": "Where Does Your Day Actually Go?",
-    "titleHighlight": "Now You'll Know.",
-    "description": "FocusNow quietly tracks your apps and shows you exactly how you spend your workday. See your most productive hours, spot time sinks, and build better habits — automatically.",
-    "cta": "Start My Free Tracker",
-    "secondaryCta": "See It in Action",
-    "platformBadge": {
-      "mac": "Available on macOS",
-      "windows": "Available on Windows"
-    },
-    "screenshotAlt": "FocusNow app screenshot preview",
-    "mockup": {
-      "dashboard": {
-        "focusScore": "Focus Score",
-        "focusTime": "Focus Time",
-        "sessions": "Sessions",
-        "timeline": "Timeline",
-        "tabs": {
-          "today": "Today",
-          "yesterday": "Yesterday",
-          "week": "Week"
-        },
-        "legend": {
-          "focus": "Focus",
-          "neutral": "Neutral",
-          "distraction": "Distraction",
-          "idle": "Idle"
-        },
-        "tracking": "Tracking"
-      }
+    "category": "Automatic time tracking for Mac & Windows",
+    "title": "Your workday, in focus.",
+    "description": "See where your time goes, make room for deep work, and turn tracked activity into clear client hours.",
+    "cta": "Get FocusNow Free",
+    "secondaryCta": "Explore the app",
+    "platformNote": "macOS 12+ and Windows 10+. Free core tracking, no card.",
+    "scene": {
+      "mainAlt": "FocusNow Focus page: a 25-minute Pomodoro timer and today's summary with a Focus Score of 88",
+      "insightsTitle": "Insights",
+      "insightsAlt": "Highlights from an AI daily report, such as the longest unbroken work block of the day",
+      "timerAlt": "Timecards timer running for a client project, marked billable",
+      "demoNote": "Real app screens with sample data."
     }
-  },
-  "socialProof": {
-    "v1": "0",
-    "l1": "Screenshots — ever",
-    "v2": "0",
-    "l2": "Keystrokes logged",
-    "v3": "< 2 min",
-    "l3": "From download to tracking",
-    "v4": "1",
-    "l4": "Person who sees this: you"
-  },
-  "bentoFeatures": {
-    "title": "Everything You Need to",
-    "titleHighlight": "Focus Better",
-    "seeIt": "See it in action",
-    "cards": {
-      "tracking": {
-        "title": "Automatic tracking",
-        "description": "No timers to start, nothing to log. Install it once and your real workday appears on the dashboard."
-      },
-      "sessions": {
-        "title": "Focus sessions",
-        "description": "Pomodoro (25 min) or Deep Work (90 min) — every session keeps an honest record of where the time went, so you know if it was really yours."
-      },
-      "report": {
-        "title": "AI Daily Report",
-        "description": "At the end of the day, AI sums up what went well, where the time leaked, and what to try tomorrow."
-      },
-      "privacy": {
-        "title": "Private by design",
-        "description": "No screenshots, no keystrokes — and you decide what counts as a distraction."
-      }
-    },
-    "included": {
-      "title": "Also included",
-      "items": [
-        "AI Daily Report",
-        "Calendar view — revisit any day from the last 90 days",
-        "Working hours — score your workday, not your whole day",
-        "Floating session widget with pause & resume",
-        "Command palette — ⌘K to anywhere",
-        "Idle & away detection",
-        "Custom categories and per-app rules",
-        "Search across apps, sites and window titles",
-        "Sign in with Google or Microsoft",
-        "Offline mode with encrypted sync",
-        "Data export",
-        "Dark & light themes, 5 languages"
-      ]
-    },
-    "roadmap": {
-      "title": "What's Next",
-      "items": [
-        "A paid Pro plan is on the way — we're still shaping what goes in it. The core tracker stays free."
-      ]
-    }
-  },
-  "screenshots": {
-    "title": "See FocusNow",
-    "titleHighlight": "in Action",
-    "tabs": {
-      "dashboard": "Dashboard",
-      "analytics": "Analytics",
-      "activities": "Activities",
-      "sessions": "Sessions",
-      "settings": "Settings"
-    },
-    "content": {
-      "dashboard": {
-        "title": "Today at a Glance",
-        "items": [
-          "Focus Score — 87%",
-          "Focus Time — 4h 32m",
-          "Sessions — 3 completed"
-        ]
-      },
-      "analytics": {
-        "title": "Your Patterns",
-        "items": [
-          "Peak focus: 9–11 AM",
-          "7-day focus trend ↑",
-          "Top app: VS Code — 2h 15m"
-        ]
-      },
-      "activities": {
-        "title": "Your Rules",
-        "items": [
-          "Figma → Focus",
-          "YouTube → Distraction",
-          "Custom category: Design"
-        ]
-      },
-      "sessions": {
-        "title": "Recent Sessions",
-        "items": [
-          "Pomodoro — 25m of 25m · completed",
-          "Deep Work — 1h 24m of 1h 30m",
-          "3 sessions today"
-        ]
-      },
-      "settings": {
-        "title": "Make It Yours",
-        "items": [
-          "Working hours: 09:00–18:00",
-          "Theme: Dark · Light · System",
-          "Language: EN · ES · RU · TR · DE"
-        ]
-      }
-    }
-  },
-  "howItWorks": {
-    "title": "How It",
-    "titleHighlight": "Works",
-    "steps": {
-      "install": {
-        "title": "Download & Install",
-        "description": "One-click install on Mac or Windows — you're tracking within two minutes."
-      },
-      "run": {
-        "title": "Go About Your Day",
-        "description": "FocusNow runs silently. No buttons to press."
-      },
-      "insights": {
-        "title": "Check Your Insights",
-        "description": "Open the dashboard anytime to see where your time went."
-      }
-    }
-  },
-  "privacySection": {
-    "title": "Your data is encrypted and",
-    "titleHighlight": "stays under your control.",
-    "badges": {
-      "encrypted": "Encrypted in Transit & at Rest",
-      "noScreenshots": "No Screenshots",
-      "noKeylogging": "No Keylogging",
-      "yourData": "You Own Your Data"
-    },
-    "link": "Read our full privacy commitment"
   },
   "downloadCta": {
-    "title": "Your Most Productive Week",
-    "titleHighlight": "Starts Now",
-    "description": "Download FocusNow and finally see where your time actually goes. Free forever, no credit card needed.",
-    "cta": "Start My Free Tracker",
-    "note": "macOS & Windows. From download to tracking in two minutes."
+    "title": "Start with today.",
+    "description": "Install FocusNow, work as usual, and open it this evening to see your day.",
+    "cta": "Get FocusNow Free",
+    "note": "Mac and Windows. From download to tracking in under two minutes.",
+    "todayAlt": "Today's summary: Focus Score 88, 6h 45m of focus in 7h 56m active, 3 sessions completed",
+    "timerAlt": "Timecards timer running for a client project"
   },
   "download": {
     "meta": {
-      "title": "Download FocusNow Free — Mac & Windows",
-      "description": "Download FocusNow for free. Automatic focus and time tracking for macOS and Windows. Two-minute setup."
+      "title": "Download FocusNow for Mac & Windows (Free)",
+      "description": "Download FocusNow free for macOS (Apple Silicon and Intel) or get it from the Microsoft Store on Windows. Tracking in under two minutes."
     },
     "title": "Download FocusNow",
-    "description": "Free forever. Set up in two minutes.",
-    "detected": "Detected Platform",
-    "downloadFor": "Get FocusNow for {platform}",
-    "otherPlatforms": "Other Platforms",
-    "comingSoon": "Coming Soon",
+    "description": "Free for Mac and Windows. From download to tracking in under two minutes.",
+    "detected": "Recommended for this computer",
+    "downloadFor": "Download for {platform}",
+    "storeFor": "Get it from the Microsoft Store",
+    "otherPlatforms": "All platforms",
+    "comingSoon": "Coming soon",
     "platforms": {
       "mac-arm": "macOS (Apple Silicon)",
       "mac-intel": "macOS (Intel)",
       "windows": "Windows"
     },
     "requirements": {
-      "title": "System Requirements",
+      "title": "System requirements",
       "mac": {
         "title": "macOS",
         "items": [
           "macOS 12 (Monterey) or later",
           "Apple Silicon or Intel",
-          "500 MB disk space"
+          "Signed, notarized and updates itself"
         ]
       },
       "windows": {
         "title": "Windows",
         "items": [
           "Windows 10 or later",
-          "64-bit processor",
-          "500 MB disk space"
+          "64-bit",
+          "Installed and updated through the Microsoft Store"
         ]
       }
     },
     "afterInstall": {
-      "title": "After You Install",
+      "title": "After you install",
       "steps": {
         "permissions": {
-          "title": "Grant Permissions",
-          "description": "Sign in with Google or Microsoft, then let the setup walk you through the one permission FocusNow needs on macOS (Windows needs no extra step). It only reads the app name, window title, and for browsers the page address — never your screen contents or keystrokes."
+          "title": "Allow tracking",
+          "description": "On macOS, setup asks for the Accessibility permission. Windows needs no extra step. FocusNow reads the app name, window title and the site's domain, never your screen or keystrokes."
         },
         "run": {
-          "title": "Let It Run",
-          "description": "FocusNow works silently in the background. Go about your normal workday."
+          "title": "Pick your role",
+          "description": "Choose your role so the AI daily report speaks your language. You can change it later in Settings."
         },
         "dashboard": {
-          "title": "Check Your Dashboard",
-          "description": "Open FocusNow anytime to see your focus stats, top apps, and productivity trends."
+          "title": "Work as usual",
+          "description": "Open the Focus page to start a session, or just keep working and look at your day this evening."
         }
       }
     },
-    "microsoftStore": "Microsoft Store"
+    "microsoftStore": "Microsoft Store",
+    "demoAlt": "FocusNow Focus page with a Pomodoro timer and today's Focus Score",
+    "noLinux": "There is no Linux or mobile version."
   },
   "pricing": {
     "meta": {
-      "title": "Pricing — FocusNow Is Free Forever",
-      "description": "FocusNow is free to use with no credit card required. AI-powered activity tracking, focus sessions, analytics, and encrypted sync included."
+      "title": "Pricing: Free Time Tracking for Mac & Windows",
+      "description": "FocusNow's core tracking, focus sessions and AI daily report are free, with sync included. Timecards and billing are free during early access."
     },
-    "title": "Simple, Transparent",
-    "titleHighlight": "Pricing",
-    "description": "FocusNow is free to use. We believe productivity tools should be accessible to everyone.",
+    "category": "Pricing",
+    "title": "Free to start. Clear about what's next.",
+    "description": "Core tracking is free. Client tools are free while they're in early access, and we'll share Pro terms before anything changes.",
     "free": {
-      "title": "Free",
+      "label": "Free",
       "price": "$0",
-      "period": "forever",
-      "description": "Everything you need to track and improve your focus.",
+      "period": "no card, no trial clock",
+      "description": "Everything you need to see your day and protect focus time.",
       "features": [
-        "Automatic activity tracking with AI categorization",
-        "AI Daily Report — your day summed up by AI",
-        "Pomodoro & Deep Work focus sessions",
-        "Focus Score, timeline & hourly analytics",
-        "Custom categories, app rules & exclusion lists",
-        "Encrypted cloud sync with offline mode",
-        "Data export & account deletion",
-        "Dark & light themes, 5 languages",
-        "macOS & Windows support"
+        "Automatic app and site tracking",
+        "Pomodoro and Deep Work focus sessions",
+        "Tasks with estimates and actual time",
+        "Focus Music and background noise",
+        "Productivity views and Focus Score",
+        "Activities and Calendar",
+        "AI daily report",
+        "Encrypted sync and full data export"
       ],
-      "cta": "Start My Free Tracker"
+      "cta": "Get FocusNow Free"
+    },
+    "clients": {
+      "label": "Early access",
+      "title": "Client tools",
+      "price": "$0",
+      "period": "during early access",
+      "description": "For freelancers and consultants who bill by the hour.",
+      "features": [
+        "Timecards from tracked records, a timer or manual entry",
+        "Projects, clients, tags and rates in any currency",
+        "Work statements as PDF or CSV",
+        "Coverage of tracked time not on a timecard",
+        "Reports with utilization and CSV export"
+      ],
+      "note": "We plan to include these in a paid Pro plan later. Price and timing will be announced in advance."
     },
     "pro": {
+      "label": "Pro",
       "title": "Pro",
-      "price": "Coming Soon",
-      "description": "Advanced features for power users.",
-      "features": [
-        "Everything in Free",
-        "Advanced AI insights & recommendations",
-        "Team & workspace features",
-        "Priority support"
-      ],
+      "price": "Not priced yet",
+      "description": "A paid plan for client work is on the way. Join the list to hear first and get early access when it opens.",
       "waitlist": {
-        "prompt": "Be the first to try Pro when it launches.",
+        "prompt": "Get Pro news first.",
+        "emailLabel": "Email",
         "emailPlaceholder": "you@example.com",
-        "cta": "Join early access",
+        "cta": "Join the Pro list",
         "joining": "Joining…",
-        "success": "You're on the list — we'll email you when Pro is ready.",
+        "success": "You're on the list. We'll email you when Pro is ready.",
         "errorInvalid": "Please enter a valid email address.",
         "errorGeneric": "Something went wrong. Please try again later.",
         "privacyNote": "Only Pro news. No newsletter, no spam."
       }
-    }
+    },
+    "faqTitle": "Pricing questions",
+    "faq": [
+      {
+        "question": "What stays free?",
+        "answer": "Automatic tracking, focus sessions, tasks and the Productivity views are the free core of FocusNow."
+      },
+      {
+        "question": "What happens to client tools when Pro launches?",
+        "answer": "We plan to move timecards, billing and reports into Pro. We'll announce the price and timing in advance, in the app and on this page."
+      },
+      {
+        "question": "Can I take my data with me?",
+        "answer": "Yes. Settings → Account exports all of your data at any time, and timecards also export as CSV."
+      }
+    ]
   },
   "about": {
     "meta": {
-      "title": "About FocusNow — Our Mission",
-      "description": "FocusNow was born from a simple idea: understand your productivity without giving up your privacy. Learn about our mission."
+      "title": "About FocusNow: Built by Cihan & Barbaros",
+      "description": "FocusNow is built by two people, Cihan and Barbaros, to waste fewer hours and leave room for family, hobbies and rest. Read our story."
     },
-    "title": "About",
-    "titleHighlight": "FocusNow",
+    "category": "About FocusNow",
     "mission": "Deep work shouldn't require deep effort.",
-    "description": "FocusNow started with a question we kept asking at the end of busy days: where did all that time actually go? We dug into the research on attention and focus, took inspiration from Cal Newport's Deep Work, and built something simple that bends to your rules. Because once you know where your day goes, the week and the month fall into place — and there's room again for the work that matters and the life around it.",
+    "description": "FocusNow started with a question we kept asking at the end of busy days: where did all that time go? We read the research on attention, took inspiration from Cal Newport's Deep Work, and built something simple that bends to your rules. Once you know where your day goes, the week and the month fall into place, and there's room again for the work that matters and the life around it.",
     "pillars": {
-      "privacy": {
-        "title": "Privacy-First",
-        "content": "Your productivity data is deeply personal. Everything is encrypted in transit and at rest, never sold, and stored on your terms. We built FocusNow so you never have to choose between insight and privacy."
-      },
       "simplicity": {
         "title": "Effortless",
-        "content": "No buttons to press, no timers to start. FocusNow runs silently in the background and shows you where your time went. And the rules are yours — you decide what counts as focus and what counts as distraction."
+        "content": "No buttons to press to be tracked. FocusNow runs in the background and shows you where your time went. The rules are yours: you decide what counts as focus and what counts as distraction."
+      },
+      "privacy": {
+        "title": "Private by design",
+        "content": "No screenshots, no keystrokes. Your data is encrypted in transit and at rest and never sold. You can export it or delete your account whenever you like."
       },
       "transparency": {
-        "title": "Transparent",
-        "content": "We're clear about what we collect, how we store it, and why. No dark patterns, no hidden data flows. You own your data and can export or delete it anytime."
+        "title": "Honest",
+        "content": "We say what we collect, how we store it and why. We also say what FocusNow doesn't do, on our comparison pages and in the app."
       }
     },
     "founder": {
       "title": "A note from the founders",
-      "content": "FocusNow is built by two people — Cihan and Barbaros. We didn't start it to squeeze more hours out of ourselves; we started it to waste fewer of them — to finish focused work in focused time and keep the rest for family, hobbies, and downtime. We wanted to see where our days went without handing that answer to a surveillance tool, so we built our own. We use FocusNow every day, and it grows with what our users tell us. When you write to <mail>info@focusnow.ai</mail>, one of us answers.",
-      "signature": "Cihan & Barbaros — founders of FocusNow"
+      "content": "FocusNow is built by two people, Cihan and Barbaros. We didn't start it to squeeze more hours out of ourselves. We started it to waste fewer of them: to finish focused work in focused time and keep the rest for family, hobbies and downtime. We wanted to see where our days went without handing that answer to a surveillance tool, so we built our own. We use FocusNow every day, and it grows with what our users tell us. When you write to <mail>info@focusnow.ai</mail>, one of us answers.",
+      "signature": "Cihan & Barbaros, founders of FocusNow"
     },
     "proof": {
-      "lead": "Not just words —",
-      "privacyLink": "read our privacy commitment",
+      "lead": "Not just words:",
+      "privacyLink": "read our privacy policy",
       "middle": "or see what ships in the",
       "changelogLink": "changelog"
     }
   },
   "privacyPage": {
     "title": "Privacy Policy",
-    "lastUpdated": "Effective date: July 30, 2026",
-    "intro": "FocusNow (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy covers the FocusNow website and desktop application. It explains exactly what data we collect, how we use and store it, who processes it on our behalf, and the rights you have over your personal information. This version replaces the version dated May 25, 2025.",
+    "lastUpdated": "Effective date: September 26, 2026",
+    "intro": "FocusNow (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy covers the FocusNow website and desktop application. It explains exactly what data we collect, how we use and store it, who processes it on our behalf, and the rights you have over your personal information. This version replaces the version dated July 30, 2026.",
     "sections": {
       "trustPromise": {
         "title": "1. Our Privacy Promise",
@@ -359,6 +319,7 @@
           "Account information — your email address, display name, and which sign-in provider you used (Google or Microsoft). We never receive or store passwords",
           "Optional profile details — your job title and sector, if you choose to provide them, and your working hours, if you set them. These make your AI daily report more relevant (see section 6)",
           "Activity data — the names and file paths of the applications you use, window titles, the web addresses (URLs) you visit, whether you are active, idle, or away, timestamps and durations, and your focus session details. This powers your productivity analytics",
+          "Timecard and billing data — if you use timecards, the projects, clients, tasks, tags, time entries, rates, currencies, notes and work statements you create. Client records can include the contact name, email, phone, address and tax number you enter for that client. This data is synced so it is available across your devices and can be exported",
           "Diagnostics and usage analytics — operating system and app version, device architecture, language and theme settings, usage events, approximate location, and error reports. Collected only if you opt in, apart from two anonymous events that contain no identifier (see section 7)",
           "Website data — what the focusnow.ai website collects is described in the cookies section below",
           "Website form data — if you use the contact form we receive the name, email address, topic and message you submit; if you join the Pro waitlist we store your email address. Both are used solely to reply to you or to notify you about Pro, are never sold or shared, and are deleted on request"
@@ -455,9 +416,11 @@
         "content": "We keep your data only as long as necessary:",
         "items": [
           "Activity logs, focus sessions, and AI daily insight reports are retained in the cloud for up to 12 months on a rolling basis, then automatically deleted; your account and profile information are kept for as long as your account stays active",
-          "On your device, synced activity older than 90 days is automatically cleaned up; your cloud history remains available within the 12-month cloud retention window described above",
+          "Timecards, projects, clients, and work statements have no automatic expiry in the cloud, because they are your billing records; they stay until you delete them or delete your account",
+          "On your device, data is not deleted by age: the local database keeps your history until you delete it in the app or uninstall FocusNow, even after the matching cloud records have expired",
           "When you delete data in the app, it is removed from both the cloud and your device",
           "Account deletion requests are completed within 30 days; certain data may be retained longer where required by applicable law",
+          "A record of your consent choices (what you agreed to or declined, when, and where) is kept after account deletion, so we can show how consent was given if it is ever questioned; it contains no activity data",
           "Aggregated, anonymous statistics that cannot identify you may be retained for service improvement"
         ]
       },
@@ -493,12 +456,16 @@
         ],
         "note": "Data Controller: FocusNow — Barbaros Zongur, Turkey. This policy is provided in English and Turkish; if the two versions conflict, the English version prevails."
       }
+    },
+    "meta": {
+      "title": "Privacy Policy",
+      "description": "What FocusNow collects, how it's stored and processed, who helps us run it, and your rights under GDPR and KVKK."
     }
   },
   "termsPage": {
     "meta": {
-      "title": "Terms of Use — FocusNow",
-      "description": "The terms that apply when you use the FocusNow desktop app and website: license, acceptable use, AI content, warranties, and liability."
+      "title": "Terms of Use",
+      "description": "The terms for using the FocusNow desktop app and website: license, acceptable use, AI content, warranties and liability."
     },
     "title": "Terms of Use",
     "lastUpdated": "Effective date: July 2, 2026",
@@ -578,9 +545,26 @@
     "description": "See what's new in FocusNow.",
     "versions": [
       {
+        "version": "0.3.0",
+        "date": "2026-09-25",
+        "title": "Timecards and billing",
+        "changes": [
+          "Timecards: log hours with a timer, by hand, or from a day's tracked activity records, with time ranges, overlap warnings and CSV export",
+          "Projects, clients, tasks and tags, with rates per project or task in any currency",
+          "Billing: a ready-to-bill queue per client, work statements with rounding and per-entry pricing, and locking so a billed entry can't change underneath its statement",
+          "Reports: a new page for timecard reports, with amounts grouped per currency",
+          "Focus is now the home view, with explicit session controls, a today strip with your Focus Score, and the active task on the timer",
+          "Focus Music: radio stations and background noise in the top bar, with an option to play only during focus sessions",
+          "Analytics is renamed to Productivity",
+          "The AI daily report now explains why a report couldn't be generated instead of showing a generic error",
+          "Category names are shown in your app language",
+          "Every delete now asks for confirmation, and sign-in recovers from failed token refreshes"
+        ]
+      },
+      {
         "version": "0.2.0",
         "date": "2026-07-31",
-        "title": "Latest Release",
+        "title": "Design refresh and Insights",
         "changes": [
           "Full design refresh: Focus Score ring on the dashboard, a richer six-state timeline, collapsible sidebar and a command palette (⌘K / Ctrl+K)",
           "New Insights page: your finished days summarized by AI, with highlights and recommendations tailored to your role",
@@ -607,7 +591,11 @@
           "macOS (Apple Silicon) and Windows builds with automatic updates"
         ]
       }
-    ]
+    ],
+    "meta": {
+      "title": "Changelog: What's New in FocusNow",
+      "description": "Release notes for every FocusNow version: new features, improvements and fixes for the Mac and Windows app."
+    }
   },
   "blog": {
     "title": "Blog",
@@ -616,18 +604,19 @@
     "readingTime": "{minutes} min read",
     "backToBlog": "Back to Blog",
     "publishedOn": "Published on {date}",
-    "noPosts": "No blog posts yet. Check back soon!"
+    "noPosts": "No blog posts yet. Check back soon!",
+    "meta": {
+      "title": "Blog: Focus, Time and Deep Work",
+      "description": "Essays and practical guides on focus sessions, screen time and deep work from the founders of FocusNow."
+    }
   },
   "footer": {
-    "description": "See where your time goes. Free desktop tracker for Mac and Windows.",
-    "product": "Product",
-    "useCases": "Use Cases",
-    "resources": "Resources",
+    "description": "Automatic time tracking, focus sessions and client hours for Mac and Windows.",
+    "founders": "Built by Cihan & Barbaros.",
     "legal": "Legal",
-    "contact": "Contact",
     "copyright": "All rights reserved.",
-    "compare": "Compare",
-    "guide": "Guide"
+    "platforms": "macOS 12+ and Windows 10+",
+    "contact": "Contact"
   },
   "consent": {
     "message": "We use cookies to analyze site traffic and improve your experience.",
@@ -636,244 +625,209 @@
     "learnMore": "Learn more"
   },
   "useCases": {
-    "remoteWorkers": {
-      "meta": {
-        "title": "Focus Tracker for Remote Workers",
-        "description": "See if remote work is actually working for you. Track your focus, find your productive hours, and build better work-from-home habits."
-      },
-      "badge": "For Remote Workers",
-      "title": "See If Remote Work Is",
-      "titleHighlight": "Actually Working for You",
-      "description": "Working from home means more freedom — and more distractions. FocusNow shows you exactly how your remote workday looks, so you can make it better.",
-      "painPoints": {
-        "title": "Sound Familiar?",
-        "items": [
-          "You feel busy all day but can't point to what you accomplished",
-          "Home distractions eat into your deep work time without you realizing",
-          "You're not sure if you're more or less productive than in the office",
-          "Work bleeds into evenings because you lost focus during the day"
-        ]
-      },
-      "solution": {
-        "title": "How FocusNow Helps",
-        "items": [
-          "See your real productive hours vs. time lost to distractions",
-          "Find your peak focus times and protect them",
-          "Automatic idle and away detection keeps your stats honest — know when to stop",
-          "Build evidence that remote work works for you"
-        ]
-      },
-      "cta": "Start My Free Tracker",
-      "faq": {
-        "items": [
-          {
-            "question": "Can my employer or team see my data?",
-            "answer": "No. FocusNow is a personal tool — your data lives in your own account and there are no team dashboards or admin views. Only you see your numbers."
-          },
-          {
-            "question": "Does FocusNow watch my meetings or read my messages?",
-            "answer": "No. It never captures your screen, camera, microphone or keystrokes. It only records which app or site is in front and for how long — enough for your analytics, nothing more."
-          },
-          {
-            "question": "Can I keep work and personal time separate?",
-            "answer": "Yes. Custom categories and per-app rules let you decide what counts as work, personal or distraction, and automatic idle detection keeps your numbers honest."
-          }
-        ]
-      }
-    },
-    "students": {
-      "meta": {
-        "title": "Focus Tracker for Students",
-        "description": "Track your study sessions and find where your time goes. Build better study habits with automatic focus tracking."
-      },
-      "badge": "For Students",
-      "title": "Where Do Your Study Hours",
-      "titleHighlight": "Actually Go?",
-      "description": "You sit down to study for 3 hours, but how much of that is actual focus? FocusNow tracks your screen time automatically so you can study smarter.",
-      "painPoints": {
-        "title": "Sound Familiar?",
-        "items": [
-          "You plan to study for hours but end up on social media",
-          "You don't know which subjects eat the most time",
-          "Exam season feels chaotic — you're never sure if you studied enough",
-          "You can't tell if your study methods are actually working"
-        ]
-      },
-      "solution": {
-        "title": "How FocusNow Helps",
-        "items": [
-          "See exactly how long you actually study vs. get distracted",
-          "Track which apps you use during study time",
-          "Run Pomodoro or Deep Work sessions to stay on task",
-          "Review weekly trends to improve your study habits"
-        ]
-      },
-      "cta": "Start My Free Tracker",
-      "faq": {
-        "items": [
-          {
-            "question": "Can FocusNow tell studying apart from procrastination?",
-            "answer": "Yes — you set the rules. Mark your note apps and course sites as focus, label YouTube or games as distraction, and your day sorts itself automatically."
-          },
-          {
-            "question": "Do I need to start a timer every study session?",
-            "answer": "No. FocusNow tracks automatically in the background. Pomodoro and Deep Work sessions are there when you want structure — they're optional, not homework."
-          },
-          {
-            "question": "Is it really free for students?",
-            "answer": "Yes. The core app is free forever with no credit card — there's no separate student plan because everyone gets it free."
-          }
-        ]
-      }
-    },
     "freelancers": {
       "meta": {
-        "title": "Focus Tracker for Freelancers",
-        "description": "Know where every working hour goes. Automatic desktop tracking for freelancers — no timers, no manual logs."
+        "title": "Automatic Time Tracking for Freelancers",
+        "description": "Track client work automatically, add records to timecards and prepare work statements as PDF or CSV. Free core tracking for Mac and Windows."
       },
-      "badge": "For Freelancers",
-      "title": "Know Exactly Where",
-      "titleHighlight": "Every Hour Goes",
-      "description": "As a freelancer, your time is your income. FocusNow tracks your work automatically so you always know how you're spending it.",
-      "painPoints": {
-        "title": "Sound Familiar?",
-        "items": [
-          "You underestimate how long tasks take and underprice your work",
-          "Admin and communication eat hours you can't bill for",
-          "You switch between projects and lose track of time",
-          "End of month, you wonder where all your hours went"
-        ]
-      },
-      "solution": {
-        "title": "How FocusNow Helps",
-        "items": [
-          "See real time spent in each app — and group apps into custom categories",
-          "Identify unbillable time sinks like email and Slack",
-          "Track your most productive hours to schedule important work",
-          "Build data to price your services accurately"
-        ]
-      },
-      "cta": "Start My Free Tracker",
+      "who": "For freelancers",
+      "title": "Bill from what you did, not from memory.",
+      "description": "FocusNow records your day on its own. At the end of the week you pick what belongs to each client, and the hours and amounts add up for you.",
+      "heroAlt": "Projects page: a client project with logged and billable hours, amount, budget used and recent entries",
+      "day": "Mornings on the Brightline redesign, a call with Northwind after lunch, email in between. On Friday you open Calendar, select the records that belong to each client and add them to a timecard. Coverage shows how much of the tracked week made it onto a timecard, and Ready to bill lists each client with hours and amount.",
+      "scenes": [
+        {
+          "title": "Every client, ready to bill",
+          "body": "Billable entries gather per client with hours and amount. Create a work statement when you're ready and export it as PDF or CSV.",
+          "alt": "Ready to bill: hours and amounts per client with a Create statement button for each"
+        },
+        {
+          "title": "Know your real utilization",
+          "body": "Reports compare billable hours with your available working hours, and group time by project, client, task or tag.",
+          "alt": "Utilization of 43 percent: 84h 43m billable out of 198h available, against a 70 to 75 percent target"
+        }
+      ],
+      "compareText": "Weighing FocusNow against a timer-first tool?",
+      "compareLink": "FocusNow vs Toggl Track",
+      "featureLink": "How timecards work",
       "faq": {
         "items": [
           {
-            "question": "Can I use FocusNow to back up my client billing?",
-            "answer": "Yes, as an honest record: you see exactly how long you spent in each app and on each site, day by day, and you can export your data anytime to reconcile with invoices."
+            "question": "Can FocusNow prepare what I send to clients?",
+            "answer": "Yes, as a work statement: billable entries for a client, exported as PDF or CSV. It isn't a tax invoice. Create the invoice in your accounting tool and add its number to the statement as a reference."
           },
           {
-            "question": "Do I have to run timers as I switch between projects?",
-            "answer": "No timers. FocusNow records your real activity automatically, and custom categories with per-app rules let you slice the day the way you actually work."
+            "question": "Do I have to run timers when I switch projects?",
+            "answer": "No. FocusNow records your activity automatically. Later you pick the records that belong to a project and add them to a timecard. The timer is there if you prefer it."
           },
           {
-            "question": "Will clients or anyone else see my data?",
-            "answer": "No. Your data lives in your own account, encrypted in transit and at rest — no shared dashboards, no third parties, never sold."
+            "question": "Will clients see my activity?",
+            "answer": "No. Your records stay in your account. A client sees only what you put on a work statement."
+          },
+          {
+            "question": "Are timecards free?",
+            "answer": "Timecards, billing and reports are free during early access. We plan to include them in a paid Pro plan later and will share the terms before anything changes. Core tracking stays free."
           }
         ]
       }
     },
     "developers": {
       "meta": {
-        "title": "Focus Tracker for Developers",
-        "description": "Track your coding time, code review hours, and meeting overhead. See your real development workflow."
+        "title": "Time Tracker for Developers: Focus & Tasks",
+        "description": "See coding time, meetings and context switches without timers. Deep Work sessions tied to tasks, with estimates that learn. Free for Mac and Windows."
       },
-      "badge": "For Developers",
-      "title": "Is That Code Review Really",
-      "titleHighlight": "Taking 3 Hours?",
-      "description": "Between coding, code reviews, meetings, and Slack, it's hard to know where your day actually goes. FocusNow shows you the real picture.",
-      "painPoints": {
-        "title": "Sound Familiar?",
-        "items": [
-          "Meetings and code reviews fragment your deep work time",
-          "You feel like you coded all day but shipped nothing",
-          "Context switching between PRs, Slack, and IDE kills your flow",
-          "You can't quantify how much time you spend in actual development"
-        ]
-      },
-      "solution": {
-        "title": "How FocusNow Helps",
-        "items": [
-          "See time in IDE vs. browser vs. communication tools",
-          "Track deep coding sessions and spot your peak hours on the hourly focus chart",
-          "Identify meeting overhead and context-switching costs",
-          "Build data to advocate for more focus time"
-        ]
-      },
-      "cta": "Start My Free Tracker",
+      "who": "For developers",
+      "title": "Keep your coding time in one piece.",
+      "description": "See how much of the day went to the editor, reviews and chat, then protect the next block with a Deep Work session tied to the task in front of you.",
+      "heroAlt": "Tasks page: estimate accuracy of 0.7 times, actual time and a list of tasks with time spent and a Session button",
+      "day": "Stand-up at ten, a review that took longer than planned, then a long afternoon in the editor. FocusNow keeps it all without a timer. You start Deep Work from the ticket you're on, the floating widget keeps the clock in view, and the task shows how its actual time compares with your estimate.",
+      "scenes": [
+        {
+          "title": "See where the day really went",
+          "body": "Top apps and categories show time in the editor, the browser and chat, for any date range.",
+          "alt": "Top apps this week: Code 17h 40m, Google Chrome 7h 6m, Figma 4h 13m, Notion 2h 44m"
+        },
+        {
+          "title": "Deep Work, one click away",
+          "body": "Pomodoro or a 90-minute Deep Work block. Keys 1 to 4 switch modes and ⌘/Ctrl+K opens anything.",
+          "alt": "Focus page with Pomodoro, Deep Work, Short Break and Long Break modes and a 25:00 timer"
+        }
+      ],
+      "compareText": "Also looking at Rize?",
+      "compareLink": "FocusNow vs Rize",
+      "featureLink": "How focus sessions work",
       "faq": {
         "items": [
           {
             "question": "Does FocusNow read my code or log keystrokes?",
-            "answer": "No. It records app names, window titles and the website's domain in browsers — never full URLs, keystrokes, clipboard or screen content. Your code stays yours."
+            "answer": "No. It records app names, window titles and, in browsers, the site's domain. It never records keystrokes, the clipboard or screen content."
           },
           {
             "question": "Does it work with IDEs, terminals and browsers?",
-            "answer": "Yes. Any desktop app counts — VS Code, JetBrains IDEs, terminals, browsers and the sites you visit — so context switches finally become visible."
+            "answer": "Yes. Any desktop app counts, including VS Code, JetBrains IDEs, terminals and browsers, so context switches become visible."
+          },
+          {
+            "question": "Can I track time per ticket?",
+            "answer": "Yes. Create a task for the ticket and start sessions from it. Its actual time combines those sessions with any records you link to it."
           },
           {
             "question": "Will it slow down my machine?",
-            "answer": "No. It checks the active window at intervals and sits quietly in the background — lighter than a single browser tab."
+            "answer": "It checks the window in front about every two seconds and otherwise stays out of the way in the background."
+          }
+        ]
+      }
+    },
+    "remoteWorkers": {
+      "meta": {
+        "title": "Work From Home Time Tracker for Remote Workers",
+        "description": "See your remote workday within your working hours, spot where focus slips and end the day with an AI summary. Free, private tracker for Mac and Windows."
+      },
+      "who": "For remote workers",
+      "title": "A home workday with clear edges.",
+      "description": "Set your working hours and FocusNow reads your day inside them. You see the focus you had, where it slipped, and when the evening started.",
+      "heroAlt": "Productivity page scoped to work hours, with focus time, average Focus Score, top app and top site",
+      "day": "Laptop open at nine, a video call, a delivery at the door, then a good stretch before lunch. FocusNow notices idle and away time on its own. At the end of the day, the Productivity view shows focus inside your working hours, and a notice tells you how much activity fell outside them.",
+      "scenes": [
+        {
+          "title": "Your week at a glance",
+          "body": "The calendar shows tracked time for every day, with a bar for focus, neutral, personal and distraction time.",
+          "alt": "Four weeks on the calendar, each day with tracked time and a colored bar"
+        },
+        {
+          "title": "Close the day with a summary",
+          "body": "Pick a finished day and the AI daily report sums it up with highlights and recommendations.",
+          "alt": "Highlights from an AI daily report, such as the longest unbroken work block of the day"
+        }
+      ],
+      "compareText": "Comparing personal time trackers?",
+      "compareLink": "FocusNow vs RescueTime",
+      "featureLink": "How automatic tracking works",
+      "faq": {
+        "items": [
+          {
+            "question": "Can my employer or team see my data?",
+            "answer": "No. FocusNow is a personal tool. Your data lives in your own account and there are no team dashboards or admin views."
+          },
+          {
+            "question": "Does it watch my meetings or read my messages?",
+            "answer": "No. It never captures your screen, camera, microphone or keystrokes. It records which app or site is in front and for how long."
+          },
+          {
+            "question": "Can I keep work and personal time apart?",
+            "answer": "Yes. Working hours scope your numbers to the workday, the Personal category keeps life admin out of your score, and idle time is detected automatically."
+          }
+        ]
+      }
+    },
+    "students": {
+      "meta": {
+        "title": "Study Focus Timer & Time Tracker for Students",
+        "description": "Study in Pomodoro sessions and see where study time really goes. Automatic tracking and a free focus timer for Mac and Windows."
+      },
+      "who": "For students",
+      "title": "Study in sessions that add up.",
+      "description": "Plan a subject as a task, study it in Pomodoro blocks and see honestly how much of the evening went to it, and how much to everything else.",
+      "heroAlt": "Focus page with a Pomodoro timer, today's summary and a list of tasks",
+      "day": "Three chapters to cover before Thursday. You add each one as a task with an estimate, start a Pomodoro, and take the break when the timer says so. Later, Activities shows how the evening split between your notes, the course site and everything else.",
+      "scenes": [
+        {
+          "title": "Tasks with honest estimates",
+          "body": "Each task shows time spent against your estimate, so planning the next week gets easier.",
+          "alt": "Task list with time spent, estimates and a button to start a session for each task"
+        },
+        {
+          "title": "See where the evening went",
+          "body": "Apps and sites land in Focus, Neutral, Personal or Distraction. Move one to another group whenever you like.",
+          "alt": "Personal and Distraction columns: Messages and Spotify, then youtube.com, x.com and news.ycombinator.com"
+        }
+      ],
+      "compareText": "Considering RescueTime for studying?",
+      "compareLink": "FocusNow vs RescueTime",
+      "featureLink": "How focus sessions work",
+      "faq": {
+        "items": [
+          {
+            "question": "Can FocusNow tell studying apart from procrastination?",
+            "answer": "You set the rules. Mark your notes and course sites as Focus and a video site as Distraction, and your day sorts itself."
+          },
+          {
+            "question": "Do I need to start a timer every time I study?",
+            "answer": "No. Tracking runs on its own. Pomodoro and Deep Work sessions are there when you want structure."
+          },
+          {
+            "question": "Is it free for students?",
+            "answer": "Yes. Core tracking and focus sessions are free for everyone, with no card and no separate student plan."
           }
         ]
       }
     }
   },
-  "showcase": {
-    "title": "See FocusNow",
-    "titleHighlight": "in action",
-    "description": "Real screenshots from the app — this is exactly what you get after a two-minute setup.",
-    "tabs": {
-      "dashboard": {
-        "label": "Dashboard",
-        "caption": "Your day at a glance: Focus Score, focus time and a timeline of every app and site — recorded automatically."
-      },
-      "report": {
-        "label": "AI Daily Report",
-        "caption": "An AI-written summary of your day: what went well, where the time leaked, and one thing to try tomorrow."
-      },
-      "analytics": {
-        "label": "Analytics",
-        "caption": "Weekly and monthly trends: focus hours, average score, top apps and total distraction time."
-      },
-      "activities": {
-        "label": "Activities",
-        "caption": "Every app and site, grouped as Focus, Neutral, Personal or Distraction — reclassify anything with one click."
-      },
-      "sessions": {
-        "label": "Sessions",
-        "caption": "Your full Pomodoro and Deep Work history, day by day, with a completion status for every session."
-      },
-      "categories": {
-        "label": "Customization",
-        "caption": "You decide what counts: change how any category affects your score, or create your own."
-      }
-    }
-  },
   "faq": {
-    "title": "Frequently Asked Questions",
+    "title": "Questions before you install",
     "items": [
       {
-        "question": "Is it really free?",
-        "answer": "Yes — free forever, no credit card. A paid Pro tier may arrive later with team features and advanced extras, but everything you see today stays free."
+        "question": "Is FocusNow free?",
+        "answer": "Core tracking, focus sessions and Productivity are free, with no card. Timecards, billing and reports are free during early access. We plan to move them into a paid Pro plan later and will announce the terms before that happens."
       },
       {
-        "question": "Is this employee monitoring software?",
-        "answer": "No — the opposite. FocusNow is a personal tool: your data lives in your own account and nobody else can see it. It never takes screenshots and never records keystrokes."
+        "question": "Which computers does it run on?",
+        "answer": "macOS 12 (Monterey) or later on Apple Silicon or Intel, from our download page, and Windows 10 or later (64-bit) from the Microsoft Store. There is no Linux or mobile app."
       },
       {
-        "question": "What data does FocusNow collect?",
-        "answer": "Only what your analytics need: the name of the app in front, its window title, the page address in browsers, and how long you spent there. Everything is encrypted in transit and at rest, and never sold or shared."
+        "question": "What does FocusNow record?",
+        "answer": "The app in front of you, its window title, the site's domain in your browser, and whether you're active, idle or away. It never takes screenshots or logs keystrokes."
       },
       {
-        "question": "Can I export or delete my data?",
-        "answer": "Yes. Settings → Account gives you a one-click export of all your data as a JSON file, and you can delete your account — with everything in it — whenever you want."
+        "question": "Does it assign my time to clients automatically?",
+        "answer": "No. You choose which tracked records go on a timecard and which project they belong to. FocusNow keeps the record and does the arithmetic."
       },
       {
-        "question": "How much CPU and battery does it use?",
-        "answer": "Barely any. FocusNow checks the active window at regular intervals and sits quietly in the background — you won't notice it's running."
+        "question": "Is a work statement an invoice?",
+        "answer": "No. It summarizes your work for a client and exports as PDF or CSV. FocusNow doesn't issue tax invoices or collect payments. You can add your own invoice number to a statement."
       },
       {
-        "question": "Does it work offline?",
-        "answer": "Yes. FocusNow keeps tracking without an internet connection and stores your data locally. When you're back online, it syncs — encrypted, as always."
+        "question": "Does it work offline, and can I take my data with me?",
+        "answer": "Tracking keeps going offline and syncs when you're signed in and back online. Settings → Account exports all of your data, and you can delete your account at any time."
       }
     ],
     "contactPrompt": "Question not answered?",
@@ -881,12 +835,11 @@
   },
   "contact": {
     "meta": {
-      "title": "Contact FocusNow — Feedback, Support & Partnerships",
-      "description": "Reach the FocusNow team. Every message lands directly in the founder's inbox — we reply within 2 business days."
+      "title": "Contact FocusNow: Feedback, Support & Partnerships",
+      "description": "Write to Cihan and Barbaros, the founders of FocusNow. Every message reaches a founder, and we reply within 2 business days."
     },
-    "title": "Get in",
-    "titleHighlight": "Touch",
-    "description": "Feedback, questions, partnership ideas — every message lands directly in the founder's inbox. We reply within 2 business days.",
+    "title": "Talk to the founders.",
+    "description": "Feedback, questions or partnership ideas. Every message reaches Cihan or Barbaros, and we reply within 2 business days.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
@@ -900,10 +853,10 @@
         "other": "Other"
       },
       "message": "Message",
-      "messagePlaceholder": "Tell us what's on your mind — feedback of any size is welcome.",
+      "messagePlaceholder": "Tell us what's on your mind. Feedback of any size is welcome.",
       "submit": "Send message",
       "sending": "Sending…",
-      "success": "Thanks — your message is in our inbox. We reply within 2 business days.",
+      "success": "Thanks, your message is in our inbox. We reply within 2 business days.",
       "errorFields": "Please check the fields and try again.",
       "errorRate": "Too many messages in a short time. Please try again in a few minutes.",
       "errorGeneric": "Something went wrong on our side. Please email us directly at info@focusnow.ai."
@@ -913,143 +866,857 @@
     "copied": "Copied"
   },
   "compare": {
-    "verified": "Competitor information last verified: July 2026.",
     "rize": {
       "meta": {
-        "title": "FocusNow vs Rize: Is the Free Alternative Enough? (2026)",
-        "description": "An honest comparison of FocusNow and Rize: pricing, automatic tracking, focus scores, AI reports, and who each tracker is really for."
+        "title": "FocusNow vs Rize: Features, Pricing & Fit (2026)",
+        "description": "FocusNow vs Rize: automatic tracking, AI, focus tools, client work and price, compared honestly. See which time tracker fits the way you work."
       },
-      "badge": "Comparison",
-      "title": "FocusNow vs",
-      "titleHighlight": "Rize",
-      "description": "Rize is a polished, paid time tracker. FocusNow keeps automatic tracking, focus scores, and AI reports free. Here is an honest look at where each one fits.",
-      "chooseUs": {
-        "title": "Choose FocusNow if...",
-        "items": [
-          "You want automatic time tracking without a subscription",
-          "Focus scores and an AI daily report cover your needs",
-          "You want local-first storage with encrypted sync and one-click data export",
-          "You want a simple tracker that just runs — no projects, clients, or setup to manage"
-        ]
-      },
-      "chooseThem": {
-        "title": "Choose Rize if...",
-        "items": [
-          "You need to block distracting apps and sites during sessions",
-          "You bill clients and need project and client tracking",
-          "You want your calendar meetings tracked automatically",
-          "A monthly subscription is worth the extra automation to you"
-        ]
-      },
-      "table": {
-        "title": "Feature by Feature",
-        "featureCol": "Feature",
-        "usCol": "FocusNow",
-        "themCol": "Rize",
-        "rows": [
-          {
-            "feature": "Price",
-            "us": "Free",
-            "them": "$9.99–$14.99/mo (individual)"
-          },
-          {
-            "feature": "Free plan",
-            "us": "Full app, free",
-            "them": "Free trial only"
-          },
-          {
-            "feature": "Automatic tracking",
-            "us": "yes",
-            "them": "yes"
-          },
-          {
-            "feature": "Focus score",
-            "us": "yes",
-            "them": "yes"
-          },
-          {
-            "feature": "Focus sessions",
-            "us": "Pomodoro (25 min) & Deep Work (90 min)",
-            "them": "Timer & planned sessions"
-          },
-          {
-            "feature": "AI reports",
-            "us": "AI daily report",
-            "them": "AI reports & tag suggestions"
-          },
-          {
-            "feature": "Distraction blocker",
-            "us": "no",
-            "them": "yes"
-          },
-          {
-            "feature": "Calendar integration",
-            "us": "no",
-            "them": "yes"
-          },
-          {
-            "feature": "Focus music",
-            "us": "no",
-            "them": "yes"
-          },
-          {
-            "feature": "Project & client tracking",
-            "us": "no",
-            "them": "Professional plan"
-          },
-          {
-            "feature": "Platforms",
-            "us": "Mac & Windows",
-            "them": "Mac & Windows"
-          }
-        ]
-      },
-      "sections": [
+      "title": "FocusNow vs Rize",
+      "summary": "Both apps track your computer time automatically. Rize leans on AI to assign work to projects and adds blocking and team reporting, on a subscription. FocusNow keeps core tracking free, builds the day around focus sessions and leaves project choices to you.",
+      "pickThemTitle": "Rize fits if",
+      "pickUs": [
+        "You want automatic tracking and focus sessions without a subscription",
+        "You'd rather decide yourself which records go to which client",
+        "You want Pomodoro and Deep Work tied to tasks, with Focus Music",
+        "You work alone and want timecards and work statements in the same app"
+      ],
+      "pickThem": [
+        "You want AI to assign work sessions to clients and projects",
+        "You need distraction blocking",
+        "You want Google Calendar meetings attributed to projects",
+        "You run a team or need an API, webhooks or Zapier"
+      ],
+      "themCol": "Rize",
+      "rows": [
         {
-          "title": "Two different price philosophies",
-          "body": "Rize charges a subscription and earns it with power features: a distraction blocker, calendar-aware tracking, and project billing. FocusNow takes the opposite path — the core promise of seeing exactly where your time goes stays free. If you bill clients by the hour, Rize's paid tiers can pay for themselves. If you simply want clarity about your day, you shouldn't need a subscription for that."
+          "criterion": "Automatic app and site tracking",
+          "us": "Yes, on macOS and Windows",
+          "them": "Yes, on macOS and Windows"
         },
         {
-          "title": "Your data, your rules",
-          "body": "FocusNow records only the active app name, its window title and, in browsers, the website's domain — never screenshots, never keystrokes. Your data is stored local-first with encrypted sync, and you can export everything as a single JSON file or delete your account at any time."
+          "criterion": "Getting time onto a project",
+          "us": "You select tracked records and add them to a timecard, or run a timer",
+          "them": "AI assigns sessions to clients or projects from window titles, URLs and learned patterns"
         },
         {
-          "title": "The honest bottom line",
-          "body": "Rize is an excellent tool, and if you need blocking, calendar integration, or client billing, it's worth the price. But most people looking at time trackers want one thing: to see their real workday and improve it. FocusNow does exactly that, for free. The easiest way to decide is to run FocusNow alongside your current setup for a week — it costs nothing to find out."
+          "criterion": "Focus sessions",
+          "us": "Pomodoro and Deep Work tied to tasks, 1 to 180 minutes",
+          "them": "Session timer, planned sessions and AI break suggestions"
+        },
+        {
+          "criterion": "Focus music",
+          "us": "Five stations plus brown, pink and white noise",
+          "them": "Included"
+        },
+        {
+          "criterion": "Distraction blocking",
+          "us": "Not available",
+          "them": "Available"
+        },
+        {
+          "criterion": "What the AI does",
+          "us": "Summarizes a finished day with highlights and recommendations",
+          "them": "Categorization, tagging, chat, insights and project assignment; automations and agents on Pro"
+        },
+        {
+          "criterion": "What you hand a client",
+          "us": "Work statements as PDF or CSV",
+          "them": "Client and scheduled reports as PDF or CSV on Pro"
+        },
+        {
+          "criterion": "Calendar",
+          "us": "Your own tracked history; no external calendar sync",
+          "them": "Google Calendar integration"
+        },
+        {
+          "criterion": "Teams",
+          "us": "Built for individuals",
+          "them": "Team dashboards and team plans"
+        },
+        {
+          "criterion": "Integrations",
+          "us": "None",
+          "them": "API, webhooks and Zapier on Pro; MCP server access"
+        },
+        {
+          "criterion": "Platforms",
+          "us": "macOS 12+ and Windows 10+",
+          "them": "macOS 10.14.6+ and Windows 10+"
+        },
+        {
+          "criterion": "Price",
+          "us": "Core tracking free; timecards and billing free during early access",
+          "them": "Basic $9.99, Pro $23.99, Max $39.99 per month billed annually; 7-day free trial"
         }
       ],
+      "experience": "Your day is recorded in the background. You start focus sessions from tasks on the Focus page, and at the end of the week you review Activities or Calendar and add records to timecards. Every client hour is one you chose.",
+      "experienceAlt": "Timecards page with a running timer, logged and billable time, coverage and entries that carry tracked records",
+      "sections": [
+        {
+          "title": "Two ways to get time onto a project",
+          "body": "Rize lets AI decide which project a session belongs to, and you adjust from there. FocusNow keeps that step in your hands: you select the records, and the timecard carries them as evidence. If assigning time is the chore you most want gone, Rize is built for it. If you want every client hour to be a decision you made, FocusNow fits."
+        },
+        {
+          "title": "Focus tools",
+          "body": "Both include a session timer and focus music. FocusNow centers the day on the Focus page, with Pomodoro and Deep Work sessions tied to tasks and time spent against estimates. Rize adds distraction blocking, which FocusNow doesn't have."
+        },
+        {
+          "title": "Price",
+          "body": "Rize is a subscription with a 7-day trial. FocusNow's core tracking, focus sessions and Productivity views are free, and client tools are free during early access. We plan a paid Pro plan for client tools later and will share the terms before anything changes."
+        }
+      ],
+      "switch": "There's no import from Rize. FocusNow starts recording on the day you install it, so the simplest test is to run both for a week of real work. Export anything you need from Rize first, then keep the tool whose week you'd rather read.",
       "faq": {
-        "title": "Frequently Asked Questions",
         "items": [
           {
-            "question": "Is FocusNow really free?",
-            "answer": "Yes. Automatic tracking, focus scores, sessions, and the AI daily report are all free — no credit card, no trial clock. A paid Pro plan with team features is planned, but the core tracker stays free."
+            "question": "Is there a free version of Rize?",
+            "answer": "On September 26, 2026, Rize's pricing page listed a 7-day free trial with full access and paid plans from $9.99 a month billed annually. We didn't see a permanent free plan."
           },
           {
-            "question": "What does Rize cost?",
-            "answer": "As of July 2026, Rize's individual plans run from $9.99/month (billed annually) to $14.99/month for the Professional plan with project and client tracking. There is a free trial but no permanent free plan."
+            "question": "Can FocusNow block distracting sites like Rize?",
+            "answer": "No. FocusNow shows where your time went but doesn't block anything. If blocking matters most to you, Rize fits that need better."
           },
           {
-            "question": "Can FocusNow block distracting apps like Rize does?",
-            "answer": "No. FocusNow shows you where your time goes but doesn't block anything today. If hard blocking is essential to how you work, Rize is the better fit for that specific need."
-          },
-          {
-            "question": "How do I switch from Rize to FocusNow?",
-            "answer": "Just download FocusNow and let it run — there's nothing to import or configure. Many people run both side by side for a week and then keep the one that fits."
+            "question": "Does FocusNow assign time to clients automatically?",
+            "answer": "No. You choose which tracked records go on a timecard and which project they belong to. Rize lists AI project assignment as a feature."
           }
         ]
-      }
+      },
+      "ogKicker": "An honest comparison, checked September 2026"
+    },
+    "rescuetime": {
+      "meta": {
+        "title": "FocusNow vs RescueTime: An Honest Comparison (2026)",
+        "description": "FocusNow vs RescueTime: automatic tracking, focus sessions, blocking, timesheets and price compared. Find the time tracker that fits how you work."
+      },
+      "title": "FocusNow vs RescueTime",
+      "summary": "RescueTime has tracked computer time for years and now offers Focus plans with blocking, plus Timesheets for client work, on desktop and mobile. FocusNow is a desktop app with free core tracking, focus sessions tied to tasks and timecards in early access.",
+      "pickThemTitle": "RescueTime fits if",
+      "pickUs": [
+        "You want core tracking and focus sessions free, with no trial clock",
+        "You prefer a desktop app that keeps working offline",
+        "You want Pomodoro, Deep Work, tasks and music on one Focus page",
+        "You want work statements as PDF or CSV from your timecards"
+      ],
+      "pickThem": [
+        "You want distraction blocking during focus sessions",
+        "You need apps for iOS or Android",
+        "You work in a team and need shared clients, projects and reports",
+        "You want goals and alerts for daily targets"
+      ],
+      "themCol": "RescueTime",
+      "rows": [
+        {
+          "criterion": "Automatic tracking",
+          "us": "Desktop apps for macOS and Windows",
+          "them": "Automatic activity tracking with desktop, web and mobile apps"
+        },
+        {
+          "criterion": "Idle detection",
+          "us": "Active, idle and away time detected automatically",
+          "them": "Idle time detection"
+        },
+        {
+          "criterion": "Focus sessions",
+          "us": "Pomodoro and Deep Work tied to tasks",
+          "them": "Focus Sessions with a timer"
+        },
+        {
+          "criterion": "Distraction blocking",
+          "us": "Not available",
+          "them": "During Focus Sessions"
+        },
+        {
+          "criterion": "Goals and alerts",
+          "us": "Not available",
+          "them": "Goals & Alerts with daily targets"
+        },
+        {
+          "criterion": "Client and project time",
+          "us": "Timecards from tracked records, a timer or manual entry; free during early access",
+          "them": "Timesheets with clients, projects, tasks and billable rates on Solo+ and Team+"
+        },
+        {
+          "criterion": "What the AI does",
+          "us": "Summarizes a finished day with highlights and recommendations",
+          "them": "An Assistant, activity pattern analysis and suggestions you review"
+        },
+        {
+          "criterion": "Teams",
+          "us": "Built for individuals",
+          "them": "Team Focus and Team+ plans with role-based access"
+        },
+        {
+          "criterion": "Platforms",
+          "us": "macOS 12+ and Windows 10+",
+          "them": "Desktop, web, iOS and Android"
+        },
+        {
+          "criterion": "Price",
+          "us": "Core tracking free; timecards and billing free during early access",
+          "them": "Solo Focus $7, Solo+ with Timesheets $12 per month billed annually ($9 and $15 monthly); 14-day free trial"
+        }
+      ],
+      "experience": "FocusNow opens on the Focus page: pick a task, start a session and see today's Focus Score below the timer. The automatic record fills Productivity, Activities and Calendar, and client hours come from the records you choose.",
+      "experienceAlt": "Focus page with a Pomodoro timer, today's Focus Score and a list of tasks",
+      "sections": [
+        {
+          "title": "Focus: blocking or a quiet timer",
+          "body": "RescueTime's Focus Sessions can block distracting sites. FocusNow doesn't block anything. It gives you a timer tied to a task, optional music and the real length of every session."
+        },
+        {
+          "title": "Client time: timesheets or timecards",
+          "body": "RescueTime's Solo+ plan adds Timesheets with billable rates and suggestions you review. FocusNow's timecards come from records you select, and Billing turns billable entries into work statements. Both keep you in charge; FocusNow's client tools are free during early access."
+        },
+        {
+          "title": "Where you use it",
+          "body": "RescueTime has web and mobile apps. FocusNow runs only on macOS and Windows and keeps tracking when you're offline."
+        }
+      ],
+      "switch": "There's no import from RescueTime. Install FocusNow, let it run next to RescueTime for a week, then compare the two weekly views. Export what you need from RescueTime before you cancel anything.",
+      "faq": {
+        "items": [
+          {
+            "question": "Does RescueTime have a free plan?",
+            "answer": "On September 26, 2026, its pricing page listed paid plans with a 14-day free trial. Check rescuetime.com for the current options."
+          },
+          {
+            "question": "Can FocusNow block websites?",
+            "answer": "No. If blocking during focus time is important to you, RescueTime offers it and FocusNow doesn't."
+          },
+          {
+            "question": "Does FocusNow have a mobile app?",
+            "answer": "No. FocusNow runs on macOS and Windows only."
+          }
+        ]
+      },
+      "ogKicker": "An honest comparison, checked September 2026"
+    },
+    "toggl": {
+      "meta": {
+        "title": "FocusNow vs Toggl Track: Timer or Automatic? (2026)",
+        "description": "FocusNow vs Toggl Track: timers, desktop timeline, focus tools, billable rates, invoicing and price compared. Which time tracker fits how you work?"
+      },
+      "title": "FocusNow vs Toggl Track",
+      "summary": "Toggl Track is a mature tracker built around timers, projects and team reports, with a desktop Timeline that records apps and sites. FocusNow starts from the automatic record, adds focus sessions, and turns tracked records into timecards for solo client work.",
+      "pickThemTitle": "Toggl Track fits if",
+      "pickUs": [
+        "You want the automatic record at the center, not the timer",
+        "You want Focus Score, focus sessions and Productivity views in one app",
+        "You want an AI summary of each finished day",
+        "You work alone and want work statements from your timecards"
+      ],
+      "pickThem": [
+        "You work in a team and need shared projects and team reports",
+        "You want mobile apps and browser extensions",
+        "You want a free plan that also covers a small team",
+        "You need invoicing and profitability reporting"
+      ],
+      "themCol": "Toggl Track",
+      "rows": [
+        {
+          "criterion": "How time is captured",
+          "us": "Automatic record first; timer and manual entry when you want them",
+          "them": "Timer and manual entries first; desktop Timeline records apps and sites"
+        },
+        {
+          "criterion": "Turning activity into entries",
+          "us": "Select tracked records and add them to a timecard",
+          "them": "Timeline lays out activity and you decide what becomes a time entry"
+        },
+        {
+          "criterion": "Focus tools",
+          "us": "Pomodoro and Deep Work tied to tasks, plus Focus Music",
+          "them": "Pomodoro timer and focus mode"
+        },
+        {
+          "criterion": "Focus Score and distraction share",
+          "us": "Yes, with Productivity views by app, site, category and hour",
+          "them": "Not listed on the pages we checked"
+        },
+        {
+          "criterion": "Billable rates",
+          "us": "Task or project rate, in any currency",
+          "them": "Workspace, member, project or project-member rates on Starter and up"
+        },
+        {
+          "criterion": "What you hand a client",
+          "us": "Work statements as PDF or CSV",
+          "them": "Invoicing, plus PDF, CSV and XLSX report export"
+        },
+        {
+          "criterion": "Calendar",
+          "us": "Your own tracked history; no external calendar sync",
+          "them": "Tracks calendar events automatically"
+        },
+        {
+          "criterion": "Idle time",
+          "us": "Idle and away detected automatically",
+          "them": "Prompts you when the device goes quiet while a timer runs"
+        },
+        {
+          "criterion": "Teams",
+          "us": "Built for individuals",
+          "them": "Team plans and team reporting"
+        },
+        {
+          "criterion": "Platforms",
+          "us": "macOS 12+ and Windows 10+",
+          "them": "Web, macOS, Windows, iOS, Android and browser extensions"
+        },
+        {
+          "criterion": "Price",
+          "us": "Core tracking free; timecards and billing free during early access",
+          "them": "Free plan; Starter $9 and Premium $16 per user per month billed annually ($12 and $24 monthly)"
+        }
+      ],
+      "experience": "In FocusNow you don't start anything to be tracked. The record builds itself, the Focus page holds your sessions and tasks, and at the end of the week you add tracked records to timecards and prepare a work statement.",
+      "experienceAlt": "Calendar view of a month with tracked time and a colored bar for each day",
+      "sections": [
+        {
+          "title": "Timer-first or record-first",
+          "body": "In Toggl Track you usually start a timer, with Timeline as a safety net. In FocusNow the record is always there, and you pick from it when you build a timecard. If you like starting and stopping timers, Toggl Track is very good at it. If you often forget to, FocusNow's approach may suit you better."
+        },
+        {
+          "title": "More than hours",
+          "body": "FocusNow also shows how focused the day was: Focus Score, distraction share, focus sessions and an AI daily report. Toggl Track concentrates on time entries, projects and team reporting."
+        },
+        {
+          "title": "Teams and invoicing",
+          "body": "Toggl Track has team plans, invoicing and profitability reports. FocusNow is for individuals, prepares work statements rather than invoices, and has no integrations or API."
+        }
+      ],
+      "switch": "There's no import from Toggl Track. You can keep Toggl for team work and invoicing and use FocusNow for the automatic record and focus, or run both for a week and keep the one that fits.",
+      "faq": {
+        "items": [
+          {
+            "question": "Does Toggl Track track automatically?",
+            "answer": "Its desktop apps include Timeline, which records apps and sites so you can turn them into time entries. Timers remain its main way of tracking."
+          },
+          {
+            "question": "Is FocusNow free like Toggl Track's free plan?",
+            "answer": "FocusNow's core tracking, focus sessions and Productivity views are free. Timecards, billing and reports are free during early access and are planned for a paid Pro plan later."
+          },
+          {
+            "question": "Can FocusNow send invoices?",
+            "answer": "No. FocusNow prepares work statements as PDF or CSV. It doesn't issue tax invoices or collect payments."
+          }
+        ]
+      },
+      "ogKicker": "An honest comparison, checked September 2026"
     }
   },
   "guide": {
     "meta": {
-      "title": "FocusNow User Guide — Setup, Focus Score & Sessions",
-      "description": "Step-by-step guides for FocusNow: setup, how your Focus Score works, focus sessions, AI daily reports, working hours and owning your data."
+      "title": "FocusNow User Guide: Setup, Focus Score & More",
+      "description": "Step-by-step guides for FocusNow: setup, your Focus Score, focus sessions, the AI daily report, working hours and owning your data."
     },
-    "title": "FocusNow",
-    "titleHighlight": "User Guide",
-    "description": "Everything you need to get the most out of FocusNow — from first launch to reading your analytics.",
+    "title": "User guide",
+    "description": "Everything you need to get the most out of FocusNow, from first launch to reading your reports.",
     "backToGuide": "Back to Guide",
     "updatedOn": "Updated {date}"
+  },
+  "common": {
+    "earlyAccess": "Early access, free for now",
+    "demoData": "Sample data",
+    "lastChecked": "Checked {date}",
+    "breadcrumbHome": "Home",
+    "getApp": "Get FocusNow Free"
+  },
+  "screens": {
+    "focus": "Focus",
+    "productivity": "Productivity",
+    "insights": "Insights",
+    "activities": "Activities",
+    "calendar": "Calendar",
+    "tasks": "Tasks",
+    "timecards": "Timecards",
+    "projects": "Projects",
+    "billing": "Billing",
+    "reports": "Reports"
+  },
+  "trustStrip": {
+    "label": "FocusNow at a glance",
+    "platforms": "Mac and Windows",
+    "free": "Free core tracking, no credit card",
+    "private": "No screenshots, no keystroke logging",
+    "setup": "Tracking in under two minutes"
+  },
+  "daySection": {
+    "title": "Your day, without the guesswork.",
+    "description": "FocusNow notes the app, window and site in front of you. Open it at the end of the day and the day you actually had is waiting.",
+    "viewsLabel": "Views of your tracked day",
+    "views": {
+      "productivity": "Productivity",
+      "calendar": "Calendar"
+    },
+    "alts": {
+      "productivity": "Productivity view: 28h 40m of focus in 37h 6m active this week, with focus time, top app and a focus trend chart",
+      "calendar": "Calendar view: a month of tracked days, each with its total and a bar of focus, neutral, personal and distraction time"
+    },
+    "points": {
+      "apps": {
+        "title": "Which apps and sites",
+        "body": "Top apps, top sites and categories, sorted by the time you really spent."
+      },
+      "hours": {
+        "title": "Which hours",
+        "body": "Set working hours and read your focus inside them, apart from evenings and weekends."
+      },
+      "patterns": {
+        "title": "Which patterns",
+        "body": "A focus trend, Focus Score by hour and a calendar that reopens any tracked day."
+      }
+    },
+    "link": "Explore automatic tracking"
+  },
+  "focusScene": {
+    "title": "Make room for your best work.",
+    "description": "Pick a task, start a session and let the timer hold the line. When you finish, the session is saved with its real length.",
+    "facts": {
+      "timer": {
+        "title": "Pomodoro or Deep Work",
+        "body": "25 and 90 minutes by default. Change any length from 1 to 180 minutes."
+      },
+      "tasks": {
+        "title": "The task stays in view",
+        "body": "Time spent against your estimate, and roughly when you'll finish."
+      },
+      "music": {
+        "title": "Focus Music when you want it",
+        "body": "Stations and background noise in the top bar. Nothing plays until you press play."
+      }
+    },
+    "stationsLabel": "Music stations and background noise",
+    "stations": [
+      "Lo-fi",
+      "Jazzy",
+      "Night",
+      "Rainy",
+      "Ambient",
+      "Brown noise",
+      "Pink noise",
+      "White noise"
+    ],
+    "alt": "FocusNow Focus page in dark theme: Pomodoro timer, today's Focus Score and a task list with time spent against estimates",
+    "link": "How focus sessions work"
+  },
+  "featureBento": {
+    "title": "See the patterns behind your day.",
+    "description": "Four views you'll keep coming back to, all built on the same automatic record.",
+    "cards": {
+      "analytics": {
+        "title": "Know where the hours went",
+        "body": "Top apps, sites and categories for any date range, next to your Focus Score and distraction share.",
+        "link": "Automatic time tracking",
+        "alt": "Top apps this week: Code 17h 40m, Google Chrome 7h 6m, Figma 4h 13m, Notion 2h 44m"
+      },
+      "report": {
+        "title": "A finished day, summarized",
+        "body": "Choose a day and AI writes a short summary with highlights and recommendations, based on that day's records.",
+        "link": "About the AI daily report",
+        "alt": "Recommendations from an AI daily report, such as keeping the first two hours for deep work"
+      },
+      "tasks": {
+        "title": "Estimates that improve",
+        "body": "Finished tasks show how your estimates compare with the time they took.",
+        "link": "Tasks and focus sessions",
+        "alt": "Estimate accuracy card: you spend 0.7 times your estimate on average"
+      },
+      "calendar": {
+        "title": "Any day, back to your first",
+        "body": "Open a day on the calendar and see what you worked on, title by title.",
+        "link": "Calendar and your data",
+        "alt": "Four calendar days, each with tracked time and time on timecards"
+      }
+    }
+  },
+  "clientWork": {
+    "title": "Client hours you can explain.",
+    "description": "FocusNow keeps the record. You decide what belongs to which client, then prepare a work statement you can stand behind.",
+    "moments": {
+      "review": {
+        "label": "Review",
+        "title": "Look back at the day",
+        "body": "Apps, sites and window titles are there for any day you open.",
+        "alt": "Activities column for Focus: Code 17h 40m, Figma 4h 13m, Notion, Slack, Zoom and Mail"
+      },
+      "assign": {
+        "label": "Choose",
+        "title": "You pick the project",
+        "body": "Add tracked records to a timecard or run the timer. Project, rate and billable are your call.",
+        "timerAlt": "Running timer with the project Orbit Web App selected and Billable switched on",
+        "recordsAlt": "Timecard entries that carry 1 and 3 tracked records as evidence"
+      },
+      "statement": {
+        "label": "Prepare",
+        "title": "Create a work statement",
+        "body": "Billable entries gather per client. Finalize a statement, then export it as PDF or CSV.",
+        "alt": "Ready to bill: hours and amounts per client, each with a Create statement button"
+      }
+    },
+    "note": "A work statement is a record of your work, not a tax invoice. FocusNow doesn't send invoices or collect payments.",
+    "link": "How timecards work"
+  },
+  "useCaseGrid": {
+    "title": "Find your way of using it.",
+    "items": {
+      "freelancers": {
+        "who": "Freelancers",
+        "title": "Every client hour, accounted for",
+        "body": "Clients, projects and rates on top of an automatic record, so you bill from what you did and not from memory.",
+        "alt": "Projects list with clients and logged hours for each project"
+      },
+      "developers": {
+        "who": "Developers",
+        "title": "Keep coding time whole",
+        "body": "Pick a task, start Deep Work and see how your estimates hold up.",
+        "alt": "Task list with time spent against estimates for each task"
+      },
+      "remoteWorkers": {
+        "who": "Remote workers",
+        "title": "A workday with edges",
+        "body": "Working hours keep the evening out of your numbers.",
+        "alt": "Focus time card: 28h 40m of 37h 6m active this week"
+      },
+      "students": {
+        "who": "Students",
+        "title": "Study in sessions",
+        "body": "Pomodoro blocks and an honest look at study time.",
+        "alt": "Pomodoro timer set to 25 minutes"
+      }
+    }
+  },
+  "compareTeaser": {
+    "title": "Finding the right time tracker?",
+    "description": "Plenty of good tools track time. Here's where FocusNow fits, and where another tool may suit you better.",
+    "allLink": "See all comparisons",
+    "guideLink": "How to choose a time tracker"
+  },
+  "trustOffer": {
+    "trust": {
+      "title": "Clear about what it records.",
+      "recorded": {
+        "title": "Recorded",
+        "items": [
+          "The app in front of you",
+          "Its window title",
+          "The site's domain in your browser",
+          "Active, idle and away time"
+        ]
+      },
+      "never": {
+        "title": "Never recorded",
+        "items": [
+          "Screenshots",
+          "Keystrokes or clipboard",
+          "Camera or microphone",
+          "What's inside your files"
+        ]
+      },
+      "storage": "Records are saved on your computer first and tracking keeps going offline. While you're signed in, they sync to your account, encrypted in transit and at rest.",
+      "link": "Read the privacy policy"
+    },
+    "offer": {
+      "free": {
+        "price": "$0",
+        "title": "Free core tracking",
+        "body": "Automatic tracking, focus sessions and your Productivity views. No trial clock and no card."
+      },
+      "clients": {
+        "title": "Client tools in early access",
+        "body": "Timecards, billing and reports are free during early access. We plan to include them in a paid Pro plan later and will share the terms before anything changes."
+      },
+      "link": "See pricing"
+    }
+  },
+  "compareHub": {
+    "items": {
+      "rize": {
+        "summary": "Both track automatically. Rize adds AI project assignment, distraction blocking and team reporting on a subscription. FocusNow keeps core tracking free and leaves project choices to you.",
+        "cta": "Read FocusNow vs Rize"
+      },
+      "rescuetime": {
+        "summary": "RescueTime offers focus sessions with blocking, mobile apps and a paid Timesheets plan. FocusNow pairs free desktop tracking with timecards in early access.",
+        "cta": "Read FocusNow vs RescueTime"
+      },
+      "toggl": {
+        "summary": "Toggl Track leads with timers, team reports and invoicing, plus a desktop timeline. FocusNow starts from the automatic record and adds focus tools.",
+        "cta": "Read FocusNow vs Toggl Track"
+      }
+    },
+    "meta": {
+      "title": "Time Tracker Comparisons: FocusNow vs Others",
+      "description": "Honest, dated comparisons of FocusNow with Rize, RescueTime and Toggl Track. Each page says where the other tool is the better fit."
+    },
+    "title": "How FocusNow compares",
+    "description": "Plain comparisons with the tools people often weigh against FocusNow. Every page says where the other tool is the better choice.",
+    "method": {
+      "title": "How we write these",
+      "items": [
+        "Competitor details come from their official pricing and product pages, with the date we checked.",
+        "FocusNow facts match what the app does today, including what it doesn't do.",
+        "We recheck every comparison at least once a quarter."
+      ]
+    },
+    "guide": {
+      "title": "Not sure what you need yet?",
+      "body": "Start with five questions and short notes on six tools, including options that aren't FocusNow.",
+      "link": "Read the guide"
+    },
+    "ogKicker": "Honest, dated comparisons"
+  },
+  "featurePage": {
+    "outcomesTitle": "What you get",
+    "flowTitle": "How it works",
+    "relatedTitle": "Keep exploring",
+    "breadcrumb": "Features"
+  },
+  "features": {
+    "tracking": {
+      "secondaryCta": "Read the setup guide",
+      "meta": {
+        "title": "Automatic Time Tracking App for Mac & Windows",
+        "description": "FocusNow records the app, window and site in front of you, so your workday shows up without timers. No screenshots or keylogging. Free."
+      },
+      "category": "Automatic time tracking",
+      "title": "Your whole workday, without a single timer.",
+      "description": "FocusNow notes the app, window title and site in front of you on Mac and Windows. Open it any time and the day you actually had is there.",
+      "heroAlt": "Activities page: apps and sites sorted into Focus, Neutral, Personal and Distraction, with time for each",
+      "outcomes": [
+        {
+          "title": "Remember the day accurately",
+          "body": "Every app and site with the time it took, sorted into Focus, Neutral, Personal and Distraction."
+        },
+        {
+          "title": "Your rules decide what counts",
+          "body": "Change a category in one click, add your own, or exclude an app so it never collects time."
+        },
+        {
+          "title": "Working hours that mean something",
+          "body": "Set your hours and read focus inside them. Evenings and weekends stay out of your score."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Allow tracking once",
+          "body": "On macOS you grant the Accessibility permission during setup. Windows needs no extra step."
+        },
+        {
+          "title": "Work as usual",
+          "body": "About every two seconds FocusNow checks the window in front and notices when you step away."
+        },
+        {
+          "title": "Open your day",
+          "body": "Productivity, Activities and Calendar show the same record from three angles."
+        },
+        {
+          "title": "Adjust what counts",
+          "body": "Move an app or site to another category and your numbers update with it."
+        }
+      ],
+      "flowAlt": "Productivity page with this week's focus time, average Focus Score, top app, top site and focus trend",
+      "related": {
+        "gettingStarted": "Getting started with FocusNow",
+        "focusScore": "How your Focus Score works",
+        "workingHours": "Working hours",
+        "remote": "FocusNow for remote workers",
+        "rize": "FocusNow vs Rize"
+      }
+    },
+    "focus": {
+      "secondaryCta": "Read the focus guide",
+      "meta": {
+        "title": "Focus Timer for Pomodoro & Deep Work on Desktop",
+        "description": "Pomodoro and Deep Work sessions tied to your tasks, with Focus Music and real session lengths. A free desktop focus timer for Mac and Windows."
+      },
+      "category": "Focus sessions",
+      "title": "Pomodoro and Deep Work, tied to your tasks.",
+      "description": "Start a 25-minute Pomodoro or a 90-minute Deep Work block from the Focus page or straight from a task. Every session is saved with its real length.",
+      "heroAlt": "Focus page with a Pomodoro timer, today's summary and a task list with time spent against estimates",
+      "outcomes": [
+        {
+          "title": "Start without friction",
+          "body": "Four modes are one click away. Keys 1 to 4 switch them, and ⌘/Ctrl+K opens anything else."
+        },
+        {
+          "title": "Estimates you can trust",
+          "body": "Actual time per task comes from its sessions and linked records, right next to your estimate."
+        },
+        {
+          "title": "Sound that helps, silence by default",
+          "body": "Five music stations plus brown, pink and white noise. Noise works offline, and nothing plays until you choose."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Pick a task",
+          "body": "Choose what you'll work on. The task shows time left and roughly when you'll finish."
+        },
+        {
+          "title": "Start a session",
+          "body": "Pomodoro, Deep Work or a break. Lengths are yours to set, from 1 to 180 minutes."
+        },
+        {
+          "title": "Stay in the flow",
+          "body": "A floating widget keeps the timer in view, with pause and resume, while you work in other apps."
+        },
+        {
+          "title": "End and look back",
+          "body": "End the session whenever you're done. History lists every session with how much of its target you reached."
+        }
+      ],
+      "flowAlt": "Tasks page with estimate accuracy, actual time and a list of tasks, each with a button to start a session",
+      "related": {
+        "focusSessions": "Guide: focus sessions",
+        "shortcuts": "Shortcuts and tips",
+        "students": "FocusNow for students",
+        "developers": "FocusNow for developers",
+        "rescuetime": "FocusNow vs RescueTime"
+      }
+    },
+    "timecards": {
+      "secondaryCta": "See it for freelancers",
+      "meta": {
+        "title": "Timecards from Tracked Time for Freelancers",
+        "description": "Turn tracked activity into timecards, then prepare work statements as PDF or CSV. Built for freelancers who bill by the hour. Free in early access."
+      },
+      "category": "Timecards and client hours",
+      "title": "Timecards built from what you actually did.",
+      "description": "Pick tracked records, attach them to a project and let FocusNow total the hours and amounts. When a client needs a summary, prepare a work statement.",
+      "heroAlt": "Timecards page with a running timer, filters, logged and billable time, coverage and entries that carry tracked records",
+      "outcomes": [
+        {
+          "title": "Evidence behind every entry",
+          "body": "An entry made from tracked records keeps them attached, with their time ranges."
+        },
+        {
+          "title": "Nothing slips through",
+          "body": "Coverage shows how much tracked time is on a timecard, and Billing lists what isn't yet."
+        },
+        {
+          "title": "Rates and currencies your way",
+          "body": "A task rate or project rate, in any currency. Totals stay separate per currency."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Log time three ways",
+          "body": "Run the timer, enter hours by hand, or select tracked records and add them to an entry."
+        },
+        {
+          "title": "Review before you bill",
+          "body": "Long timers, missing projects or rates and overlapping entries are flagged for you."
+        },
+        {
+          "title": "Create a work statement",
+          "body": "Ready to bill gathers billable entries per client. Finalizing locks them and marks them billed."
+        },
+        {
+          "title": "Export and close the loop",
+          "body": "Export as PDF or CSV, add your invoice reference and mark it paid when the money arrives."
+        }
+      ],
+      "flowAlt": "Billing page with work statements per client, their status, amount, invoice reference and PDF and CSV export",
+      "note": "Timecards, billing and reports are free during early access. We plan to include them in a paid Pro plan later. A work statement is not a tax invoice, and FocusNow doesn't collect payments.",
+      "related": {
+        "freelancers": "FocusNow for freelancers",
+        "pricing": "Pricing and early access",
+        "toggl": "FocusNow vs Toggl Track",
+        "alternatives": "Choosing a time tracker"
+      }
+    }
+  },
+  "useCasePage": {
+    "breadcrumb": "Use cases",
+    "dayTitle": "A day like yours",
+    "faqTitle": "Questions from people like you",
+    "nextTitle": "Where to go next"
+  },
+  "comparePage": {
+    "breadcrumb": "Compare",
+    "tableTitle": "Side by side",
+    "criterionCol": "What you're deciding",
+    "usCol": "FocusNow",
+    "experienceTitle": "What using FocusNow looks like",
+    "switchTitle": "If you're thinking about switching",
+    "sourcesTitle": "Sources",
+    "checked": "Competitor details checked on September 26, 2026 against their official pages. Prices are list prices in USD before tax and can change.",
+    "faqTitle": "Common questions",
+    "moreTitle": "More comparisons",
+    "guideLink": "How to choose a time tracker",
+    "pickUsTitle": "FocusNow fits if"
+  },
+  "alternatives": {
+    "meta": {
+      "title": "Time Tracking Apps Compared: How to Choose (2026)",
+      "description": "Six time trackers sorted by need: personal focus, client hours, teams, local-only data and platform. Written by FocusNow, with our bias stated up front."
+    },
+    "breadcrumb": "Choosing a time tracker",
+    "title": "How to choose a time tracker",
+    "intro": "Most time trackers handle the basics well. The right one depends on what you need the numbers for. Start with the questions below, then read short notes on six tools.",
+    "disclosure": "We make FocusNow, so read this with that in mind. We've described each tool as fairly as we can, checked the details against official pages on September 26, 2026, and said where another tool is the better choice. Nobody paid to be listed.",
+    "criteriaTitle": "Five questions to ask first",
+    "criteria": [
+      {
+        "title": "Is it for your focus or your invoices?",
+        "body": "Focus tools show patterns and sessions. Client tools turn time into entries, rates and statements. Some do both."
+      },
+      {
+        "title": "Timer or automatic record?",
+        "body": "Timers are precise when you remember them. Automatic tracking catches everything and asks you to sort it later."
+      },
+      {
+        "title": "Just you, or a team?",
+        "body": "Team plans add shared projects, roles and reports. Tools for one person stay simpler."
+      },
+      {
+        "title": "Where should the data live?",
+        "body": "Some tools keep everything on your device. Others sync to the cloud so you can reach it elsewhere."
+      },
+      {
+        "title": "Which devices?",
+        "body": "Check macOS, Windows, Linux and mobile support before you commit."
+      }
+    ],
+    "toolsTitle": "Six tools, briefly",
+    "fitLabel": "Good fit",
+    "considerLabel": "Keep in mind",
+    "priceLabel": "Price",
+    "officialSite": "Official site",
+    "compareLink": "Full comparison",
+    "tools": {
+      "focusnow": {
+        "fit": "Solo professionals who want automatic tracking, focus sessions and timecards in one desktop app.",
+        "consider": "No distraction blocking, no mobile or Linux app, no team features. You assign time to clients yourself.",
+        "price": "Core tracking free; timecards and billing free during early access."
+      },
+      "rize": {
+        "fit": "People who want AI to assign sessions to projects, plus blocking, integrations and team dashboards.",
+        "consider": "Subscription after a 7-day trial.",
+        "price": "From $9.99 a month billed annually."
+      },
+      "rescuetime": {
+        "fit": "People who want focus sessions with blocking, goals and alerts, and mobile apps. Timesheets for client work come with Solo+.",
+        "consider": "Paid plans after a 14-day trial.",
+        "price": "From $7 a month billed annually; Solo+ $12."
+      },
+      "toggl": {
+        "fit": "Timer lovers and teams who need projects, billable rates, invoicing and reports on web, desktop and mobile.",
+        "consider": "The timer is the main habit. The automatic Timeline is a helper in the desktop apps.",
+        "price": "Free plan; paid from $9 per user a month billed annually."
+      },
+      "timely": {
+        "fit": "Agencies and consultancies that want AI-drafted timesheets built from an automatic record.",
+        "consider": "Priced per user, with a 14-day trial.",
+        "price": "From $9 per user a month billed annually."
+      },
+      "activitywatch": {
+        "fit": "Privacy-minded users who want free, open-source tracking with data kept on their own device, including on Linux.",
+        "consider": "No focus timer or client billing, and syncing between devices is still in progress.",
+        "price": "Free and open source (MPL-2.0)."
+      }
+    },
+    "closing": "Whichever you pick, try it for one full week of real work before you decide."
   }
 }

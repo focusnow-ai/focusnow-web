@@ -1,141 +1,79 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { FocusNowLogo } from "@/components/shared/focusnow-logo";
+import { navGroups, type NavLink } from "@/lib/site-nav";
+
+const linkClass = "text-sm text-muted-foreground transition-colors hover:text-foreground";
+
+function FooterColumn({ title, links }: { title: string; links: { href: NavLink["href"]; label: string }[] }) {
+  return (
+    <div>
+      <h2 className="mb-3 text-sm font-semibold">{title}</h2>
+      <ul className="space-y-2.5">
+        {links.map((link) => (
+          <li key={link.href}>
+            <Link href={link.href} className={linkClass}>
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export function Footer() {
   const t = useTranslations("footer");
   const nav = useTranslations("nav");
-  const uc = useTranslations("useCases");
+
+  const columns = navGroups.map((group) => ({
+    title: nav(`groups.${group.key}.label`),
+    links: group.links.map((link) => ({
+      href: link.href,
+      label: nav(`groups.${group.key}.links.${link.key}.title`),
+    })),
+  }));
+
+  const resources = columns[3];
+  resources.links = [...resources.links, { href: "/contact", label: t("contact") }];
+
+  const product = columns[0];
+  product.links = [
+    ...product.links,
+    { href: "/pricing", label: nav("pricing") },
+    { href: "/download", label: nav("download") },
+  ];
 
   return (
-    <footer className="border-t border-border/40 bg-muted/30">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6">
-          {/* Brand */}
-          <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/">
+    <footer className="border-t border-border/60 bg-muted/40">
+      <div className="mx-auto max-w-[84rem] px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-3 lg:grid-cols-[1.4fr_repeat(5,1fr)]">
+          <div className="col-span-2 md:col-span-3 lg:col-span-1">
+            <Link href="/" aria-label={nav("home")}>
               <FocusNowLogo />
             </Link>
-            <p className="mt-3 text-sm text-muted-foreground max-w-xs">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
               {t("description")}
             </p>
+            <p className="mt-4 text-sm text-muted-foreground">{t("founders")}</p>
           </div>
-
-          {/* Product links */}
-          <div>
-            <h3 className="font-semibold text-sm mb-3">{t("product")}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href={{ pathname: "/", hash: "features" }} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {nav("features")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/download" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {nav("download")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {nav("pricing")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/changelog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {nav("changelog")}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Use Cases */}
-          <div>
-            <h3 className="font-semibold text-sm mb-3">{t("useCases")}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/use-cases/remote-workers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {uc("remoteWorkers.badge")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/use-cases/students" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {uc("students.badge")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/use-cases/freelancers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {uc("freelancers.badge")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/use-cases/developers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {uc("developers.badge")}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Compare */}
-          <div>
-            <h3 className="font-semibold text-sm mb-3">{t("compare")}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/compare/rize" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  FocusNow vs Rize
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="font-semibold text-sm mb-3">{t("resources")}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {nav("blog")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/guide" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {t("guide")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {nav("about")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {t("contact")}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="font-semibold text-sm mb-3">{t("legal")}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {nav("privacy")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {nav("terms")}
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {columns.map((column) => (
+            <FooterColumn key={column.title} title={column.title} links={column.links} />
+          ))}
+          <FooterColumn
+            title={t("legal")}
+            links={[
+              { href: "/privacy", label: nav("privacy") },
+              { href: "/terms", label: nav("terms") },
+            ]}
+          />
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border/40">
-          <p className="text-sm text-muted-foreground text-center">
+        <div className="mt-12 flex flex-col gap-2 border-t border-border/60 pt-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <p>
             &copy; {new Date().getFullYear()} FocusNow. {t("copyright")}
           </p>
+          <p>{t("platforms")}</p>
         </div>
       </div>
     </footer>
