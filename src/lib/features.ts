@@ -52,9 +52,11 @@ export const featureConfigs: Record<FeatureKey, FeatureConfig> = {
     heroShot: "timecardsEntries",
     heroMobileShot: "timecardsMobile",
     flowShot: "billingStatements",
-    guide: "/use-cases/freelancers",
+    guide: guide("timecards"),
     earlyAccess: true,
     related: [
+      { key: "guide", href: guide("timecards") },
+      { key: "billingGuide", href: guide("billing-and-reports") },
       { key: "freelancers", href: "/use-cases/freelancers" },
       { key: "pricing", href: "/pricing" },
       { key: "toggl", href: "/compare/toggl" },

@@ -203,7 +203,7 @@
         "Tahmin ve gerçek süreli görevler",
         "Odak Müziği ve arka plan sesleri",
         "Verimlilik görünümleri ve Odak Puanı",
-        "Etkinlikler ve Takvim",
+        "Aktiviteler ve Takvim",
         "AI günlük raporu",
         "Şifreli senkronizasyon ve eksiksiz veri dışa aktarma"
       ],
@@ -768,7 +768,7 @@
       "title": "Birikerek ilerleyen çalışma oturumları.",
       "description": "Bir dersi görev olarak planla, Pomodoro bloklarıyla çalış; akşamın ne kadarının derse, ne kadarının başka şeylere gittiğini dürüstçe gör.",
       "heroAlt": "Pomodoro zamanlayıcısı, günün özeti ve görev listesiyle Odak sayfası",
-      "day": "Perşembeye kadar bitmesi gereken üç ünite. Her birini tahmini süresiyle görev olarak eklersin, bir Pomodoro başlatır, zamanlayıcı söyleyince molanı verirsin. Sonra Etkinlikler, akşamın notların, ders sitesi ve geri kalan her şey arasında nasıl bölündüğünü gösterir.",
+      "day": "Perşembeye kadar bitmesi gereken üç ünite. Her birini tahmini süresiyle görev olarak eklersin, bir Pomodoro başlatır, zamanlayıcı söyleyince molanı verirsin. Sonra Aktiviteler, akşamın notların, ders sitesi ve geri kalan her şey arasında nasıl bölündüğünü gösterir.",
       "scenes": [
         {
           "title": "Dürüst tahminli görevler",
@@ -949,7 +949,7 @@
           "them": "Yıllık ödemede aylık Basic 9,99, Pro 23,99, Max 39,99 USD; 7 günlük ücretsiz deneme"
         }
       ],
-      "experience": "Günün arka planda kaydedilir. Odak sayfasında görevlerden oturum başlatırsın, hafta sonunda Etkinlikler ya da Takvim'i gözden geçirip kayıtları zaman kartlarına eklersin. Her müşteri saati senin seçtiğin bir saattir.",
+      "experience": "Günün arka planda kaydedilir. Odak sayfasında görevlerden oturum başlatırsın, hafta sonunda Aktiviteler ya da Takvim'i gözden geçirip kayıtları zaman kartlarına eklersin. Her müşteri saati senin seçtiğin bir saattir.",
       "experienceAlt": "Çalışan sayaç, kaydedilen ve faturalanabilir süre, kapsama ve takip kaydı taşıyan girişlerle Zaman kartları sayfası",
       "sections": [
         {
@@ -1057,7 +1057,7 @@
           "them": "Yıllık ödemede aylık Solo Focus 7, Timesheets'li Solo+ 12 USD (aylık ödemede 9 ve 15 USD); 14 günlük ücretsiz deneme"
         }
       ],
-      "experience": "FocusNow Odak sayfasıyla açılır: bir görev seç, oturumu başlat, günün Odak Puanı'nı zamanlayıcının altında gör. Otomatik kayıt Verimlilik, Etkinlikler ve Takvim'i doldurur; müşteri saatleri senin seçtiğin kayıtlardan gelir.",
+      "experience": "FocusNow Odak sayfasıyla açılır: bir görev seç, oturumu başlat, günün Odak Puanı'nı zamanlayıcının altında gör. Otomatik kayıt Verimlilik, Aktiviteler ve Takvim'i doldurur; müşteri saatleri senin seçtiğin kayıtlardan gelir.",
       "experienceAlt": "Pomodoro zamanlayıcısı, günün Odak Puanı ve görev listesiyle Odak sayfası",
       "sections": [
         {
@@ -1227,10 +1227,10 @@
     "focus": "Odak",
     "productivity": "Verimlilik",
     "insights": "İçgörüler",
-    "activities": "Etkinlikler",
+    "activities": "Aktiviteler",
     "calendar": "Takvim",
     "tasks": "Görevler",
-    "timecards": "Zaman kartları",
+    "timecards": "Zaman Kartları",
     "projects": "Projeler",
     "billing": "Faturalama",
     "reports": "Raporlar"
@@ -1290,10 +1290,10 @@
     "stationsLabel": "Müzik istasyonları ve arka plan sesleri",
     "stations": [
       "Lo-fi",
-      "Jazzy",
-      "Night",
-      "Rainy",
-      "Ambient",
+      "Caz",
+      "Gece",
+      "Yağmurlu",
+      "Ambiyans",
       "Kahverengi gürültü",
       "Pembe gürültü",
       "Beyaz gürültü"
@@ -1482,7 +1482,7 @@
       "category": "Otomatik zaman takibi",
       "title": "Bütün iş günün, tek bir kronometre olmadan.",
       "description": "FocusNow, Mac ve Windows'ta önündeki uygulamayı, pencere başlığını ve siteyi not eder. Ne zaman açsan, gerçekten yaşadığın gün orada.",
-      "heroAlt": "Etkinlikler sayfası: Odak, Nötr, Kişisel ve Dikkat Dağıtıcı olarak ayrılmış uygulama ve siteler, her birinin süresiyle",
+      "heroAlt": "Aktiviteler sayfası: Odak, Nötr, Kişisel ve Dikkat Dağıtıcı olarak ayrılmış uygulama ve siteler, her birinin süresiyle",
       "outcomes": [
         {
           "title": "Günü doğru hatırla",
@@ -1508,7 +1508,7 @@
         },
         {
           "title": "Gününü aç",
-          "body": "Verimlilik, Etkinlikler ve Takvim aynı kaydı üç farklı açıdan gösterir."
+          "body": "Verimlilik, Aktiviteler ve Takvim aynı kaydı üç farklı açıdan gösterir."
         },
         {
           "title": "Neyin sayılacağını ayarla",
@@ -1576,7 +1576,7 @@
       }
     },
     "timecards": {
-      "secondaryCta": "Serbest çalışanlar için gör",
+      "secondaryCta": "Zaman kartı rehberini oku",
       "meta": {
         "title": "Zaman Kartı ve Müşteri Saatleri Takibi",
         "description": "Takip kayıtlarını zaman kartına dönüştür, çalışma dökümünü PDF ya da CSV hazırla. Saatle çalışan serbest çalışanlar için; erken erişimde ücretsiz."
@@ -1623,7 +1623,9 @@
         "freelancers": "Serbest çalışanlar için FocusNow",
         "pricing": "Fiyatlandırma ve erken erişim",
         "toggl": "FocusNow ve Toggl Track",
-        "alternatives": "Zaman takip uygulaması seçmek"
+        "alternatives": "Zaman takip uygulaması seçmek",
+        "guide": "Rehber: zaman kartları",
+        "billingGuide": "Rehber: faturalama ve raporlar"
       }
     }
   },

@@ -1576,7 +1576,7 @@
       }
     },
     "timecards": {
-      "secondaryCta": "See it for freelancers",
+      "secondaryCta": "Read the timecards guide",
       "meta": {
         "title": "Timecards from Tracked Time for Freelancers",
         "description": "Turn tracked activity into timecards, then prepare work statements as PDF or CSV. Built for freelancers who bill by the hour. Free in early access."
@@ -1623,7 +1623,9 @@
         "freelancers": "FocusNow for freelancers",
         "pricing": "Pricing and early access",
         "toggl": "FocusNow vs Toggl Track",
-        "alternatives": "Choosing a time tracker"
+        "alternatives": "Choosing a time tracker",
+        "guide": "Guide: timecards",
+        "billingGuide": "Guide: billing and reports"
       }
     }
   },
