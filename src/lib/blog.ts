@@ -54,7 +54,7 @@ export function getBlogPost(slug: string, locale: string): BlogPost | null {
     title: data.title || "",
     description: data.description || "",
     date: data.date || "",
-    author: data.author || "FocusNow Team",
+    author: data.author || "Cihan & Barbaros",
     tags: data.tags || [],
     readingTime: Math.ceil(stats.minutes).toString(),
     content,
