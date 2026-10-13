@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
@@ -11,18 +11,12 @@ import { Check, CheckCircle2, ChevronDown, Copy, Mail } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
 const TOPICS = ["feedback", "support", "partnership", "other"] as const;
+type Topic = (typeof TOPICS)[number];
 
 type Status = "idle" | "sending" | "success" | "error";
 
 export function ContactPageClient() {
   const t = useTranslations("contact");
-  // Pre-select the topic when linked with ?topic=... (e.g. the desktop
-  // app's feedback links) — invalid values fall back to the default.
-  const searchParams = useSearchParams();
-  const topicParam = searchParams.get("topic");
-  const initialTopic = TOPICS.includes(topicParam as (typeof TOPICS)[number])
-    ? (topicParam as (typeof TOPICS)[number])
-    : "feedback";
   const [status, setStatus] = useState<Status>("idle");
   const [errorKey, setErrorKey] = useState<string>("errorGeneric");
   const [copied, setCopied] = useState(false);
@@ -159,18 +153,10 @@ export function ContactPageClient() {
                       {t("form.topic")}
                     </label>
                     <div className="relative">
-                      <select
-                        id="contact-topic"
-                        name="topic"
-                        defaultValue={initialTopic}
-                        className="w-full h-10 appearance-none rounded-md border border-input bg-background pl-3 pr-10 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                      >
-                        {TOPICS.map((topic) => (
-                          <option key={topic} value={topic}>
-                            {t(`form.topics.${topic}`)}
-                          </option>
-                        ))}
-                      </select>
+                      {/* Only the topic reads the URL, so the rest of the page prerenders. */}
+                      <Suspense fallback={<TopicSelect initialTopic="feedback" />}>
+                        <TopicSelectFromUrl />
+                      </Suspense>
                       <ChevronDown className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                     </div>
                   </div>
@@ -256,5 +242,31 @@ export function ContactPageClient() {
         </motion.div>
       </div>
     </div>
+  );
+}
+
+// Pre-select the topic when linked with ?topic=... (e.g. the desktop
+// app's feedback links) — invalid values fall back to the default.
+function TopicSelectFromUrl() {
+  const topicParam = useSearchParams().get("topic");
+  const initialTopic = TOPICS.includes(topicParam as Topic) ? (topicParam as Topic) : "feedback";
+  return <TopicSelect initialTopic={initialTopic} />;
+}
+
+function TopicSelect({ initialTopic }: { initialTopic: Topic }) {
+  const t = useTranslations("contact");
+  return (
+    <select
+      id="contact-topic"
+      name="topic"
+      defaultValue={initialTopic}
+      className="w-full h-10 appearance-none rounded-md border border-input bg-background pl-3 pr-10 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+    >
+      {TOPICS.map((topic) => (
+        <option key={topic} value={topic}>
+          {t(`form.topics.${topic}`)}
+        </option>
+      ))}
+    </select>
   );
 }

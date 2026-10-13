@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { ArrowLink } from "@/components/shared/arrow-link";
@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export default async function CompareHubPage({ params }: Params) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "compareHub" });
   const page = await getTranslations({ locale, namespace: "comparePage" });
   const compare = await getTranslations({ locale, namespace: "compare" });

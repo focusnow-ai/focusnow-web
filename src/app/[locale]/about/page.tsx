@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { AppWindow } from "@/components/shared/product-shot";
 import { DownloadCTA } from "@/components/landing/download-cta";
@@ -17,6 +17,7 @@ const pillars = ["simplicity", "privacy", "transparency"] as const;
 
 export default async function AboutPage({ params }: Params) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "about" });
   const home = await getTranslations({ locale, namespace: "hero.scene" });
   const linkClass = "font-medium text-emphasis underline-offset-4 hover:underline";

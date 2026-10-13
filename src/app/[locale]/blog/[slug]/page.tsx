@@ -1,9 +1,15 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
-import { getBlogPost, getAllBlogSlugs, formatPostDate } from "@/lib/blog";
+import {
+  getBlogPost,
+  getAllBlogSlugs,
+  formatPostDate,
+  blogPostPath,
+  getBlogPostAlternates,
+} from "@/lib/blog";
 import { MarkdownBody } from "@/lib/markdown";
 import { getBlogPostLD } from "@/lib/structured-data";
 import { BlogReadTracker } from "@/components/shared/blog-read-tracker";
@@ -17,11 +23,15 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const post = getBlogPost(slug, locale);
   if (!post) return {};
-  const path = locale === "en" ? `/blog/${slug}` : `/${locale}/blog/${slug}`;
+  const path = blogPostPath(slug, locale);
+  const languages = getBlogPostAlternates(post);
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: path },
+    alternates: {
+      canonical: path,
+      ...(languages && { languages: { ...languages, "x-default": languages.en } }),
+    },
     openGraph: {
       url: `https://focusnow.ai${path}`,
       title: post.title,
@@ -49,6 +59,7 @@ export default async function BlogPostPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("blog");
   const post = getBlogPost(slug, locale);
 

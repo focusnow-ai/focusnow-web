@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { DownloadCTA } from "@/components/landing/download-cta";
 import { formatPostDate } from "@/lib/blog";
 import { pageMetadata } from "@/lib/seo";
@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export default async function ChangelogPage({ params }: Params) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "changelog" });
   const versions: ChangelogVersion[] = t.raw("versions");
 

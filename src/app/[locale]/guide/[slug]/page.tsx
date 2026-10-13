@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { getGuidePage, getAllGuideSlugs } from "@/lib/guide";
 import { MarkdownBody } from "@/lib/markdown";
@@ -24,7 +24,7 @@ export async function generateMetadata({
     description: page.description,
     alternates: {
       canonical: locale === "en" ? enPath : trPath,
-      languages: { en: enPath, tr: trPath },
+      languages: { en: enPath, tr: trPath, "x-default": enPath },
     },
     openGraph: {
       title: page.title,
@@ -50,6 +50,7 @@ export default async function GuidePageDetail({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("guide");
   const page = getGuidePage(slug, locale);
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { HeroSection } from "@/components/landing/hero-section";
 import { SocialProofBar } from "@/components/landing/social-proof-bar";
 import { DaySection } from "@/components/landing/day-section";
@@ -33,6 +33,7 @@ export default async function HomePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "faq" });
   const faqItems: { question: string; answer: string }[] = t.raw("items");
 
