@@ -293,7 +293,7 @@
   },
   "privacyPage": {
     "title": "Gizlilik Politikası",
-    "lastUpdated": "Yürürlük tarihi: 26 Eylül 2026",
+    "lastUpdated": "Yürürlük tarihi: 13 Ekim 2026",
     "intro": "FocusNow (\"biz\") olarak gizliliğinizi korumayı taahhüt ediyoruz. Bu Gizlilik Politikası, FocusNow web sitesini ve masaüstü uygulamasını kapsar; hangi verileri topladığımızı, bunları nasıl kullandığımızı ve sakladığımızı, bizim adımıza kimlerin işlediğini ve kişisel verileriniz üzerindeki haklarınızı açıklar. Bu metin, 30 Temmuz 2026 tarihli sürümün yerine geçer. Türkçe metin bilgilendirme amaçlı bir çeviridir; herhangi bir çelişki hâlinde İngilizce sürüm esas alınır.",
     "sections": {
       "trustPromise": {
@@ -318,7 +318,7 @@
         "items": [
           "Hesap bilgileri — e-posta adresiniz, görünen adınız ve hangi giriş sağlayıcısını kullandığınız (Google veya Microsoft). Parolanızı hiçbir zaman görmeyiz ve saklamayız",
           "İsteğe bağlı profil bilgileri — dilerseniz paylaştığınız meslek unvanınız ve sektörünüz ile belirlerseniz çalışma saatleriniz; yapay zekâ günlük raporunuzu size daha uygun hâle getirmek için kullanılır (bkz. 6. bölüm)",
-          "Aktivite verileri — kullandığınız uygulamaların adları ve dosya yolları, pencere başlıkları, ziyaret ettiğiniz web adresleri (URL'ler), aktif/boşta/uzakta durumlarınız, zaman damgaları ve süreler ile odak seansı bilgileriniz. Verimlilik analizleriniz bu verilerle oluşturulur",
+          "Aktivite verileri — kullandığınız uygulamaların adları, pencere başlıkları, tarayıcılarda sitenin alan adı (örneğin github.com), aktif/boşta/uzakta durumlarınız, zaman damgaları ve süreler, cihazınızın adı ile odak seansı bilgileriniz. Verimlilik analizleriniz bu verilerle oluşturulur. Uygulama alan adını bulmak için açık tarayıcı sekmesinin adresini cihazınızda okur; yalnızca alan adını tutar, tam web adresini hiçbir zaman kaydetmez ve bize göndermez. 0.2.0 öncesi uygulama sürümleri tam web adreslerini de (token gibi hassas parametreler çıkarılarak), 0.1.0 öncesi sürümler ise uygulamaların dosya yollarını kaydediyordu; bu sürümlerin daha önce kaydettiği veriler 13. bölümdeki kurallara göre saklanır ve silinir",
           "Zaman kartı ve faturalama verileri — zaman kartlarını kullanırsanız oluşturduğunuz projeler, müşteriler, görevler, etiketler, zaman girişleri, ücretler, para birimleri, notlar ve çalışma dökümleri. Müşteri kayıtları, o müşteri için girdiğiniz iletişim kişisi, e-posta, telefon, adres ve vergi numarasını içerebilir. Bu veriler cihazlarınız arasında erişilebilir olması için senkronize edilir ve dışa aktarılabilir",
           "Tanılama ve kullanım analitiği — işletim sistemi ve uygulama sürümü, cihaz mimarisi, dil ve tema ayarları, kullanım olayları, yaklaşık konum ve hata raporları. Hiçbir tanımlayıcı içermeyen iki anonim olay dışında yalnızca açık rıza verirseniz toplanır (bkz. 7. bölüm)",
           "Web sitesi verileri — focusnow.ai sitesinin ne topladığı aşağıdaki çerezler bölümünde açıklanmıştır",
@@ -349,7 +349,7 @@
       },
       "aiInsights": {
         "title": "6. Yapay Zekâ Destekli Raporlar",
-        "content": "Günlük rapor istediğinizde, o güne ait aktivite kayıtlarınız — uygulama adları, pencere başlıkları, URL'ler, zaman damgaları ve kategoriler — Avrupa Birliği'ndeki kendi Microsoft Azure aboneliğimiz içinde çalışan Azure OpenAI Service tarafından işlenir. Girdiyseniz meslek unvanınız, sektörünüz ve çalışma saatleriniz de bu işleme dahil edilir; böylece rapor gününüzü soyut bir şekilde değil, gerçek işinizin bağlamında yorumlayabilir. Adınız ve e-posta adresiniz hiçbir zaman gönderilmez. Verileriniz yapay zekâ modellerinin eğitiminde kullanılmaz. Üretilen rapor, yeniden oluşturulmasına gerek kalmaması için hesabınızda saklanır.",
+        "content": "Günlük rapor istediğinizde, o güne ait aktivite kayıtlarınız — uygulama adları, pencere başlıkları, site alan adları, zaman damgaları ve kategoriler — Avrupa Birliği'ndeki kendi Microsoft Azure aboneliğimiz içinde çalışan Azure OpenAI Service tarafından işlenir. Girdiyseniz meslek unvanınız, sektörünüz ve çalışma saatleriniz de bu işleme dahil edilir; böylece rapor gününüzü soyut bir şekilde değil, gerçek işinizin bağlamında yorumlayabilir. Adınız ve e-posta adresiniz hiçbir zaman gönderilmez. Verileriniz yapay zekâ modellerinin eğitiminde kullanılmaz. Üretilen rapor, yeniden oluşturulmasına gerek kalmaması için hesabınızda saklanır.",
         "note": "Yapay zekâ tarafından üretilen içgörüler yalnızca bilgilendirme amaçlıdır ve hatalı olabilir; mesleki, tıbbi veya istihdama ilişkin tavsiye niteliği taşımaz."
       },
       "analytics": {
