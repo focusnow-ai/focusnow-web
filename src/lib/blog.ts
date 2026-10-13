@@ -13,6 +13,8 @@ export interface BlogPost {
   readingTime: string;
   content: string;
   locale: string;
+  /** Slug of the same post in the other locale (frontmatter `translation`). */
+  translation?: string;
 }
 
 const BLOG_DIR = path.join(process.cwd(), "src/content/blog");
@@ -57,7 +59,26 @@ export function getBlogPost(slug: string, locale: string): BlogPost | null {
     readingTime: Math.ceil(stats.minutes).toString(),
     content,
     locale,
+    translation: data.translation,
   };
+}
+
+export function blogPostPath(slug: string, locale: string): string {
+  return locale === "en" ? `/blog/${slug}` : `/${locale}/blog/${slug}`;
+}
+
+/**
+ * hreflang paths for a post. Slugs differ per language, so a post only pairs
+ * up when its frontmatter names a `translation` that actually exists.
+ */
+export function getBlogPostAlternates(post: BlogPost): { en: string; tr: string } | null {
+  const other = post.locale === "en" ? "tr" : "en";
+  if (!post.translation || !getBlogPost(post.translation, other)) return null;
+  const paths = {
+    [post.locale]: blogPostPath(post.slug, post.locale),
+    [other]: blogPostPath(post.translation, other),
+  };
+  return { en: paths.en, tr: paths.tr };
 }
 
 export function getAllBlogSlugs(locale: string): string[] {

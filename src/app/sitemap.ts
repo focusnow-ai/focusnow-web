@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
-import { getBlogPosts } from "@/lib/blog";
-import { getAllGuideSlugs } from "@/lib/guide";
+import { blogPostPath, getBlogPostAlternates, getBlogPosts } from "@/lib/blog";
+import { getAllGuideSlugs, getGuidePage } from "@/lib/guide";
 import { absoluteUrl, SITE_URL } from "@/lib/seo";
 import type { NavHref } from "@/lib/site-nav";
 
@@ -43,33 +43,49 @@ function localizedPair(en: string, tr: string, entry: Omit<MetadataRoute.Sitemap
   ];
 }
 
+/* lastmod is only sent where we know the real date. A build-time timestamp on
+   every URL tells Google nothing changed meaningfully and teaches it to ignore
+   our lastmod values altogether. */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
   const staticEntries = staticPages.flatMap((page) =>
     localizedPair(absoluteUrl(page.path, "en"), absoluteUrl(page.path, "tr"), {
-      lastModified,
       changeFrequency: page.changeFrequency,
       priority: page.priority,
     })
   );
 
-  const guideEntries = getAllGuideSlugs("en").flatMap((slug) =>
-    localizedPair(`${SITE_URL}/guide/${slug}`, `${SITE_URL}/tr/rehber/${slug}`, {
-      lastModified,
+  const guideEntries = getAllGuideSlugs("en").flatMap((slug) => {
+    const updated = [getGuidePage(slug, "en")?.updated, getGuidePage(slug, "tr")?.updated]
+      .filter((date): date is string => Boolean(date))
+      .sort()
+      .at(-1);
+    return localizedPair(`${SITE_URL}/guide/${slug}`, `${SITE_URL}/tr/rehber/${slug}`, {
+      ...(updated && { lastModified: new Date(updated) }),
       changeFrequency: "monthly",
       priority: 0.5,
-    })
-  );
+    });
+  });
 
-  // Blog slugs differ per language, so each post stands alone without hreflang pairs.
+  // Blog slugs differ per language; posts pair up through their `translation` frontmatter.
   const blogEntries: MetadataRoute.Sitemap = (["en", "tr"] as const).flatMap((locale) =>
-    getBlogPosts(locale).map((post) => ({
-      url: locale === "en" ? `${SITE_URL}/blog/${post.slug}` : `${SITE_URL}/tr/blog/${post.slug}`,
-      lastModified: new Date(post.date),
-      changeFrequency: "monthly" as const,
-      priority: 0.5,
-    }))
+    getBlogPosts(locale).map((post) => {
+      const languages = getBlogPostAlternates(post);
+      return {
+        url: `${SITE_URL}${blogPostPath(post.slug, locale)}`,
+        ...(languages && {
+          alternates: {
+            languages: {
+              en: `${SITE_URL}${languages.en}`,
+              tr: `${SITE_URL}${languages.tr}`,
+              "x-default": `${SITE_URL}${languages.en}`,
+            },
+          },
+        }),
+        lastModified: new Date(post.date),
+        changeFrequency: "monthly" as const,
+        priority: 0.5,
+      };
+    })
   );
 
   return [...staticEntries, ...guideEntries, ...blogEntries];

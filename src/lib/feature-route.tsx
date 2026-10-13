@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { FeaturePage } from "@/components/features/feature-page";
 import { JsonLd } from "@/components/shared/json-ld";
 import { featureConfigs, type FeatureKey } from "@/lib/features";
@@ -19,6 +19,7 @@ export function featureRoute(feature: FeatureKey) {
 
   async function Page({ params }: Params) {
     const { locale } = await params;
+    setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: `features.${feature}` });
     const common = await getTranslations({ locale, namespace: "common" });
     return (

@@ -4,6 +4,9 @@ export const routing = defineRouting({
   locales: ["en", "tr"],
   defaultLocale: "en",
   localePrefix: "as-needed",
+  /* hreflang lives in each page's metadata. The middleware's `Link` header
+     assumes the same slug in every locale, which points blog posts at 404s. */
+  alternateLinks: false,
   pathnames: {
     "/": "/",
     "/download": {

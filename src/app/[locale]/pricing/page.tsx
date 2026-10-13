@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Check, Download } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
@@ -38,6 +38,7 @@ function FeatureList({ items, muted }: { items: string[]; muted?: boolean }) {
 
 export default async function PricingPage({ params }: Params) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "pricing" });
   const faq: FaqItem[] = t.raw("faq");
 

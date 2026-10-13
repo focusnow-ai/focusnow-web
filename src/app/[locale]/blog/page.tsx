@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { DownloadCTA } from "@/components/landing/download-cta";
@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export default async function BlogPage({ params }: Params) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "blog" });
   const posts = getBlogPosts(locale);
 

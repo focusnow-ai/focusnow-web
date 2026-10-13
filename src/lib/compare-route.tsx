@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ComparisonTemplate } from "@/components/compare/comparison-template";
 import { JsonLd } from "@/components/shared/json-ld";
 import { comparisons, COMPETITOR_CHECKED_ON, type Competitor } from "@/lib/comparisons";
@@ -19,6 +19,7 @@ export function compareRoute(competitor: Competitor) {
 
   async function Page({ params }: Params) {
     const { locale } = await params;
+    setRequestLocale(locale);
     const t = await getTranslations({ locale, namespace: `compare.${competitor}` });
     const common = await getTranslations({ locale, namespace: "common" });
     const page = await getTranslations({ locale, namespace: "comparePage" });

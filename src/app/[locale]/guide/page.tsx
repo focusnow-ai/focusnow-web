@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { DownloadCTA } from "@/components/landing/download-cta";
 import { pageMetadata } from "@/lib/seo";
@@ -22,6 +22,7 @@ export default async function GuideIndexPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "guide" });
   const pages = getGuidePages(locale);
 

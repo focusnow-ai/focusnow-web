@@ -1,5 +1,5 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Inter, Geist_Mono } from "next/font/google";
 import type { Metadata } from "next";
@@ -23,6 +23,10 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   display: "swap",
 });
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params,
@@ -71,6 +75,9 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+
+  // Lets next-intl read the locale without request headers, so pages prerender statically.
+  setRequestLocale(locale);
 
   const messages = (await import(`../../messages/${locale}.json`)).default;
 

@@ -1,6 +1,5 @@
-import { Suspense } from "react";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactPageClient } from "@/components/pages/contact-page-client";
 import { pageMetadata } from "@/lib/seo";
 
@@ -15,12 +14,11 @@ export async function generateMetadata({
   return pageMetadata({ pathname: "/contact", locale, title: t("title"), description: t("description") });
 }
 
-export default function ContactPage() {
-  // Suspense boundary is required because ContactPageClient reads
-  // useSearchParams() (for ?topic= pre-selection from the desktop app).
-  return (
-    <Suspense>
-      <ContactPageClient />
-    </Suspense>
-  );
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  setRequestLocale((await params).locale);
+  return <ContactPageClient />;
 }
