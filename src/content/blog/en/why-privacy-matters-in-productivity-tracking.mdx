@@ -1,45 +1,103 @@
 ---
-title: "Why Privacy Matters in Productivity Tracking"
-description: "Most productivity tools don't protect your activity data well enough. Here's how FocusNow keeps yours safe at every layer."
+title: "Time Tracking Privacy: 7 Questions to Ask First"
+description: "A time tracker sees your whole workday. Here are seven questions to ask any tracker before you install it, with FocusNow's plain answers to each."
 date: "2026-06-20"
 translation: "gizlilik-neden-onemli"
-author: "Barbaros"
+author: "Cihan & Barbaros"
 tags: ["Privacy", "Productivity"]
 ---
 
-## The Problem with Unprotected Tracking
+An automatic time tracker only helps if you leave it running. That's the whole idea: no timers to forget, no gaps in the record. But it also means the tracker sees your entire workday, every app and every window.
 
-Most productivity and time tracking tools work by monitoring your computer activity and storing that data on remote servers. While this enables features like cross-device sync and team dashboards, it comes with significant privacy concerns if the data isn't properly secured.
+So before you install one, ask what it keeps. Here are seven questions we'd ask any tracker, including our own, each with FocusNow's plain answer.
 
-Your activity data reveals intimate details about your work habits, interests, and even personal life. Which applications you use, how long you spend on each task — all of this paints a detailed picture of your daily life.
+## Why this data is more personal than it looks
 
-## What Could Go Wrong?
+"Which apps I use" sounds harmless. Over a few months, it isn't. Window titles carry document names, email subjects and project names. Your activity shows when you start work, when you take breaks and which client you worked for on Tuesday.
 
-When your productivity data isn't properly protected, several risks emerge:
+That's what makes a tracker useful. It's also why you should know where that picture lives, and who else can see it.
 
-- Data breaches can expose your complete activity history
-- Companies may use your data for purposes you didn't agree to
-- Third-party analytics services may have access to your information
-- Changes in company ownership could change how your data is handled
+## 1. What exactly does it record?
 
-## The FocusNow Approach
+Ask for a precise list, not "activity data".
 
-FocusNow takes security seriously from the ground up. Your data is encrypted and protected at every layer. Here's what that means in practice:
+FocusNow checks the window in front of you about every two seconds, on macOS and Windows. It records the **active app name**, the **window title** and, in browsers, the **website's domain**. It also notes whether you're active, idle or away, with timestamps. It never takes screenshots and never records keystrokes.
 
-### Encrypted at Every Layer
+Tracking runs while the app is open, not only during focus sessions. Quitting FocusNow stops tracking right away.
 
-All your data is encrypted with AES-256 at rest and TLS 1.2+ in transit. Whether it's sitting in our database or traveling between your device and the cloud, it's always protected.
+## 2. Can I keep things out?
 
-### Trusted Infrastructure
+A good tracker lets you decide what it never sees.
 
-Your data is stored in Microsoft Azure Cosmos DB, benefiting from SOC 1/2/3, ISO 27001, and GDPR compliance certifications. The same infrastructure trusted by Fortune 500 companies protects your focus data.
+In FocusNow, **Settings → Privacy** lets you exclude any app or website. Excluded items are never recorded in the first place. They aren't just hidden from a chart. You also have two softer tools:
 
-### You Own Your Data
+- The **Personal** category keeps an app out of your [Focus Score](/guide/focus-score). It's still recorded, but it doesn't count as work.
+- [Working hours](/guide/working-hours) limit your score to the workday, so evenings don't mix in.
 
-You have full control over your data. Want to export it? Download it in a machine-readable format. Want to delete everything? We'll remove it within 30 days of your request.
+## 3. Where is the data stored?
 
-## Conclusion
+"In the cloud" is not an answer. Ask where, and whether a copy lives on your computer.
 
-Privacy and productivity don't have to be at odds. With proper encryption and secure infrastructure, you can get powerful insights about your focus patterns without worrying about your personal data. That's the core philosophy behind FocusNow.
+FocusNow is local-first. Activity is recorded on your device first, in a local database, and the app works offline. While you're signed in, it syncs to your account in Microsoft Azure data centers in the European Union. That sync is why a new computer or a reinstall doesn't mean starting over.
 
-Curious about the details? Read our [privacy commitment](/privacy), then [get FocusNow free](/download) — insight without surveillance.
+So FocusNow is not a local-only app, and we won't call it one. Your data lives on your device and, while you're signed in, in your account.
+
+## 4. How is it protected?
+
+Look for specifics: how data is encrypted, and when.
+
+Here are ours. Data moves between your device and our servers over TLS 1.2 or newer. In our Azure database it's encrypted at rest with AES-256. You sign in with Google or Microsoft, so we never see or store a password. Your sign-in token is stored encrypted on your device. Every request to our servers is checked, and each account's data is kept apart.
+
+One honest limit: this is not end-to-end encryption. Our backend has to read a day's activity to write your AI daily report. And no system is perfectly secure. We'd rather tell you that than promise something we can't.
+
+## 5. Who else sees it, and what about AI?
+
+Ask whether data is sold, shared or used to train AI models.
+
+FocusNow never sells your data and never shares your activity with advertisers. It's used to power your own analytics, and nothing else.
+
+The [AI daily report](/guide/ai-daily-report) runs only when you ask for it, and only for a finished day. That day's records go to Azure OpenAI Service, inside our own Azure subscription in the EU. Your name and email are not sent. Under Microsoft's terms, your data is not used to train AI models.
+
+Usage statistics and error reports are opt-in: you choose on first launch and can change it in Settings → Privacy. The [privacy policy](/privacy) lists every service involved.
+
+## 6. How long is it kept?
+
+Ask how long data is kept, and where.
+
+On your computer, FocusNow never deletes data by age. You can open any day back to your first tracked record. In the cloud, activity logs, sessions and AI reports expire after 12 months, on a rolling basis. Timecards, projects, clients and work statements don't expire, because they're your billing records.
+
+## 7. Can I take it with me, or delete it?
+
+You should be able to leave with your data, and leave without it.
+
+- **Export:** Settings → Account → *Export your data* downloads one JSON file with your activity, sessions, profile and AI reports.
+- **Delete a piece:** in Activities, the ⋯ menu on any app or site has *Delete records*. It removes that history from both the cloud and your device.
+- **Delete everything:** *Delete my account* in Settings → Account removes your account and data. Deletion is completed within 30 days.
+
+These match your rights under GDPR in Europe and KVKK in Turkey. More on all of this is in [The Calendar & Owning Your Data](/guide/calendar-and-your-data).
+
+## A five-minute privacy setup
+
+If you've decided to try FocusNow, these steps take about five minutes:
+
+1. On first launch, answer the usage reports question the way you want. Saying no changes nothing in the app.
+2. Open **Settings → Privacy** and exclude anything you never want recorded. Think banking, a password manager or a health portal.
+3. Set your working hours in **Settings → Tracking**.
+4. After a day, open **Activities** and move any personal apps to the Personal category.
+5. Open yesterday in the **Calendar**. The day view is led by window titles. This is the honest test: what FocusNow knows about your day is right there for you to read.
+
+## Short answers to common worries
+
+### Can my employer see my data?
+
+FocusNow is built for individuals. It has no team features, no workspaces and no manager dashboards.
+
+### Does it read my emails or messages?
+
+No. It reads the window title. Some apps put an email subject or a chat name in the title. If that bothers you for a certain app, exclude it.
+
+## Why we care about this
+
+We built FocusNow to help people see where their time goes. That only works if you trust it enough to leave it on, so we'd rather be clear about trade-offs than vague about promises. See how tracking works on the [automatic time tracking page](/features/automatic-time-tracking), and every detail in the [privacy policy](/privacy).
+
+**Want to check it yourself?** [Get FocusNow free](/download), work one normal day, and open your Calendar the next morning.
