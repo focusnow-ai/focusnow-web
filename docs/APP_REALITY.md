@@ -40,7 +40,7 @@ Ranges **Today / Yesterday / This week / This month / All** + custom range; **Ti
 
 ## Insights (AI Daily Report)
 
-"Your days, summarized by AI." Date picker + generate; output = summary + **Highlights** + **Recommendations**, tailored by role/sector. Finished days only. Runs on Azure OpenAI in the EU; not used for training.
+"Your days, summarized by AI." Date picker + generate; output = summary + **Highlights** + **Recommendations**, tailored by role/sector. Finished days only. Runs on Azure OpenAI (data stored in the EU, inference may run outside the EU); not used for training. Uses the day's tasks and code-computed figures from the previous 7 days.
 
 ## Activities
 
